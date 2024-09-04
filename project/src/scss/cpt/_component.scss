@@ -1,0 +1,16 @@
+@import 'header';   /* 메인,서브 상단 */
+@import 'main';     /* 메인 콘텐츠 */
+@import 'footer';   /* 메인,서브 하단 */
+
+@import 'subvisual';   /* 서브 상단 비주얼 */
+@import 'lnb';   /* 사이드 메뉴 */
+@import 'board';   /* 보드 */
+@import 'table'; /* 테이블 전용 */
+@import 'contents'; /* 개별 서브컨텐츠 */
+@import 'privacy'; /* 약관, 금융소비자 */
+@import 'etc'; /* 기타(로딩,에러,서비스공지 등) */
+
+
+// 임시
+@import 'bomKim'; 
+@import 'jonathanKim';/*♥*/
