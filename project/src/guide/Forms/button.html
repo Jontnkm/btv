@@ -3,28 +3,28 @@
 
     <strong class="g-area-tit">button</strong>
     <xmp>
-        <!--primary button-->
-        <div class="cptBtnForm">
+        <p class="guideTitle">Primary Button</p>
+        <div class="cptBtnForm d-flex gap10"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
             <!--default-->
             <button type="button" class="btn prmy">BTV 우리동네광고</button>
             <!--disabled-->
             <button type="button" class="btn prmy" disabled>BTV 우리동네광고</button>
         </div>
 
-        <!--secondary button-->
-        <div class="cptBtnForm">
+        <p class="guideTitle">Secondary Button</p>
+        <div class="cptBtnForm d-flex gap10"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
             <!--default-->
             <button type="button" class="btn scnd">BTV 우리동네광고</button>
             <!--disabled-->
-            <button type="button" class="btn scnd" disabled>BTV 우리동네광고 test</button>
+            <button type="button" class="btn scnd" disabled>BTV 우리동네광고</button>
         </div>
 
-        <!--text type button-->
-        <div class="cptBtnForm">
+        <p class="guideTitle">Text Type Button</p> 
+        <div class="cptBtnForm d-flex gap30"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
             <!--default-->
             <button type="button" class="btn txtTy">메뉴명</button>
             <!--disabled-->
-            <button type="button" class="btn txtTy">상품서비스</button>
+            <button type="button" class="btn txtTy active">상품서비스</button>
         </div>
     </xmp>
 
@@ -36,6 +36,8 @@
 .classInfo th {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#dfdfdf;}
 .classInfo td {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#fff;}
 .classInfo table + table {margin-top:-1px;}
+.guideTitle {font-size:20px; color:#000; font-weight:bold; margin-bottom:20px;}
+.guideTitle:not(:first-of-type) {margin-top:20px;}
 </style>
 <!-- <div class="classInfo">
     <div class="infoTitle">설명</div>

@@ -1,0 +1,34 @@
+/*button guide css*/
+.cptBtnForm {
+    
+    &.d-flex {display:flex; flex-flow: row nowrap;}
+    &.gap10 {gap:10px;}
+    &.gap30 {gap:30px;}
+
+    button {
+        min-width:200px; padding: 15px 40px; text-align:center; font-size:18px; color:var(--clr-white); font-weight:500; border-radius:8px;
+        &.prmy {
+            background:var(--prm-color);
+            &:hover {background:var(--btn-hover);}
+            &:disabled {background:var(--txt-gray04); color:var(--txt-gray02); cursor:default;}
+        }
+
+        &.scnd {
+            background:var(--clr-white); color:var(--txt-gray01); border:1px solid var(--txt-gray03);
+            &:hover {border:1px solid var(--prm-color); color:var(--prm-color);}
+            &:disabled {color:var(--txt-gray03); border:1px solid var(--txt-gray04); cursor:default;}
+        }
+        
+        &.txtTy {
+            font-size:20px; color:var(--txt-black); border-radius: 0; text-align:left; padding:0; min-width:auto; width:max-content; position:relative;
+            &:hover {
+                color:var(--prm-color);
+                &::before {content: ''; position:absolute; bottom:-6px; left:50%; transform:translateX(-50%); width:100%; height:4px; background:var(--prm-color) ;}
+            }
+            &.active {
+                color:var(--prm-color);
+                &::before {content: ''; position:absolute; bottom:-6px; left:50%; transform:translateX(-50%); width:100%; height:4px; background:var(--prm-color) ;}
+            }
+        }
+    }
+}
