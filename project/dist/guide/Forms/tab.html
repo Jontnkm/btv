@@ -1,0 +1,74 @@
+<!-- Guide : s -->
+<div class="g-area">
+    <strong class="g-area-tit">tab</strong>  
+    <xmp>
+        <!-- tab1 -->
+        <div class="modTab">
+            <ul class="tabMenu">
+                <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab(0)">전체</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(1)">공지/이벤트</button></li>
+                <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(2)">서비스</button></li>
+                <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(3)">운영</button></li>
+                <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(4)">기타</button></li>
+            </ul>
+            <div class="tabContainer">
+                <div class="tabCont active">
+                    탭내용1
+                </div> 
+                <div class="tabCont">
+                    탭내용2
+                </div>
+                <div class="tabCont">
+                    탭내용3
+                </div>
+                <div class="tabCont">
+                    탭내용4
+                </div>
+                <div class="tabCont">
+                    탭내용5
+                </div>
+            </div>
+        </div>
+    </xmp>
+</div>
+
+<script>
+
+    // tab1
+    function showTab(index) {
+        var tabButtons = document.querySelectorAll('.modTab .tabName');
+        var tabContents = document.querySelectorAll('.modTab .tabCont');
+
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove('active');
+            tabContents[i].classList.remove('active');
+        }
+
+        tabButtons[index].classList.add('active');
+        tabContents[index].classList.add('active');
+    }
+
+    // 가이드 공통
+    $(".g-area-tit, .g-area-tit01").each(function(){
+        var obj = $(this).next("xmp");
+        if(!obj.length) return;
+        var btn = '<p class="g-btn-source"><a href="#" style="font-size: 13px; color: #434343;">소스보기</a></p>';
+        var code = '<xmp class="g-code">'+obj.html()+'</xmp>';
+        $(this).append(btn);
+        $(this).after(code);
+        $(this).next().after('<div class="g-view"><div class="g-true-area">'+obj.html()+'</div></div>');
+    });
+    $(".g-btn-source a").click(function(){
+        var me = $(this).parent().parent().parent();
+        var obj = $(this).parent().parent().next();
+        if(obj.is(":hidden")){
+            obj.show();
+            me.addClass("on");
+        }else{
+            obj.hide();
+            me.removeClass("on");
+        }
+        return false;
+    });
+
+</script>
