@@ -2,8 +2,8 @@
 <div class="g-area">
     <strong class="g-area-tit">tab 버전2</strong>  
     <xmp>
-        <!-- tab 버전2 -->
-        <div class="modTab2">
+        <!-- tab 와이드 버전2 -->
+        <div class="modTabWide">
             <ul class="tabMenu">
                 <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab(0)">진행중인 이벤트</button></li> <!-- addClass - on : 메뉴 선택됨 -->
                 <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(1)">종료된 이벤트</button></li>
@@ -33,8 +33,8 @@
     
     // tab 버전2
     function showTab(index) {
-        var tabButtons = document.querySelectorAll('.modTabEvent .tabName');
-        var tabContents = document.querySelectorAll('.modTabEvent .tabCont');
+        var tabButtons = document.querySelectorAll('.modTabWide .tabName');
+        var tabContents = document.querySelectorAll('.modTabWide .tabCont');
 
         for (var i = 0; i < tabButtons.length; i++) {
             tabButtons[i].classList.remove('active');

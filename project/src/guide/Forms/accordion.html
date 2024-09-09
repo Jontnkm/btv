@@ -100,24 +100,22 @@
 
     // accordion
     function toggleAccordion(element) {
-        const accoItem = element.parentElement;
-        const accoCont = accoItem.querySelector('.accoCont');
-        const arrowImg = element.querySelector('.arrowImg');
+        const accoCont = element.nextElementSibling;
 
-        if (accoCont.classList.contains('active')) {
-            accoCont.classList.remove('active');
+        element.classList.toggle("active");
+
+        if (accoCont.style.height && accoCont.style.height !== "0px") {
+            accoCont.style.height = accoCont.scrollHeight + "px"; 
+            setTimeout(() => {
+                accoCont.style.height = "0px"; 
+            }, 10); 
         } else {
-            document.querySelectorAll('.accoCont').forEach(cont => {
-                cont.classList.remove('active');
-            });
-            accoCont.classList.add('active');
-        }
+            accoCont.style.height = accoCont.scrollHeight + "px"; 
 
-        document.querySelectorAll('.arrowImg').forEach(arrow => {
-            arrow.style.transform = 'rotate(0deg)';
-        });
-        if (accoCont.classList.contains('active')) {
-            arrowImg.style.transform = 'rotate(180deg)';
+            accoCont.addEventListener('transitionend', function onTransitionEnd() {
+                accoCont.style.height = 'auto'; // 애니메이션 끝난 후 height를 auto로 전환해서 컨텐츠의 유연성에 맞춤(모바일 대응)
+                accoCont.removeEventListener('transitionend', onTransitionEnd);
+            });
         }
     }
 
