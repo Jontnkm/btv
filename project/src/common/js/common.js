@@ -8,113 +8,144 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     //===================================================================================//
-    //==================================사이드메뉴========================================//
+    //==================================메인메뉴========================================//
     //===================================================================================//
 
-    //3뎁스가 있는 2뎁스메뉴
-    let depth2Names = document.querySelectorAll(".cptLnb .depth2Menu.add .depth2Name");
-    //활성화 3뎁스메뉴
-    function menuActive(depth2Menu){
-        let thisOpend = depth2Menu.classList.contains("active");   //활성화 되어있는 메뉴 체크
-        console.log(thisOpend);
-        
-        if(thisOpend){
-            let activeMenu = document.querySelector(".cptLnb .depth2Menu.add.active");
-            //3뎁스메뉴 그룹
-            let depth3Group = activeMenu.querySelector(".depth3Group");
-            let depth3Height = activeMenu.querySelector(".depth2Name").offsetHeight + depth3Group.offsetHeight;
-            //선택된 3뎁스 아이콘 열린 방향으로
-            activeMenu.classList.add("on");
-            activeMenu.style.height = depth3Height + "px";
-        }
-    }
+    var depth01Elements = document.querySelectorAll(".cptHeader .gnbArea .menu .headerMenu > dl");
+    var headerElement = document.querySelector(".cptHeader");
 
-    // 좌메뉴 3뎁스 유무 확인
-    let depth3Menu = document.querySelectorAll(".cptLnb .depth2Menu");
-
-    depth3Menu.forEach(function(depth2Menu){
-        if(depth2Menu.classList.contains("add")){
-            menuActive(depth2Menu);
-        }
-    })
-
-    //3뎁스가 있는 2뎁스메뉴 전체를 대상
-    depth2Names.forEach(function (depth2Name) {
-        //메뉴클릭
-        depth2Name.addEventListener("click", function (e) {
-            e.preventDefault();
-            let thisOpend = this.closest(".depth2Menu").classList.contains("on");   //활성화 되어있는 메뉴 체크
-            //3뎁스메뉴 그룹
-            let depth3Group = this.closest(".depth2Menu").querySelector(".depth3Group");
-            let depth3Height = this.closest(".depth2Menu").querySelector(".depth2Name").offsetHeight + depth3Group.offsetHeight;
-
-            if(thisOpend){ //메뉴가 열려 있다면
-                //3뎁스 아이콘 닫힌 방향으로
-                document.querySelectorAll(".cptLnb .depth2Menu.add").forEach(function (element) {   
-                    element.classList.remove("on");
-                    element.style.height = element.querySelector(".depth2Name").offsetHeight + "px";
+    // 마우스 엔터 이벤트 핸들러
+    depth01Elements.forEach(function(element) {
+        element.addEventListener('mouseenter', function() {
+            // 모든 depth01 요소에서 'on' 클래스 제거
+            depth01Elements.forEach(function(el) {
+                el.classList.remove('on');
+                var head2depths = el.querySelectorAll('.head2depth');
+                head2depths.forEach(function(depth) {
+                    depth.style.display = 'none';
                 });
-            }else{
-                //3뎁스 아이콘 닫힌 방향으로
-                document.querySelectorAll(".cptLnb .depth2Menu.add").forEach(function (element) {
-                    element.classList.remove("on");
-                    element.style.height = element.querySelector(".depth2Name").offsetHeight + "px";
-                });
+            });
 
-                //선택된 3뎁스 아이콘 열린 방향으로
-                this.closest(".depth2Menu").classList.add("on");
-                this.closest(".depth2Menu").style.height = depth3Height + "px";
-            }
+            // 현재 요소에 'on' 클래스 추가
+            this.classList.add('on');
 
+            // 현재 요소의 .head2depth 요소를 보이게 함
+            var currentHead2depths = this.querySelectorAll('.head2depth');
+            currentHead2depths.forEach(function(depth) {
+                depth.style.display = 'flex';
+            });
         });
     });
 
-    //===================================================================================//
-    //================================헤더 드롭 메뉴======================================//
-    //===================================================================================//
-
-    let depth1MenuLinks = document.querySelector(".menuArea");
-    let dropDownMenu = document.querySelector(".dropDownMenu");
-    let menuArea = document.querySelector(".menuArea");
-    let elementToFadeIn = document.querySelector(".dropDownMenu");
-
-    //메뉴가 없는 페이지가 있어서 수정 osw
-	if(depth1MenuLinks){
-		depth1MenuLinks.addEventListener("mouseenter", function() {
-	        dropDownMenu.style.display = "block";
-	        fadeIn(elementToFadeIn);
-	    });
-	}
-    
-    //메뉴가 없는 페이지가 있어서 수정 osw
-	if(menuArea){
-	    menuArea.addEventListener("mouseleave", function() {
-	        dropDownMenu.style.display = "none";
-	    });
+    // 마우스 리브 이벤트 핸들러
+    if (headerElement) {
+        headerElement.addEventListener('mouseleave', function() {
+            depth01Elements.forEach(function(el) {
+                el.classList.remove('on');
+                var head2depths = el.querySelectorAll('.head2depth');
+                head2depths.forEach(function(depth) {
+                    setTimeout(function() {
+                        depth.style.display = 'none';
+                        depth.style.opacity = 1;
+                    });
+                });
+            });
+        });
     }
+
+    // Select all elements with class 'mypage'
+    const mypageElements = document.querySelectorAll('.mypage');
+
+    mypageElements.forEach(mypage => {
+        mypage.addEventListener('click', () => {
+            const isActive = mypage.classList.contains('active');
+            
+            if (isActive) {
+                mypage.classList.remove('active');
+                fadeOut(mypage.nextElementSibling);
+            } else {
+                mypage.classList.add('active');
+                fadeIn(mypage.nextElementSibling);
+            }
+        });
+    });
+
+    // Function to fade out an element
+    function fadeOut(element) {
+        if (!element) return;
+        element.style.transition = 'opacity 0.3s ease-out';
+        element.style.opacity = '0';
+        setTimeout(() => {
+            element.style.display = 'none';
+        }, 300);
+    }
+
 
     //===================================================================================//
     //=============================전체(햄버거)메뉴 오픈===================================//
     //===================================================================================//
 
-    const allBtn = document.querySelectorAll(".allMenuBtn")
+    const allBtn = document.querySelectorAll(".moMenuOpen")
+
+    let moMenuOpen = document.querySelector(".moMenuOpen");
+    let target = document.querySelector(".moMenuBtn .moMenuOpen");
+    let moHeader = document.querySelector(".moHeader");
+    let body = document.querySelector("body");
+
     for (const button of allBtn) {
         button.addEventListener('click', function(event) {
-            let allMenuBtn = document.querySelector(".allMenuBtn");
-            let target = document.querySelector(".allMenuCov .allMenuBtn");
-            let allMenuCov = document.querySelector(".allMenuCov");
-            let body = document.querySelector("body");
+            
             if (!target.classList.contains("active")) {
-                fadeIn(allMenuCov);
+                moHeader.classList.add("on");
                 target.classList.add("active");
                 body.style.overflow = "hidden";
             } else {
-                allMenuCov.style.display = "none";
+                moHeader.classList.remove("on");
                 target.classList.remove("active");
                 body.style.overflow = "auto";
             }
         })
     }
+
+    window.addEventListener('resize', function() {
+        // 'on' 클래스를 제거합니다.
+        if (moHeader) {
+            moHeader.classList.remove('on');
+        }
+        if (target) {
+            target.classList.remove('active');
+        }
+    });
+    
+    const menuLinks = document.querySelectorAll('.moHeader .headerMenu > li > a');
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // 링크의 기본 동작을 막습니다.
+    
+            // 현재 클릭된 링크의 상태를 확인합니다.
+            const isActive = this.classList.contains('active');
+    
+            // 모든 메뉴 항목에서 'active' 클래스를 제거합니다.
+            menuLinks.forEach(link => {
+                link.classList.remove('active');
+                const subMenu = link.nextElementSibling;
+                if (subMenu && subMenu.tagName === 'UL') {
+                    subMenu.classList.remove('open');
+                }
+            });
+    
+            // 클릭된 링크가 비활성 상태였다면 'active' 클래스를 추가하고 하위 메뉴를 표시합니다.
+            if (!isActive) {
+                this.classList.add('active');
+                const subMenu = this.nextElementSibling;
+                if (subMenu && subMenu.tagName === 'UL') {
+                    subMenu.classList.add('open');
+                }
+            }
+        });
+    });
+
 
     //===================================================================================//
     //=================================faq 아코디언=======================================//

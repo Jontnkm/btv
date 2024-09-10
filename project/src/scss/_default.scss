@@ -9,7 +9,7 @@
   --txt-gray01 : #303030;
   --txt-gray02 : #797979;
   --txt-gray03 : #a9a9a9;
-  --txt-gray04 : #f2f2f2;
+  --txt-gray04 : #d9d9d9;
   --txt-gray05 : #f7f9fb;
   
   --clr-white : #ffffff;
@@ -116,7 +116,7 @@
   }
 * {box-sizing: border-box; font-family:'roboto', 'NotoSansCJKkr', sans-serif; letter-spacing: -0.4px;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
-fieldset,img {border:0 none}
+fieldset,img {border:0 none; display:block;}
 dl,ul,ol,menu,li {list-style:none}
 blockquote, q {quotes: none}
 blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
@@ -140,7 +140,7 @@ label {font-size: 0;}
 .skip .quickBtn {display: block; width: 100%; height: 0px;background: #092473; font-size: 15px; color: #fff; overflow: hidden; text-align: center;}
 .skip .quickBtn:focus {height:auto;}
 
-.hide {font-size:0 !important; position:fixed; left:-5000px; top:0;}
+.hidden {font-size:0 !important; position:fixed; left:-5000px; top:0;}
 
 .input[type=text] {}
 
