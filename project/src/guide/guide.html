@@ -94,7 +94,28 @@ html,body {height:100%; margin:0; padding:0; background:#ebedef}
     url("../common/webfont/NotoSansKR-Bold.woff2") format("woff2"),
     url("../common/webfont/NotoSansKR-Bold.otf") format("opentype");
 }
+/*color value*/
+:root{
+  --prm-color : #3617CE;
+  --snd-color : #FF404E;
 
+  --btn-hover : #2105AB; /*button hover case*/
+
+  --txt-black : #000000;
+  --txt-gray01 : #303030;
+  --txt-gray02 : #797979;
+  --txt-gray03 : #a9a9a9;
+  --txt-gray04 : #d9d9d9;
+  --txt-gray05 : #f7f9fb;
+  
+  --clr-white : #ffffff;
+
+  --sub-color01 : #ffeef0;
+  --sub-color02 : #fff4e5;
+  --sub-color03 : #fff9e5;
+  --sub-color04 : #eaf6fe; 
+  --sub-color05 : #f7ecff;
+}
 * {box-sizing: border-box; font-family: 'NotoSansCJKkr', sans-serif; letter-spacing: -1px;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
 fieldset,img {border:0 none}
@@ -320,7 +341,15 @@ body {background:#ebedef;}
 .g-true-area { background:#fff;}
 xmp{display:none;}
 
-</style>
+  .classInfo * {letter-spacing:0;} 
+  .classInfo .infoTitle {margin:20px 0 10px; font-size:16px; font-weight:700;}
+  .classInfo .infoMasage {margin:10px 0 10px; font-size:15px; font-weight:400;}
+  .classInfo th {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#dfdfdf;}
+  .classInfo td {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#fff;}
+  .classInfo table + table {margin-top:-1px;}
+  .guideTitle {font-size:20px; color:#000; font-weight:bold; margin-bottom:20px;}
+  .guideTitle:not(:first-of-type) {margin-top:20px;}
+  </style>
 </head>
 <body>
 <div class="g-wrap">
@@ -340,25 +369,19 @@ xmp{display:none;}
 							<div class="g-depth2-name"><h3><a href="button">button</a></h3></div>
 						</li>
             <li class="g-depth2-list">
-							<div class="g-depth2-name"><h3><a href="tab">tab</a></h3></div>
+							<div class="g-depth2-name"><h3><a href="tab">탬 메뉴</a></h3></div>
 						</li>
             <li class="g-depth2-list">
-							<div class="g-depth2-name"><h3><a href="tab2">tab2</a></h3></div>
+							<div class="g-depth2-name"><h3><a href="board">게시판</a></h3></div>
 						</li>
             <li class="g-depth2-list">
-							<div class="g-depth2-name"><h3><a href="boardList">boardList</a></h3></div>
+							<div class="g-depth2-name"><h3><a href="pagination">페이징</a></h3></div>
 						</li>
             <li class="g-depth2-list">
-							<div class="g-depth2-name"><h3><a href="boardView">boardView</a></h3></div>
+							<div class="g-depth2-name"><h3><a href="accordion">아코디언 메뉴</a></h3></div>
 						</li>
             <li class="g-depth2-list">
-							<div class="g-depth2-name"><h3><a href="pagination">pagination</a></h3></div>
-						</li>
-            <li class="g-depth2-list">
-							<div class="g-depth2-name"><h3><a href="accordion">accordion</a></h3></div>
-						</li>
-            <li class="g-depth2-list">
-							<div class="g-depth2-name"><h3><a href="card">card</a></h3></div>
+							<div class="g-depth2-name"><h3><a href="card">카드뉴스</a></h3></div>
 						</li>
 					</ul>
 				</li>

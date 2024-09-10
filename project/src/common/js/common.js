@@ -146,6 +146,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    //===============================================================================//
+    //=================================공통 탭=======================================//
+    //===============================================================================//
+    function showTab(index) {
+        var tabButtons = document.querySelectorAll('.tabName');
+        var tabContents = document.querySelectorAll('.tabCont');
+
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove('active');
+            tabContents[i].classList.remove('active');
+        }
+
+        tabButtons[index].classList.add('active');
+        tabContents[index].classList.add('active');
+    }
 
     //===================================================================================//
     //=================================faq 아코디언=======================================//
