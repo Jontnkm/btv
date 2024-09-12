@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // 현재 요소에 'on' 클래스 추가
             this.classList.add('on');
-
+            
             // 현재 요소의 .head2depth 요소를 보이게 함
             var currentHead2depths = this.querySelectorAll('.head2depth');
             currentHead2depths.forEach(function(depth) {
@@ -201,28 +201,18 @@ document.addEventListener("DOMContentLoaded", function () {
     //===================================================================================//
 
     var buttons = document.querySelectorAll(".frmCombo button");
-    // var body = document.querySelector("body");
-
     buttons.forEach(function(button) {
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function() {            
             var parent = this.parentElement;
-            var drpdwBox = parent.querySelector(".drpdwBox");
-            if (this.classList.contains("on")) {
-                parent.classList.remove("on");
-                this.classList.remove("on");
+            var drpdwBox = parent.querySelector(".listBox");
+            if (this.classList.contains("spread")) {
+                parent.classList.remove("spread");
+                this.classList.remove("spread");
                 drpdwBox.style.display = "none";
             } else {
-                parent.classList.add("on");
-                this.classList.add("on");
+                parent.classList.add("spread");
+                this.classList.add("spread");
                 drpdwBox.style.display = "block";
-                // body.addEventListener("click", function() {
-                //     var dropdowns = document.querySelectorAll(".frmCombo .drpdwBox");
-                //     dropdowns.forEach(function(dropdown) {
-                //         dropdown.style.display = "none";
-                //         dropdown.parentElement.classList.remove("on");
-                //         dropdown.parentElement.querySelector("button").classList.remove("on");
-                //     });
-                // });
             }
         });
     });
