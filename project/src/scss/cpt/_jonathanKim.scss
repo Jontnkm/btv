@@ -4,7 +4,7 @@
 .loginPageArea {
     width:100%; max-width: 480px; margin:0 auto; position:relative; padding-top:10px;
     @include media ('mobile') {
-        width:90.75%; margin:4rem auto 0;
+        width:90.75%; margin:4rem auto 0; 
     }
     .logTitle {
         font-size:32px; margin-bottom:56px; color:var(--txt-black); font-weight:700; line-height:45px; letter-spacing:-0.8px; text-align:center;
