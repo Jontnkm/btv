@@ -33,7 +33,7 @@
                         </div>
                         <div class="iptGroup">
                             <div class="iptGroupArea">
-                                <input type="text" class="srchTitle" placeholder="검색" autocomplete="off" title="템플릿 영상 검색창" maxlength="30" id="srchTitle" name="srchTitle" value="">
+                                <input type="text" class="srchTitle" placeholder="검색" autocomplete="off" title="템플릿 영상 검색창" maxlength="50" id="srchTitle" name="srchTitle" value="">
                                 <a href="#" class="srchBtn"></a>
                             </div>
                         </div>
@@ -174,7 +174,7 @@
                                 <a href="#">
                                     <div class="thumbnail2"><img src="../../images/common/tmp_thumbnail.png" alt="영상 썸네일"></div>
                                     <ul class="thumbCont">
-                                        <li class="title2">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                        <li class="title2">템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명</li>
                                         <li class="txtBox">
                                             <ul>
                                                 <li class="txt">외식업</li>
@@ -188,7 +188,7 @@
                                 <a href="#">
                                     <div class="thumbnail2"><img src="../../images/common/tmp_thumbnail.png" alt="영상 썸네일"></div>
                                     <ul class="thumbCont">
-                                        <li class="title2">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                        <li class="title2">템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명</li>
                                         <li class="txtBox">
                                             <ul>
                                                 <li class="txt">외식업</li>
@@ -202,7 +202,7 @@
                                 <a href="#">
                                     <div class="thumbnail2"><img src="../../images/common/tmp_thumbnail.png" alt="영상 썸네일"></div>
                                     <ul class="thumbCont">
-                                        <li class="title2">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                        <li class="title2">템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명</li>
                                         <li class="txtBox">
                                             <ul>
                                                 <li class="txt">외식업</li>
@@ -216,7 +216,7 @@
                                 <a href="#">
                                     <div class="thumbnail2"><img src="../../images/common/tmp_thumbnail.png" alt="영상 썸네일"></div>
                                     <ul class="thumbCont">
-                                        <li class="title2">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                        <li class="title2">템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명</li>
                                         <li class="txtBox">
                                             <ul>
                                                 <li class="txt">외식업</li>
@@ -230,7 +230,7 @@
                                 <a href="#">
                                     <div class="thumbnail2"><img src="../../images/common/tmp_thumbnail.png" alt="영상 썸네일"></div>
                                     <ul class="thumbCont">
-                                        <li class="title2">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                        <li class="title2">템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명템플릿명</li>
                                         <li class="txtBox">
                                             <ul>
                                                 <li class="txt">외식업</li>
@@ -269,6 +269,36 @@
         <!-- //상단영역 -->
     </div>
 </div>
+
+<!-- 팝업이 들어오는 영역 -->
+<div id="sample01" class="modPopup md on"> 
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea">
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">변경이력</div>
+                    <div class="popCont">
+                        팝업콘텐츠 영역<br>
+                        팝업콘텐츠 영역<br>
+                        팝업콘텐츠 영역<br>
+                        팝업콘텐츠 영역<br>
+                        팝업콘텐츠 영역<br>
+                        팝업콘텐츠 영역<br>
+                        팝업콘텐츠 영역
+                    </div>
+                    <div class="popBtm">
+                        <button class="btn gLine">취소</button>
+                        <button class="btn dkBlue">계정신청</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <script>
 
@@ -312,6 +342,20 @@
         titleImg.classList.toggle('toggle');
 
     });
+
+
+        //================= 템플릿 필터 팝업 ==================//
+        const scrollPops = document.querySelectorAll(".modPopup .popCont");
+        scrollPops.forEach(function(scrollPop, idx){
+            scrollPop.addEventListener("scroll",function(event){
+                if(this.scrollTop >= 1){
+                    this.previousElementSibling.classList.add("shadow");
+                }else{
+                    this.previousElementSibling.classList.remove("shadow");
+                }
+
+            });
+        })
 
 
 </script>
