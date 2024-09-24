@@ -46,11 +46,7 @@
                 <div class="tabCont active">
                     <div class="cptNoData">
                         <div class="noImg">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-                                <circle cx="40" cy="40" r="39.5" stroke="#A9A9A9"/>
-                                <rect x="37" y="23" width="6" height="24" rx="3" fill="#A9A9A9"/>
-                                <circle cx="40" cy="54" r="3" fill="#A9A9A9"/>
-                            </svg>
+                            <img src="../../images/common/ico_warning.svg" alt="경고 아이콘">
                         </div>
                         <p class="noTxt">진행중인 이벤트가 없습니다.</p>
                     </div>
@@ -79,6 +75,9 @@
         tabButtons[index].classList.add('active');
         tabContents[index].classList.add('active');
     }
+
+
+
     // 가이드 공통
     $(".g-area-tit, .g-area-tit01").each(function(){
         var obj = $(this).next("xmp");

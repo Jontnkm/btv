@@ -265,12 +265,12 @@
 
 /*====================================== 데이터없음 =====================================*/
 .cptNoData{
-    padding: 240px 0;
+    padding: 240px 0; display: flex; justify-content: center; align-items: center; flex-direction: column;
     .noImg{
         text-align: center;
         @include media('tablet'){
             width: 60px; margin: 0 auto;
-            svg{
+            img{
                 width: 100%;
             }
         }
@@ -506,13 +506,13 @@
                             font-size: 16px;
                             .arrowImg{
                                 margin-left: 10px; transition: all 0.5s ease-in-out;
-                                svg{
+                                img{
                                     width: 18px; height: 18px; 
                                 }
                             }
                         }
                     }
-                    &.active .arrowImg svg{
+                    &.active .arrowImg img{
                         transform: rotate(180deg);
                     }
                     @include media('tablet'){
