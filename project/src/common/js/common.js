@@ -85,28 +85,22 @@ document.addEventListener("DOMContentLoaded", function () {
     //=============================전체(햄버거)메뉴 오픈===================================//
     //===================================================================================//
 
-    const allBtn = document.querySelectorAll(".moMenuOpen")
-
-    let moMenuOpen = document.querySelector(".moMenuOpen");
-    let target = document.querySelector(".moMenuBtn .moMenuOpen");
+    const allBtn = document.querySelector(".menuWrap")
     let moHeader = document.querySelector(".moHeader");
     let body = document.querySelector("body");
 
-    for (const button of allBtn) {
-        button.addEventListener('click', function(event) {
-            
-            if (!target.classList.contains("active")) {
-                moHeader.classList.add("on");
-                target.classList.add("active");
-                body.style.overflow = "hidden";
-            } else {
-                moHeader.classList.remove("on");
-                target.classList.remove("active");
-                body.style.overflow = "auto";
-            }
-        })
-    }
-
+    allBtn.addEventListener('click', function(){
+        if(allBtn.classList.contains('open')){
+            allBtn.classList.remove('open');
+            moHeader.classList.remove("on");
+            body.style.overflow = "auto";
+        }else{
+            allBtn.classList.add('open');
+            moHeader.classList.add("on");
+            body.style.overflow = "hidden";
+        }
+    })
+    
     window.addEventListener('resize', function() {
         // 'on' 클래스를 제거합니다.
         if (moHeader) {
@@ -480,23 +474,17 @@ function slideDown(element) {
 // Popup Open
 function popOpen(popId){
     let thispop = document.querySelector("#" + popId);
-    
+
     thispop.classList.add("popOpen");
 }
 
 // Popup Close
 function popClose(popId){
     let thispop = document.querySelector("#" + popId);
-    
-    // 영상 팝업일 시
-    let hasMov = thispop.querySelector("iframe");
-
-    if(hasMov) {
-        hasMov.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}','*');
-    }
 
     thispop.classList.remove("popOpen");
 }
+
 // datepicker
 function datepick() {
     let havDatePick = document.querySelectorAll(".datepickWrap");

@@ -1,0 +1,143 @@
+<!-- Guide : s -->
+<div class="g-area">
+    <strong class="g-area-tit">타이틀 있는 작은팝업</strong>  
+    <xmp>
+        <button type="button" onclick="popOpen('clause01')" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">작은 팝업열기 버튼</button>
+        <div class="modPopup type01" id="clause01">
+            <div class="popupDim">딤 영역</div>
+            <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+                <!-- 팝업 타이틀 -->
+                <div class="popTitArea">
+                    <div class="tit">타이틀</div>
+                    <button class="closeBtn" onclick="popClose('clause01')">팝업 닫기</button>
+                </div>
+
+                <!-- 팝업 컨텐츠 -->
+                <div class="popContArea">
+                    <div class="comClause">
+                        <p class="basicTxt">
+                            내용입니다.<br>
+                            내용입니다.<br>
+                            내용입니다.<br>
+                            내용입니다.<br>
+                            내용입니다.<br>
+                            내용입니다.<br>
+                        </p>                        
+                    </div>
+                </div>
+
+                <!-- 팝업 버튼 -->
+                <div class="popBtnArea">
+                    <button type="button" class="popBtn white" onclick="popClose('clause01')">취소</button>
+                    <button type="button" class="popBtn blue" onclick="popClose('clause01')">확인</button>
+                </div>
+            </div>
+        </div>
+    </xmp>
+
+    <strong class="g-area-tit">타이틀 있는 큰팝업</strong>  
+    <xmp>
+        <button type="button" onclick="popOpen('clause02')" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">큰 팝업열기 버튼</button>
+        <div class="modPopup type01" id="clause02">
+            <div class="popupDim">딤 영역</div>
+            <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+                <!-- 팝업 타이틀 -->
+                <div class="popTitArea">
+                    <div class="tit">타이틀</div>
+                    <button class="closeBtn" onclick="popClose('clause02')">팝업 닫기</button>
+                </div>
+
+                <!-- 팝업 컨텐츠 -->
+                <div class="popContArea">
+                    <div class="comClause">
+                        <p class="basicTxt">
+                            내용입니다.<br>
+                            내용입니다.<br>
+                            내용입니다.<br>
+                            내용입니다.<br>
+                            내용입니다.<br>
+                            내용입니다.<br>
+                        </p>                        
+                    </div>
+                </div>
+
+                <!-- 팝업 버튼 -->
+                <div class="popBtnArea">
+                    <button type="button" class="popBtn white" onclick="popClose('clause02')">취소</button>
+                    <button type="button" class="popBtn blue" onclick="popClose('clause02')">확인</button>
+                </div>
+            </div>
+        </div>
+    </xmp>
+
+    <strong class="g-area-tit">타이틀 없는 팝업</strong>  
+    <xmp>
+        <button type="button" onclick="popOpen('clause03')" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">작은 팝업열기 버튼</button>
+        <div class="modPopup type02" id="clause03">
+            <div class="popupDim">딤 영역</div>
+            <div class="popupBox"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+                <!-- 팝업 타이틀 -->
+                <div class="popTitArea">
+                    <button class="closeBtn" onclick="popClose('clause03')">팝업 닫기</button>
+                </div>
+
+                <!-- 팝업 컨텐츠 -->
+                <div class="popContArea">
+                    <div class="comClause">
+                        <p class="basicTxt">
+                            <p class="title">광고명을 입력해주세요!</p>
+                        </p>                        
+                    </div>
+                </div>
+
+                <!-- 팝업 버튼 -->
+                <div class="popBtnArea">
+                    <!-- <button type="button" class="popBtn white" onclick="popClose('clause03')">취소</button> -->
+                    <button type="button" class="popBtn blue" onclick="popClose('clause03')">확인</button>
+                </div>
+            </div>
+        </div>
+    </xmp>
+</div>
+
+<script>
+
+    // Popup Open
+    function popOpen(popId){
+        let thispop = document.querySelector("#" + popId);
+
+        thispop.classList.add("popOpen");
+    }
+
+    // Popup Close
+    function popClose(popId){
+        let thispop = document.querySelector("#" + popId);
+
+        thispop.classList.remove("popOpen");
+    }
+
+
+    // 가이드 공통
+    $(".g-area-tit, .g-area-tit01").each(function(){
+        var obj = $(this).next("xmp");
+        if(!obj.length) return;
+        var btn = '<p class="g-btn-source"><a href="#" style="font-size: 13px; color: #434343;">소스보기</a></p>';
+        var code = '<xmp class="g-code">'+obj.html()+'</xmp>';
+        $(this).append(btn);
+        $(this).after(code);
+        $(this).next().after('<div class="g-view"><div class="g-true-area">'+obj.html()+'</div></div>');
+    });
+    $(".g-btn-source a").click(function(){
+        var me = $(this).parent().parent().parent();
+        var obj = $(this).parent().parent().next();
+        if(obj.is(":hidden")){
+            obj.show();
+            me.addClass("on");
+        }else{
+            obj.hide();
+            me.removeClass("on");
+        }
+        return false;
+    });
+
+</script>

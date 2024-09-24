@@ -86,9 +86,11 @@ var url = locals.url ? locals.url : '../../';
 					</div>
 				</div>
 				<div class="moMenuBtn">
-					<a href="#none" class="moMenuOpen">
-						<span class="hidden">모바일메뉴</span>
-					</a>
+					<div class="menuWrap">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
 				</div>
 			</div>
 
@@ -96,6 +98,28 @@ var url = locals.url ? locals.url : '../../';
 			<!--2024.09.04 mobile menu-->
 			<div class="menu moHeader">
 				<div class="mobileMenuBox">
+					<div class="moQuick">
+						<ul>
+							<li class="item01">
+								<a href="#none">
+									<span class="icon"></span>
+									<span class="txt">광고 만들기<br>튜토리얼</span>
+								</a>
+							</li>
+							<li class="item02">
+								<a href="#none">
+									<span class="icon"></span>
+									<span class="txt">광고비<br>알아보기</span>
+								</a>
+							</li>
+							<li class="item03">
+								<a href="#none">
+									<span class="icon"></span>
+									<span class="txt">광고 상담<br>신청</span>
+								</a>
+							</li>
+						</ul>
+					</div>
 					<ul class="headerMenu">
 						<!--2024.09.04 로그인 전 후-->
 						<li>
@@ -140,10 +164,10 @@ var url = locals.url ? locals.url : '../../';
 					</ul>
 					<div class="cptBtnForm loginArea">
 						<!--2024.09.04 로그인 전-->
-						<button type="button" class="btn scnd">로그인</button>
+						<button type="button" class="btn prmy">로그인</button>
 						<button type="button" class="btn scnd">회원가입</button>
 						<!--2024.09.04 로그인 후-->
-						<button type="button" class="btn scnd" style="display:none;">마이페이지</button>
+						<button type="button" class="btn scnd" style="display:none;">로그아웃</button>
 					</div>
 				</div>
 			</div>

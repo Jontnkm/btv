@@ -126,9 +126,11 @@
 					</div>
 				</div>
 				<div class="moMenuBtn">
-					<a href="#none" class="moMenuOpen">
-						<span class="hidden">모바일메뉴</span>
-					</a>
+					<div class="menuWrap">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
 				</div>
 			</div>
 
@@ -136,6 +138,28 @@
 			<!--2024.09.04 mobile menu-->
 			<div class="menu moHeader">
 				<div class="mobileMenuBox">
+					<div class="moQuick">
+						<ul>
+							<li class="item01">
+								<a href="#none">
+									<span class="icon"></span>
+									<span class="txt">광고 만들기<br>튜토리얼</span>
+								</a>
+							</li>
+							<li class="item02">
+								<a href="#none">
+									<span class="icon"></span>
+									<span class="txt">광고비<br>알아보기</span>
+								</a>
+							</li>
+							<li class="item03">
+								<a href="#none">
+									<span class="icon"></span>
+									<span class="txt">광고 상담<br>신청</span>
+								</a>
+							</li>
+						</ul>
+					</div>
 					<ul class="headerMenu">
 						<!--2024.09.04 로그인 전 후-->
 						<li>
@@ -180,10 +204,10 @@
 					</ul>
 					<div class="cptBtnForm loginArea">
 						<!--2024.09.04 로그인 전-->
-						<button type="button" class="btn scnd">로그인</button>
+						<button type="button" class="btn prmy">로그인</button>
 						<button type="button" class="btn scnd">회원가입</button>
 						<!--2024.09.04 로그인 후-->
-						<button type="button" class="btn scnd" style="display:none;">마이페이지</button>
+						<button type="button" class="btn scnd" style="display:none;">로그아웃</button>
 					</div>
 				</div>
 			</div>
@@ -200,6 +224,54 @@
 
             <!-- 메인 콘텐츠 영역 -->
             
+            <!--2024.09.24 로그인 start-->
+            <div class="loginPageArea">
+                <p class="logTitle">
+                    로그인
+                </p>
+
+                <div class="cptForm">
+                    <div class="frmIpt">
+                        <label for="login_id">아이디</label>
+                        <input type="text" id="login_id" />
+                    </div>
+                    <div class="frmIpt">
+                        <label for="login_pw">비밀번호</label>
+                        <input type="text" id="login_pw" />
+                    </div>
+                    <div class="memberOpt">
+                        <label class="frmChk">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                            <span class="labelTxt">아이디 저장</span>
+                        </label>
+                        <div class="memberFunc">
+                            <ul>
+                                <li><a href="#none" class="findId">아이디 찾기</a></li>
+                                <li><a href="#none" class="findPw">비밀번호 찾기</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cptBtnForm">
+                    <button type="button" class="btn prmy">BTV 우리동네광고</button>
+                    <button type="button" class="btn scnd">회원가입</button>
+                </div>
+
+                <div class="socialLogin">
+                    <a href="#none" class="kakaoLogin">
+                        <span class="icon"><span class="hidden">카카오톡</span></span>
+                        <span>카카오 로그인</span>
+                    </a>
+                    <a href="#none" class="naverLogin">
+                        <span class="icon"><span class="hidden">네이버</span></span>
+                        <span>네이버 로그인</span>
+                    </a>
+                </div>
+            </div>
+            <!--2024.09.24 로그인 end-->
+
             <!-- //메인 콘텐츠 영역 -->
 
         </div>

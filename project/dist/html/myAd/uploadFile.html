@@ -1,5 +1,5 @@
  <!-- Header -->
-
+ 
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,16 +14,16 @@
 
 	<title>sk우리동네광고</title>
 
-	<link rel="stylesheet" href="../common/css/swiper.css" />
-	<link rel="stylesheet" href="../common/css/tui-date-picker.css">
-	<link rel="stylesheet" href="../common/css/style.css" />
+	<link rel="stylesheet" href="../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="../../common/css/style.css" />
 	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
 	
-	<script src="../common/js/jquery-3.4.1.min.js"></script>
-	<script src="../common/js/jquery-ui.min.js"></script>
-	<script src="../common/js/tui-date-picker.js"></script>
-	<script src="../common/js/swiper.js"></script>
-	<script src="../common/js/common.js"></script>
+	<script src="../../common/js/jquery-3.4.1.min.js"></script>
+	<script src="../../common/js/jquery-ui.min.js"></script>
+	<script src="../../common/js/tui-date-picker.js"></script>
+	<script src="../../common/js/swiper.js"></script>
+	<script src="../../common/js/common.js"></script>
 
 	<!--
     <script src="../common/js/basic.js"></script>
@@ -223,9 +223,83 @@
         <div class="layoutContainer" id="container">
 
             <!-- 메인 콘텐츠 영역 -->
-            <div class="tempBox" style="height:660px; background:#f1faf9;">
+            
+            <div class="myAdCover">
+                <p class="locTit">광고 만들기</p>
+                <div class="contTitle">
+                    <p>내 컴퓨터에서 불러오기</p>
+                    <div class="option">
+                        <button type="button" >다른 방법으로 영상 만들기</button>
+                        <button type="button" class="icoBtn">영상 제작 튜토리얼</button>
+                    </div>
+                </div>
 
+                <div class="uploadRule">
+                    <p class="ruleTitle">영상파일을 올리기 전 확인해 주세요!</p>
+                    <ul class="ruleList">
+                        <li class="item codec">
+                            <span class="ico"></span>
+                            <span>코덱</span>
+                            <span>영상 코덱이 'H.264'인 것을 확인하였습니다.</span>
+                        </li>
+                        <li class="item length">
+                            <span class="ico"></span>
+                            <span>길이</span>
+                            <span>영상의 길이가 '15초'인 것을 확인하였습니다.</span>
+                        </li>
+                        <li class="item resolution">
+                            <span class="ico"></span>
+                            <span>해상도</span>
+                            <span>영상 해상도가 '1920 x 1080'인 것을 확인하였습니다.</span>
+                        </li>
+                        <li class="item audio">
+                            <span class="ico"></span>
+                            <span>오디오</span>
+                            <span>영상의 오디오 평준화 -24 lkfs에 근접한 것을 확인하였습니다.</span>
+                        </li>
+                        <li class="item frame">
+                            <span class="ico"></span>
+                            <span>프레임</span>
+                            <span>영상의 프레임이 '449(15초)' 또는 '899(30초)'인 것을 확인하였습니다.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="uploadProgressArea">
+                    <!--2024.09.24 파일등록-->
+                    <div class="cptBtnForm">
+                        <button type="button" class="btn prmy">영상등록</button>
+                    </div>
+                    <!--// 2024.09.24 파일등록-->
+
+                    <!--2024.09.24 진행 중-->
+                    <div class="progressArea">
+                        <div class="bar">
+                            <span class="balloon">업로드 중</span>
+                        </div>
+                    </div>
+                    <!--// 2024.09.24 진행 중-->
+
+                    <!--2024.09.24 파일등록 오류-->
+                    <div class="cptBtnForm">
+                        <button type="button" class="btn prmy">다시올리기</button>
+                        <p class="infoTxt warining">
+                            영상의 옵션을 다시 한 번 확인하신 후 올려주세요!
+                        </p>
+                    </div>
+                    <!--// 2024.09.24 파일등록 오류-->
+
+                    <!--2024.09.24 파일등록 완료-->
+                    <div class="cptBtnForm">
+                        <button type="button" class="btn prmy">나의 영상 확인하러 가기</button>
+                        <p class="infoTxt">
+                            영상 업로드를 완료하였습니다.
+                        </p>
+                    </div>
+                    <!--// 2024.09.24 파일등록 완료-->
+                </div>
             </div>
+
             <!-- //메인 콘텐츠 영역 -->
 
         </div>
