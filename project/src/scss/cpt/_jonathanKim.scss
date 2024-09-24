@@ -1,0 +1,86 @@
+/*===================================================================================*/
+/*====================================로그인페이지====================================*/
+/*===================================================================================*/
+.loginPageArea {
+    width:100%; max-width: 480px; margin:0 auto; position:relative; padding-top:10px;
+    @include media ('mobile') {
+        width:90.75%; margin:4rem auto 0;
+    }
+    .logTitle {
+        font-size:32px; margin-bottom:56px; color:var(--txt-black); font-weight:700; line-height:45px; letter-spacing:-0.8px; text-align:center;
+        @include media ('mobile') {
+            font-size:2rem; margin-bottom:3rem;
+        }
+    }
+
+    .cptForm {
+        display:flex; flex-flow:column; justify-content: flex-start; gap:16px; margin-bottom:40px;
+        @include media ('mobile') {
+            margin-bottom:2rem;
+        }
+        .memberOpt {
+            display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+            > .memberFunc {
+                > ul {
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start;
+                    > li {
+                        position:relative;
+                        > a {display:block; font-size:16px; color:var(--txt-gray02); font-weight:400; line-height:22px; letter-spacing:-0.4px;}
+
+                        &:first-of-type {
+                            padding-right:16px; margin-right:16px;
+                            &::after {content:''; position:absolute; top:50%; right:0; width:1px; height:16px; background:var(--txt-gray02); transform:translateY(-50%);}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cptBtnForm {
+        display:flex; flex-flow: column; align-items: center; justify-content: flex-start; gap:16px;
+    }
+
+    .socialLogin {
+        margin-top: 50px; width:100%; display:flex; flex-flow: row nowrap; align-items: center; justify-content: center; gap:128px;
+        > a {
+            display:block; position:relative;
+            > span.icon {
+                display:block; width:64px; height:64px; margin:0 auto 8px; background:url(../../images/common/ico_kakao.svg)50% 50% no-repeat;
+            }
+
+            &:last-of-type {
+                > span.icon {background:url(../../images/common/ico_naver.svg)50% 50% no-repeat;}
+            }
+
+            > span:last-of-type {
+                font-size:14px; color:var(--txt-gray01);
+            }
+        }
+    }
+}
+
+/*====================================================================================*/
+/*==================================== 나 의 광 고 ====================================*/
+/*====================================================================================*/
+.myAdCover {
+    .locTit {
+        font-size:24px; color:var(--txt-black); font-weight:bold; line-height:34px;
+    }
+
+    .contTitle {
+        width:100%; position:relative; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+
+        > p {
+            font-size:40px; color:var(--txt-black); font-weight:400; line-height:56px; margin-top:40px;
+        }
+
+        > .option {
+            display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:10px;
+
+            > button {
+                border:1px solid var(--txt-gray04); border-radius:8px;  font-size:16px; color:var(--txt-gray01); font-weight:500; text-align:center; line-height:39px; padding: 0 16px;
+            }
+        }
+    }
+}
