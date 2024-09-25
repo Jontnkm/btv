@@ -504,6 +504,85 @@ function datepick() {
     }
 }
 
+
+//================= 템플릿 탭타입 & 아이콘 변경 및 텍스트 색상 변경 ==================//
+function showTab(index) {
+    var tabButton = document.querySelectorAll('.tmpName');
+    var tabContent = document.querySelectorAll('.tmpCont');
+
+    for (var i = 0; i < tabButton.length; i++) {
+        tabButton[i].classList.remove('active');
+        tabContent[i].classList.remove('active');
+    }
+
+    tabButton[index].classList.add('active');
+    tabContent[index].classList.add('active');
+}
+
+
+//================= 상세검색 클릭시 그에 맞는 컴텐츠 보임 ==================//
+window.onload = function(){
+    document.querySelector('.detailTitle').addEventListener('click', function() {
+
+        const detailBox = document.querySelector('.detailBox');
+        const titleImg = document.querySelector('.titleImg');
+
+        detailBox.classList.toggle('show');
+        titleImg.classList.toggle('toggle');
+
+    });
+}
+
+
+//================= 광고 버튼 개별 클릭 ==================//
+document.addEventListener('DOMContentLoaded', () => {
+    const industryLists = document.querySelectorAll('.industryList');
+    const industryLists2 = document.querySelectorAll('.detailBoxArea ul');
+
+    industryLists.forEach(list => {
+        const listItems = list.querySelectorAll('li');
+
+        listItems.forEach(item => {
+            item.addEventListener('click', () => {
+                listItems.forEach(li => li.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    });
+
+    industryLists2.forEach(list => {
+        const listItems2 = list.querySelectorAll('li');
+
+        listItems2.forEach(item => {
+            item.addEventListener('click', () => {
+                listItems2.forEach(li => li.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    });
+});
+
+
+//================= 템플릿 필터검색 버튼 팝업 ==================//
+function openPopup(popId) {
+    let popup = document.querySelector("#" + popId);
+    popup.classList.add("active");
+}
+
+function closePopup(popId) {
+    let popup = document.querySelector("#" + popId);
+    popup.classList.remove("active");
+}
+
+
+
+
+
+
+
+
+
+
 //===================================================================================//
 //============================End of global function=================================//
 //===================================================================================//
