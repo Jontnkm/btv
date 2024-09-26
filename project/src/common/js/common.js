@@ -218,8 +218,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let tabWrap = document.querySelectorAll(".modTab");
 
     tabWrap.forEach(function(tab){
-        let tabContents = tab.querySelectorAll(".tabCont");
-        let tabButtons = tab.querySelectorAll(".tabBtn li button");
+        let tabContents = tab.querySelectorAll(".modTab .tabCont");
+        let tabButtons = tab.querySelectorAll(".modTab .tabBtn li button");
 
         tabContents.forEach(function(tabContent, index) {
             tabContent.style.display = "none";
