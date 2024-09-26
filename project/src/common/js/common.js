@@ -505,33 +505,76 @@ function datepick() {
 }
 
 
-//================= 템플릿 탭타입 & 아이콘 변경 및 텍스트 색상 변경 ==================//
-function showTab(index) {
-    var tabButton = document.querySelectorAll('.tmpName');
-    var tabContent = document.querySelectorAll('.tmpCont');
+//================= 템플릿3 탭 타입 토글(pc) & 아이콘 변경 및 텍스트 색상 변경(pc) & 필터검색 클릭시(mobile) ==================//
+document.addEventListener('DOMContentLoaded', function() {
 
-    for (var i = 0; i < tabButton.length; i++) {
-        tabButton[i].classList.remove('active');
-        tabContent[i].classList.remove('active');
+    var tabButtons = document.querySelectorAll('.tmpName');
+    var tabContents = document.querySelectorAll('.tmpCont'); 
+    var tmpContainer = document.querySelector('.tmpContainer');
+    var filterM = document.querySelector('.filterMArea');
+
+    tmpContainer.style.display = 'none';
+
+    // 필터검색 버튼 클릭할때
+    filterM.addEventListener('click', function() {
+        tmpContainer.style.display = 'block'; 
+
+        tabButtons.forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+
+        if (tabButtons.length > 0) {
+            tabButtons[0].classList.add('active');
+        }
+
+        tabContents.forEach(function(content) {
+            content.style.display = 'none';
+        });
+
+        if (tabContents.length > 0) {
+            tabContents[0].style.display = 'block';
+        }
+    });
+
+    // 템플릿3 탭 타입 클릭시
+    function showTab(index) {
+ 
+        tmpContainer.style.display = 'block';
+        var isActive = tabButtons[index].classList.contains('active');
+    
+        tabButtons.forEach(function(button) {
+            button.classList.remove('active');
+        });
+
+        tabContents.forEach(function(content) {
+            content.classList.remove('active');
+            content.style.display = 'none';
+        });
+
+        if (!isActive) {
+            tabButtons[index].classList.add('active');
+            tabContents[index].classList.add('active');
+            tabContents[index].style.display = 'block'; 
+        } else {
+            tabButtons[index].classList.remove('active');
+            tabContents[index].classList.remove('active');
+            tabContents[index].style.display = 'none'; 
+
+            if (Array.from(tabContents).every(content => content.style.display === 'none')) {
+                tmpContainer.style.display = 'none'; 
+            }
+        }
     }
 
-    tabButton[index].classList.add('active');
-    tabContent[index].classList.add('active');
-}
-
-
-//================= 상세검색 클릭시 그에 맞는 컴텐츠 보임 ==================//
-window.onload = function(){
-    document.querySelector('.detailTitle').addEventListener('click', function() {
-
-        const detailBox = document.querySelector('.detailBox');
-        const titleImg = document.querySelector('.titleImg');
-
-        detailBox.classList.toggle('show');
-        titleImg.classList.toggle('toggle');
-
+    // 각 탭 버튼에 클릭 이벤트 추가
+    tabButtons.forEach(function(button, index) {
+        button.addEventListener('click', function() {
+            showTab(index); 
+        });
     });
-}
+
+});
+
 
 
 //================= 광고 버튼 개별 클릭 ==================//
