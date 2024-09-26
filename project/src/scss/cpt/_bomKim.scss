@@ -21,6 +21,9 @@
             display: none;
             @include media('tablet'){
                 display: block;
+                &.filterExc{
+                    margin-bottom: 110px;
+                }
                 .filterMArea{
                     padding: 8px 12px; border-radius: 24px; border: 1px solid var(--txt-gray02); color: var(--Gray-02, #797979); font-size: 14px; font-weight: 400; letter-spacing: -0.35px; display: flex; justify-content: center; align-items: center; margin-top: 15px;
                     .filterMImg{
@@ -66,7 +69,7 @@
             }
         }
         @include media('tablet'){
-            flex-direction: column; align-items: flex-start; width: 100%; margin-bottom: 110px;
+            flex-direction: column; align-items: flex-start; width: 100%;
         }
     }
     .cptBtnForm{
