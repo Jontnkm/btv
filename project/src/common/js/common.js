@@ -588,9 +588,7 @@ function toggleAccordion(element) {
 }
 
 
-//===============================================================================//
-//=================================공통 탭=======================================//
-//===============================================================================//
+//================================= 탭 메뉴 타입 1 =======================================//
 function showTab(index) {
     var modTabBtn = document.querySelectorAll('.modTab .tabName');
     var modTabCont = document.querySelectorAll('.modTab .tabCont');
@@ -602,6 +600,21 @@ function showTab(index) {
 
     modTabBtn[index].classList.add('active');
     modTabCont[index].classList.add('active');
+}
+
+
+//================================= 탭 메뉴 타입 2 =======================================//
+function showTab2(index) {
+    var modTabBtn2 = document.querySelectorAll('.modTabWide .tabName');
+    var modTabCont2 = document.querySelectorAll('.modTabWide .tabCont');
+
+    for (var i = 0; i < modTabBtn2.length; i++) {
+        modTabBtn2[i].classList.remove('active');
+        modTabCont2[i].classList.remove('active');
+    }
+
+    modTabBtn2[index].classList.add('active');
+    modTabCont2[index].classList.add('active');
 }
 
 

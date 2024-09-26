@@ -12,6 +12,20 @@
         }
     }
 
+    /*2024.09.26 검색 case 추가*/
+    &.searchBar {
+        > .frmIpt {
+            input[type="text"] {
+                width:100%; padding:18px 30px; font-size:24px; color:var(--txt-black); font-weight:400; line-height:34px; letter-spacing:-0.4px; border:1px solid var(--txt-gray04); border-radius:8px; background:var(--clr-white); transition:all 0.4s;
+            }
+            button {
+                &.srchBtn {
+                    position:absolute; top:50%; right:30px; transform:translateY(-50%); width:40px; height:40px; background:url(../../images/common/ico_srch_big.svg)50% 50% no-repeat;
+                }
+            }
+        }
+    }
+
     /*입력 폼*/
     .frmIpt {
         width:100%; position:relative;
