@@ -67,14 +67,19 @@
 
     .uploadRule {
         width:100%; position:relative; margin-top:56px; padding: 40px; background:var(--txt-gray05); border-radius:24px; margin-bottom:40px;
-
+        @include media ('tablet'){
+            padding:20px;
+        }
         > .ruleTitle {
             position:relative; padding-left:56px; font-size:18px; color:var(--prm-color); font-weight:500; line-height:36px; margin-bottom:26px;
             &::after {
                 content:''; position:absolute; width:40px; height:40px; background: url(../../images/common/ico_alert.svg)50% 50% no-repeat; top:50%; left:0; transform:translateY(-50%);
             }
             @include media ('tablet'){
-                width: max-content; margin:0 auto 26px;
+                width: max-content; margin:0 auto 20px; padding-left:46px;
+                &::after {
+                    width:30px; height:30px; background-size:contain;
+                }
             }
         }
 
@@ -126,7 +131,7 @@
         > .progressArea {
             position:relative; width:100%; max-width:900px; margin:80px auto 0; background:var(--txt-gray04); height:4px; border-radius:24px;
             @include media ('tablet'){
-                max-width:50%;
+                max-width:80%;
             }
 
             > .bar {
@@ -155,6 +160,54 @@
                     left:0;
                 }to{
                     left:900px
+                }
+            }
+        }
+    }
+}
+
+/*템플릿 만들기 팝업*/
+.modPopup {
+    .templateInfo {
+        margin-top:30px;
+
+        > ul {
+            display:flex; flex-flow:row nowrap; align-items: center; justify-content: center;
+            @include media ('mobile') {
+                flex-flow:column;
+            }
+            > li {
+                padding:0 9px 0 33px; position:relative; font-size:16px; color:var(--txt-gray02); font-weight:400; 
+
+                &::before {
+                    content:''; position:absolute; top:50%; left:9px; transform:translateY(-50%); width:20px; height:20px;
+                }
+                &::after {
+                    content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:3px; height:3px; border-radius:50%; background:var(--txt-gray03);
+                }
+                &:first-of-type {
+                    &::before {
+                        background:url(../../images/common/ico_clock.svg)50% 50% no-repeat;
+                    }
+                }
+                &:nth-of-type(2) {
+                    &::before {
+                        background:url(../../images/common/ico_portrait.svg)50% 50% no-repeat;
+                    }
+                }
+                &:last-of-type {
+                    &::before {
+                        background:url(../../images/common/ico_video.svg)50% 50% no-repeat;
+                    }
+                    &::after {
+                        display:none;
+                    }
+                }
+
+                @include media ('mobile') {
+                    &::after {
+                        display:none;
+                    }
                 }
             }
         }

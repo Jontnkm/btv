@@ -45,16 +45,19 @@
 /*--------------------------------- 레이어팝업 --------------------------------*/
 .modPopup {
     width: 100%; height: 100vh; position: fixed; top: 0;left: 0;right: 0;bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 999; display: none;
-    
+
     // 팝업동작 기본설정
     .popupDim {width: 100%; height: 100vh; font-size: 0; background: rgba(0,0,0,0.4); position: absolute; top: 0;left: 0;right: 0; bottom: 0; opacity: 0;}
     .popupBox {
         width: 100%; margin: 0 auto; position: relative; display: flex; flex-flow: column; z-index: 1;
+        @include media ('tablet'){
+            width:90.75%;
+        }
         & > * {opacity: 0;}
         &::before {display: block; content: ""; width: 0; height: 0;background: #fff; position: absolute; top: 50%; left: 50%; z-index: -1;}
     }
     .popContArea {
-        height: auto; overflow-y: auto;
+        height: auto; overflow-y: auto; overflow-x:hidden;
         &::-webkit-scrollbar{
             width:4px; background:rgba(0,0,0,0.1);
         }
@@ -84,7 +87,7 @@
     // 타이틀 있는 팝업
     &.type01 {
         .popupBox {
-            max-height: 85%; border-radius: 24px; padding:24px 24px 30px 24px;
+            max-height: 95%; border-radius: 24px; padding:24px 24px 30px 24px;
             &::before {border-radius: 24px;} 
                     
             .popTitArea {
