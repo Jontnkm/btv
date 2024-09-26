@@ -64,27 +64,6 @@
 /*==================================== 나 의 광 고 ====================================*/
 /*====================================================================================*/
 .myAdCover {
-    .locTit {
-        font-size:24px; color:var(--txt-black); font-weight:bold; line-height:34px;
-    }
-
-    .contTitle {
-        width:100%; position:relative; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
-        width:100%; position:relative; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;  margin-top:40px;
-
-        > p {
-            font-size:40px; color:var(--txt-black); font-weight:400; line-height:56px; margin-top:40px;
-            font-size:40px; color:var(--txt-black); font-weight:400; line-height:56px;
-        }
-
-        > .option {
-            display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:10px;
-
-            > button {
-                border:1px solid var(--txt-gray04); border-radius:8px;  font-size:16px; color:var(--txt-gray01); font-weight:500; text-align:center; line-height:39px; padding: 0 16px;
-            }
-        }
-    }
 
     .uploadRule {
         width:100%; position:relative; margin-top:56px; padding: 40px; background:var(--txt-gray05); border-radius:24px; margin-bottom:40px;
@@ -94,14 +73,22 @@
             &::after {
                 content:''; position:absolute; width:40px; height:40px; background: url(../../images/common/ico_alert.svg)50% 50% no-repeat; top:50%; left:0; transform:translateY(-50%);
             }
+            @include media ('tablet'){
+                width: max-content; margin:0 auto 26px;
+            }
         }
 
         > .ruleList {
             width:100%; border-top:1px solid var(--txt-gray04); padding-top:25px; display:flex; flex-flow:row wrap; align-items: center; justify-content: flex-start;
-
+            @include media ('tablet'){
+                flex-flow:column;
+            }
             > li {
                 width:50%; position:relative; display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; margin-bottom:26px;
                 &:last-of-type {margin-bottom:0;}
+                @include media ('tablet'){
+                    width:100%;
+                }
 
                 > span.ico {
                     display:block; width:24px; height:24px; margin-right:4px; background:url(../../images/common/ico_bullet_off.svg)50% 50% no-repeat;
@@ -113,6 +100,9 @@
                 }
                 > span.desc {
                     display:block; font-size:16px; color:var(--txt-gray02); font-weight:400; line-height:24px;
+                    @include media ('tablet'){
+                        word-break:keep-all;
+                    }
                 }
             }
         }
@@ -135,15 +125,20 @@
 
         > .progressArea {
             position:relative; width:100%; max-width:900px; margin:80px auto 0; background:var(--txt-gray04); height:4px; border-radius:24px;
+            @include media ('tablet'){
+                max-width:50%;
+            }
 
             > .bar {
                 position:absolute; top:0; left:0; height:4px; border-radius:24px; background:var(--prm-color); animation:progress 3s linear; animation-fill-mode:forwards;
+            }
 
-                > .balloon {
-                    position:absolute; width:max-content; top:- 40px; margin-left:-44px; padding:0 12px; border:1px solid var(--prm-color); animation:balloon 3s linear; animation-fill-mode:forwards; font-size:14px; color:var(--prm-color); border-radius:5px; line-height:27px; font-weight:500;
-
-                    &::before {content:''; position:absolute; top:27px; left:34px; border-top:7px solid var(--clr-white); border-left:6px solid transparent; border-right:7px solid transparent; border-bottom:0px solid transparent; z-index:3;}
-                    &::after {content:''; position:absolute; top:27px; left:32px; border-top:8px solid var(--prm-color); border-left:8px solid transparent; border-right:8px solid transparent; border-bottom:0px solid transparent; z-index:2;}
+            > .balloon {
+                position:absolute; width:max-content; top:- 40px; left:0; margin-left:-44px; padding:0 12px; border:1px solid var(--prm-color); animation:balloon 3s linear; animation-fill-mode:forwards; font-size:14px; color:var(--prm-color); border-radius:5px; line-height:27px; font-weight:500;
+                &::before {content:''; position:absolute; top:27px; left:34px; border-top:7px solid var(--clr-white); border-left:6px solid transparent; border-right:7px solid transparent; border-bottom:0px solid transparent; z-index:3;}
+                &::after {content:''; position:absolute; top:27px; left:32px; border-top:8px solid var(--prm-color); border-left:8px solid transparent; border-right:8px solid transparent; border-bottom:0px solid transparent; z-index:2;}
+                @include media ('tablet'){
+                    left:50%; margin-left:0; transform:translateX(-50%); animation:none;
                 }
             }
 
