@@ -1,379 +1,373 @@
 /* createComplete scss */
-.InnerArea{
-    max-width: 1320px; margin: 0 auto;
-
-    .comSubTitle{
-        h5{
-            font-size: 24px; font-weight: 700; letter-spacing: -0.6px; color: var(--txt-black);
-            @include media('tablet'){
-                padding-bottom: 40px;
-            }
+.comSubTitle{
+    h5{
+        font-size: 24px; font-weight: 700; letter-spacing: -0.6px; color: var(--txt-black);
+        @include media('tablet'){
+            padding-bottom: 40px;
         }
     }
-
-    .cptSubTop{
-        margin: 55px 0; display: flex; justify-content: space-between; align-items: center; position: relative;
-        .subTopTxt{
-            display: flex; align-items: center;
-            h3{
-                color: var(--txt-black); font-size: 40px; font-weight: 400; letter-spacing: -1px; margin-right: 30px;
-                @include media('tablet'){
-                    font-size: 34px; margin-right: 0;
-                }
-            }
-            .filterM{
-                display: none;
-                @include media('tablet'){
-                    display: block;
-                    .filterMArea{
-                        padding: 8px 12px; border-radius: 24px; border: 1px solid var(--txt-gray02); color: var(--Gray-02, #797979); font-size: 14px; font-weight: 400; letter-spacing: -0.35px; display: flex; justify-content: center; align-items: center; margin-top: 15px;
-                        .filterMImg{
-                            display: inline-block; background: url(../../images/common/ico_filter.svg) no-repeat 0 0; width: 24px; height: 24px; margin-right: 8px;
-                        }
-                    }
-                }
-            }
-            .iptGroup{
-                position: absolute; right: 0px; top: 105px;
-                .iptGroupArea{
-                    width: 300px; border-radius: 8px; border: 1px solid var(--txt-gray04); background: var(--clr-white); position: relative;
-                    .srchTitle{
-                        height: 44px; font-size: 16px; color: var(--txt-black); padding: 12px; width: 90%; border: none; border-radius: 8px;
-                        &::placeholder{
-                            color: var(--txt-gray03);
-                        }
-                        &:focus{
-                            outline: none;
-                        }
-                        @include media('mobile'){
-                            height: 80%;
-                        }
-                    }
-                    .srchBtn{
-                        display: inline-block; background: url(../../images/common/ico_srch.svg) no-repeat 0 0; width: 24px; height: 24px; position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
-                    }
-                    @include media('tablet'){
-                        width: 100%;
-                    }
-                }
-                @include media('tablet'){
-                    display: block; left: 0; top: 200px;
-                }
-            }
-            .filter{
-                color: var(--txt-gray02); font-size: 18px; font-weight: 400; letter-spacing: -0.45px; position: relative;
-                &::before{
-                    content: ''; display: block; width: 1px; height: 36px; background: var(--txt-gray04); position: absolute; left: -15px; top: -5px;
-                }
-                @include media('tablet'){
-                    display: none;
-                }
-            }
+}
+.cptSubTop{
+    margin: 55px 0; display: flex; justify-content: space-between; align-items: center; position: relative;
+    .subTopTxt{
+        display: flex; align-items: center;
+        h3{
+            color: var(--txt-black); font-size: 40px; font-weight: 400; letter-spacing: -1px; margin-right: 30px;
             @include media('tablet'){
-                flex-direction: column; align-items: flex-start; width: 100%; margin-bottom: 110px;
+                font-size: 34px; margin-right: 0;
             }
         }
-        .cptBtnForm{
-            .btn{
-                height: 40px; padding: 8px 15px; font-size: 16px; font-weight: 500; letter-spacing: -0.4px; color: var(--txt-gray01); border: 1px solid var(--txt-gray04); width: auto;
-                span{
-                    display: inline-block; background: url(../../images/common/ico_tv.svg) center no-repeat; width: 24px; height: 22px; margin-right: 8px; vertical-align: top;
-                    @include media('tablet'){
-                        height: 20px;
+        .filterM{
+            display: none;
+            @include media('tablet'){
+                display: block;
+                .filterMArea{
+                    padding: 8px 12px; border-radius: 24px; border: 1px solid var(--txt-gray02); color: var(--Gray-02, #797979); font-size: 14px; font-weight: 400; letter-spacing: -0.35px; display: flex; justify-content: center; align-items: center; margin-top: 15px;
+                    .filterMImg{
+                        display: inline-block; background: url(../../images/common/ico_filter.svg) no-repeat 0 0; width: 24px; height: 24px; margin-right: 8px;
                     }
                 }
-                @include media('tablet'){
-                    font-size: 14px; width: 50%;
+            }
+        }
+        .iptGroup{
+            position: absolute; right: 0px; top: 105px;
+            .iptGroupArea{
+                width: 300px; border-radius: 8px; border: 1px solid var(--txt-gray04); background: var(--clr-white); position: relative;
+                .srchTitle{
+                    height: 44px; font-size: 16px; color: var(--txt-black); padding: 12px; width: 90%; border: none; border-radius: 8px;
+                    &::placeholder{
+                        color: var(--txt-gray03);
+                    }
+                    &:focus{
+                        outline: none;
+                    }
+                    @include media('mobile'){
+                        height: 80%;
+                    }
                 }
-                @include media('mobile'){
-                    font-size: 13px; padding: 8px;
+                .srchBtn{
+                    display: inline-block; background: url(../../images/common/ico_srch.svg) no-repeat 0 0; width: 24px; height: 24px; position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+                }
+                @include media('tablet'){
+                    width: 100%;
                 }
             }
             @include media('tablet'){
-                margin-bottom: 25px; display: flex; width: 100%; flex-direction: row;
+                display: block; left: 0; top: 200px;
+            }
+        }
+        .filter{
+            color: var(--txt-gray02); font-size: 18px; font-weight: 400; letter-spacing: -0.45px; position: relative;
+            &::before{
+                content: ''; display: block; width: 1px; height: 36px; background: var(--txt-gray04); position: absolute; left: -15px; top: -5px;
+            }
+            @include media('tablet'){
+                display: none;
             }
         }
         @include media('tablet'){
-            margin: 0; flex-direction: column-reverse; align-items: flex-start;
+            flex-direction: column; align-items: flex-start; width: 100%; margin-bottom: 110px;
         }
     }
-
-    .modTemplateTab{
-        margin-bottom: 55px; display: block;
-        .modPopupVer2{
-            display: block;
-            .cptTmp{
-                .tmpMenu{
-                    display: flex; justify-content: space-between; align-items: center;
-                    .tmpMenuArea{
-                        display: flex; align-items: center; position: relative;
-                        .tmpItem{
-                            margin-right: 30px;
-                            .tmpName{
-                                font-size: 18px; font-weight: 500; letter-spacing: -0.45px; line-height: 26px; color: var(--txt-gray02);
-                                .tmpIcon{
-                                    display: inline-block; background: url(../../images/common/ico_tmpArrDown.svg) no-repeat 0 0; background-size: 100%; width: 24px; height: 24px; vertical-align: middle; transition: all 0.2s ease; margin-left: 8px;
-                                    @include media('tablet'){
-                                        display: none;
-                                    }
+    .cptBtnForm{
+        .btn{
+            height: 40px; padding: 8px 15px; font-size: 16px; font-weight: 500; letter-spacing: -0.4px; color: var(--txt-gray01); border: 1px solid var(--txt-gray04); width: auto;
+            span{
+                display: inline-block; background: url(../../images/common/ico_tv.svg) center no-repeat; width: 24px; height: 22px; margin-right: 8px; vertical-align: top;
+                @include media('tablet'){
+                    height: 20px;
+                }
+            }
+            @include media('tablet'){
+                font-size: 14px; width: 50%;
+            }
+            @include media('mobile'){
+                font-size: 13px; padding: 8px;
+            }
+        }
+        @include media('tablet'){
+            margin-bottom: 25px; display: flex; width: 100%; flex-direction: row;
+        }
+    }
+    @include media('tablet'){
+        margin: 0; flex-direction: column-reverse; align-items: flex-start;
+    }
+}
+.modTemplateTab{
+    margin-bottom: 55px; display: block;
+    .modPopupVer2{
+        display: block;
+        .cptTmp{
+            .tmpMenu{
+                display: flex; justify-content: space-between; align-items: center;
+                .tmpMenuArea{
+                    display: flex; align-items: center; position: relative;
+                    .tmpItem{
+                        margin-right: 30px;
+                        .tmpName{
+                            font-size: 18px; font-weight: 500; letter-spacing: -0.45px; line-height: 26px; color: var(--txt-gray02);
+                            .tmpIcon{
+                                display: inline-block; background: url(../../images/common/ico_tmpArrDown.svg) no-repeat 0 0; background-size: 100%; width: 24px; height: 24px; vertical-align: middle; transition: all 0.2s ease; margin-left: 8px;
+                                @include media('tablet'){
+                                    display: none;
                                 }
-                                &.active{ 
-                                    color: var(--prm-color);
-                                    .tmpIcon{
-                                        background: url(../../images/common/ico_tmpArrUp.svg) no-repeat 0 0;
-                                    }
-                                    @include media('tablet'){
-                                        height: 60px; border-bottom: 2px solid var(--prm-color);
-                                    }
+                            }
+                            &.active{ 
+                                color: var(--prm-color);
+                                .tmpIcon{
+                                    background: url(../../images/common/ico_tmpArrUp.svg) no-repeat 0 0;
                                 }
                                 @include media('tablet'){
-                                    font-size: 16px; width: 100%;
+                                    height: 60px; border-bottom: 2px solid var(--prm-color);
                                 }
                             }
                             @include media('tablet'){
-                                width: 33.3333%; margin-right: 0;
+                                font-size: 16px; width: 100%;
                             }
                         }
                         @include media('tablet'){
-                            justify-content: center; height: 60px; width: 100%; border-bottom: 1px solid var(--txt-gray04); text-align: center;
+                            width: 33.3333%; margin-right: 0;
                         }
                     }
+                    @include media('tablet'){
+                        justify-content: center; height: 60px; width: 100%; border-bottom: 1px solid var(--txt-gray04); text-align: center;
+                    }
                 }
-                .tmpContainer{
-                    display: none; 
-                    border-radius: 8px; border: 1px solid var(--txt-gray04); background: var(--clr-white); box-shadow: 2px 16px 36px 0px rgba(0, 0, 0, 0.06); margin-top: 25px; padding: 40px;
+            }
+            .tmpContainer{
+                display: none; 
+                border-radius: 8px; border: 1px solid var(--txt-gray04); background: var(--clr-white); box-shadow: 2px 16px 36px 0px rgba(0, 0, 0, 0.06); margin-top: 25px; padding: 40px;
+                &.active{
+                    display: block;
+                }
+                .tmpCont{
+                    display: none;
                     &.active{
                         display: block;
                     }
-                    .tmpCont{
-                        display: none;
-                        &.active{
-                            display: block;
-                        }
-                        .tmpContArea{
-                            .contBox{
-                                margin-bottom: 40px;
-                                .title{
-                                    color: var(--txt-gray01); font-size: 16px; font-weight: 400; letter-spacing: -0.4px;
-                                    span{
-                                        display: inline-block; margin-left: 10px; background: url(../../images/common/ico_tmpArrDown.svg) no-repeat 0 0; background-size: 100%; width: 20px; height: 20px; vertical-align: middle;
-                                    }
-                                    &.detailTitle{
-                                        cursor: pointer;     margin-bottom: 15px;
-                                        .titleImg{
-                                            display: inline-block; background: url(../../images/common/ico_tmpArrDown.svg) no-repeat 0 0; background-size: 100%; width: 20px; height: 20px; vertical-align: middle; transition: all 0.2s ease;
-                                            &.toggle{
-                                                background: url(../../images/common/ico_tmpArrUp.svg) no-repeat 0 0; background-size: 100%; width: 20px; height: 20px; vertical-align: middle;
-                                            }
-                                        }
-                                    }
-                                    @include media('tablet'){
-                                        margin-top: 40px; font-size: 14px;
-                                    }
+                    .tmpContArea{
+                        .contBox{
+                            margin-bottom: 40px;
+                            .title{
+                                color: var(--txt-gray01); font-size: 16px; font-weight: 400; letter-spacing: -0.4px;
+                                span{
+                                    display: inline-block; margin-left: 10px; background: url(../../images/common/ico_tmpArrDown.svg) no-repeat 0 0; background-size: 100%; width: 20px; height: 20px; vertical-align: middle;
                                 }
-                                .industryTitle{
-                                    display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;
-                                    .cptForm{
-                                        display: flex;
-                                        .frmChk{
-                                            margin-right: 25px; padding-left: 27px;
-                                            .labelTxt{
-                                                @include media('tablet'){
-                                                    font-size: 14px;
-                                                }
-                                            }
-                                            input[type=checkbox] + .checkmark{
-                                                width: 20px; height: 20px; 
-                                                &::after{
-                                                    top: 2px; left: 5px;
-                                                }
-                                            }
-                                            @include media('tablet'){
-                                                margin-right: 40px;
-                                            }
+                                &.detailTitle{
+                                    cursor: pointer;     margin-bottom: 15px;
+                                    .titleImg{
+                                        display: inline-block; background: url(../../images/common/ico_tmpArrDown.svg) no-repeat 0 0; background-size: 100%; width: 20px; height: 20px; vertical-align: middle; transition: all 0.2s ease;
+                                        &.toggle{
+                                            background: url(../../images/common/ico_tmpArrUp.svg) no-repeat 0 0; background-size: 100%; width: 20px; height: 20px; vertical-align: middle;
                                         }
-                                    }
-                                    @include media('tablet'){
-                                        flex-direction: column-reverse; align-items: flex-start; margin-bottom: 15px;
-                                    }
-                                }
-                                .industryList{
-                                    display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 10px;
-                                    li{
-                                        display: flex; padding: 12px 16px; justify-content: center; align-items: center; border-radius: 30px; background: var(--txt-gray05); color: var(--txt-gray02); font-size: 16px;font-weight: 400; letter-spacing: -0.4px; cursor: pointer;
-                                        &.active{
-                                            background: var(--txt-black); color: var(--clr-white);
-                                        }
-                                        @include media('tablet'){
-                                            padding: 8px 10px; font-size: 14px;
-                                        }
-                                    }
-                                }
-                                .detailBox{
-                                    border-radius: 8px; background: var(--sub-color06); display: flex; justify-content: space-between; align-items: flex-start; visibility: hidden; height: 0; overflow: hidden; 
-                                    .detailBoxArea{
-                                        display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; width: 100%; padding: 30px;
-                                        ul{
-                                            display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 10px; width: calc(49.9999% - 40px); 
-                                            .detailTop{
-                                                color: var(--txt-gray01); font-size: 16px; font-weight: 400; letter-spacing: -0.4px;
-                                            }
-                                            .first{
-                                                width: 100%; color: var(--txt-gray01); font-size: 16px; font-weight: 400; letter-spacing: -0.4px; background: transparent; padding: 0; margin-bottom: 30px; cursor: default;
-                                                @include media('tablet'){
-                                                    font-size: 14px; margin-bottom: 15px;
-                                                }
-                                            }
-                                            li{
-                                                padding: 12px 16px; border-radius: 30px; background: var(--txt-gray05); color: var(--txt-gray02); font-size: 16px; font-weight: 400; letter-spacing: -0.4px; cursor: pointer;
-                                                &.active{
-                                                    background: var(--txt-black); color: var(--clr-white);
-                                                }
-                                                @include media('tablet'){
-                                                    font-size: 14px; padding: 8px 10px;
-                                                }
-                                            }
-                                            @include media('tablet'){
-                                                width: 100%;
-                                            }
-                                            &:first-child{
-                                                margin-bottom: 30px;
-                                            }
-                                        }
-                                        @include media('tablet'){
-                                            flex-direction: column; padding: 25px; 
-                                        }
-                                    }
-                                    &.show{
-                                        visibility: visible; height: auto;  
                                     }
                                 }
                                 @include media('tablet'){
-                                    margin-bottom: 0px;
+                                    margin-top: 40px; font-size: 14px;
                                 }
                             }
-                        }
-                    } 
-                    .cptBtnForm{
-                        &.d-flex{
-                            justify-content: center;
-                        }
-                        .btn{
-                            max-width: 320px; letter-spacing: -0.4px;
-                            @include media('tablet'){
-                                width: 100%; font-size: 15px;
+                            .industryTitle{
+                                display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;
+                                .cptForm{
+                                    display: flex;
+                                    .frmChk{
+                                        margin-right: 25px; padding-left: 27px;
+                                        .labelTxt{
+                                            @include media('tablet'){
+                                                font-size: 14px;
+                                            }
+                                        }
+                                        input[type=checkbox] + .checkmark{
+                                            width: 20px; height: 20px; 
+                                            &::after{
+                                                top: 2px; left: 5px;
+                                            }
+                                        }
+                                        @include media('tablet'){
+                                            margin-right: 40px;
+                                        }
+                                    }
+                                }
+                                @include media('tablet'){
+                                    flex-direction: column-reverse; align-items: flex-start; margin-bottom: 15px;
+                                }
+                            }
+                            .industryList{
+                                display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 10px;
+                                li{
+                                    display: flex; padding: 12px 16px; justify-content: center; align-items: center; border-radius: 30px; background: var(--txt-gray05); color: var(--txt-gray02); font-size: 16px;font-weight: 400; letter-spacing: -0.4px; cursor: pointer;
+                                    &.active{
+                                        background: var(--txt-black); color: var(--clr-white);
+                                    }
+                                    @include media('tablet'){
+                                        padding: 8px 10px; font-size: 14px;
+                                    }
+                                }
+                            }
+                            .detailBox{
+                                border-radius: 8px; background: var(--sub-color06); display: flex; justify-content: space-between; align-items: flex-start; visibility: hidden; height: 0; overflow: hidden; 
+                                .detailBoxArea{
+                                    display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; width: 100%; padding: 30px;
+                                    ul{
+                                        display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 10px; width: calc(49.9999% - 40px); 
+                                        .detailTop{
+                                            color: var(--txt-gray01); font-size: 16px; font-weight: 400; letter-spacing: -0.4px;
+                                        }
+                                        .first{
+                                            width: 100%; color: var(--txt-gray01); font-size: 16px; font-weight: 400; letter-spacing: -0.4px; background: transparent; padding: 0; margin-bottom: 30px; cursor: default;
+                                            @include media('tablet'){
+                                                font-size: 14px; margin-bottom: 15px;
+                                            }
+                                        }
+                                        li{
+                                            padding: 12px 16px; border-radius: 30px; background: var(--txt-gray05); color: var(--txt-gray02); font-size: 16px; font-weight: 400; letter-spacing: -0.4px; cursor: pointer;
+                                            &.active{
+                                                background: var(--txt-black); color: var(--clr-white);
+                                            }
+                                            @include media('tablet'){
+                                                font-size: 14px; padding: 8px 10px;
+                                            }
+                                        }
+                                        @include media('tablet'){
+                                            width: 100%;
+                                        }
+                                        &:first-child{
+                                            margin-bottom: 30px;
+                                        }
+                                    }
+                                    @include media('tablet'){
+                                        flex-direction: column; padding: 25px; 
+                                    }
+                                }
+                                &.show{
+                                    visibility: visible; height: auto;  
+                                }
                             }
                             @include media('tablet'){
-                                font-size: 14px;
+                                margin-bottom: 0px;
                             }
+                        }
+                    }
+                } 
+                .cptBtnForm{
+                    &.d-flex{
+                        justify-content: center;
+                    }
+                    .btn{
+                        max-width: 320px; letter-spacing: -0.4px;
+                        @include media('tablet'){
+                            width: 100%; font-size: 15px;
                         }
                         @include media('tablet'){
-                            margin-top: 40px;
+                            font-size: 14px;
                         }
                     }
                     @include media('tablet'){
-                        border: none; margin-top: 0; padding: 40px 15px; width: 100%; box-shadow: none;
+                        margin-top: 40px;
                     }
                 }
-                .popupBox{
-                    .popTitArea{
-                        display: none;
-                        @include media('tablet'){
-                            display: flex; justify-content: space-between; align-items: center; height: 55px; padding: 15px; border-bottom: 1px solid #f2f2f2;
-                            .tit{
-                                color: var(--txt-black); font-weight: 500; font-size: 20px; letter-spacing: -0.5px;
-                            }
-                            .closeBtn{
-    
-                            }
-                        }
-                    }
+                @include media('tablet'){
+                    border: none; margin-top: 0; padding: 40px 15px; width: 100%; box-shadow: none;
+                }
+            }
+            .popupBox{
+                .popTitArea{
+                    display: none;
                     @include media('tablet'){
-                        width: 100%; height: 100%; background: var(--clr-white);
+                        display: flex; justify-content: space-between; align-items: center; height: 55px; padding: 15px; border-bottom: 1px solid #f2f2f2;
+                        .tit{
+                            color: var(--txt-black); font-weight: 500; font-size: 20px; letter-spacing: -0.5px;
+                        }
+                        .closeBtn{
+
+                        }
                     }
                 }
                 @include media('tablet'){
                     width: 100%; height: 100%; background: var(--clr-white);
                 }
-
-            }
-            &.active{
-                // display: flex;
-                display: block; background: var(--clr-white);
             }
             @include media('tablet'){
-                display: none; position: fixed; top: 0px; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; z-index: 1000; overflow-y: auto;
+                width: 100%; height: 100%; background: var(--clr-white);
             }
+
+        }
+        &.active{
+            // display: flex;
+            display: block; background: var(--clr-white);
         }
         @include media('tablet'){
-            margin-bottom: 0;
+            display: none; position: fixed; top: 0px; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; z-index: 1000; overflow-y: auto;
         }
     }
-
-    .cptTmpList{
-        margin-bottom: 120px;
-        .cardArea{
-            .cardCont{
-                row-gap: 70px;
-                .item{
-                    a{
-                        .thumbnail2{
-                            height: 236px; width: 100%; border-radius: 24px;
-                            img{
-                                border-radius: 24px; border: 1px solid var(--txt-gray04); width: 100%; height: 100%;
-                            }
-                            @include media('mobile'){
-                                height: auto;
+    @include media('tablet'){
+        margin-bottom: 0;
+    }
+}
+.cptTmpList{
+    margin-bottom: 120px;
+    .cardArea{
+        .cardCont{
+            row-gap: 70px;
+            .item{
+                a{
+                    .thumbnail2{
+                        height: 236px; width: 100%; border-radius: 24px;
+                        img{
+                            border-radius: 24px; border: 1px solid var(--txt-gray04); width: 100%; height: 100%;
+                        }
+                        @include media('mobile'){
+                            height: auto;
+                        }
+                    }
+                    .thumbCont{
+                        background: transparent; padding: 0;
+                        .title2{
+                            color: var(--txt-black); font-size: 18px; font-weight: 400; letter-spacing: -0.45px; margin-top: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; 
+                            @include media('tablet'){
+                                font-size: 16px;
                             }
                         }
-                        .thumbCont{
-                            background: transparent; padding: 0;
-                            .title2{
-                                color: var(--txt-black); font-size: 18px; font-weight: 400; letter-spacing: -0.45px; margin-top: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; 
-                                @include media('tablet'){
-                                    font-size: 16px;
+                        .txtBox{
+                            ul{
+                                display: flex; flex-direction: row; align-items: center; margin-top: 10px;
+                                li{
+                                    color: var(--txt-gray02);font-size: 16px; font-weight: 400; letter-spacing: -0.4px;
+                                    &.txt{
+                                        position: relative;
+                                        &::after{
+                                            content: ''; display: inline-block; width: 3px; height: 3px; border-radius: 50%; background: var(--txt-gray03); margin: 4px 12px;
+                                        }
+                                    }
+                                    &.sec{
+                                        position: relative;
+                                        &::before{
+                                            content: ''; display: inline-block; background: url(../../images/common/ico_time.svg) no-repeat 0 0; width: 20px; height: 20px; transform: translateY(4px); margin-right: 3px;
+                                        }
+                                    }
                                 }
-                            }
-                            .txtBox{
-                                ul{
-                                    display: flex; flex-direction: row; align-items: center; margin-top: 10px;
-                                    li{
-                                        color: var(--txt-gray02);font-size: 16px; font-weight: 400; letter-spacing: -0.4px;
-                                        &.txt{
-                                            position: relative;
-                                            &::after{
-                                                content: ''; display: inline-block; width: 3px; height: 3px; border-radius: 50%; background: var(--txt-gray03); margin: 4px 12px;
-                                            }
-                                        }
-                                        &.sec{
-                                            position: relative;
-                                            &::before{
-                                                content: ''; display: inline-block; background: url(../../images/common/ico_time.svg) no-repeat 0 0; width: 20px; height: 20px; transform: translateY(4px); margin-right: 3px;
-                                            }
-                                        }
-                                    }
-                                    @include media('tablet'){
-                                        margin-top: 8px;
-                                    }
+                                @include media('tablet'){
+                                    margin-top: 8px;
                                 }
                             }
                         }
                     }
                 }
-                @include media('tablet'){
-                    row-gap: 25px;
-                }
+            }
+            @include media('tablet'){
+                row-gap: 25px;
             }
         }
-        @include media('tablet'){
-            margin-bottom: 0px;
-        }
     }
-
     @include media('tablet'){
-        padding: 0 15px;
+        margin-bottom: 0px;
     }
-    
 }
+
+/* question scss */
+
+
+
+    
 
 
