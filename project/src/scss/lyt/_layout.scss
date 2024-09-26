@@ -12,6 +12,10 @@
         .layoutContainer {
             width:100%; max-width:1320px; margin:90px auto 0;
 
+            @include media('tablet'){
+                padding: 0 15px;
+            }
+
             .layoutMainCont{
                 width:100%;
             }
