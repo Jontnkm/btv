@@ -457,35 +457,37 @@ function datepick() {
 //================= 템플릿3 탭 타입 토글(pc) & 아이콘 변경 및 텍스트 색상 변경(pc) & 필터검색 클릭시(mobile) ==================//
 document.addEventListener('DOMContentLoaded', function() {
 
-    var tabButtons = document.querySelectorAll('.tmpName');
-    var tabContents = document.querySelectorAll('.tmpCont'); 
-    var tmpContainer = document.querySelector('.tmpContainer');
-    var filterM = document.querySelector('.filterMArea');
+    const tabButtons = document.querySelectorAll('.tmpName');
+    const tabContents = document.querySelectorAll('.tmpCont'); 
+    const tmpContainer = document.querySelector('.tmpContainer');
+    const filterMArea = document.querySelector('.filterMArea');
 
     // 필터검색 버튼 클릭할때
-    filterM.addEventListener('click', function() {
-        tmpContainer.style.display = 'block'; 
+    if (filterMArea) {
+        filterMArea.addEventListener('click', function() {
+            tmpContainer.style.display = 'block'; 
 
-        tabButtons.forEach(function(btn) {
-            btn.classList.remove('active');
+            tabButtons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            if (tabButtons.length > 0) {
+                tabButtons[0].classList.add('active');
+            }
+
+            tabContents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            if (tabContents.length > 0) {
+                tabContents[0].style.display = 'block';
+            }
         });
-
-        if (tabButtons.length > 0) {
-            tabButtons[0].classList.add('active');
-        }
-
-        tabContents.forEach(function(content) {
-            content.style.display = 'none';
-        });
-
-        if (tabContents.length > 0) {
-            tabContents[0].style.display = 'block';
-        }
-    });
+    }
 
     // 템플릿3 탭 타입 클릭시
     function showTabTmp(index) {
- 
+
         tmpContainer.style.display = 'block';
         var isActive = tabButtons[index].classList.contains('active');
     
