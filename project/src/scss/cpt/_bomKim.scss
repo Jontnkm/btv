@@ -1,4 +1,4 @@
-/* createComplete scss */
+/* createAd - createTemplate */
 .comSubTitle{
     h5{
         font-size: 24px; font-weight: 700; letter-spacing: -0.6px; color: var(--txt-black);
@@ -8,7 +8,7 @@
     }
 }
 .cptSubTop{
-    margin: 55px 0; display: flex; justify-content: space-between; align-items: center; position: relative;
+    margin: 55px 0; display: flex; justify-content: space-between; align-items: flex-start; position: relative;
     .subTopTxt{
         display: flex; align-items: center;
         h3{
@@ -85,7 +85,7 @@
                 font-size: 14px; width: 50%;
             }
             @include media('mobile'){
-                font-size: 13px; padding: 8px;
+                padding: 8px;
             }
         }
         @include media('tablet'){
@@ -327,7 +327,7 @@
                         background: transparent; padding: 0;
                         .title2{
                             color: var(--txt-black); font-size: 18px; font-weight: 400; letter-spacing: -0.45px; margin-top: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; 
-                            @include media('tablet'){
+                            @include media('mobile'){
                                 font-size: 16px;
                             }
                         }
@@ -340,13 +340,20 @@
                                         position: relative;
                                         &::after{
                                             content: ''; display: inline-block; width: 3px; height: 3px; border-radius: 50%; background: var(--txt-gray03); margin: 4px 12px;
+
                                         }
                                     }
                                     &.sec{
                                         position: relative;
                                         &::before{
                                             content: ''; display: inline-block; background: url(../../images/common/ico_time.svg) no-repeat 0 0; width: 20px; height: 20px; transform: translateY(4px); margin-right: 3px;
+                                            @include media('mobile'){
+                                                width: 17px; height: 17px; background-size: 100%; transform: translateY(3px);
+                                            }
                                         }
+                                    }
+                                    @include media('mobile'){
+                                        font-size: 14px;
                                     }
                                 }
                                 @include media('tablet'){
@@ -367,10 +374,28 @@
     }
 }
 
-/* question scss */
+/* faq - question */
+.comSubTitle{
+    h3{
+        font-size: 32px; color: var(--txt-black); font-weight: 700; letter-spacing: -0.8px; margin-bottom: 65px;
+    }
+}
+.modTab{
+    margin-top: 55px;
+}
 
+/* notice - listAll */
 
+/* notice - detailAll */
+.cptBtnForm{
+    button{
+        width: auto;
+    }
+}
 
-    
-
-
+/* event - list */
+.modTabWide{
+    .tabMenu{
+        margin-bottom: 60px;
+    }
+}

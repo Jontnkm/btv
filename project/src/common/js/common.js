@@ -140,21 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    //===============================================================================//
-    //=================================공통 탭=======================================//
-    //===============================================================================//
-    function showTab(index) {
-        var tabButtons = document.querySelectorAll('.tabName');
-        var tabContents = document.querySelectorAll('.tabCont');
-
-        for (var i = 0; i < tabButtons.length; i++) {
-            tabButtons[i].classList.remove('active');
-            tabContents[i].classList.remove('active');
-        }
-
-        tabButtons[index].classList.add('active');
-        tabContents[index].classList.add('active');
-    }
 
     //===================================================================================//
     //=================================faq 아코디언=======================================//
@@ -210,42 +195,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-
-//===================================================================================//
-//====================================탭 동작========================================//
-//===================================================================================//
-
-    let tabWrap = document.querySelectorAll(".modTab");
-
-    tabWrap.forEach(function(tab){
-        let tabContents = tab.querySelectorAll(".modTab .tabCont");
-        let tabButtons = tab.querySelectorAll(".modTab .tabBtn li button");
-
-        tabContents.forEach(function(tabContent, index) {
-            tabContent.style.display = "none";
-            if (index === 0) {
-                tabContent.style.display = "flex";
-            }
-        });
-    
-        tabButtons.forEach(function(tabButton) {
-            tabButton.addEventListener("click", function() {
-                let idx = Array.from(tabButton.parentNode.parentNode.children).indexOf(tabButton.parentNode);
-    
-                tabContents.forEach(function(tabContent) {
-                    tabContent.style.display = "none";
-                });
-    
-                tabContents[idx].style.display = "flex";
-    
-                tab.querySelectorAll(".tabBtn li").forEach(function(li) {
-                    li.classList.remove("active");
-                });
-                
-                tabButton.parentNode.classList.add("active");
-            });
-        });
-    })
 
 
     //===================================================================================//
@@ -513,8 +462,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var tmpContainer = document.querySelector('.tmpContainer');
     var filterM = document.querySelector('.filterMArea');
 
-    tmpContainer.style.display = 'none';
-
     // 필터검색 버튼 클릭할때
     filterM.addEventListener('click', function() {
         tmpContainer.style.display = 'block'; 
@@ -537,7 +484,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 템플릿3 탭 타입 클릭시
-    function showTab(index) {
+    function showTabTmp(index) {
  
         tmpContainer.style.display = 'block';
         var isActive = tabButtons[index].classList.contains('active');
@@ -569,12 +516,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // 각 탭 버튼에 클릭 이벤트 추가
     tabButtons.forEach(function(button, index) {
         button.addEventListener('click', function() {
-            showTab(index); 
+            showTabTmp(index); 
         });
     });
 
 });
-
 
 
 //================= 광고 버튼 개별 클릭 ==================//
@@ -618,12 +564,72 @@ function closePopup(popId) {
 }
 
 
+//================= 아코디언 메뉴 ==================//
+function toggleAccordion(element) {
+    const accoCont = element.nextElementSibling;
+
+    element.classList.toggle("active");
+
+    if (accoCont.style.height && accoCont.style.height !== "0px") {
+        accoCont.style.height = accoCont.scrollHeight + "px"; 
+        setTimeout(() => {
+            accoCont.style.height = "0px"; 
+        }, 10); 
+    } else {
+        accoCont.style.height = accoCont.scrollHeight + "px"; 
+
+        accoCont.addEventListener('transitionend', function onTransitionEnd() {
+            accoCont.style.height = 'auto'; // 애니메이션 끝난 후 height를 auto로 전환해서 컨텐츠의 유연성에 맞춤(모바일 대응)
+            accoCont.removeEventListener('transitionend', onTransitionEnd);
+        });
+    }
+}
 
 
+//================================= 탭 메뉴 타입 1 =======================================//
+function showTab(index) {
+    var modTabBtn = document.querySelectorAll('.modTab .tabName');
+    var modTabCont = document.querySelectorAll('.modTab .tabCont');
+
+    for (var i = 0; i < modTabBtn.length; i++) {
+        modTabBtn[i].classList.remove('active');
+        modTabCont[i].classList.remove('active');
+    }
+
+    modTabBtn[index].classList.add('active');
+    modTabCont[index].classList.add('active');
+}
 
 
+//================================= 탭 메뉴 타입 2 =======================================//
+function showTab2(index) {
+    var modTabBtn2 = document.querySelectorAll('.modTabWide .tabName');
+    var modTabCont2 = document.querySelectorAll('.modTabWide .tabCont');
+
+    for (var i = 0; i < modTabBtn2.length; i++) {
+        modTabBtn2[i].classList.remove('active');
+        modTabCont2[i].classList.remove('active');
+    }
+
+    modTabBtn2[index].classList.add('active');
+    modTabCont2[index].classList.add('active');
+}
 
 
+//================= 페이징 클릭 시 ==================//
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.comPagination .numList li').forEach(li => {
+        li.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            document.querySelectorAll('.comPagination .numList li').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            this.classList.add('active');
+        });
+    });
+});
 
 
 //===================================================================================//
