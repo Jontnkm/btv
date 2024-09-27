@@ -1,0 +1,258 @@
+ <!-- Header -->
+ <%- include('../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <!-- 메인 콘텐츠 영역 -->
+            <div class="comSubTitle">
+                <h5>나의 광고</h5>
+            </div>
+
+            <div class="pageLocationBar">
+                <ul>
+                    <li class="active"><a href="#none">제작 중<br><span class="cnt">00</span></a></li>
+                    <li><a href="#none">제작 완료<br><span class="cnt">00</span></a></li>
+                    <li><a href="#none">결제 대기<br><span class="cnt">00</span></a></li>
+                    <li><a href="#none">심사중<br><span class="cnt">00</span></a></li>
+                    <li><a href="#none">심사반려<br><span class="cnt">00</span></a></li>
+                    <li><a href="#none">광고집행<br><span class="cnt">00</span></a></li>
+                    <li><a href="#none">광고집행종료<br><span class="cnt">00</span></a></li>
+                </ul>
+            </div>
+            
+            <div class="payInfoBox">
+                <div class="payLeftBox">
+                    <p class="payTitle">기본정보</p>
+
+                    <div class="thmbInfo">
+
+                        <div class="thumbArea">
+                            <img src="../../images/temp/tmp_thumbnail.png" alt="" />
+                            <p class="adTitle">
+                                광고제목 테스트 입니다. / 광고제목 테스트 입니다. / 광고제목 테스트 입니다. / 광고제목 테스트 입니다.
+                            </p>
+                        </div>
+
+                        <div class="adInfoArea">
+                            <div class="cptForm">
+                                <div class="frmIpt">
+                                    <label for="ipt01">매장주소</label>
+                                    <input type="text" placeholder="test" id="ipt01" value="서울특별시 강남구 압구정로 114"/>
+                                </div>
+                                <div class="frmIpt">
+                                    <label for="ipt02">매장 연락처</label>
+                                    <input type="text" placeholder="test" id="ipt02" value="000-0000-0000"/>
+                                </div>
+                                <div class="frmIpt">
+                                    <label>업종 <span class="required">*</span></label>
+                                    <div class="frmCombo">
+                                        <div class="drpCov">
+                                            <button type="button" class="drpBtn">선택</button>
+                                            <div class="listBox">
+                                                <ul class="drpList">
+                                                    <li><a href="#none">text</a></li>
+                                                    <li><a href="#none">text</a></li>
+                                                    <li><a href="#none">text</a></li>
+                                                    <li><a href="#none">text</a></li>
+                                                    <li><a href="#none">text</a></li>
+                                                    <li><a href="#none">text</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prodOption">
+                        <div class="leftOption">
+                            <p class="optionInfo">추가 상품 선택</p>
+
+                            <p class="optionTitle">우리가게 위치 등록 서비스(무료)</p>
+
+                            <p class="desc">
+                                Tmap, T전화, 내비게이션 등 20여개 지도 서비스에 우리가게 위치를 등록 대행해 드리는 서비스 입니다.우리가게 홍보에 꼭 필요한 서비스이나 개인이 직접 등록시 놓치기 쉽고 시간이 많이 소요됩니다.Btv우리동네광고 청약고객에게만 특별히 제공되는 대행 서비스이오니, 꼭 신청해 보세요
+                            </p>
+
+                            <p class="desc02">
+                                (※ 등록 신청 후 반영까지 최대 4주 소요 됩니다)
+                            </p>
+
+                            <div class="applyOpinion">
+                                <span class="txt">신청여부</span>
+                                <div class="cptForm">
+                                    <label class="frmChk">
+                                        <input type="radio" checked="checked" name="radio02">
+                                        <span class="radiomark"></span>
+                                        <span class="labelTxt">신청</span>
+                                    </label>
+                                </div>
+                                <div class="cptForm">
+                                    <label class="frmChk">
+                                        <input type="radio" checked="checked" name="radio02">
+                                        <span class="radiomark"></span>
+                                        <span class="labelTxt">미신청</span>
+                                    </label>    
+                                </div>
+                            </div>
+
+                            <div class="personalInfo">
+                                <span>개인(법인)정보 수집 및 제3자 제공 동의</span>
+                                <a href="#none">자세히 보기</a>
+                            </div>
+                        </div>
+                        <div class="rightOption">
+                            <p class="optionInfo">추가 옵션 선택</p>
+
+                            <p class="optionTitle">데이타임 타기팅 서비스(유료)</p>
+
+                            <p class="desc">
+                                외식,배달업종 광고에 적합한 시간대입니다.<br>해당 시간에 광고가 집중 노출되어 효과적으로, 시간대 선택에 따른 할증 요금이 부과됩니다.
+                            </p>
+
+                            <div class="cptForm">
+                                <label class="frmChk">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <span class="labelTxt">데이타임 타기팅(10:00~15:00) 신청</span>
+                                </label>
+                            </div>
+                            <p class="alertTxt">※30% 할증</p>
+                        </div>
+                    </div>
+
+                    <p class="payTitle">
+                        주문정보 <span class="alertTxt">최소 게재 기간은 30일 입니다. 광고 심사를 위해, 광고 시작일은 금일부터 영업일 기준 +3일 이후로 선택해 주세요</span>
+                    </p>
+
+                    <!--광고지역-->
+                    <div class="cptForm">
+                        <div class="frmIpt">
+                            <label for="ipt04">광고지역 <span class="required">*</span></label>
+                            <div class="iptArea">
+                                <input type="text" placeholder="test" id="ipt04" />
+                                <div class="cptBtnForm">
+                                    <button type="button" class="btn scnd location">지역 설정</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--희망광고시간-->
+                    <div class="cptForm">
+                        <div class="frmIpt">
+                            <label for="ipt05">희망 광고 기간 <span class="required">*</span></label>
+                            <div class="iptArea">
+                                <input type="text" placeholder="test" id="ipt05" />
+                                <div class="cptBtnForm">
+                                    <button type="button" class="btn scnd date">기간 설정</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--광고대상 수-->
+                    <div class="cptForm">
+                        <div class="frmIpt">
+                            <label for="ipt06">광고 대상 수</label>
+                            <div class="tooltip">
+                                <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                                <span class="toolBox">
+                                    <a href="#none"><span class="hidden">닫기</span></a>
+                                    툴팁 텍스트 테스트 입니다. 문구는 추후 확정 후 기입하겠습니다.툴팁 텍스트 테스트 입니다. 문구는 추후 확정 후 기입하겠습니다.툴팁 텍스트 테스트 입니다. 문구는 추후 확정 후 기입하겠습니다.툴팁 텍스트 테스트 입니다. 문구는 추후 확정 후 기입하겠습니다.툴팁 텍스트 테스트 입니다. 문구는 추후 확정 후 기입하겠습니다.툴팁 텍스트 테스트 입니다. 문구는 추후 확정 후 기입하겠습니다.
+                                </span>
+                            </div>
+                            <input type="text" placeholder="test" id="ipt06" />
+                        </div>
+                    </div>
+
+                    <!--사용 예산-->
+                    <div class="cptForm">
+                        <div class="frmIpt">
+                            <label for="ipt07">사용 예산</label>
+                            <span class="infoTxt">
+                                ※ 광고횟수 노출은 설정하신 기간에 따라 변경될 수 있습니다.
+                            </span>
+                            <input type="text" placeholder="test" id="ipt07" />
+                        </div>
+                    </div>
+
+                    <!--광고 영상 길이-->
+                    <div class="cptForm">
+                        <div class="frmIpt">
+                            <label for="ipt08">광고 영상 길이</label>
+                            <input type="text" placeholder="test" id="ipt08" disabled value="15초 소재 광고"/>
+                        </div>
+                    </div>
+
+                    <!--광고 노출 횟수-->
+                    <div class="cptForm">
+                        <div class="frmIpt">
+                            <label for="ipt09">광고 노출 횟수</label>
+                            <div class="tooltip">
+                                <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                                <span class="toolBox">
+                                    <a href="#none"><span class="hidden">닫기</span></a>
+                                    툴팁 텍스트 테스트 입니다. 문구는 추후 확정 후 기입하겠습니다.툴팁 텍스트 테스트 입니다. 문구는 추후 확정 후 기입하겠습니다.툴팁 텍스트 테스트 입니다. 문구는 추후 확정 후 기입하겠습니다.툴팁 텍스트 테스트 입니다. 문구는 추후 확정 후 기입하겠습니다.툴팁 텍스트 테스트 입니다. 문구는 추후 확정 후 기입하겠습니다.툴팁 텍스트 테스트 입니다. 문구는 추후 확정 후 기입하겠습니다.
+                                </span>
+                            </div>
+                            <input type="text" placeholder="test" id="ipt09" disabled value="000"/>
+                        </div>
+                    </div>
+
+                    <!--예상 금액-->
+                    <div class="cptForm"> 
+                        <div class="frmIpt">
+                            <label for="ipt10">예상 금액</label>
+                            <input type="text" placeholder="test" id="ipt10" disabled value="1,000,000 원"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payRightBox">
+                    결제영역
+                </div>
+            </div>
+            <!-- //메인 콘텐츠 영역 -->
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../ejs/quick.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
