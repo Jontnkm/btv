@@ -462,8 +462,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var tmpContainer = document.querySelector('.tmpContainer');
     var filterM = document.querySelector('.filterMArea');
 
-    // tmpContainer.style.display = 'none';
-
     // 필터검색 버튼 클릭할때
     filterM.addEventListener('click', function() {
         tmpContainer.style.display = 'block'; 
