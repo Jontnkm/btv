@@ -629,3 +629,14 @@ function closePopup(popId) {
 //===================================================================================//
 //============================End of global function=================================//
 //===================================================================================//
+
+$(document).ready(function(){
+    $(".settingBtn").click(function(){
+        $(".settingCover").removeClass("open");
+        $(this).parents("li").find(".settingCover").addClass("open");
+    })
+
+    $(".settingCover .clsBtn > a").click(function(){
+        $(this).parents(".settingCover").removeClass("open");
+    })
+})

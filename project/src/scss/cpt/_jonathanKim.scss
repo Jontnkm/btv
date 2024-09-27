@@ -213,3 +213,230 @@
         }
     }
 }
+
+/*광고만들기 서브메인*/
+.createOption {
+    width:100%; position:relative; margin-top:40px;
+
+    > ul {
+        display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:30px;
+
+        > li {
+            position:relative; width:33.3333%; border-radius:24px; background:var(--sub-color05); min-height:614px; padding:30px; 
+
+            > span.flag {
+                display:inline-block; background:var(--clr-white); padding: 0 16px; line-height:37px; font-size:16px; color:var(--prm-color); font-weight:bold; border-radius:38px; margin-bottom:40px;
+            }
+
+            > p.title {
+                font-size:24px; color:var(--txt-black); font-weight:400;
+            }
+
+            > button {
+                position:absolute; bottom:30px; left:30px; width:calc(100% - 60px); padding: 0 40px; background:var(--prm-color); line-height:56px; height:56px; font-size:18px; color:var(--clr-white); font-weight:500; text-align:center; border-radius:8px;
+                @include media ('tablet') {
+                    position:relative; bottom:auto; left:auto; width:100%; margin-top:40px;
+                }
+            }
+
+            @include media ('tablet') {
+                width:100%; height:auto; min-height:auto;
+            }
+        }
+        @include media ('tablet') {
+            flex-flow:column;
+        }
+    }
+}
+
+/*나의광고 서브메인*/
+.pageLocationBar {
+    width:100%; position:sticky; padding:30px 80px; background:var(--txt-gray05); margin-top:56px; border-radius:8px;
+    
+    > ul {
+        display:flex; flex-flow:row nowrap; align-items: center; justify-content: center; gap:124px;
+        &::after {content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:83%; height:1px; background:var(--txt-gray03); margin-top:-22px;}
+
+        > li {
+            width:max-content; position:relative;
+            &::before {content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:40px; height:40px; background:url(../../images/common/ico_location_off.svg)50% 50% no-repeat;}
+            &::after {content:''; position:absolute; top:50%; right:-136px; transform:translateY(-50%); width:145px; height:1px; background:var(--txt-gray03); margin-top:-22px;}
+            > a {
+                display:block; text-align:center; font-size:16px; color:var(--txt-gray02); font-weight:400; line-height:18px; margin-top:48px;
+            }
+
+            &:last-of-type {
+                &::after {display:none;}
+            }
+        }
+    }
+}
+
+.cptAdList {
+    width:100%;
+    .sortingArea {
+        width:100%; position:relative; margin-bottom:24px;
+        .sortInner {
+            > ul {
+                width:100%; display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-end; gap:8px;
+                > li {
+                    width:max-content; position:relative;
+
+                    > button {
+                        display:inline-block; padding-left:28px; position:relative; width:max-content; font-size:16px; color:var(--txt-gray02); font-weight:400;
+                        &::before {
+                            content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); background:url(../../images/common/ico_bullet_off.svg)50% 50% no-repeat; width:24px; height:24px;
+                        }
+                    }
+
+                    &:first-of-type {
+                        button {
+                            padding-right:11px;
+                            &::after {
+                                content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:3px; height:3px; background:var(--txt-gray03); border-radius:50%;
+                            }
+                        }
+                    }
+
+                    &:last-of-type {
+                        button {
+                            &::after {
+                                display:none;
+                            }
+                        }
+                    }
+
+                    &.active {
+                        button {
+                            color:var(--prm-color);
+                            &::before {background:url(../../images/common/ico_bullet_on.svg)50% 50% no-repeat;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .innerBox {
+        width:100%;  position:relative;
+
+        > ul {
+            display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:30px;
+
+            > li {
+                width:421px; border-radius:24px; border:1px solid var(--txt-gray04); overflow:hidden; position:relative;
+
+                > .cardCover {
+                    width:100%; 
+                    > .thumbArea {
+                        border-bottom:1px solid var(--txt-gray04);
+                        > img {width:100%;}
+                    }
+
+                    > .infoBox {
+                        width:100%; position:relative; padding:24px 30px 40px;
+                        
+                        > .topArea {
+                            widtH:100%; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+
+                            > .flag {
+                                display:inline-block; padding: 0 16px; height:37px; line-height:37px; font-size:16px; font-weight:bold; text-align:center; color:var(--prm-color); border:1px solid var(--prm-color); border-radius:30px;
+                            }
+
+                            > .rytOpt {
+                                display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:12px;
+
+                                > button {
+                                    display:inline-block; width:32px; height:32px;
+                                    &.insertVideoBtn {background:url(../../images/common/ico_insert.svg)50% 50% no-repeat;}
+                                    &.settingBtn {background:url(../../images/common/ico_setting.svg)50% 50% no-repeat;}
+                                }
+                            }
+                        }
+
+                        > .midArea {
+                            width:100%; position:relative;
+
+                            > .adTitle {font-size:18px; color:var(--txt-black); font-weight:400; margin:16px 0 24px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+                            > .dateInfo {
+                                width:100%;
+                                > ul {
+                                    display:flex; flex-flow:column; align-items: center; justify-content: flex-start; gap:8px;
+                                    > li {
+                                        width:100%; display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between;
+
+                                        > span {
+                                            font-size:16px; color:var(--txt-gray02); font-weight:400;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        > .botArea {
+                            width:100%; margin-top:40px;
+
+                            button {
+                                min-width:auto; padding:15px 0;
+                            }
+                        }
+                    }
+                }
+
+                > .settingCover {
+                    position:absolute; top:0; left:100%; background:var(--prm-color); width:100%; height:100%; padding: 0 30px; transition:all 0.4s;
+                    &.open {
+                        left:0;
+                    }
+
+                    > .setInner {
+                        width:100%; position:relative; height:100%;
+
+                        > .buttonArea {
+                            position:absolute; width:100%; top:50%; left:50%; transform:translate(-50%, -50%);
+
+                            > ul {
+                                display:flex; flex-flow:column; align-items: center; justify-content: flex-start; gap:8px;
+
+                                > li {
+                                    width:100%; border:1px solid var(--clr-white); border-radius:24px;
+
+                                    > a {
+                                        position:relative; display:block; width:100%; height:100%; text-align:center; font-size:16px; color:var(--clr-white); font-weight:500; line-height:44px; padding-left:28px;
+                                        &::before {content:''; position:absolute; width:24px; height:24px; top:50%; left:50%; transform:translate(-50%,-50%);}
+                                    }
+
+                                    &.videoTitSet {
+                                        > a {
+                                            &::before {background:url(../../images/common/ico_pencil_wht.svg)50% 50% no-repeat; margin-left: -64px;}
+                                        }
+                                    }
+
+                                    &.videoCopy {
+                                        > a {
+                                            &::before {background:url(../../images/common/ico_copy_wht.svg)50% 50% no-repeat; margin-left: -48px;}
+                                        }
+                                    }
+
+                                    &.videoErase {
+                                        > a {
+                                            &::before {background:url(../../images/common/ico_erase_wht.svg)50% 50% no-repeat; margin-left: -48px;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        > .clsBtn {
+                            position:absolute; bottom:40px; left:50%; transform:translateX(-50%);
+                            > a {
+                                display:block; width:64px; height:64px; background:url(../../images/common/ico_close_wht.svg)50% 50% no-repeat;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
