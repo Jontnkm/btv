@@ -326,7 +326,7 @@
                     .thumbCont{
                         background: transparent; padding: 0;
                         .title2{
-                            color: var(--txt-black); font-size: 18px; font-weight: 400; letter-spacing: -0.45px; margin-top: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; 
+                            color: var(--txt-black); font-size: 18px; font-weight: 400; letter-spacing: -0.45px; margin-top: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; word-break: keep-all;
                             @include media('mobile'){
                                 font-size: 16px;
                             }
