@@ -31,14 +31,14 @@
         width:100%; position:relative;
 
         label {
-            display:block; font-size:16px; color:var(--txt-gray01); font-weight:400; line-height:22px; letter-spacing:-0.4px; margin-bottom:8px;
+            display:inline-block; vertical-align: middle; font-size:16px; color:var(--txt-gray01); font-weight:400; line-height:22px; letter-spacing:-0.4px; margin-bottom:8px;
             > .required {
                 color: var(--snd-color);
             }
         }
 
         input[type="text"] {
-            width:100%; padding: 13px 16px; font-size:16px; color:var(--txt-black); font-weight:400; line-height:22px; letter-spacing:-0.4px; border:1px solid var(--txt-gray04); border-radius:8px; background:var(--clr-white); transition:all 0.4s;
+            width:100%; padding: 0 16px; font-size:16px; color:var(--txt-black); font-weight:400; height:48px; line-height:48px; letter-spacing:-0.4px; border:1px solid var(--txt-gray04); border-radius:8px; background:var(--clr-white); transition:all 0.4s;
             &::-webkit-input-placeholder {color:var(--txt-gray03);}
             &:focus {border:1px solid var(--prm-color); outline:1px solid var(--prm-color);}
             &:disabled {
@@ -49,6 +49,15 @@
             input[type="text"] {
                 border:1px solid var(--snd-color);
                 &:focus {outline:1px solid var(--snd-color);}
+            }
+        }
+
+        /*버튼 포함 케이스*/
+        &.withBtn {
+            .iptArea {
+                display:flex; flex-flow: row nowrap; align-items: center; justify-self: flex-start; gap:10px;
+                > input {width:calc(100% - 160px)}
+                button {min-width:150px; height:48px; line-height:48px; padding: 0;}
             }
         }
     }
@@ -915,6 +924,28 @@
                         display:block; font-size:14px; color:var(--txt-black); font-weight:500; line-height:20px; letter-spacing:-0.4px; text-align: center; padding-top:30px;
                     }
                 }
+            }
+        }
+    }
+}
+
+/*==================================================================================================*/
+/*=========================================== TOOLTIP ==============================================*/
+/*==================================================================================================*/
+.tooltip {
+    display:inline-block; vertical-align:middle; position:relative;
+
+    > .tooltipTrig {
+        display:inline-block; width:22px; height:22px; background:url(../../images/common/ico_tooltip.svg)50% 50% no-repeat;
+    }
+    
+    > .toolBox {
+        position:absolute; top:25px; left:0; width:max-content; border-radius:8px; max-width:700px; overflow:hidden; z-index:99;
+
+        > .relCov {
+            position:relative; width:100%; display:block; padding: 8px 42px 8px 10px; background:rgba(0, 0, 0, 0.8); font-size:14px; color:var(--clr-white); font-weight:400; line-height:20px; word-break:keep-all;
+            > a {
+                position:absolute; top:6px; right:10px; width:24px; height:24px; background:url(../../images/common/ico_tooltip_cls.svg)50% 50% no-repeat;
             }
         }
     }
