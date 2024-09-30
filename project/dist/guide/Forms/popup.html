@@ -99,19 +99,133 @@
         </div>
     </xmp>
 
-    <strong class="g-area-tit">풀 레이아웃 팝업</strong>  
+    <strong class="g-area-tit">풀 레이아웃 팝업 & 달력</strong>  
     <xmp>
-        <button type="button" onclick="popOpen('clause04')" class="fullBtn" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">풀 레이아웃 팝업열기 버튼</button>
+        <button type="button" onclick="popOpen('clause04')" class="fullBtn" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">풀 레이아웃 팝업&달력 버튼</button>
         <div class="modPopup type02 fullLayout" id="clause04">
             <div class="popupBox">
                 <!-- 팝업 타이틀 -->
                 <div class="popTitArea">
-                    <div class="tit">필터검색</div>
+                    <div class="tit">달력 타이틀</div>
                     <button class="closeBtn" onclick="popClose('clause04')"><img src="../../images/common/ico_pop_close.svg" alt="팝업 닫기"></button>
                 </div>
                 <!-- 팝업 컨텐츠 -->
                 <div class="popContArea">
-                    
+
+                    <!-- 달력 -->
+                    <div class="cptCalendar">
+                        <div class="calArea prevMonth">
+                            <div class="calTop">
+                                <button class="icoLeft"><img src="../../images/common/ico_calLeft.svg" alt="이전달로 가기"></button>
+                                <p class="currentDate">2024년 10월</p>
+                                <button class="icoRight"><img src="../../images/common/ico_calRight.svg" alt="다음달로 가기"></span>
+                            </div>
+                            <div class="calBottom">
+                                <ul class="weeks">
+                                    <li>일</li>
+                                    <li>월</li>
+                                    <li>화</li>
+                                    <li>수</li>
+                                    <li>목</li>
+                                    <li>금</li>
+                                    <li>토</li>
+                                </ul>
+                                <ul class="days">
+                                    <li class="inactive"><span>29</span></li>
+                                    <li class="inactive"><span>30</span></li>
+                                    <li class="start active"><span>1</span></li>
+                                    <li class="during"><span>2</span></li>
+                                    <li class="during"><span>3</span></li>
+                                    <li class="during"><span>4</span></li>
+                                    <li class="during"><span>5</span></li>
+                                    <li class="holiday during"><span>6</span></li>
+                                    <li class="during"><span>7</span></li>
+                                    <li class="during"><span>8</span></li>
+                                    <li class="end active"><span>9</span></li>
+                                    <li><span>10</span></li>
+                                    <li><span>11</span></li>
+                                    <li><span>12</span></li>
+                                    <li class="holiday"><span>13</span></li>
+                                    <li><span>14</span></li>
+                                    <li><span>15</span></li>
+                                    <li><span>16</span></li>
+                                    <li><span>17</span></li>
+                                    <li><span>18</span></li>
+                                    <li><span>19</span></li>
+                                    <li class="holiday"><span>20</span></li>
+                                    <li><span>21</span></li>
+                                    <li><span>22</span></li>
+                                    <li><span>23</span></li>
+                                    <li><span>24</span></li>
+                                    <li><span>25</span></li>
+                                    <li><span>26</span></li>
+                                    <li class="holiday"><span>27</span></li>
+                                    <li><span>28</span></li>
+                                    <li><span>29</span></li>
+                                    <li><span>30</span></li>
+                                    <li><span>31</span></li>
+                                    <li class="inactive"><span>1</span></li>
+                                    <li class="inactive"><span>2</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="calArea nextMonth">
+                            <div class="calTop">
+                                <button class="icoLeft"><img src="../../images/common/ico_calLeft.svg" alt="이전달로 가기"></button>
+                                <p class="currentDate">2024년 11월</p>
+                                <button class="icoRight"><img src="../../images/common/ico_calRight.svg" alt="다음달로 가기"></span>
+                            </div>
+                            <div class="calBottom">
+                                <ul class="weeks">
+                                    <li>일</li>
+                                    <li>월</li>
+                                    <li>화</li>
+                                    <li>수</li>
+                                    <li>목</li>
+                                    <li>금</li>
+                                    <li>토</li>
+                                </ul>
+                                <ul class="days">
+                                    <li class="inactive"><span>27</span></li>
+                                    <li class="inactive"><span>28</span></li>
+                                    <li class="inactive"><span>29</span></li>
+                                    <li class="inactive"><span>30</span></li>
+                                    <li class="inactive"><span>31</span></li>
+                                    <li><span>1</span></li>
+                                    <li class="start active"><span>2</span></li>
+                                    <li class="during holiday"><span>3</span></li>
+                                    <li class="during"><span>4</span></li>
+                                    <li class="during"><span>5</span></li>
+                                    <li class="during"><span>6</span></li>
+                                    <li class="during"><span>7</span></li>
+                                    <li class="during"><span>8</span></li>
+                                    <li class="end active"><span>9</span></li>
+                                    <li class="holiday"><span>10</span></li>
+                                    <li><span>11</span></li>
+                                    <li><span>12</span></li>
+                                    <li><span>13</span></li>
+                                    <li><span>14</span></li>
+                                    <li><span>15</span></li>
+                                    <li><span>16</span></li>
+                                    <li class="holiday"><span>17</span></li>
+                                    <li><span>18</span></li>
+                                    <li><span>19</span></li>
+                                    <li><span>20</span></li>
+                                    <li><span>21</span></li>
+                                    <li><span>22</span></li>
+                                    <li><span>23</span></li>
+                                    <li class="holiday"><span>24</span></li>
+                                    <li><span>25</span></li>
+                                    <li><span>26</span></li>
+                                    <li><span>27</span></li>
+                                    <li><span>28</span></li>
+                                    <li><span>29</span></li>
+                                    <li><span>30</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

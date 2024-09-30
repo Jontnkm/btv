@@ -368,7 +368,7 @@
     }
 }
 
-/* common.scss에 추후 추가 예정 - 풀레이아웃 팝업창 */
+/* common.scss에 추후 추가 예정 - 풀 레이아웃 팝업창 & 달력 */
 .modPopup{
     &.fullLayout{
         .popupBox{
@@ -388,6 +388,98 @@
         color: var(--txt-black); font-weight: 500; font-size: 20px; letter-spacing: -0.5px;
     }
 }
+.cptCalendar{
+    display: flex; justify-content: center;
+    .calArea{
+        width: 324px; padding: 30px 15px; background: var(--clr-white);
+        .calTop{
+            display: flex; align-items: center;  margin-bottom: 30px;
+            .currentDate{
+                color: var(--txt-black); text-align: center; font-size: 18px; font-weight: 700; letter-spacing: -0.45px; text-align: center; margin: 0 auto;
+            }
+        }
+        &.prevMonth{
+            margin-right: 40px;
+            .icoRight{
+                display: none;
+                @include media('mobile'){
+                    display: block;
+                }
+            } 
+            @include media('mobile'){
+                margin-right: 0;
+            }
+        }
+        &.nextMonth{
+            .icoLeft{
+                display: none;
+                @include media('mobile'){
+                    display: block;
+                }
+            } 
+            @include media('mobile'){
+                display: none;
+            }
+        }
+        .calBottom{
+            ul{
+                display: flex; flex-wrap: wrap;  text-align: center; width: 100%; align-items: center;
+                // justify-content: space-between;
+                li{
+                    font-size: 16px; font-weight: 400; letter-spacing: -0.4px; background: var(--clr-white);
+                    span{
+                        display: inline-block;
+                    }
+                }
+            }
+            .weeks{
+                margin-bottom: 15px;
+                li{
+                    color: var(--txt-gray02); width: 42px; height: 28px; line-height: 27px;
+                }
+            }
+            .days{
+                li{
+                    color: var(--txt-gray01); width: 42px; height: 28px; line-height: 27px; letter-spacing: -0.4px; margin-bottom: 15px; border-radius: 4px; 
+                    span{
+                        cursor: pointer;
+                    }
+                    &.inactive{
+                        color: var(--txt-gray03); background: transparent;
+                    }
+                    &.active{
+                        background-color: var(--sub-color04); color: var(--txt-gray01); border-radius: 0; height: 28px;
+                        span{
+                            background: var(--prm-color); color: var(--clr-white); width: 28px; height: 28px; border-radius: 4px; 
+                        }
+                    }
+                    &.start{
+                        background: linear-gradient(to right, white 50%, #eaf6fe 50%);
+                    }
+                    &.end{
+                        background: linear-gradient(to right, #eaf6fe 50%, white 50%);
+                    }
+                    &.during{
+                        background: var(--sub-color04); color: var(--txt-gray01); border-radius: 0;
+                    }
+                    &.holiday{
+                        color: var(--snd-color);
+                    }
+                    // &:hover{
+                    //     background: var(--txt-gray03); color: var(--clr-white); border-radius: 4px;
+                    // }
+                } 
+            }
+        }
+    }
+    @include media('mobile'){
+        flex-direction: column; align-items: center;
+    }
+}
+
+
+
+
 
 /* faq - question */
 .comSubTitle{
