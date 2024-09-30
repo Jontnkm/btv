@@ -16,7 +16,7 @@
     &.searchBar {
         > .frmIpt {
             input[type="text"] {
-                width:100%; padding:18px 30px; font-size:24px; color:var(--txt-black); font-weight:400; line-height:34px; letter-spacing:-0.4px; border:1px solid var(--txt-gray04); border-radius:8px; background:var(--clr-white); transition:all 0.4s;
+                width:100%; padding:18px 30px; font-size:24px; color:var(--txt-black); font-weight:400; line-height:34px; letter-spacing:-0.4px; border:1px solid var(--txt-gray04); border-radius:8px; background:var(--clr-white); transition:all 0.4s; height:70px; line-height:70px;
             }
             button {
                 &.srchBtn {
@@ -34,6 +34,10 @@
             display:inline-block; vertical-align: middle; font-size:16px; color:var(--txt-gray01); font-weight:400; line-height:22px; letter-spacing:-0.4px; margin-bottom:8px;
             > .required {
                 color: var(--snd-color);
+            }
+
+            >.alertTxt {
+                display:inline-block; vertical-align:middle; font-size:14px; font-weight:400; line-height:20px; color:var(--txt-gray02); padding-left:16px;
             }
         }
 
@@ -55,10 +59,70 @@
         /*버튼 포함 케이스*/
         &.withBtn {
             .iptArea {
-                display:flex; flex-flow: row nowrap; align-items: center; justify-self: flex-start; gap:10px;
-                > input {width:calc(100% - 160px)}
-                button {min-width:150px; height:48px; line-height:48px; padding: 0;}
+                display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:10px;
+                @include media('tablet') {
+                    flex-flow:row wrap;
+                }
+                > input {
+                    width:calc(100% - 160px);
+                    @include media('tablet') {
+                        width:100%;
+                    }
+                }
+                > .cptBtnForm {
+                    @include media('tablet') {
+                        width:100%;
+                    }
+                }
+                button {
+                    position:relative; min-width:150px; height:48px; line-height:48px; padding:0; text-align:center;
+                    @include media('tablet') {
+                        width:100%; min-width:auto;
+                    }
+                    &.location {
+                        padding:0 0 0 56px; text-align: left;
+                        @include media('tablet') {
+                            padding: 0 0 0 32px; text-align:center;
+                        }
+                        &::before {
+                            content:''; position:absolute; top:50%; left:24px; margin-right:8px; width:24px; height:24px; background:url(../../images/common/ico_map_pin.svg) 50% 50% no-repeat; transform:translateY(-50%);
+                            @include media('tablet') {
+                                left:50%; transform:translate(-50%,-50%); margin-left:-32px;
+                            }
+                        }
+                    }
+
+                    &.date {
+                        padding:0 0 0 56px; text-align: left;
+                        @include media('tablet') {
+                            padding: 0 0 0 32px; text-align:center;
+                        }
+                        &::before {
+                            content:''; position:absolute; top:50%; left:24px; margin-right:8px; width:24px; height:24px; background:url(../../images/common/ico_calendar.svg) 50% 50% no-repeat; transform:translateY(-50%);
+                            @include media('tablet') {
+                                left:50%; transform:translate(-50%,-50%); margin-left:-32px;
+                            }
+                        }
+                    }
+                }
+
+                &.small {
+                    input {
+                        width:calc(100% - 90px);
+                        @include media('tablet'){
+                            width:100%;
+                        }
+                    }
+                    button {
+                        min-width:80px
+                    }
+                }
             }
+        }
+
+        /*input 우측정렬 케이스*/
+        &.ta-right {
+            input {text-align:right;}
         }
     }
 
@@ -936,14 +1000,17 @@
     display:inline-block; vertical-align:middle; position:relative;
 
     > .tooltipTrig {
-        display:inline-block; width:22px; height:22px; background:url(../../images/common/ico_tooltip.svg)50% 50% no-repeat;
+        display:inline-block; width:22px; height:22px; background:url(../../images/common/ico_tooltip.svg)50% 50% no-repeat; cursor:pointer;
     }
     
     > .toolBox {
-        position:absolute; top:25px; left:0; width:max-content; border-radius:8px; max-width:700px; overflow:hidden; z-index:99;
-
+        display:none; position:absolute; top:25px; left:0; width:max-content; border-radius:8px; max-width:700px; overflow:hidden; z-index:999999;
+        @include media('tablet'){
+            left:50%; transform:translateX(-50%); margin-left:45px; max-width:300px;
+        }
         > .relCov {
             position:relative; width:100%; display:block; padding: 8px 42px 8px 10px; background:rgba(0, 0, 0, 0.8); font-size:14px; color:var(--clr-white); font-weight:400; line-height:20px; word-break:keep-all;
+            
             > a {
                 position:absolute; top:6px; right:10px; width:24px; height:24px; background:url(../../images/common/ico_tooltip_cls.svg)50% 50% no-repeat;
             }
@@ -960,7 +1027,7 @@
         padding:30px 15px;
     }
     @include media ('mobile') {
-        margin-top:5rem;
+        margin-top:30px;
     }
     .footerArea {
         width:100%; max-width:1320px; margin:0 auto;
