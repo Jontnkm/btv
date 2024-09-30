@@ -32,7 +32,7 @@
 
             <div class="cptSubTop">
                 <div class="subTopTxt">
-                    <h3>제작 중인 광고들 입니다.</h3>
+                    <h3>타이틀 영역</h3>
                 </div>
                 <div class="cptBtnForm d-flex gap10">
                     <button type="button" class="btn scnd">소재 가이드라인 확인</button>
@@ -60,7 +60,7 @@
                                     <div class="topArea">
                                         <span class="flag">제작 중</span>
                                         <div class="rytOpt">
-                                            <button type="button" class="insertVideoBtn"><span class="hidden">광고수정하기</span></button>
+                                            <button type="button" class="insertVideoBtn" onclick="popOpen('clause03')"><span class="hidden">광고수정하기</span></button>
                                             <button type="button" class="settingBtn"><span class="hidden">설정</span></button>
                                         </div>
                                     </div>
@@ -111,7 +111,7 @@
                                     <div class="topArea">
                                         <span class="flag">제작 중</span>
                                         <div class="rytOpt">
-                                            <button type="button" class="insertVideoBtn"><span class="hidden">광고수정하기</span></button>
+                                            <button type="button" class="insertVideoBtn" onclick="popOpen('clause03')"><span class="hidden">광고수정하기</span></button>
                                             <button type="button" class="settingBtn"><span class="hidden">설정</span></button>
                                         </div>
                                     </div>
@@ -162,7 +162,7 @@
                                     <div class="topArea">
                                         <span class="flag">제작 중</span>
                                         <div class="rytOpt">
-                                            <button type="button" class="insertVideoBtn"><span class="hidden">광고수정하기</span></button>
+                                            <button type="button" class="insertVideoBtn" onclick="popOpen('clause03')"><span class="hidden">광고수정하기</span></button>
                                             <button type="button" class="settingBtn"><span class="hidden">설정</span></button>
                                         </div>
                                     </div>
@@ -228,6 +228,39 @@
             }) %>
         </div>
         <!-- //상단영역 -->
+    </div>
+</div>
+
+<div class="modPopup type02 popOpen" id="clause03">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <button class="closeBtn" onclick="popClose('clause03')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="comClause">
+                <p class="basicTxt">
+                    <p class="title">광고명을 입력해주세요!</p>
+                    <p class="desc">
+                        최대 00자 이내로 입력해주세요.
+                    </p>
+                    <div class="cptForm">
+                        <div class="frmIpt">
+                            <input type="text" placeholder="예) 우리동네광고 광고영상"/>
+                        </div>
+                    </div>
+                </p>                        
+            </div>
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <!-- <button type="button" class="popBtn white" onclick="popClose('clause03')">취소</button> -->
+            <button type="button" class="popBtn blue" onclick="popClose('clause03')">등록</button>
+        </div>
     </div>
 </div>
 

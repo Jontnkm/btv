@@ -484,5 +484,91 @@
     </div>
 </div>
 
+<!--2024.09.30 별도 트리거 없이 팝업 오픈 (페이지 진입 시)-->
+<style>
+    body {overflow:hidden;}
+</style>
+<div class="modPopup type01 popOpen" id="clause01">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">지역 및 기간 추천받기</div>
+            <button class="closeBtn" onclick="popClose('clause01')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="choiceBox">
+                <div class="adLocation">
+                    <p class="title">광고지역</p>
+                    <ul>
+                        <li>
+                            <div class="cptForm radioType">
+                                <div class="frmButton">
+                                    <input type="radio" checked name="adLoc" id="noRecom01"/>
+                                    <label for="noRecom01">추천안받기</label>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cptForm radioType">
+                                <div class="frmButton">
+                                    <input type="radio" name="adLoc" id="noRecom02"/>
+                                    <label for="noRecom02">추천받기</label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="adDuration">
+                    <p class="title">광고기간</p>
+                    <ul>
+                        <li>
+                            <div class="cptForm radioType">
+                                <div class="frmButton">
+                                    <input type="radio" checked name="adDuration" id="duration01"/>
+                                    <label for="duration01">추천안받기</label>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cptForm radioType">
+                                <div class="frmButton">
+                                    <input type="radio" name="adDuration" id="duration02"/>
+                                    <label for="duration02">1개월</label>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cptForm radioType">
+                                <div class="frmButton">
+                                    <input type="radio" name="adDuration" id="duration03"/>
+                                    <label for="duration03">2개월</label>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cptForm radioType">
+                                <div class="frmButton">
+                                    <input type="radio" name="adDuration" id="duration04"/>
+                                    <label for="duration04">6개월</label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <button type="button" class="popBtn white" onclick="popClose('clause01')">취소</button>
+            <button type="button" class="popBtn blue" onclick="popClose('clause01')">확인</button>
+        </div>
+    </div>
+</div>
+
 <!-- Bottom -->
 <%- include('../ejs/bottom.ejs', { }) %>
+

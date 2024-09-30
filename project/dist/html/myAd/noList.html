@@ -1,5 +1,5 @@
  <!-- Header -->
-
+ 
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,16 +14,16 @@
 
 	<title>sk우리동네광고</title>
 
-	<link rel="stylesheet" href="../common/css/swiper.css" />
-	<link rel="stylesheet" href="../common/css/tui-date-picker.css">
-	<link rel="stylesheet" href="../common/css/style.css" />
+	<link rel="stylesheet" href="../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="../../common/css/style.css" />
 	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
 	
-	<script src="../common/js/jquery-3.4.1.min.js"></script>
-	<script src="../common/js/jquery-ui.min.js"></script>
-	<script src="../common/js/tui-date-picker.js"></script>
-	<script src="../common/js/swiper.js"></script>
-	<script src="../common/js/common.js"></script>
+	<script src="../../common/js/jquery-3.4.1.min.js"></script>
+	<script src="../../common/js/jquery-ui.min.js"></script>
+	<script src="../../common/js/tui-date-picker.js"></script>
+	<script src="../../common/js/swiper.js"></script>
+	<script src="../../common/js/common.js"></script>
 
 	<!--
     <script src="../common/js/basic.js"></script>
@@ -47,8 +47,8 @@
 			<div class="leftArea">
 				<div class="logo">
 					<a href="#none">
-						<img src="../images/common/btv_logo.png" alt="" class="pcLogo">
-						<img src="../images/common/btv_mo_logo.png" alt="" class="moLogo">
+						<img src="../../images/common/btv_logo.png" alt="" class="pcLogo">
+						<img src="../../images/common/btv_mo_logo.png" alt="" class="moLogo">
 					</a>
 				</div>
 				<!--2024.09.04 pc menu-->
@@ -221,16 +221,52 @@
 
         <!-- 중단영역 -->
         <div class="layoutContainer" id="container">
-
             <!-- 메인 콘텐츠 영역 -->
-            <div class="tempBox" style="height:660px; background:#f1faf9;">
+            <div class="comSubTitle">
+                <h5>나의 광고</h5>
+            </div>
 
+            <!--스탭 영역-->
+            
+<div class="pageLocationBar">
+    <ul>
+        <li class="active"><a href="#none">제작 중<br><span class="cnt">00</span></a></li>
+        <li><a href="#none">제작 완료<br><span class="cnt">00</span></a></li>
+        <li><a href="#none">결제 대기<br><span class="cnt">00</span></a></li>
+        <li><a href="#none">심사중<br><span class="cnt">00</span></a></li>
+        <li><a href="#none">심사반려<br><span class="cnt">00</span></a></li>
+        <li><a href="#none">광고집행<br><span class="cnt">00</span></a></li>
+        <li><a href="#none">광고집행종료<br><span class="cnt">00</span></a></li>
+    </ul>
+    <div class="whiteBg"></div>
+</div>
+            <!--//스탭 영역-->
+
+            <div class="cptSubTop">
+                <div class="subTopTxt">
+                    <h3>제작 중인 광고들 입니다.</h3>
+                </div>
+                <div class="cptBtnForm d-flex gap10">
+                    <button type="button" class="btn scnd">소재 가이드라인 확인</button>
+                    <button type="button" class="btn scnd"><span></span>영상 제작 튜토리얼</button>
+                </div>
+            </div>
+
+            <div class="cptAdList">
+                <div class="noList">
+                    <span class="imgBg"><img src="../../images/common/noList01.svg" alt="" /></span>
+                    <p class="title">광고가 없습니다 ㅠㅠ</p>
+                    <p class="desc">
+                        지금 바로 광고를 제작해 늘어나는 고객, 높아지는 인지도를 경험해보세요!
+                    </p>
+                    <div class="cptBtnForm">
+                        <button type="button" class="btn prmy">광고 만들기로 바로가기</button>
+                    </div>
+                </div>
             </div>
             <!-- //메인 콘텐츠 영역 -->
-
         </div>
         <!-- //중단영역 -->
-
 
         <!-- 하단영역 -->
         <div class="layoutFooter">
@@ -308,11 +344,8 @@
     </div>
 </div>
 
-<!-- 팝업이 들어오는 영역 -->
-
 <!-- Bottom -->
 
 </div>
 </body>
 </html>
-

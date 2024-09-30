@@ -1,0 +1,80 @@
+ <!-- Header -->
+ <%- include('../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <!-- 메인 콘텐츠 영역 -->
+            <div class="comSubTitle">
+                <h5>나의 광고</h5>
+            </div>
+
+            <!--스탭 영역-->
+            <%- include('../ejs/stepBar.ejs', {
+                url: "../../"
+            }) %>
+            <!--//스탭 영역-->
+
+            <div class="cptSubTop">
+                <div class="subTopTxt">
+                    <h3>제작 중인 광고들 입니다.</h3>
+                </div>
+                <div class="cptBtnForm d-flex gap10">
+                    <button type="button" class="btn scnd">소재 가이드라인 확인</button>
+                    <button type="button" class="btn scnd"><span></span>영상 제작 튜토리얼</button>
+                </div>
+            </div>
+
+            <div class="cptAdList">
+                <div class="noList">
+                    <span class="imgBg"><img src="../../images/common/noList01.svg" alt="" /></span>
+                    <p class="title">광고가 없습니다 ㅠㅠ</p>
+                    <p class="desc">
+                        지금 바로 광고를 제작해 늘어나는 고객, 높아지는 인지도를 경험해보세요!
+                    </p>
+                    <div class="cptBtnForm">
+                        <button type="button" class="btn prmy">광고 만들기로 바로가기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //메인 콘텐츠 영역 -->
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../ejs/quick.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
