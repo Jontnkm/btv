@@ -525,7 +525,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-//================= 광고 버튼 개별 클릭 ==================//
+//================================= 광고 버튼 개별 클릭 =======================================//
 document.addEventListener('DOMContentLoaded', () => {
     const industryLists = document.querySelectorAll('.industryList');
     const industryLists2 = document.querySelectorAll('.detailBoxArea ul');
@@ -554,7 +554,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-//================= 템플릿 필터검색 버튼 팝업 ==================//
+//================================= 템플릿 필터검색 버튼 팝업 =======================================//
 function openPopup(popId) {
     let popup = document.querySelector("#" + popId);
     popup.classList.add("active");
@@ -566,7 +566,7 @@ function closePopup(popId) {
 }
 
 
-//================= 아코디언 메뉴 ==================//
+//================================= 아코디언 메뉴 =======================================//
 function toggleAccordion(element) {
     const accoCont = element.nextElementSibling;
 
@@ -618,7 +618,7 @@ function showTab2(index) {
 }
 
 
-//================= 페이징 클릭 시 ==================//
+//================================= 페이징 클릭 시 =======================================//
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.comPagination .numList li').forEach(li => {
         li.addEventListener('click', function(event) {
