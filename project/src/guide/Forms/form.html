@@ -18,12 +18,14 @@
             <div class="frmIpt">
                 <input type="text" placeholder="test"/>
             </div>
-
+            
+            <br>
             error case
             <div class="frmIpt err">
                 <input type="text" placeholder="test" />
             </div>
 
+            <br>
             disabled case
             <div class="frmIpt">
                 <input type="text" placeholder="test" disabled/>
@@ -40,16 +42,74 @@
                 <input type="text" placeholder="test" id="ipt01" />
             </div>
 
+            <br>
             error case
             <div class="frmIpt err">
                 <label for="ipt01">label <span class="required">*</span></label>
                 <input type="text" placeholder="test" />
             </div>
 
+            <br>
             disabled case
             <div class="frmIpt">
                 <label for="ipt01">label <span class="required">*</span></label>
                 <input type="text" placeholder="test" disabled/>
+            </div>
+        </div>
+    </xmp>
+
+    <strong class="g-area-tit">form type case add include label</strong>
+    <xmp>
+        <div class="cptForm">
+            라벨, 툴팁, 우측정렬 케이스
+            <div class="frmIpt ta-right">
+                <label for="ipt06">광고 대상 수</label>
+                <div class="tooltip">
+                    <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                    <span class="toolBox">
+                        <span class="relCov">
+                            <a href="#none"><span class="hidden">닫기</span></a>
+                            test
+                        </span>
+                    </span>
+                </div>
+                <input type="text" id="ipt06" value="0,000,000"/>
+            </div>
+            
+            <br>
+            버튼 포함 케이스
+            <div class="frmIpt withBtn">
+                <label for="ipt05">희망 광고 기간 <span class="required">*</span></label>
+                <div class="iptArea">
+                    <input type="text" placeholder="test" id="ipt05" />
+                    <div class="cptBtnForm">
+                        <button type="button" class="btn scnd date">기간 설정</button>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            버튼 포함 케이스 (w/o icon)
+            <div class="frmIpt withBtn">
+                <label for="ipt05">희망 광고 기간 <span class="required">*</span></label>
+                <div class="iptArea">
+                    <input type="text" placeholder="test" id="ipt05" />
+                    <div class="cptBtnForm">
+                        <button type="button" class="btn scnd">설정</button>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            안내문구 포함 케이스
+            <div class="frmIpt">
+                <label for="ipt07">
+                    사용 예산
+                    <span class="alertTxt">
+                        ※ 광고횟수 노출은 설정하신 기간에 따라 변경될 수 있습니다.
+                    </span>
+                </label>
+                <input type="text" placeholder="test" id="ipt07" />
             </div>
         </div>
     </xmp>

@@ -13,7 +13,7 @@
             width:100%; max-width:1320px; margin:90px auto 0;
 
             @include media('tablet'){
-                padding: 0 15px;
+                padding: 0 15px;  margin:40px auto 0;
             }
 
             .layoutMainCont{

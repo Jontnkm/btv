@@ -423,15 +423,20 @@ function slideDown(element) {
 // Popup Open
 function popOpen(popId){
     let thispop = document.querySelector("#" + popId);
+    const body = document.querySelector("body");
 
     thispop.classList.add("popOpen");
+    body.style.overflow = 'hidden';
+
 }
 
 // Popup Close
 function popClose(popId){
     let thispop = document.querySelector("#" + popId);
+    const body = document.querySelector("body");
 
     thispop.classList.remove("popOpen");
+    body.style.overflow = 'auto';
 }
 
 // datepicker
@@ -638,13 +643,59 @@ document.addEventListener('DOMContentLoaded', () => {
 //============================End of global function=================================//
 //===================================================================================//
 
-$(document).ready(function(){
-    $(".settingBtn").click(function(){
-        $(".settingCover").removeClass("open");
-        $(this).parents("li").find(".settingCover").addClass("open");
+document.addEventListener("DOMContentLoaded", function() {
+
+    //===================================================================================//
+    //=================================나의광고 목록 기능=================================//
+    //===================================================================================//
+
+    const settingBtns = document.querySelectorAll(".settingBtn");
+    
+    settingBtns.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+            const settingCovers = document.querySelectorAll(".settingCover");
+            settingCovers.forEach(function(cover) {
+                cover.classList.remove("open");
+            });
+            const parentLi = btn.closest("li");
+            const coverToOpen = parentLi.querySelector(".settingCover");
+            coverToOpen.classList.add("open");
+        });
+    });
+
+    const clsBtns = document.querySelectorAll(".settingCover .clsBtn > a");
+    
+    clsBtns.forEach(function(clsBtn) {
+        clsBtn.addEventListener("click", function() {
+            const cover = clsBtn.closest(".settingCover");
+            cover.classList.remove("open");
+        });
+    });
+
+
+    //===================================================================================//
+    //=====================================툴팁 기능=====================================//
+    //===================================================================================//
+    const tooltipBtn = document.querySelectorAll(".tooltipTrig");
+    tooltipBtn.forEach(function(clk){
+        clk.addEventListener("click", function() {
+            const tooltip = document.querySelectorAll(".toolBox");
+            tooltip.forEach(function(box) {
+                box.style.display = 'none';
+            })
+
+            const parent = clk.closest("div");
+            const boxOpen = parent.querySelector(".toolBox");
+            boxOpen.style.display = 'block';
+        })
     })
 
-    $(".settingCover .clsBtn > a").click(function(){
-        $(this).parents(".settingCover").removeClass("open");
+    const toolCls = document.querySelectorAll(".toolBox > .relCov > a");
+
+    toolCls.forEach(function(cls) {
+        cls.addEventListener("click", function() {
+            const toolCover = cls.closest(".toolBox");
+            toolCover.style.display = 'none';
+        })
     })
-})
+});
