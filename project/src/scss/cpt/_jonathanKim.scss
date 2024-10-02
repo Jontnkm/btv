@@ -1265,22 +1265,27 @@
                 .filterCont {
                     
                     .tabContBox {
-                        padding: 30px; background:var(--clr-white); margin-top:16px; border-radius:8px;
-                        > ul {
-                            display:flex; flex-flow:row wrap; align-items: center; justify-content: flex-start; gap:10px;
-                            > li {
-                                position:relative; width:max-content;
-                                label {
-                                    display:inline-block; font-size:16px; width:max-content; height:46px; line-height:46px; color:var(--txt-gray02); font-weight:400; text-align:center; padding:0 16px; background: var(--txt-gray05); border-radius:30px; cursor:pointer;
-                                }
-                                input {
-                                    position:absolute; top:0; left:0; width:1px; height:1px;
-                                    &:checked + label {
-                                        background:var(--txt-black); color:var(--clr-white);
+                        .fieldBox {
+                            padding: 30px; background:var(--clr-white); margin-top:16px; border-radius:8px;
+                            ul {
+                                display:flex; flex-flow:row wrap; align-items: center; justify-content: flex-start; gap:10px;
+                                > li {
+                                    position:relative; width:max-content;
+                                    label {
+                                        display:inline-block; font-size:16px; width:max-content; height:46px; line-height:46px; color:var(--txt-gray02); font-weight:400; text-align:center; padding:0 16px; background: var(--txt-gray05); border-radius:30px; cursor:pointer;
+                                    }
+                                    input {
+                                        position:absolute; top:0; left:0; width:1px; height:1px;
+                                        &:checked + label {
+                                            background:var(--txt-black); color:var(--clr-white);
+                                        }
                                     }
                                 }
                             }
+
+                            .fieldTxt {font-size:16px; color:var(--txt-gray01); font-weight:400; margin-bottom:30px;}
                         }
+
                         &.active {
                             margin-bottom:7px;
                         }
@@ -1305,6 +1310,58 @@
                     .cont05 {
                         display:none;
                         &.active {display:block;}
+                    }
+                }
+
+                &.schLoc {
+                    display:none;
+
+                    .filterCont {
+                        .tabContBox {
+                            display:none;
+                            &.active {
+                                display:block;
+                            }
+                        }
+                    }
+                }
+
+                &.schApt {
+                    display:none;
+                    > .cptForm {
+                        .frmIpt {
+                            width:100%; position:relative;
+
+                            > button {
+                                position:absolute; top:50%; right:16px; width:24px; height:24px; background:url(../../images/common/ico_srch_small.svg)50% 50% no-repeat; transform:translateY(-50%);
+                            }
+                        }
+                    }
+
+                    .txtSearchBox {
+                        display:none; width:100%; background:var(--clr-white); padding:30px; border-radius:8px; margin-top:16px;
+
+                        > .locationList {
+                            width:100%; position:relative;
+
+                            > ul {
+                                display:flex; flex-flow:column; gap:24px; max-height:77vh; overflow-y:scroll;
+                                &::-webkit-scrollbar {width:4px;}
+                                &::-webkit-scrollbar-thumb {background:var(--txt-gray04); border-radius:8px;}
+
+                                > li {
+                                    width:100%; position:relative;
+
+                                    .aptList {
+                                        width:100%; padding-left:32px; margin-top:8px;
+                                        span {
+                                            font-size:16px; color:var(--txt-gray02); font-weight:400; padding-left:8px;
+                                            &:first-of-type {padding-left:0;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
