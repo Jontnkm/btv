@@ -195,7 +195,7 @@
                                             <div class="cptForm">
                                                 <div class="frmIpt">
                                                     <input type="text" onkeyup="schTyping();" placeholder="예) 강남구" />
-                                                    <button type="button" class="reset"></button>
+                                                    <button type="button" class="reset" onclick="schReset();"></button>
                                                 </div>
                                             </div>
                                             <div class="typeList">
@@ -276,24 +276,24 @@
 
                     <div class="mapBox">
                         <!--2024.10.02 지도영역-->
-                        <div class="map" style="background:#f1faf9;">
+                        <div class="map"><!--2024.10.02 임시 클래스명 사용중 본 작업시 제거 필요-->
                             <!--지도 적용 필요-->
                         </div>
 
-                        <!--상단 필터 영역-->
-                        <div class="filterArea">
+                        <!--지역추천용 필터 영역-->
+                        <div class="schRecom filterArea">
                             <div class="filterTab">
                                 <ul>
-                                    <li><a href="#none" class="filterBtn">광고대상 연령</a></li>
-                                    <li><a href="#none" class="filterBtn">광고대상 성별</a></li>
-                                    <li><a href="#none" class="filterBtn">광고대상 가구</a></li>
-                                    <li><a href="#none" class="filterBtn">광고희망범위</a></li>
-                                    <li><a href="#none" class="filterBtn">소득수준</a></li>
+                                    <li><a href="#none" class="filterBtn" onclick="showTab5(0)">광고대상 연령</a></li>
+                                    <li><a href="#none" class="filterBtn" onclick="showTab5(1)">광고대상 성별</a></li>
+                                    <li><a href="#none" class="filterBtn" onclick="showTab5(2)">광고대상 가구</a></li>
+                                    <li><a href="#none" class="filterBtn" onclick="showTab5(3)">광고희망범위</a></li>
+                                    <li><a href="#none" class="filterBtn" onclick="showTab5(4)">소득수준</a></li>
                                 </ul>
                             </div>
 
                             <div class="filterCont">
-                                <div class="cont01">
+                                <div class="tabContBox cont01">
                                     <ul>
                                         <li>
                                             <div class="cptButtonForm">
@@ -333,7 +333,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="cont02">
+                                <div class="tabContBox cont02">
                                     <ul>
                                         <li>
                                             <div class="cptButtonForm">
@@ -355,7 +355,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="cont03">
+                                <div class="tabContBox cont03">
                                     <ul>
                                         <li>
                                             <div class="cptButtonForm">
@@ -383,7 +383,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="cont04">
+                                <div class="tabContBox cont04">
                                     <ul>
                                         <li>
                                             <div class="cptButtonForm">
@@ -405,7 +405,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="cont05">
+                                <div class="tabContBox cont05">
                                     <ul> 
                                         <li>
                                             <div class="cptButtonForm">
@@ -420,6 +420,25 @@
                                             </div>
                                         </li>
                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--지역직접 > 직접검색 필터-->
+                        <div class="schLoc filterArea">
+                            <div class="filterTab">
+                                <ul>
+                                    <li><a href="#none" class="filterBtn" onclick="showTab5(0)">지역을 선택해주세요</a></li>                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--지역직접 > 아파트검색 필터-->
+                        <div class="schApt filterArea">
+                            <div class="cptFrom">
+                                <div class="frmIpt">
+                                    <input type="text" placeholder="아파트 명을 입력해주세요" />
+                                    <button type="button" class="schBtn"><span class="hidden">검색</span></button>
                                 </div>
                             </div>
                         </div>

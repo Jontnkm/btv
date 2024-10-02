@@ -622,11 +622,12 @@ function showTab2(index) {
     modTabCont2[index].classList.add('active');
 }
 
-//================================= 탭 메뉴 타입 3 =======================================//
+//================================= 탭 메뉴 타입 3 (지역, 직접) =======================================//
 function showTab3(index) {
     var modTabBtn3 = document.querySelectorAll('.mapTab li');
     var modTabCont3 = document.querySelectorAll('.tabCont .tabContBox');
-
+    var filter = document.querySelector(".schRecom");
+    
     for (var i = 0; i < modTabBtn3.length; i++) {
         modTabBtn3[i].classList.remove('active');
         modTabCont3[i].classList.remove('active');
@@ -634,12 +635,20 @@ function showTab3(index) {
 
     modTabBtn3[index].classList.add('active');
     modTabCont3[index].classList.add('active');
+
+    if(index == 1) {
+        filter.style.display = 'none';
+    }else {
+        filter.style.display = 'block';
+    }
 }
 
-//================================= 탭 메뉴 타입 4 =======================================//
+//================================= 탭 메뉴 타입 4 (지역,직접,아파트)=======================================//
 function showTab4(index) {
     var modTabBtn4 = document.querySelectorAll('.directTab li');
     var modTabCont4 = document.querySelectorAll('.inTabCont .tabContBox');
+    var filterSch = document.querySelector(".schLoc");
+    var filterApt = document.querySelector(".schApt");
 
     for (var i = 0; i < modTabBtn4.length; i++) {
         modTabBtn4[i].classList.remove('active');
@@ -648,6 +657,29 @@ function showTab4(index) {
 
     modTabBtn4[index].classList.add('active');
     modTabCont4[index].classList.add('active');
+
+    if (index == 1) {
+        filterSch.style.display = 'none';
+    }else if (index == 2) {
+        filterApt.style.display = 'none';
+    }else {
+        filterSch.style.display = 'none';
+        filterApt.style.display = 'none';
+    }
+}
+
+//================================= 탭 메뉴 타입 5 (지도 상단 필터 탭)=======================================//
+function showTab5(index) {
+    var modTabBtn5 = document.querySelectorAll('.filterTab li');
+    var modTabCont5 = document.querySelectorAll('.filterCont .tabContBox');
+
+    for (var i = 0; i < modTabBtn5.length; i++) {
+        modTabBtn5[i].classList.remove('active');
+        modTabCont5[i].classList.remove('active');
+    }
+
+    modTabBtn5[index].classList.add('active');
+    modTabCont5[index].classList.add('active');    
 }
 //================================= 페이징 클릭 시 =======================================//
 document.addEventListener('DOMContentLoaded', () => {
@@ -762,4 +794,19 @@ function schTyping() {
     $(schTxt).parents('.cptForm').next("div").show();
     $(schTxt).parent('.frmIpt').addClass("typing");
     $(schTxt).next('button').show();
+    $(".selectList > ul").css({
+        'max-height' : '220px',
+        'overflow-y' : 'scroll',
+    })
+}
+
+function schReset() {
+    const schTxt = document.querySelector('.typeSearch input[type="text"]');
+    $(schTxt).parents('.cptForm').next("div").hide();
+    $(schTxt).parent('.frmIpt').removeClass("typing");
+    $(schTxt).next('button').hide();
+    $(".selectList > ul").css({
+        'max-height' : 'none',
+        'overflow-y' : 'visible',
+    })
 }
