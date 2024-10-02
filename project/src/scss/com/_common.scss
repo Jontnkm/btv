@@ -17,6 +17,9 @@
         > .frmIpt {
             input[type="text"] {
                 width:100%; padding:18px 30px; font-size:24px; color:var(--txt-black); font-weight:400; line-height:34px; letter-spacing:-0.4px; border:1px solid var(--txt-gray04); border-radius:8px; background:var(--clr-white); transition:all 0.4s; height:70px; line-height:70px;
+                @include media ('tablet') {
+                    font-size:22px;
+                }
             }
             button {
                 &.srchBtn {
@@ -32,6 +35,9 @@
 
         label {
             display:inline-block; vertical-align: middle; font-size:16px; color:var(--txt-gray01); font-weight:400; line-height:22px; letter-spacing:-0.4px; margin-bottom:8px;
+            @include media ('tablet') {
+                font-size:14px;
+            }
             > .required {
                 color: var(--snd-color);
             }
@@ -43,6 +49,9 @@
 
         input[type="text"] {
             width:100%; padding: 0 16px; font-size:16px; color:var(--txt-black); font-weight:400; height:48px; line-height:48px; letter-spacing:-0.4px; border:1px solid var(--txt-gray04); border-radius:8px; background:var(--clr-white); transition:all 0.4s;
+            @include media ('tablet') {
+                font-size:14px;
+            }
             &::-webkit-input-placeholder {color:var(--txt-gray03);}
             &:focus {border:1px solid var(--prm-color); outline:1px solid var(--prm-color);}
             &:disabled {
@@ -146,6 +155,9 @@
             }
             > button {
                 position:relative; width:100%; padding: 13px 16px; font-size:16px; color:var(--txt-black); font-weight:400; line-height:22px; letter-spacing:-0.4px; text-align:left;
+                @include media ('tablet') {
+                    font-size:14px;
+                }
                 &::after {content:''; position:absolute; top:13px; right:16px; width:24px; height:24px; background:url(../../images/common/ico_arr02.svg)50% 50% no-repeat; transition:all 0.4s}
                 &.active {
                     &::after {transform:rotate(180deg);}
@@ -166,6 +178,9 @@
                         width:100%; position:relative;
                         > a {
                             display:block; padding:13px 16px; font-size:16px; color:var(--txt-black); font-weight:400; line-height:22px; letter-spacing:-0.4px;
+                            @include media ('tablet') {
+                                font-size:14px;
+                            }
                             &:hover {
                                 color: var(--prm-color); background:var(--txt-gray05);
                             }
@@ -296,6 +311,9 @@
         
         &.txtTy {
             font-size:20px; color:var(--txt-black); border-radius: 0; text-align:left; padding:0; min-width:auto; width:max-content; position:relative;
+            @include media ('tablet') {
+                font-size:18px;
+            }
             &:hover {
                 color:var(--prm-color);
                 &::before {content: ''; position:absolute; bottom:-6px; left:50%; transform:translateX(-50%); width:100%; height:4px; background:var(--prm-color) ;}

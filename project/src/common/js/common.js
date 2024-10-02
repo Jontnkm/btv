@@ -816,6 +816,47 @@ document.addEventListener("DOMContentLoaded", function() {
       console.error('Footer element not found.');
     }
     
+
+    //모바일환경 상세검색 열기
+    const detBtn = document.querySelector('.detailSearchBtn'); 
+    const moFil = document.querySelector('.schRecom');
+    const moFilCls = document.querySelector('.schRecom .moFilterHeader .closeBtn');
+
+    detBtn.addEventListener('click', function(){
+        moFil.classList.add('open');
+    })
+    
+    moFilCls.addEventListener('click', function(){
+        moFil.classList.remove('open');
+    })
+
+    //모바일환경 검색결과 열기
+    const resultBtn = document.querySelector('.resultSearchBtn');
+    const moRes = document.querySelector('.resultGrp');
+    const moResCls = document.querySelector('.resultGrp .moFilterHeader .closeBtn');
+    
+    resultBtn.addEventListener('click', function(){
+        moRes.classList.add('open');
+    })
+    
+    moResCls.addEventListener('click', function(){
+        moRes.classList.remove('open');
+    })
+
+    //모바일환경 차트 보기
+    const label = document.querySelector('.recomList ul li label');
+    const chart = document.querySelector('.chartPop');
+    const dim = document.querySelector(".chartBoxDim");
+    const chartCls = document.querySelector('.chartPop .chartCls');
+    label.addEventListener('click', () => {
+        chart.style.display = "block";
+        dim.style.display = "block";
+    })
+
+    chartCls.addEventListener('click', () => {
+        chart.style.display = "none";
+        dim.style.display = "none";
+    })
 });
 
 //============================================================================================================//
@@ -832,7 +873,7 @@ function schTyping() {
         'overflow-y' : 'scroll',
     })
 }
-
+//검색 리셋버튼 클릭 시
 function schReset() {
     const schTxt = document.querySelector('.typeSearch input[type="text"]');
     $(schTxt).parents('.cptForm').next("div").hide();
@@ -844,6 +885,7 @@ function schReset() {
     })
 }
 
+//아파트 검색
 function aptSearch() {
     const aptSch = document.querySelector('.schApt > .cptForm input[type="text"]');
     $(aptSch).parents('.cptForm').next("div").show();

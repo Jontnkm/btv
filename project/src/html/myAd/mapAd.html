@@ -47,105 +47,127 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="analize">
-                                    <p class="mapPopTit">상권 분석 요약</p>
-                                    <div class="baseList">
-                                        <p class="listTitle">Ai 상권분석 기반 추천</p>
-                                        <div class="locList">
-                                            <p>
-                                                <span>청담동</span>
-                                                <span>삼성2동</span>
-                                                <span>논현2동</span>
-                                            </p>
+                                    <!--for tablet & mobile device only-->
+                                    <div class="moSearchArea">
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn prmy" disabled>검색하기</button>
                                         </div>
-                                    </div>
-                                    <div class="baseList">
-                                        <p class="listTitle">광고주 선택 기반 추천</p>
-                                        <div class="locList">
-                                            <p>
-                                                <span>청담동</span>
-                                                <span>삼성2동</span>
-                                                <span>논현2동</span>
-                                            </p>
+    
+                                        <div class="detailBtnArea">
+                                            <button type="button" class="detailSearchBtn">상세검색</button>
+                                            <button type="button" class="resultSearchBtn">검색결과</button>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="recomendList">
-                                    <p class="mapPopTit">매장 주변 광고지역 추천</p>
+                                <div class="resultGrp">
+                                    <!--모바일전용-->
+                                    <div class="moFilterHeader">
+                                        <p class="filterTitle">상세검색</p>
+                                        <button class="closeBtn"><img src="../../images/common/ico_pop_close.svg" alt="팝업 닫기"></button>
+                                    </div>
+                                    <!--//모바일전용-->
+                                    <div class="analize">
+                                        <p class="mapPopTit">상권 분석 요약</p>
+                                        <div class="baseList">
+                                            <p class="listTitle">Ai 상권분석 기반 추천</p>
+                                            <div class="locList">
+                                                <p>
+                                                    <span>청담동</span>
+                                                    <span>삼성2동</span>
+                                                    <span>논현2동</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="baseList">
+                                            <p class="listTitle">광고주 선택 기반 추천</p>
+                                            <div class="locList">
+                                                <p>
+                                                    <span>청담동</span>
+                                                    <span>삼성2동</span>
+                                                    <span>논현2동</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                    <div class="recomList">
-                                        <ul>
-                                            <li>
-                                                <div class="cptForm">
-                                                    <label class="frmChk">
-                                                        <input type="checkbox" checked="checked">
-                                                        <span class="checkmark"></span>
-                                                        <span class="labelTxt">서울 강남구 삼성1동</span>
-                                                    </label>
-                                                </div>
-                                                <div class="recomInfo">
-                                                    <ul>
-                                                        <li>
-                                                            <span>전체 인구수</span>
-                                                            <span>약 12,400명</span>
-                                                        </li>
-                                                        <li>
-                                                            <span>전체 가구수</span>
-                                                            <span>약 5,300가구</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="cptForm">
-                                                    <label class="frmChk">
-                                                        <input type="checkbox" checked="checked">
-                                                        <span class="checkmark"></span>
-                                                        <span class="labelTxt">서울 강남구 삼성2동</span>
-                                                    </label>
-                                                </div>
-                                                <div class="recomInfo">
-                                                    <ul>
-                                                        <li>
-                                                            <span>전체 인구수</span>
-                                                            <span>약 22,400명</span>
-                                                        </li>
-                                                        <li>
-                                                            <span>전체 가구수</span>
-                                                            <span>약 6,300가구</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="cptForm">
-                                                    <label class="frmChk">
-                                                        <input type="checkbox" checked="checked">
-                                                        <span class="checkmark"></span>
-                                                        <span class="labelTxt">서울 강남구 삼성3동</span>
-                                                    </label>
-                                                </div>
-                                                <div class="recomInfo">
-                                                    <ul>
-                                                        <li>
-                                                            <span>전체 인구수</span>
-                                                            <span>약 32,400명</span>
-                                                        </li>
-                                                        <li>
-                                                            <span>전체 가구수</span>
-                                                            <span>약 7,300가구</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <div class="recomendList">
+                                        <p class="mapPopTit">매장 주변 광고지역 추천</p>
+
+                                        <div class="recomList">
+                                            <ul>
+                                                <li>
+                                                    <div class="cptForm">
+                                                        <label class="frmChk" for="loc01">
+                                                            <input type="checkbox" id="loc01">
+                                                            <span class="checkmark"></span>
+                                                            <span class="labelTxt">서울 강남구 삼성1동</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="recomInfo">
+                                                        <ul>
+                                                            <li>
+                                                                <span>전체 인구수</span>
+                                                                <span>약 12,400명</span>
+                                                            </li>
+                                                            <li>
+                                                                <span>전체 가구수</span>
+                                                                <span>약 5,300가구</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="cptForm">
+                                                        <label class="frmChk" for="loc02">
+                                                            <input type="checkbox" id="loc02">
+                                                            <span class="checkmark"></span>
+                                                            <span class="labelTxt">서울 강남구 삼성2동</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="recomInfo">
+                                                        <ul>
+                                                            <li>
+                                                                <span>전체 인구수</span>
+                                                                <span>약 22,400명</span>
+                                                            </li>
+                                                            <li>
+                                                                <span>전체 가구수</span>
+                                                                <span>약 6,300가구</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="cptForm">
+                                                        <label class="frmChk"  for="loc03">
+                                                            <input type="checkbox" id="loc03">
+                                                            <span class="checkmark"></span>
+                                                            <span class="labelTxt">서울 강남구 삼성3동</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="recomInfo">
+                                                        <ul>
+                                                            <li>
+                                                                <span>전체 인구수</span>
+                                                                <span>약 32,400명</span>
+                                                            </li>
+                                                            <li>
+                                                                <span>전체 가구수</span>
+                                                                <span>약 7,300가구</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="cptBtnForm"><!--mo 버튼-->
+                                        <button type="button" class="btn prmy" disabled>광고 지역 확정</button> <!--2024.10.02 default disabled 추천지역 선택시 disabled 해제-->
                                     </div>
                                 </div>
-
-                                <div class="cptBtnForm">
+                                <div class="cptBtnForm"><!--pc 버튼-->
                                     <button type="button" class="btn prmy" disabled>광고 지역 확정</button> <!--2024.10.02 default disabled 추천지역 선택시 disabled 해제-->
                                 </div>
                             </div>
@@ -253,6 +275,13 @@
 
                         <!--지역추천용 필터 영역-->
                         <div class="schRecom filterArea">
+                            <!--모바일전용-->
+                            <div class="moFilterHeader">
+                                <p class="filterTitle">상세검색</p>
+                                <button class="closeBtn"><img src="../../images/common/ico_pop_close.svg" alt="팝업 닫기"></button>
+                            </div>
+                            <!--//모바일전용-->
+
                             <div class="filterTab">
                                 <ul>
                                     <li><a href="#none" class="filterBtn" onclick="showTab5(0)">광고대상 연령</a></li>
@@ -265,6 +294,7 @@
 
                             <div class="filterCont">
                                 <div class="tabContBox cont01">
+                                    <p class="moTitle">광고 대상 연령대(중복선택가능)</p><!--모바일전용-->
                                     <div class="fieldBox">
                                         <ul>
                                             <li>
@@ -300,13 +330,14 @@
                                             <li>
                                                 <div class="cptButtonForm">
                                                     <input type="checkbox" id="age_cbf06" />
-                                                    <label for="age_cbf06">60대</label>
+                                                    <label for="age_cbf06">60대이상</label>
                                                 </div>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="tabContBox cont02">
+                                    <p class="moTitle">광고 대상 성별</p><!--모바일전용-->
                                     <div class="fieldBox">
                                         <ul>
                                             <li>
@@ -331,6 +362,7 @@
                                     </div>
                                 </div>
                                 <div class="tabContBox cont03">
+                                    <p class="moTitle">광고 대상 가구(중복선택가능)</p><!--모바일전용-->
                                     <div class="fieldBox">
                                         <ul>
                                             <li>
@@ -361,6 +393,7 @@
                                     </div>
                                 </div>
                                 <div class="tabContBox cont04">
+                                    <p class="moTitle">광고 희망범위</p><!--모바일전용-->
                                     <div class="fieldBox">
                                         <ul>
                                             <li>
@@ -385,6 +418,7 @@
                                     </div>
                                 </div>
                                 <div class="tabContBox cont05">
+                                    <p class="moTitle">소득수준</p><!--모바일전용-->
                                     <div class="fieldBox">
                                         <ul> 
                                             <li>
@@ -400,6 +434,13 @@
                                                 </div>
                                             </li>
                                         </ul>
+                                    </div>
+                                </div>
+
+                                <div class="filterBtn">
+                                    <div class="cptBtnForm d-flex gap10">
+                                        <button type="button" class="btn scnd">초기화</button>
+                                        <button type="button" class="btn prmy">검색하기</button>
                                     </div>
                                 </div>
                             </div>
@@ -1069,6 +1110,52 @@
                         
                     </div>
                  </div>
+
+                 <!--차트-->
+                 <div class="chartBoxDim"></div>
+                 <div class="chartPop">
+                    <div class="inner">
+                         <a href="#none" class="chartCls"><span class="hidden">닫기</span></a>
+                
+                         <p class="location">서울 강남구 삼성1동</p>
+                
+                         <div class="star">
+                            <span class="clrd star"></span>
+                            <span class="clrd star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                         </div>
+                
+                         <div class="chartBox">
+                            <div class="chart01">
+                                <p class="tit">전체 인구 수</p>
+                                <div class="chartArea" style="width:100%; height:100px; background: red; opacity:0.2;"><!--임시 css 작업시 style 제거 필요-->
+                                    <!--차트 영역-->
+                                </div>
+                            </div>
+                            <div class="chart02">
+                                <p class="tit">전체 가구 수</p>
+                                <div class="chartArea" style="width:100%; height:100px; background: red; opacity:0.2;"><!--임시 css 작업시 style 제거 필요-->
+                                    <!--차트 영역-->
+                                </div>
+                            </div>
+                            <div class="chart03">
+                                <p class="tit">성비</p>
+                                <div class="chartArea" style="width:100%; height:100px; background: red; opacity:0.2;"><!--임시 css 작업시 style 제거 필요-->
+                                    <!--차트 영역-->
+                                </div>
+                            </div>
+                            <div class="chart04">
+                                <p class="tit">연령대별 인구 비율</p>
+                                <div class="chartArea" style="width:100%; height:100px; background: red; opacity:0.2;"><!--임시 css 작업시 style 제거 필요-->
+                                    <!--차트 영역-->
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            
             </div>
         </div>
     </div>
