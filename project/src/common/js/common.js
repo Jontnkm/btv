@@ -698,4 +698,30 @@ document.addEventListener("DOMContentLoaded", function() {
             toolCover.style.display = 'none';
         })
     })
+
+
+    //=====================================================================================================//
+    //=====================================결제하기 페이지 레이아웃 로직=====================================//
+    //=====================================================================================================//
+    var footer = document.querySelector('.layoutFooter');
+    var btn = document.querySelector('.moPaymentBtn');
+  
+    if (footer) {
+      var footerHeight = footer.offsetHeight;
+  
+      window.addEventListener('scroll', function() {
+        var scrollTop = window.scrollY;
+        var documentHeight = document.documentElement.scrollHeight;
+        var windowHeight = window.innerHeight;
+        var scrollThreshold = documentHeight - windowHeight - footerHeight;
+  
+        if (scrollTop >= scrollThreshold) {
+          btn.classList.add('stp');
+        } else {
+          btn.classList.remove('stp');
+        }
+      });
+    } else {
+      console.error('Footer element not found.');
+    }
 });

@@ -94,9 +94,9 @@
                                 <span class="txt">신청여부</span>
                                 <div class="cptForm">
                                     <label class="frmChk">
-                                        <input type="radio" checked="checked" name="radio02">
+                                        <input type="radio" checked="checked" name="radio02"  onclick="popOpen('clause01')">
                                         <span class="radiomark"></span>
-                                        <span class="labelTxt">신청</span>
+                                        <span class="labelTxt" onclick="popOpen('clause01')">신청</span>
                                     </label>
                                 </div>
                                 <div class="cptForm">
@@ -484,5 +484,131 @@
     </div>
 </div>
 
+<div class="modPopup type01 popOpen" id="clause01">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">우리가게 위치등록 서비스 신청</div>
+            <button class="closeBtn" onclick="popClose('clause01')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="applyGpsService">
+                <div class="cptForm">
+                    <div class="frmIpt">
+                        <label for="popipt01">
+                            상호명
+                            <span class="required">*</span>
+                            <div class="tooltip">
+                                <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                                <div class="toolBox">
+                                    <span class="relCov">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                        상호명을 입력하세요.
+                                    </span>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="text" placeholder="test" id="popipt01" />
+                    </div>
+
+                    <div class="frmIpt withBtn">
+                        <label for="popipt02">사업자등록번호 <span class="required">*</span></label>
+                        <div class="iptArea small">
+                            <input type="text" id="popipt02" disabled/>
+                            <div class="cptBtnForm">
+                                <button type="button" class="btn scnd">확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="frmCombo labelCase">
+                        <div class="drpLabel">
+                            업종
+                            <span class="required">*</span>
+                            <div class="tooltip">
+                                <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                                <div class="toolBox">
+                                    <span class="relCov">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                        업종을 입력하세요.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drpCov">
+                            <button type="button" class="drpBtn">업종 선택</button>
+                            <div class="listBox">
+                                <ul class="drpList">
+                                    <li><a href="#none">업종01</a></li>
+                                    <li><a href="#none">업종02</a></li>
+                                    <li><a href="#none">업종03</a></li>
+                                    <li><a href="#none">업종04</a></li>
+                                    <li><a href="#none">업종05</a></li>
+                                    <li><a href="#none">업종06</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="frmIpt withBtn address">
+                        <label for="popipt03">
+                            주소 
+                            <span class="required">*</span>
+                            <div class="tooltip">
+                                <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                                <div class="toolBox">
+                                    <span class="relCov">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                        주소를 입력하세요.
+                                    </span>
+                                </div>
+                            </div>
+                        </label>
+                        <div class="iptArea small">
+                            <input type="text" id="popipt03" placeholder="우편번호"/>
+                            <div class="cptBtnForm">
+                                <button type="button" class="btn scnd">검색</button>
+                            </div>
+                        </div>
+
+                        <label for="popipt04" class="hidden">주소2</label>
+                        <input type="text" placeholder="주소를 입력해주세요." id="popipt04"/>
+
+                        <label for="popipt05" class="hidden">주소3</label>
+                        <input type="text" placeholder="상세주소를 입력해주세요." id="popipt05"/>
+                    </div>
+
+                    <div class="frmIpt">
+                        <label for="popipt01">
+                            가게 연락처
+                            <span class="required">*</span>
+                            <div class="tooltip">
+                                <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                                <div class="toolBox">
+                                    <span class="relCov">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                        가게연락처를 입력하세요.
+                                    </span>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="text" placeholder="연락처를 입력하세요." id="popipt01" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <button type="button" class="popBtn white" onclick="popClose('clause01')">취소</button>
+            <button type="button" class="popBtn blue" onclick="popClose('clause01')">확인</button>
+        </div>
+    </div>
+</div>
+
 <!-- Bottom -->
 <%- include('../ejs/bottom.ejs', { }) %>
+

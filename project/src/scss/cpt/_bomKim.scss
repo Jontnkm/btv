@@ -380,8 +380,16 @@
                 animation: none; opacity: 1;
             }
         }
+        /*위치변경함.. -JK-*/
+        .popTitArea{
+            display: flex; justify-content: space-between; align-items: center; height: 55px; padding: 15px; border-bottom: 1px solid #f2f2f2;
+            .tit{
+                color: var(--txt-black); font-weight: 500; font-size: 20px; letter-spacing: -0.5px;
+            }
+        }
     }
 }
+<<<<<<< HEAD
 .popTitArea{
     display: flex; justify-content: space-between; align-items: center; height: 55px; padding: 15px; border-bottom: 1px solid #f2f2f2;
     .tit{
@@ -479,6 +487,8 @@
 
 
 
+=======
+>>>>>>> 2beb9e87414c8441cde8bc77d7396fff71c0964e
 
 
 /* faq - question */
