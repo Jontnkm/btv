@@ -622,7 +622,33 @@ function showTab2(index) {
     modTabCont2[index].classList.add('active');
 }
 
+//================================= 탭 메뉴 타입 3 =======================================//
+function showTab3(index) {
+    var modTabBtn3 = document.querySelectorAll('.mapTab li');
+    var modTabCont3 = document.querySelectorAll('.tabCont .tabContBox');
 
+    for (var i = 0; i < modTabBtn3.length; i++) {
+        modTabBtn3[i].classList.remove('active');
+        modTabCont3[i].classList.remove('active');
+    }
+
+    modTabBtn3[index].classList.add('active');
+    modTabCont3[index].classList.add('active');
+}
+
+//================================= 탭 메뉴 타입 4 =======================================//
+function showTab4(index) {
+    var modTabBtn4 = document.querySelectorAll('.directTab li');
+    var modTabCont4 = document.querySelectorAll('.inTabCont .tabContBox');
+
+    for (var i = 0; i < modTabBtn4.length; i++) {
+        modTabBtn4[i].classList.remove('active');
+        modTabCont4[i].classList.remove('active');
+    }
+
+    modTabBtn4[index].classList.add('active');
+    modTabCont4[index].classList.add('active');
+}
 //================================= 페이징 클릭 시 =======================================//
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.comPagination .numList li').forEach(li => {
@@ -724,4 +750,16 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       console.error('Footer element not found.');
     }
+    
 });
+
+//============================================================================================================//
+//=====================================광고지역설정 > 지역검색 > 타이핑검색=====================================//
+//============================================================================================================//
+
+function schTyping() {
+    const schTxt = document.querySelector('.typeSearch input[type="text"]');
+    $(schTxt).parents('.cptForm').next("div").show();
+    $(schTxt).parent('.frmIpt').addClass("typing");
+    $(schTxt).next('button').show();
+}

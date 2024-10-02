@@ -1,0 +1,431 @@
+ <!-- Header -->
+ 
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>sk우리동네광고</title>
+
+	<link rel="stylesheet" href="../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="../../common/css/style.css" />
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="../../common/js/jquery-3.4.1.min.js"></script>
+	<script src="../../common/js/jquery-ui.min.js"></script>
+	<script src="../../common/js/tui-date-picker.js"></script>
+	<script src="../../common/js/swiper.js"></script>
+	<script src="../../common/js/common.js"></script>
+
+	<!--
+    <script src="../common/js/basic.js"></script>
+    -->
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<div class="modPopup type02 popOpen fullLayout" id="clause04"> <!--작업 시 popOpen 클래스 제거 후 작업 바람-->
+    <div class="popupBox">
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">광고 지역 설정</div>
+            <button class="closeBtn" onclick="popClose('clause04')"><img src="../../images/common/ico_pop_close.svg" alt="팝업 닫기"></button>
+        </div>
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="mapCover">
+                 <div class="mapInner">
+                    <div class="searchBox">
+                        <div class="mapTab">
+                            <ul>
+                                <li class="active"><a href="#none" onclick="showTab3(0)">지역추천</a></li>
+                                <li><a href="#none" onclick="showTab3(1)">지역 직접 선택</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="tabCont">
+                            <!--지역추천-->
+                            <div class="tabContBox tabCont01 active">
+                                <div class="cptForm mapSch">
+                                    <div class="frmIpt">
+                                        <input type="text" placeholder="test"/>
+                                        <button type="button" class="schBtn"><span class="hidden">검색</span></button>
+                                    </div> 
+
+                                    <div class="frmCombo">
+                                        <div class="drpCov">
+                                            <button type="button" class="drpBtn">업종을 선택해주세요.</button>
+                                            <div class="listBox">
+                                                <ul class="drpList">
+                                                    <li><a href="#none">text</a></li>
+                                                    <li><a href="#none">text</a></li>
+                                                    <li><a href="#none">text</a></li>
+                                                    <li><a href="#none">text</a></li>
+                                                    <li><a href="#none">text</a></li>
+                                                    <li><a href="#none">text</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="analize">
+                                    <p class="mapPopTit">상권 분석 요약</p>
+                                    <div class="baseList">
+                                        <p class="listTitle">Ai 상권분석 기반 추천</p>
+                                        <div class="locList">
+                                            <p>
+                                                <span>청담동</span>
+                                                <span>삼성2동</span>
+                                                <span>논현2동</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="baseList">
+                                        <p class="listTitle">광고주 선택 기반 추천</p>
+                                        <div class="locList">
+                                            <p>
+                                                <span>청담동</span>
+                                                <span>삼성2동</span>
+                                                <span>논현2동</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="recomendList">
+                                    <p class="mapPopTit">매장 주변 광고지역 추천</p>
+
+                                    <div class="recomList">
+                                        <ul>
+                                            <li>
+                                                <div class="cptForm">
+                                                    <label class="frmChk">
+                                                        <input type="checkbox" checked="checked">
+                                                        <span class="checkmark"></span>
+                                                        <span class="labelTxt">서울 강남구 삼성1동</span>
+                                                    </label>
+                                                </div>
+                                                <div class="recomInfo">
+                                                    <ul>
+                                                        <li>
+                                                            <span>전체 인구수</span>
+                                                            <span>약 12,400명</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>전체 가구수</span>
+                                                            <span>약 5,300가구</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="cptForm">
+                                                    <label class="frmChk">
+                                                        <input type="checkbox" checked="checked">
+                                                        <span class="checkmark"></span>
+                                                        <span class="labelTxt">서울 강남구 삼성2동</span>
+                                                    </label>
+                                                </div>
+                                                <div class="recomInfo">
+                                                    <ul>
+                                                        <li>
+                                                            <span>전체 인구수</span>
+                                                            <span>약 22,400명</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>전체 가구수</span>
+                                                            <span>약 6,300가구</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="cptForm">
+                                                    <label class="frmChk">
+                                                        <input type="checkbox" checked="checked">
+                                                        <span class="checkmark"></span>
+                                                        <span class="labelTxt">서울 강남구 삼성3동</span>
+                                                    </label>
+                                                </div>
+                                                <div class="recomInfo">
+                                                    <ul>
+                                                        <li>
+                                                            <span>전체 인구수</span>
+                                                            <span>약 32,400명</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>전체 가구수</span>
+                                                            <span>약 7,300가구</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="cptBtnForm">
+                                    <button type="button" class="btn prmy" disabled>광고 지역 확정</button> <!--2024.10.02 default disabled 추천지역 선택시 disabled 해제-->
+                                </div>
+                            </div>
+                            <!-- // 지역추천-->
+
+                            <!--지역직접검색-->
+                            <div class="tabContBox tabCont02">
+                                <div class="directTab">
+                                    <ul>
+                                        <li class="active"><a href="#none" onclick="showTab4(0)">지역 검색</a></li>
+                                        <li><a href="#none" onclick="showTab4(1)">직접 검색</a></li>
+                                        <li><a href="#none" onclick="showTab4(2)">아파트 검색</a></li>
+                                    </ul>
+                                </div>
+                                <div class="inTabCont">
+                                    <div class="tabContBox tabCont01 active">
+                                        <div class="typeSearch">
+                                            <div class="cptForm">
+                                                <div class="frmIpt">
+                                                    <input type="text" onkeyup="schTyping();" placeholder="예) 강남구" />
+                                                    <button type="button" class="reset"></button>
+                                                </div>
+                                            </div>
+                                            <div class="typeList">
+                                                <div class="scrBox">
+                                                    <ul>
+                                                        <li><a href="#none">타이핑검색 목록01</a></li>
+                                                        <li><a href="#none">타이핑검색 목록02</a></li>
+                                                        <li><a href="#none">타이핑검색 목록03</a></li>
+                                                        <li><a href="#none">타이핑검색 목록04</a></li>
+                                                        <li><a href="#none">타이핑검색 목록05</a></li>
+                                                        <li><a href="#none">타이핑검색 목록06</a></li>
+                                                        <li><a href="#none">타이핑검색 목록07</a></li>
+                                                        <li><a href="#none">타이핑검색 목록08</a></li>
+                                                        <li><a href="#none">타이핑검색 목록09</a></li>
+                                                        <li><a href="#none">타이핑검색 목록10</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabContBox tabCont02">
+                                        <p class="exp">
+                                            오른쪽 지도 상단에 검색할 지역을 선택해 주세요.
+                                        </p>
+                                    </div>
+                                    <div class="tabContBox tabCont03">
+                                        <p class="exp">
+                                            오른쪽 지도 상단에서 아파트를 검색해 주세요.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="selectList">
+                                    <p class="mapPopTit">선택지역</p>
+                                    <ul>
+                                        <li>
+                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                            <span>서울특별시 강남구 영동대로 513</span>
+                                            <span>서울특별시 강남구 513</span>
+                                            <span>서울특별시 강남구 333</span>
+                                            <span>서울특별시 강남구 134</span>
+                                        </li>
+                                        <li>
+                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                            <span>서울특별시 강남구 영동대로 513</span>
+                                        </li>
+                                        <li>
+                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                            <span>서울특별시 강남구 영동대로 513</span>
+                                        </li>
+                                        <li>
+                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                            <span>서울특별시 강남구 영동대로 513</span>
+                                        </li>
+                                        <li>
+                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                            <span>서울특별시 강남구 영동대로 513</span>
+                                        </li>
+                                        <li>
+                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                            <span>서울특별시 강남구 영동대로 513</span>
+                                        </li>
+                                        <li>
+                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                            <span>서울특별시 강남구 영동대로 513</span>
+                                        </li> 
+                                    </ul>
+                                </div>
+
+                                <div class="cptBtnForm">
+                                    <button type="button" class="btn prmy" disabled>광고 지역 확정</button> <!--2024.10.02 default disabled 추천지역 선택시 disabled 해제-->
+                                </div>
+
+                            </div>
+                            <!-- // 지역직접검색-->
+                        </div>
+                    </div>
+
+                    <div class="mapBox">
+                        <!--2024.10.02 지도영역-->
+                        <div class="map" style="background:#f1faf9;">
+                            <!--지도 적용 필요-->
+                        </div>
+
+                        <!--상단 필터 영역-->
+                        <div class="filterArea">
+                            <div class="filterTab">
+                                <ul>
+                                    <li><a href="#none" class="filterBtn">광고대상 연령</a></li>
+                                    <li><a href="#none" class="filterBtn">광고대상 성별</a></li>
+                                    <li><a href="#none" class="filterBtn">광고대상 가구</a></li>
+                                    <li><a href="#none" class="filterBtn">광고희망범위</a></li>
+                                    <li><a href="#none" class="filterBtn">소득수준</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="filterCont">
+                                <div class="cont01">
+                                    <ul>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="checkbox" id="age_cbf01" />
+                                                <label for="age_cbf01">10대</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="checkbox" id="age_cbf02" />
+                                                <label for="age_cbf02">20대</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="checkbox" id="age_cbf03" />
+                                                <label for="age_cbf03">30대</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="checkbox" id="age_cbf04" />
+                                                <label for="age_cbf04">40대</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="checkbox" id="age_cbf05" />
+                                                <label for="age_cbf05">50대</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="checkbox" id="age_cbf06" />
+                                                <label for="age_cbf06">60대</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="cont02">
+                                    <ul>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="radio" name="gender" id="gender_cbf01" />
+                                                <label for="gender_cbf01">전체</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="radio" name="gender" id="gender_cbf02" />
+                                                <label for="gender_cbf02">남성</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="radio" name="gender" id="gender_cbf03" />
+                                                <label for="gender_cbf03">여성</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="cont03">
+                                    <ul>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="checkbox" id="pax_cbf01" />
+                                                <label for="pax_cbf01">1인가구</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="checkbox" id="pax_cbf02" />
+                                                <label for="pax_cbf02">2인가구</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="checkbox" id="pax_cbf03" />
+                                                <label for="pax_cbf03">3인가구</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="checkbox" id="pax_cbf04" />
+                                                <label for="pax_cbf04">4인가구</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="cont04">
+                                    <ul>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="radio" name="range" id="range_cbf01" />
+                                                <label for="range_cbf01">0KM ~ 3KM</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="radio" name="range" id="range_cbf02" />
+                                                <label for="range_cbf02">3KM ~ 10KM</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="radio" name="range" id="range_cbf03" />
+                                                <label for="range_cbf03">10KM ~ 30KM</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="cont05">
+                                    <ul> 
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="radio" name="earn" id="earn_cbf01" />
+                                                <label for="earn_cbf01">선택안함</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cptButtonForm">
+                                                <input type="radio" name="earn" id="earn_cbf02" />
+                                                <label for="earn_cbf02">소득상위지역 우선추천</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
