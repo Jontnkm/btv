@@ -88,57 +88,59 @@ document.addEventListener("DOMContentLoaded", function () {
     const allBtn = document.querySelector(".menuWrap")
     let moHeader = document.querySelector(".moHeader");
     let body = document.querySelector("body");
+    window.onload = function (){
 
-    allBtn.addEventListener('click', function(){
-        if(allBtn.classList.contains('open')){
-            allBtn.classList.remove('open');
-            moHeader.classList.remove("on");
-            body.style.overflow = "auto";
-        }else{
-            allBtn.classList.add('open');
-            moHeader.classList.add("on");
-            body.style.overflow = "hidden";
-        }
-    })
-    
-    window.addEventListener('resize', function() {
-        // 'on' 클래스를 제거합니다.
-        if (moHeader) {
-            moHeader.classList.remove('on');
-        }
-        if (target) {
-            target.classList.remove('active');
-        }
-    });
-    
-    const menuLinks = document.querySelectorAll('.moHeader .headerMenu > li > a');
-
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault(); // 링크의 기본 동작을 막습니다.
-    
-            // 현재 클릭된 링크의 상태를 확인합니다.
-            const isActive = this.classList.contains('active');
-    
-            // 모든 메뉴 항목에서 'active' 클래스를 제거합니다.
-            menuLinks.forEach(link => {
-                link.classList.remove('active');
-                const subMenu = link.nextElementSibling;
-                if (subMenu && subMenu.tagName === 'UL') {
-                    subMenu.classList.remove('open');
-                }
-            });
-    
-            // 클릭된 링크가 비활성 상태였다면 'active' 클래스를 추가하고 하위 메뉴를 표시합니다.
-            if (!isActive) {
-                this.classList.add('active');
-                const subMenu = this.nextElementSibling;
-                if (subMenu && subMenu.tagName === 'UL') {
-                    subMenu.classList.add('open');
-                }
+        allBtn.addEventListener('click', function() {
+            if(allBtn.classList.contains('open')){
+                allBtn.classList.remove('open');
+                moHeader.classList.remove("on");
+                body.style.overflow = "auto";
+            }else{
+                allBtn.classList.add('open');
+                moHeader.classList.add("on");
+                body.style.overflow = "hidden";
+            }
+        })
+        
+        window.addEventListener('resize', function() {
+            // 'on' 클래스를 제거합니다.
+            if (moHeader) {
+                moHeader.classList.remove('on');
+            }
+            if (target) {
+                target.classList.remove('active');
             }
         });
-    });
+        
+        const menuLinks = document.querySelectorAll('.moHeader .headerMenu > li > a');
+    
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // 링크의 기본 동작을 막습니다.
+        
+                // 현재 클릭된 링크의 상태를 확인합니다.
+                const isActive = this.classList.contains('active');
+        
+                // 모든 메뉴 항목에서 'active' 클래스를 제거합니다.
+                menuLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const subMenu = link.nextElementSibling;
+                    if (subMenu && subMenu.tagName === 'UL') {
+                        subMenu.classList.remove('open');
+                    }
+                });
+        
+                // 클릭된 링크가 비활성 상태였다면 'active' 클래스를 추가하고 하위 메뉴를 표시합니다.
+                if (!isActive) {
+                    this.classList.add('active');
+                    const subMenu = this.nextElementSibling;
+                    if (subMenu && subMenu.tagName === 'UL') {
+                        subMenu.classList.add('open');
+                    }
+                }
+            });
+        });
+    }
 
 
     //===================================================================================//
@@ -857,6 +859,18 @@ document.addEventListener("DOMContentLoaded", function() {
         chart.style.display = "none";
         dim.style.display = "none";
     })
+
+    //모바일 검색결과 보기 
+    const rstBtn = document.querySelector('.moSchResult > a');
+    const moRstPop = document.querySelector('.moSchLocation');
+    const moRstPopCls = document.querySelector('.moSchLocation .closeBtn');
+    rstBtn.addEventListener('click', function(){
+        moRstPop.classList.add('on');
+    })
+
+    moRstPopCls.addEventListener('click', () => {
+        moRstPop.classList.remove('on');
+    })
 });
 
 //============================================================================================================//
@@ -869,7 +883,7 @@ function schTyping() {
     $(schTxt).parent('.frmIpt').addClass("typing");
     $(schTxt).next('button').show();
     $(".selectList > ul").css({
-        'max-height' : '220px',
+        'max-height' : '185px',
         'overflow-y' : 'scroll',
     })
 }
@@ -888,5 +902,8 @@ function schReset() {
 //아파트 검색
 function aptSearch() {
     const aptSch = document.querySelector('.schApt > .cptForm input[type="text"]');
+    const moAptSch = document.querySelector('.moSchApt input[type="text"]');
+    const moAptRst = document.querySelector(".moRst");
     $(aptSch).parents('.cptForm').next("div").show();
+    $(moAptRst).show();
 }

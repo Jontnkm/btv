@@ -1156,9 +1156,13 @@
 
                                 > .recomList {height:calc(100vh - 490px);}
                             }
+                        }
 
-                            > .cptBtnForm {
-                                position:absolute; bottom:30px; left:50%; transform:translateX(-50%); width:calc(100% - 30px); margin:0 auto; border-bottom:0;
+                        > .cptBtnForm {
+                            display:none; position:absolute; bottom:30px; left:50%; transform:translateX(-50%); width:calc(100% - 30px); margin:0 auto; border-bottom:0;
+
+                            @include media('tablet') {
+                                display:block;
                             }
                         }
                     }
@@ -1175,29 +1179,107 @@
 
                 > .tabCont02 {
                     display:none; height:calc(100vh - 115px);
+                    @include media ('tablet') {
+                        height:auto;
+                    }
                     .directTab {
                         padding:30px 20px 40px 20px;
+
+                        @include media('tablet') {
+                            padding:30px 16px;
+                        }
+
                         > ul {
                             display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:28px;
-
+                            @include media ('tablet') {
+                                gap:10px;
+                            }
                             > li {
                                 width:max-content;
-
+                                @include media ('tablet'){
+                                    width:100%;
+                                }
                                 > a {
                                     display:block; width:100%; font-size:18px; color:var(--txt-black); font-weight:500; text-align:center;
+                                    @include media ('tablet') {
+                                        max-width:auto; border:1px solid var(--txt-gray02); border-radius:8px; line-height: 48px; height:48px;
+                                    }
                                 }
 
                                 &.active {
                                     > a {
                                         color:var(--prm-color);
-                                    }
+                                        @include media ('tablet') {
+                                            border:1px solid var(--prm-color)
+                                        }
+                                    } 
                                 }
+                            }
+                        }
+
+                        .tabBtnGrp {
+                            display:none; flex-flow: row nowrap; align-items: center; justify-content: center; gap:10px;
+                            > button {
+                                min-width:auto; padding: 15px 40px; text-align:center; font-size:18px; color:var(--clr-white); font-weight:500; border-radius:8px;background:var(--clr-white); color:var(--txt-gray01); border:1px solid var(--txt-gray03); 
+                                @include media ('tablet'){
+                                    font-size:16px;
+                                }
+                            }
+                            @include media ('tablet'){
+                                display:flex; 
                             }
                         }
                     }
 
-                    >.inTabCont {
+                    .moSchLocation {
+                        .moFilterHeader {
+                            width:100%; height:55px; display:none; flex-flow:row nowrap; align-items: center; justify-content: space-between; padding:0 15px;  border-bottom:1px solid var(--txt-gray04); margin-bottom:30px;
+                            > p.filterTitle {
+                                font-size:20px; color:var(--txt-black); font-weight:500; line-height:55px; 
+                            }
+                        }
+                        @include media ('tablet') {
+                            position:fixed; top:0; right:-100%; width:100%; height:100%; background:var(--clr-white); z-index:999; transition:all 0.4s;
+                            &.on {
+                                right:0;
+                            }
+                            .moFilterHeader {
+                                display:flex;
+                            }
+
+                            .selectList { 
+                                ul {
+                                    max-height:none !important; height:calc(100vh - 350px); overflow-y:scroll;
+                                }
+
+                                @include media ('tablet'){
+                                    padding-top:0;
+                                }
+                            }
+
+                        }
+
+                        .totalCount {
+                            padding: 0 15px;
+                            > p {
+                                width:100%; position:relative; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between; font-size:16px; color:var(--txt-black); font-weight:500; 
+                            }
+                        }
+
+                        > .cptBtnForm {
+                            display:none;
+
+                            @include media ('tablet'){
+                                display:block;
+                            }
+                        }
+                    }
+
+                    .inTabCont {
                         width:100%; position:relative; padding: 0 20px 30px 20px; border-bottom:1px solid var(--txt-gray04);
+                        @include media ('tablet') {
+                            border-bottom:0; padding: 0 16px 16px;
+                        }
                         .tabCont01 {
                             display:none;
                             .cptForm {
@@ -1247,12 +1329,45 @@
 
                         .tabCont02 {
                             display:none;
+                            
                             &.active {display:block;}
 
                             > .exp {
                                 font-size:16px; color:var(--txt-gray01); font-weight:400; padding-left:7px; position:relative;
                                 &::before {
                                     content:''; position:absolute; top:10px; left:0; width:3px; height:3px; background:var(--txt-gray01); border-radius:50%;
+                                }
+                                @include media ('tablet') {
+                                    display:none;
+                                }
+                            }
+
+                            .moSchDropdown {
+                                display:none;
+                                @include media ('tablet'){
+                                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: center; gap:10px;
+                                    > div {
+                                        width:100%; 
+                                    }
+                                }
+
+                                .drpList {
+                                    display:flex; flex-flow:column; align-items: flex-start; justify-content: flex-start; gap:0;
+                                    > li {
+                                        position:relative; width:100%;
+                                        label {
+                                            display:inline-block; font-size:16px; width:100%; height:46px; line-height:46px; color:var(--txt-gray02); font-weight:400; text-align:left; padding:0 16px;  cursor:pointer;
+                                            &:hover {
+                                                background:var(--txt-gray05); color: var(--prm-color);
+                                            }
+                                        }
+                                        input {
+                                            position:absolute; top:0; left:0; width:1px; height:1px;
+                                            &:checked + label {
+                                                background:var(--prm-color); color:var(--clr-white);
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1266,6 +1381,49 @@
                                 &::before {
                                     content:''; position:absolute; top:10px; left:0; width:3px; height:3px; background:var(--txt-gray01); border-radius:50%;
                                 }
+
+                                @include media ('tablet') {
+                                    display:none;
+                                }
+
+                            }
+
+                            > .cptForm {
+                                .frmIpt {
+                                    width:100%; position:relative;
+        
+                                    > button {
+                                        position:absolute; top:50%; right:16px; width:24px; height:24px; background:url(../../images/common/ico_srch_small.svg)50% 50% no-repeat; transform:translateY(-50%);
+                                    }
+                                }
+                            }
+        
+                            .txtSearchBox {
+                                display:none; width:100%; background:var(--clr-white); padding:30px; border-radius:8px; margin-top:16px;
+        
+                                > .locationList {
+                                    width:100%; position:relative;
+        
+                                    > ul {
+                                        display:flex; flex-flow:column; gap:24px; max-height:77vh; overflow-y:scroll;
+                                        &::-webkit-scrollbar {width:4px;}
+                                        &::-webkit-scrollbar-thumb {background:var(--txt-gray04); border-radius:8px;}
+                                        @include media ('tablet'){
+                                            height:30vh;
+                                        }
+                                        > li {
+                                            width:100%; position:relative;
+        
+                                            .aptList {
+                                                width:100%; padding-left:32px; margin-top:8px;
+                                                span {
+                                                    font-size:16px; color:var(--txt-gray02); font-weight:400; padding-left:8px;
+                                                    &:first-of-type {padding-left:0;}
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
 
@@ -1273,8 +1431,18 @@
 
                     }
 
+                    .moSchResult {
+                        display:none; width:100%; position:relative; text-align:right; padding:0 16px 30px;
+                        @include media ('tablet') {
+                            display:block;
+                        }
+                        > a {
+                            font-size:14px; font-weight:400; line-height:22px; color:var(--txt-gray01); display:inline-block; padding-right:12px; background: url(../../images/common/ico_arr03.svg)center right no-repeat;
+                        }
+                    }
+
                     .selectList {
-                        padding: 30px 20px; border-bottom:1px solid var(--txt-gray04); margin-bottom:30px;
+                        padding: 30px 20px; border-bottom:1px solid var(--txt-gray04); margin-bottom:16px;
 
                         > ul {
                             display:flex; flex-flow:column; gap:16px;
@@ -1295,6 +1463,10 @@
 
                     .cptBtnForm {
                         position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:100%; padding:30px 20px;
+
+                        @include media ('tablet') {
+                            display:none;
+                        }
                     }
 
                     &.active {display:block;}
@@ -1406,7 +1578,7 @@
                 }
 
                 &.schApt {
-                    display:none;
+                    display:none; padding: 6px 16px;
                     > .cptForm {
                         .frmIpt {
                             width:100%; position:relative;

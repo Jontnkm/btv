@@ -182,6 +182,7 @@
                                         <li><a href="#none" onclick="showTab4(2)">아파트 검색</a></li>
                                     </ul>
                                 </div>
+                                
                                 <div class="inTabCont">
                                     <div class="tabContBox tabCont01 active">
                                         <div class="typeSearch">
@@ -213,49 +214,740 @@
                                         <p class="exp">
                                             오른쪽 지도 상단에 검색할 지역을 선택해 주세요.
                                         </p>
+
+                                        <div class="moSchDropdown">
+                                            <div class="cptForm">
+                                                <div class="frmCombo">
+                                                    <div class="drpCov">
+                                                        <button type="button" class="drpBtn">시/도</button>
+                                                        <div class="listBox">
+                                                            <ul class="drpList">
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf01" />
+                                                                        <label for="moCity_cbf01">강원도</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf02" />
+                                                                        <label for="moCity_cbf02">경기도</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf03" />
+                                                                        <label for="moCity_cbf03">경상남도</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf04" />
+                                                                        <label for="moCity_cbf04">경상북도</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf05" />
+                                                                        <label for="moCity_cbf05">광주광역시</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf06" />
+                                                                        <label for="moCity_cbf06">대구광역시</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf07" />
+                                                                        <label for="moCity_cbf07">대전광역시</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf08" />
+                                                                        <label for="moCity_cbf08">서울특별시</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf09" />
+                                                                        <label for="moCity_cbf09">부산광역시</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf10" />
+                                                                        <label for="moCity_cbf10">세종특별자치시</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf11" />
+                                                                        <label for="moCity_cbf11">울산광역시</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf12" />
+                                                                        <label for="moCity_cbf12">인천광역시</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf13" />
+                                                                        <label for="moCity_cbf13">전라남도</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf14" />
+                                                                        <label for="moCity_cbf14">전라북도</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf15" />
+                                                                        <label for="moCity_cbf15">제주특별자치도</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf16" />
+                                                                        <label for="moCity_cbf16">충청남도</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="city" id="moCity_cbf17" />
+                                                                        <label for="moCity_cbf17">충척북도</label>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="cptForm">
+                                                <div class="frmCombo">
+                                                    <div class="drpCov">
+                                                        <button type="button" class="drpBtn">시/군/구</button>
+                                                        <div class="listBox">
+                                                            <ul class="drpList">
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf01" />
+                                                                        <label for="moTown_cbf01">전체</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf02" />
+                                                                        <label for="moTown_cbf02">강남구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf03" />
+                                                                        <label for="moTown_cbf03">강동구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf04" />
+                                                                        <label for="moTown_cbf04">강북구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf05" />
+                                                                        <label for="moTown_cbf05">관악구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf06" />
+                                                                        <label for="moTown_cbf06">광진구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf07" />
+                                                                        <label for="moTown_cbf07">구로구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf08" />
+                                                                        <label for="moTown_cbf08">금천구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf09" />
+                                                                        <label for="moTown_cbf09">노원구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf10" />
+                                                                        <label for="moTown_cbf10">도봉구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf11" />
+                                                                        <label for="moTown_cbf11">동대문구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf12" />
+                                                                        <label for="moTown_cbf12">동작구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf13" />
+                                                                        <label for="moTown_cbf13">마포구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf14" />
+                                                                        <label for="moTown_cbf14">서대문구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf15" />
+                                                                        <label for="moTown_cbf15">서초구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf16" />
+                                                                        <label for="moTown_cbf16">성동구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf17" />
+                                                                        <label for="moTown_cbf17">성북구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf18" />
+                                                                        <label for="moTown_cbf18">송파구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf19" />
+                                                                        <label for="moTown_cbf19">양천구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf20" />
+                                                                        <label for="moTown_cbf20">영등포구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf21" />
+                                                                        <label for="moTown_cbf21">용산구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf22" />
+                                                                        <label for="moTown_cbf22">은평구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf23" />
+                                                                        <label for="moTown_cbf23">종로구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf24" />
+                                                                        <label for="moTown_cbf24">중구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="radio" name="town" id="moTown_cbf25" />
+                                                                        <label for="moTown_cbf25">중랑구</label>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="cptForm">
+                                                <div class="frmCombo">
+                                                    <div class="drpCov">
+                                                        <button type="button" class="drpBtn">읍/면/동</button>
+                                                        <div class="listBox">
+                                                            <ul class="drpList">
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf01" />
+                                                                        <label for="moDong_cbf01">전체</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf02" />
+                                                                        <label for="moDong_cbf02">세곡동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf03" />
+                                                                        <label for="moDong_cbf03">수서동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf04" />
+                                                                        <label for="moDong_cbf04">신사동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf05" />
+                                                                        <label for="moDong_cbf05">압구정동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf06" />
+                                                                        <label for="moDong_cbf06">청담동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf07" />
+                                                                        <label for="moDong_cbf07">개포4동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf08" />
+                                                                        <label for="moDong_cbf08">개포2동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf09" />
+                                                                        <label for="moDong_cbf09">개포1동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf10" />
+                                                                        <label for="moDong_cbf10">일원2동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf11" />
+                                                                        <label for="moDong_cbf11">논현1동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf12" />
+                                                                        <label for="moDong_cbf12">논현2동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf13" />
+                                                                        <label for="moDong_cbf13">삼성2동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf14" />
+                                                                        <label for="moDong_cbf14">역삼1동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf15" />
+                                                                        <label for="moDong_cbf15">대치2동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf16" />
+                                                                        <label for="moDong_cbf16">대치4구</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf17" />
+                                                                        <label for="moDong_cbf17">삼성1동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf18" />
+                                                                        <label for="moDong_cbf18">대치1동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf19" />
+                                                                        <label for="moDong_cbf19">도곡2동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf20" />
+                                                                        <label for="moDong_cbf20">역삼2동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf21" />
+                                                                        <label for="moDong_cbf21">도곡1동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf22" />
+                                                                        <label for="moDong_cbf22">일원본동</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cptButtonForm">
+                                                                        <input type="checkbox" id="moDong_cbf23" />
+                                                                        <label for="moDong_cbf23">일원1동</label>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="tabContBox tabCont03">
                                         <p class="exp">
                                             오른쪽 지도 상단에서 아파트를 검색해 주세요.
                                         </p>
+
+                                        <div class="cptForm moSchApt">
+                                            <div class="frmIpt">
+                                                <input type="text" placeholder="아파트 명을 입력해주세요" onkeyup="aptSearch();"/>
+                                                <button type="button" class="schBtn" onclick="aptSearch();"><span class="hidden">검색</span></button>
+                                            </div>
+                                        </div> 
+            
+                                        <div class="txtSearchBox moRst">
+                                            <div class="locationList">
+                                                <ul>
+                                                    <li>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="radio" checked="checked" name="apt">
+                                                                <span class="radiomark"></span>
+                                                                <span class="labelTxt">서울특별시 마포구 서강동</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="aptList">
+                                                            <span>신촌태영데시앙</span>,
+                                                            <span>레미안밤섬리베뉴2</span>,
+                                                            <span>서강해모로</span>,
+                                                            <span>레미안밤섬리베뉴 i</span>,
+                                                            <span>한강밤섬자이</span>,
+                                                            <span>창전삼성</span>,
+                                                            <span>서강쌍용예가</span>
+                                                        </div>
+                                                    </li>
+            
+                                                    <li>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="radio" checked="checked" name="apt">
+                                                                <span class="radiomark"></span>
+                                                                <span class="labelTxt">서울특별시 동대문구 답십리제2동</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="aptList">
+                                                            <span>답십리청솔우성제2</span>,
+                                                            <span>답십리청솔우성</span>,
+                                                            <span>답십리파크자이</span>,
+                                                            <span>대십리동서울한양</span>,
+                                                            <span>래미안엘파인</span>,
+                                                            <span>답십리우성그린</span>,
+                                                            <span>답십리두산</span>,
+                                                            <span>답십리동아제2</span>,
+                                                            <span>답십리두산위브</span>
+                                                        </div>
+                                                    </li>
+            
+                                                    <li>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="radio" checked="checked" name="apt">
+                                                                <span class="radiomark"></span>
+                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="aptList">
+                                                            <span>신길파크자이</span>,
+                                                            <span>신길우성2차</span>,
+                                                            <span>신길남서울</span>,
+                                                            <span>신길우성3차</span>,
+                                                            <span>보라매경남아너스빌</span>
+                                                        </div>
+                                                    </li>
+            
+                                                    <li>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="radio" checked="checked" name="apt">
+                                                                <span class="radiomark"></span>
+                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="aptList">
+                                                            <span>신길파크자이</span>,
+                                                            <span>신길우성2차</span>,
+                                                            <span>신길남서울</span>,
+                                                            <span>신길우성3차</span>,
+                                                            <span>보라매경남아너스빌</span>
+                                                        </div>
+                                                    </li>
+            
+                                                    <li>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="radio" checked="checked" name="apt">
+                                                                <span class="radiomark"></span>
+                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="aptList">
+                                                            <span>신길파크자이</span>,
+                                                            <span>신길우성2차</span>,
+                                                            <span>신길남서울</span>,
+                                                            <span>신길우성3차</span>,
+                                                            <span>보라매경남아너스빌</span>
+                                                        </div>
+                                                    </li>
+            
+                                                    <li>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="radio" checked="checked" name="apt">
+                                                                <span class="radiomark"></span>
+                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="aptList">
+                                                            <span>신길파크자이</span>,
+                                                            <span>신길우성2차</span>,
+                                                            <span>신길남서울</span>,
+                                                            <span>신길우성3차</span>,
+                                                            <span>보라매경남아너스빌</span>
+                                                        </div>
+                                                    </li>
+            
+                                                    <li>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="radio" checked="checked" name="apt">
+                                                                <span class="radiomark"></span>
+                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="aptList">
+                                                            <span>신길파크자이</span>,
+                                                            <span>신길우성2차</span>,
+                                                            <span>신길남서울</span>,
+                                                            <span>신길우성3차</span>,
+                                                            <span>보라매경남아너스빌</span>
+                                                        </div>
+                                                    </li>
+            
+                                                    <li>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="radio" checked="checked" name="apt">
+                                                                <span class="radiomark"></span>
+                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="aptList">
+                                                            <span>신길파크자이</span>,
+                                                            <span>신길우성2차</span>,
+                                                            <span>신길남서울</span>,
+                                                            <span>신길우성3차</span>,
+                                                            <span>보라매경남아너스빌</span>
+                                                        </div>
+                                                    </li>
+            
+                                                    <li>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="radio" checked="checked" name="apt">
+                                                                <span class="radiomark"></span>
+                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="aptList">
+                                                            <span>신길파크자이</span>,
+                                                            <span>신길우성2차</span>,
+                                                            <span>신길남서울</span>,
+                                                            <span>신길우성3차</span>,
+                                                            <span>보라매경남아너스빌</span>
+                                                        </div>
+                                                    </li>
+            
+                                                    <li>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="radio" checked="checked" name="apt">
+                                                                <span class="radiomark"></span>
+                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="aptList">
+                                                            <span>신길파크자이</span>,
+                                                            <span>신길우성2차</span>,
+                                                            <span>신길남서울</span>,
+                                                            <span>신길우성3차</span>,
+                                                            <span>보라매경남아너스빌</span>
+                                                        </div>
+                                                    </li>
+            
+                                                    <li>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="radio" checked="checked" name="apt">
+                                                                <span class="radiomark"></span>
+                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="aptList">
+                                                            <span>신길파크자이</span>,
+                                                            <span>신길우성2차</span>,
+                                                            <span>신길남서울</span>,
+                                                            <span>신길우성3차</span>,
+                                                            <span>보라매경남아너스빌</span>
+                                                        </div>
+                                                    </li>
+            
+                                                    <li>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="radio" checked="checked" name="apt">
+                                                                <span class="radiomark"></span>
+                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="aptList">
+                                                            <span>신길파크자이</span>,
+                                                            <span>신길우성2차</span>,
+                                                            <span>신길남서울</span>,
+                                                            <span>신길우성3차</span>,
+                                                            <span>보라매경남아너스빌</span>
+                                                        </div>
+                                                    </li>
+            
+                                                    <li>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="radio" checked="checked" name="apt">
+                                                                <span class="radiomark"></span>
+                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="aptList">
+                                                            <span>신길파크자이</span>,
+                                                            <span>신길우성2차</span>,
+                                                            <span>신길남서울</span>,
+                                                            <span>신길우성3차</span>,
+                                                            <span>보라매경남아너스빌</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="selectList">
-                                    <p class="mapPopTit">선택지역</p>
-                                    <ul>
-                                        <li>
-                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
-                                            <span>서울특별시 강남구 영동대로 513</span>
-                                            <span>서울특별시 강남구 513</span>
-                                            <span>서울특별시 강남구 333</span>
-                                            <span>서울특별시 강남구 134</span>
-                                        </li>
-                                        <li>
-                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
-                                            <span>서울특별시 강남구 영동대로 513</span>
-                                        </li>
-                                        <li>
-                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
-                                            <span>서울특별시 강남구 영동대로 513</span>
-                                        </li>
-                                        <li>
-                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
-                                            <span>서울특별시 강남구 영동대로 513</span>
-                                        </li>
-                                        <li>
-                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
-                                            <span>서울특별시 강남구 영동대로 513</span>
-                                        </li>
-                                        <li>
-                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
-                                            <span>서울특별시 강남구 영동대로 513</span>
-                                        </li>
-                                        <li>
-                                            <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
-                                            <span>서울특별시 강남구 영동대로 513</span>
-                                        </li> 
-                                    </ul>
+                                <div class="moSchResult">
+                                    <a href="#none">검색 및 결과보기</a>
+                                </div>
+
+                                <div class="moSchLocation">
+                                    <!--모바일전용-->
+                                    <div class="moFilterHeader">
+                                        <p class="filterTitle">지역검색</p>
+                                        <button class="closeBtn"><img src="../../images/common/ico_pop_close.svg" alt="팝업 닫기"></button>
+                                    </div>
+                                    <!--//모바일전용-->
+                                    <div class="selectList">
+                                        <p class="mapPopTit">선택지역</p>
+                                        <ul>
+                                            <li>
+                                                <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                                <span>서울특별시 강남구 영동대로 513</span>
+                                                <span>서울특별시 강남구 513</span>
+                                                <span>서울특별시 강남구 333</span>
+                                                <span>서울특별시 강남구 134</span>
+                                            </li>
+                                            <li>
+                                                <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                                <span>서울특별시 강남구 영동대로 513</span>
+                                            </li>
+                                            <li>
+                                                <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                                <span>서울특별시 강남구 영동대로 513</span>
+                                            </li>
+                                            <li>
+                                                <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                                <span>서울특별시 강남구 영동대로 513</span>
+                                            </li>
+                                            <li>
+                                                <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                                <span>서울특별시 강남구 영동대로 513</span>
+                                            </li>
+                                            <li>
+                                                <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                                <span>서울특별시 강남구 영동대로 513</span>
+                                            </li>
+                                            <li>
+                                                <a href="#none" class="delBtn"><span class="hidden">삭제</span></a>
+                                                <span>서울특별시 강남구 영동대로 513</span>
+                                            </li> 
+                                        </ul>
+                                    </div>
+
+                                    <div class="totalCount">
+                                        <p>
+                                            <span>광고 대상 수</span>
+                                            <span>24,600+</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="cptBtnForm">
+                                        <button type="button" class="btn prmy" disabled>광고 지역 확정</button> <!--2024.10.02 default disabled 추천지역 선택시 disabled 해제-->
+                                    </div>
                                 </div>
 
                                 <div class="cptBtnForm">
