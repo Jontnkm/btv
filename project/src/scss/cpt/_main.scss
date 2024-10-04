@@ -20,8 +20,14 @@ p.mcSubTit {
 .mainCont01 {
     width:100%; position:relative; overflow-x:hidden;
 
+    .swiper-slide {
+        img {width:100%;}
+    }
     .swiper-pagination {
         width:max-content; bottom:32px; left:50%; transform:translateX(-50%); margin-left:-542px;
+        @include media ('main01'){
+            margin-left:0;
+        }
         > .swiper-pagination-bullet {
             width:6px; height:6px;
         }
@@ -43,15 +49,21 @@ p.mcSubTit {
     }
 
     .swiper-button-prev {
-        width:64px; height:64px; background:url(../../images/common/ico_slider_arr_lt.svg) 50% 50% no-repeat;
+        width:64px; height:64px; background:url(../../images/main/ico_slider_arr_lt.svg) 50% 50% no-repeat;
         &::after {display:none;}
         left:300px;
+        @include media ('main01'){
+            left:150px;
+        }
     }
 
     .swiper-button-next {
         width:64px; height:64px; background:url(../../images/common/ico_slider_arr_rt.svg) 50% 50% no-repeat;
         &::after {display:none;}
         right:300px;
+        @include media ('main01'){
+            right:150px;
+        }
     }
 }
 
@@ -69,7 +81,9 @@ p.mcSubTit {
     padding:0 40px;
     .mcInner {
         position:relative; width:100%; background:var(--prm-color); padding:90px 348px; border-radius:24px;
-
+        @include media ('main01'){
+            padding:60px 148px;
+        }
         > ul.conflictBox {
             display:flex; flex-flow:column; -webkit-box-orient: vertical; -webkit-box-direction:normal; margin:56px auto 0; 
 
@@ -81,6 +95,10 @@ p.mcSubTit {
                 &:last-of-type {bottom:40px;}
 
                 display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between; padding: 0 180px 0 120px;
+
+                @include media ('main01'){
+                    padding: 0 80px;
+                }
 
                 > .copyArea {
                     width:calc(100% - 240px);
@@ -98,21 +116,34 @@ p.mcSubTit {
 
 /*메인 컨텐츠 04번 구역*/
 .mainCont04 {
-    width:100%; max-width:1320px; margin:150px auto;
+    width:100%; margin:150px auto; padding-left:290px;
     .mcInner {
         .slideTitle {
-            display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+            width:100%; max-width:1320px; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between; position:relative;
 
             > p.mcTit {text-align:left;}
 
             > .swiper-button {
-                position:absolute; top:50%; right:0; transform:translateY(-50%);
+                display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:10px;
+                > a {
+                    display:block; width:40px; height:40px; background:url(../../images/main/adSlideArr_off.svg) 50% 50% no-repeat;
+                    &::after {display:none;}
+                    &:hover {background:url(../../images/main/adSlideArr_on.svg) 50% 50% no-repeat;}
+                }
+                .swiper-button-prev02 {
+                    &:hover{transform:rotate(180deg);}
+                }
+
+                .swiper-button-next02 {
+                    transform:rotate(180deg);   
+                    &:hover{transform:rotate(0deg);}
+                }
             }
         }
         .adVisual {
             .swiper-wrapper {
                 .swiper-slide {
-                    position:relative; overflow:hidden; width:320px !important; height:440px; border-radius:24px;
+                    position:relative; overflow:hidden; border-radius:24px; width:max-content; margin-right:30px;
 
                     > a {
                         display:block; width:100%; height:100%; position:relative; z-index:4; transition:transform 0.4s;
@@ -146,5 +177,68 @@ p.mcSubTit {
                 }
             }
         }    
+    }
+}
+
+/*메인 컨텐츠 05번 구역*/
+.mainCont05 {
+    width:100%; max-width:1320px; margin:0 auto 150px; position:relative;
+
+    > .mcInner {
+        position:relative; display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:0;
+
+        > .leftCont {
+            width:300px; 
+            > .tit {font-size:32px; color:var(--txt-black); font-weight:bold; line-height:45px; letter-spacing:-0.8px;}
+            > .mcSubTit {text-align:left; margin:24px 0 40px;}
+            > .more {
+                display:inline-block; width:max-content; padding: 0 16px; height:40px; line-height:40px; font-size:16px; color:var(--txt-gray02); font-weight:500; border-radius:8px; border:1px solid var(--txt-gray04);
+                &:hover {
+                    border:1px solid var(--prm-color); color:var(--prm-color);
+                }
+            }
+        }
+
+        > .rightCont {
+            width:calc(100% - 300px); position:relative;
+
+            > ul {
+                display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:20px;
+
+                > li {
+                    padding:30px 17px; border-radius:24px; background:var(--txt-gray05); min-width:240px; min-height:324px;
+
+                    > .topArea {
+                        display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between; margin-bottom:16px;
+                        > p {
+                            font-size:16px; color:var(--txt-black); font-weight:bold;
+                        }
+                        > a {
+                            font-size:16px; color:var(--txt-gray01); font-weight:400; position:relative; padding-right:8px;
+                            &::after {
+                                content:''; position:absolute; top:50%; right:0; width:4px; height:7px; background:url(../../images/common/ico_arr03.svg)50% 50% no-repeat; transform:translateY(-50%);
+                            }
+                        }
+                    }
+
+                    > .midArea {
+                        margin-bottom:40px;
+                        > p {
+                            font-size:16px; color:var(--txt-black); font-weight:500; word-break:keep-all;
+                        }
+                    }
+
+                    > .botArea {
+                        > .ico {
+                            display:block; width:24px; height:24px; background:url(../../images/common/ico_balloon.svg)50% 50% no-repeat; margin-bottom:8px;
+                        }
+                        > p {
+                            font-size:16px; color:var(--txt-gray02); font-weight:400; line-height:22px; letter-spacing:-0.4px;
+                            overflow:hidden; display:-webkit-box; -webkit-line-clamp: 5; -webkit-box-orient:vertical;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
