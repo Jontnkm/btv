@@ -908,6 +908,9 @@ document.addEventListener("DOMContentLoaded", function() {
     moRstPopCls.addEventListener('click', () => {
         moRstPop.classList.remove('on');
     })
+
+    var scr = window.scrollY;
+    console.log(scr);
 });
 
 //============================================================================================================//

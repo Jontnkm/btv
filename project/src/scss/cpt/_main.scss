@@ -242,3 +242,37 @@ p.mcSubTit {
         }
     }
 }
+
+/*메인 컨텐츠 06번 구역*/
+.mainCont06 {
+    width:100%; position:relative; background: var(--txt-gray05); height:460px; overflow:hidden;
+
+    .mcInner {
+        > span {
+            position:absolute; background-size:100% 100%;
+            &.obj01 {
+                width:337px; height:308px; right:55px; top:-88px; background:url(../../images/main/obj1.png)0 0 no-repeat;
+            }
+            &.obj02 {
+               width:57px; height:58px; top:55px; left:61px; background:url(../../images/main/obj2.png)0 0 no-repeat;
+            }
+            &.obj03 {
+                width:70px; height:70px; top:244px; left:443px; background:url(../../images/main/obj3.png)0 0 no-repeat;
+            }
+            &.obj04 {
+                width:104px; height:96px; bottom:51px; left:145px; background:url(../../images/main/obj4.png)0 0 no-repeat; z-index:2;
+            }
+            &.obj05 {
+                width:374px; height:385px; bottom:-286px; left:96px; background:url(../../images/main/obj5.png)0 0 no-repeat; z-index:1;
+            }
+            &.obj06 {
+                width:89px; height:91px; bottom:39px; right:300px; background:url(../../images/main/obj6.png)0 0 no-repeat;
+            }
+        }
+
+        .mcTit {margin-top:112px; margin-bottom:40px; position:relative; z-index:3;}
+        .cptBtnForm {
+            width:240px; margin:0 auto; position:relative; z-index:3;
+        }
+    }
+}

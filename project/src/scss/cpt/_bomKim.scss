@@ -116,7 +116,7 @@
                                 }
                             }
                             &.active{ 
-                                color: var(--prm-color);
+                                background:var(--prm-color); color:var(--clr-white);
                                 .tmpIcon{
                                     background: url(../../images/common/ico_tmpArrUp.svg) no-repeat 0 0;
                                 }
@@ -125,15 +125,23 @@
                                 }
                             }
                             @include media('tablet'){
-                                font-size: 16px; width: 100%;
+                                font-size: 16px; width: 100%; 
+                                /*스타일변경으로인한 수정 jk*/
+                                line-height:60px; height:60px;
                             }
                         }
                         @include media('tablet'){
                             width: 33.3333%; margin-right: 0;
+                            /*스타일변경으로인한 수정 jk*/
+                            border-right:1px solid var(--txt-gray04);
+                            &:last-of-type {
+                                border-right:0;
+                            }
                         }
                     }
                     @include media('tablet'){
-                        justify-content: center; height: 60px; width: 100%; border-bottom: 1px solid var(--txt-gray04); text-align: center;
+                        /*스타일변경으로인한 수정 jk*/
+                        justify-content: center; height: 60px; width: 100%; text-align: center; background:var(--txt-gray05); border-bottom: 1px solid var(--txt-gray04);
                     }
                 }
             }
@@ -277,7 +285,16 @@
                 .popTitArea{
                     display: none;
                     @include media('tablet'){
-                        display: flex; 
+                        /*css 추가함 jk*/
+                        display: flex; position:relative; border-bottom:1px solid var(--txt-gray04);
+
+                        > .tit {
+                            font-size:20px; color:var(--txt-black); font-weight:500; height:56px; line-height:56px; padding-left:15px;
+                        }
+                        > .closeBtn {
+                            position:absolute; top:50%; right:15px; transform:translateY(-50%);
+                        }
+                        /* //css 추가함 jk*/
                     }
                 }
                 @include media('tablet'){
@@ -385,9 +402,9 @@
     }
 }
 
-/* event - list */
-.modTabWide{
-    .tabMenu{
-        margin-bottom: 60px;
-    }
-}
+/* event - list */ /*중복되어 제거함 jk*/
+// .modTabWide{
+//     .tabMenu{
+//         margin-bottom: 60px;
+//     }
+// }
