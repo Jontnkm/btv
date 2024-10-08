@@ -1,12 +1,4 @@
 /* createAd - createTemplate */
-.comSubTitle{
-    h5{
-        font-size: 24px; font-weight: 700; letter-spacing: -0.6px; color: var(--txt-black);
-        @include media('tablet'){
-            padding-bottom: 40px;
-        }
-    }
-}
 .cptSubTop{
     margin: 55px 0; display: flex; justify-content: space-between; align-items: flex-start; position: relative;
     .subTopTxt{
@@ -386,8 +378,8 @@
 
 /* faq - question */
 .comSubTitle{
-    h3{
-        font-size: 32px; color: var(--txt-black); font-weight: 700; letter-spacing: -0.8px; margin-bottom: 65px;
+    &.marginB{
+        margin-bottom: 65px;
     }
 }
 .questionTab{
