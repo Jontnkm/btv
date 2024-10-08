@@ -1267,7 +1267,11 @@
         > thead {
             > tr {
                 > th {
-                    font-size:16px; color:var(--txt-gray02); font-weight:400; height:80px; line-height:80px; padding: 0 8px; text-align:center; border-bottom:1px solid var(--txt-gray04); background:var(--txt-gray05);
+                    position:relative; font-size:16px; color:var(--txt-gray02); font-weight:400; height:80px; padding: 0 8px; text-align:center; border-bottom:1px solid var(--txt-gray04); background:var(--txt-gray05);
+
+                    > span {
+                        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:100%; height:auto; word-break:keep-all;
+                    }
                 }
             }
         }
@@ -1285,6 +1289,15 @@
                         text-align:left;
                         > span {
                             display:block; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+                        }
+                    }
+
+                    &.thumb {
+                        span {
+                            display:block; margin:0 auto; padding:8px 0;
+                            > img {
+                                display:block; width:100%;
+                            }
                         }
                     }
                 }
