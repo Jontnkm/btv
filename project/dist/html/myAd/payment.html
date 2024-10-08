@@ -18,12 +18,17 @@
 	<link rel="stylesheet" href="../../common/css/tui-date-picker.css">
 	<link rel="stylesheet" href="../../common/css/style.css" />
 	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	<link rel="stylesheet" href="../../common/css/animate.css"/> 
 	
 	<script src="../../common/js/jquery-3.4.1.min.js"></script>
 	<script src="../../common/js/jquery-ui.min.js"></script>
 	<script src="../../common/js/tui-date-picker.js"></script>
 	<script src="../../common/js/swiper.js"></script>
 	<script src="../../common/js/common.js"></script>
+	<script src="../../common/js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
 
 	<!--
     <script src="../common/js/basic.js"></script>
@@ -91,17 +96,28 @@
 							</dd>
 						</dl>
 						<!-- 2024.09.04 로그인 후 only !!!! -->
-						<a href="#none" class="myAdLink">나의광고</a>
+						<dl>
+							<dt>
+								<a href="#none" class="item">
+									<span class="ico"><span class="hidden">티비아이콘</span></span>
+									<span class="txt">나의광고</span>
+								</a>
+							</dt>
+							<dd class="head2depth">
+								<a href="#none">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl>
 					</div>
 				</div>
 			</div>
 			<div class="rightArea pcMenu">
 				<div class="cptBtnForm"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
 					<!--2024.09.04 로그인 전-->
-					<!-- <button type="button" class="btn scnd login">로그인</button>
-					<button type="button" class="btn scnd register">회원가입</button> -->
+					<button type="button" class="btn scnd login">로그인</button>
+					<button type="button" class="btn scnd register">회원가입</button>
 					<!--2024.09.04 로그인 후-->
-					<div class="mypageCover">
+					<!-- <div class="mypageCover">
 						<button type="button" class="btn scnd mypage">
 							<span class="userNm">홍길동</span>님 
 						</button>
@@ -123,7 +139,7 @@
 								</ul>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<div class="moMenuBtn">
 					<div class="menuWrap">
@@ -756,4 +772,6 @@
 
 </div>
 </body>
+
+
 </html>

@@ -11,11 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
     //==================================메인비주얼========================================//
     //===================================================================================//
 
-    var swiper = new Swiper(".mainVisual", {
+    var mainSlide = new Swiper(".mainVisual", {
+        
         autoplay: {
-            delay: 3000,
             slidePerView:1,
-            centeredSlides: true
+            centeredSlides: true,
+            delay: 3000,
+            disableOnInteraction: false
         },
         loop: true,
         pagination: {
@@ -32,10 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
     //==================================광고슬라이더========================================//
     //===================================================================================//
     
-    var swiper = new Swiper(".adVisual", {
-        slidePerView:1,
+    var adSlide = new Swiper(".adVisual", {
+        slidesPerView: 'auto',
         loop: false,
-        spaceBetween : 30,
+        allowTouchMove: true,
         navigation: {
             nextEl: ".swiper-button-next02",
             prevEl: ".swiper-button-prev02"
@@ -906,6 +908,9 @@ document.addEventListener("DOMContentLoaded", function() {
     moRstPopCls.addEventListener('click', () => {
         moRstPop.classList.remove('on');
     })
+
+    var scr = window.scrollY;
+    console.log(scr);
 });
 
 //============================================================================================================//

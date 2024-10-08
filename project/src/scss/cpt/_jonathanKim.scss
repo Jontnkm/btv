@@ -485,7 +485,7 @@
         width:100%; position:relative; margin-top:120px; text-align:center;
         
         > .imgBg {
-            display:block; width:180px; height:180px; background:#55CFA6; border-radius:50%; position:relative; margin:0 auto;
+            display:block; width:180px; height:180px; background:var(--sub-color04); border-radius:50%; position:relative; margin:0 auto;
             > img {
                 position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
             }

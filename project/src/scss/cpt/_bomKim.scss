@@ -1,12 +1,4 @@
 /* createAd - createTemplate */
-.comSubTitle{
-    h5{
-        font-size: 24px; font-weight: 700; letter-spacing: -0.6px; color: var(--txt-black);
-        @include media('tablet'){
-            padding-bottom: 40px;
-        }
-    }
-}
 .cptSubTop{
     margin: 55px 0; display: flex; justify-content: space-between; align-items: flex-start; position: relative;
     .subTopTxt{
@@ -116,7 +108,7 @@
                                 }
                             }
                             &.active{ 
-                                color: var(--prm-color);
+                                background:var(--prm-color); color:var(--clr-white);
                                 .tmpIcon{
                                     background: url(../../images/common/ico_tmpArrUp.svg) no-repeat 0 0;
                                 }
@@ -125,15 +117,18 @@
                                 }
                             }
                             @include media('tablet'){
-                                font-size: 16px; width: 100%;
+                                font-size: 16px; width: 100%; line-height:60px; height:60px;
                             }
                         }
                         @include media('tablet'){
-                            width: 33.3333%; margin-right: 0;
+                            width: 33.3333%; margin-right: 0; border-right:1px solid var(--txt-gray04);
+                            &:last-of-type {
+                                border-right:0;
+                            }
                         }
                     }
                     @include media('tablet'){
-                        justify-content: center; height: 60px; width: 100%; border-bottom: 1px solid var(--txt-gray04); text-align: center;
+                        justify-content: center; height: 60px; width: 100%; text-align: center; background:var(--txt-gray05); border-bottom: 1px solid var(--txt-gray04);
                     }
                 }
             }
@@ -277,7 +272,14 @@
                 .popTitArea{
                     display: none;
                     @include media('tablet'){
-                        display: flex; 
+                        display: flex; position:relative; border-bottom:1px solid var(--txt-gray04);
+
+                        > .tit {
+                            font-size:20px; color:var(--txt-black); font-weight:500; height:56px; line-height:56px; padding-left:15px;
+                        }
+                        > .closeBtn {
+                            position:absolute; top:50%; right:15px; transform:translateY(-50%);
+                        }
                     }
                 }
                 @include media('tablet'){
@@ -290,7 +292,6 @@
 
         }
         &.active{
-            // display: flex;
             display: block; background: var(--clr-white);
         }
         @include media('tablet'){
@@ -307,6 +308,7 @@
         .cardCont{
             row-gap: 70px;
             .item{
+                width: calc(33.3333% - 20px);
                 a{
                     .thumbnail2{
                         height: 236px; width: 100%; border-radius: 24px;
@@ -357,9 +359,15 @@
                         }
                     }
                 }
+                @include media('tablet'){
+                    width: calc(50% - 10px);
+                }
+                @include media('mobile'){
+                    width: 100%;
+                }
             }
             @include media('tablet'){
-                row-gap: 25px;
+                row-gap: 20px;  column-gap: 20px;
             }
         }
     }
@@ -369,12 +377,7 @@
 }
 
 /* faq - question */
-.comSubTitle{
-    h3{
-        font-size: 32px; color: var(--txt-black); font-weight: 700; letter-spacing: -0.8px; margin-bottom: 65px;
-    }
-}
-.modTab{
+.questionTab{
     margin-top: 55px;
 }
 
@@ -382,12 +385,5 @@
 .excpBtn{
     button{
         width: auto;
-    }
-}
-
-/* event - list */
-.modTabWide{
-    .tabMenu{
-        margin-bottom: 60px;
     }
 }
