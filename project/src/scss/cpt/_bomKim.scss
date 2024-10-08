@@ -125,22 +125,17 @@
                                 }
                             }
                             @include media('tablet'){
-                                font-size: 16px; width: 100%; 
-                                /*스타일변경으로인한 수정 jk*/
-                                line-height:60px; height:60px;
+                                font-size: 16px; width: 100%; line-height:60px; height:60px;
                             }
                         }
                         @include media('tablet'){
-                            width: 33.3333%; margin-right: 0;
-                            /*스타일변경으로인한 수정 jk*/
-                            border-right:1px solid var(--txt-gray04);
+                            width: 33.3333%; margin-right: 0; border-right:1px solid var(--txt-gray04);
                             &:last-of-type {
                                 border-right:0;
                             }
                         }
                     }
                     @include media('tablet'){
-                        /*스타일변경으로인한 수정 jk*/
                         justify-content: center; height: 60px; width: 100%; text-align: center; background:var(--txt-gray05); border-bottom: 1px solid var(--txt-gray04);
                     }
                 }
@@ -285,7 +280,6 @@
                 .popTitArea{
                     display: none;
                     @include media('tablet'){
-                        /*css 추가함 jk*/
                         display: flex; position:relative; border-bottom:1px solid var(--txt-gray04);
 
                         > .tit {
@@ -294,7 +288,6 @@
                         > .closeBtn {
                             position:absolute; top:50%; right:15px; transform:translateY(-50%);
                         }
-                        /* //css 추가함 jk*/
                     }
                 }
                 @include media('tablet'){
@@ -307,7 +300,6 @@
 
         }
         &.active{
-            // display: flex;
             display: block; background: var(--clr-white);
         }
         @include media('tablet'){
@@ -398,7 +390,7 @@
         font-size: 32px; color: var(--txt-black); font-weight: 700; letter-spacing: -0.8px; margin-bottom: 65px;
     }
 }
-.modTab{
+.questionTab{
     margin-top: 55px;
 }
 
@@ -408,10 +400,3 @@
         width: auto;
     }
 }
-
-/* event - list */ /*중복되어 제거함 jk*/
-// .modTabWide{
-//     .tabMenu{
-//         margin-bottom: 60px;
-//     }
-// }
