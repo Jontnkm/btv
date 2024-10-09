@@ -387,3 +387,276 @@
         width: auto;
     }
 }
+
+/* mypage - index */
+.mypageM{
+    @include media('mobile'){
+        display: flex;
+    }
+    .standard{
+        @include media('mobile'){
+            position: relative;
+            &::after{
+                content: ''; display: block; width: 1px; height: 18px; background: var(--txt-gray04); position: absolute; left: 92px; top: 50%; transform: translateY(-50%);
+            }
+        }
+    }
+    .mypageMTxt{
+        display: none;
+        @include media('mobile'){
+            display: block; padding-left: 25px; font-size: 18px; font-weight: 400; letter-spacing: -0.45px; color: var(--prm-color);
+            div{
+                display: flex; justify-content: center; align-items: center;
+                .mobileImg{
+                    display: inline-block; padding-right: 8px; 
+                }
+                .mobileImg2{
+                    display: inline-block; padding-left: 8px; 
+                }
+            }
+        }
+    }
+}
+.cptInfoTop{
+    border-radius: 24px; background: var(--prm-color); padding: 40px 30px;
+    .top{
+        width: 100%; display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;
+        .title{
+            color: var(--clr-white); font-size: 18px; font-weight: 500; letter-spacing: -0.45px;
+            .name{
+                display: inline-block; 
+            }
+            @include media('mobile'){
+                font-size: 16px;
+            }
+        }
+        .more{
+            a{ 
+                color: var(--clr-white); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 400; letter-spacing: -0.4px;
+                span{
+                    display: inline-block; margin-left: 8px;
+                }
+            }
+            @include media('mobile'){
+                display: none;
+            }
+        }
+        .moreMobile{
+            display: none; transition: transform 0.3s ease;
+            &.active{
+                background: url(../../images/common/ico_arrUp_w.svg) no-repeat 0 0; width: 24px; height: 24px; cursor: pointer;
+            }
+            @include media('mobile'){
+                display: block; background: url(../../images/common/ico_arrDown_w.svg) no-repeat 0 0; width: 24px; height: 24px; cursor: pointer;
+            }
+        }
+        @include media('mobile'){
+            margin-bottom: 0;
+        }
+    }
+    .boxWrap{
+        .boxArea{
+                display: flex; justify-content: space-between;
+            .box{
+                background: var(--clr-white); border-radius: 8px; padding: 25px; display: flex; justify-content: space-between;
+            .item{
+                position: relative;
+                .txt{
+                    color: var(--prm-color); font-size: 16px; font-weight: 500; letter-spacing: -0.4px; margin-bottom: 30px;
+                    &::after{
+                        content: ''; display: block; background: var(--txt-gray04); width: 1px; height: 75px; position: absolute; right: -30px; top: 50%; transform: translateY(-50%);
+                        @include media('tablet'){
+                            right: -20px;
+                        }
+                        @include media('mobile'){
+                            right: -15%; height: 56px;
+                        }
+                    }
+                    @include media('mobile'){
+                        font-size: 14px; margin-bottom: 15px;
+                    }
+                }
+                .score{
+                    color: var(--txt-black); font-size: 24px; font-weight: 500; letter-spacing: -0.6px; text-align: right;
+                    @include media('mobile'){
+                        font-size: 20px;
+                    }
+                }
+                &:last-child{
+                    .txt{
+                        &::after{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &.box1{
+                margin-right: 30px; width: 492px;
+                .item{
+                    width: 44%;
+                }
+                @include media('mobile'){
+                    width: 100%; margin: 15px 0 25px 0;
+                }
+            }
+            &.box2{
+                width: 738px;
+                .item{
+                    width: 28%;
+                    
+                }
+                @include media('mobile'){
+                    width: 100%;
+                }
+            }
+            @include media('mobile'){
+                padding: 15px;
+            }
+            }
+            @include media('mobile'){
+                flex-direction: column; 
+            }
+        }
+        &.hidden{
+            max-height: 0;
+        }
+        @include media('mobile'){
+            transition: max-height 0.3s ease; max-height: 300px; overflow: hidden;
+        }
+    }
+    @include media('mobile'){
+        padding: 15px; border-radius: 16px;
+    }
+}
+.cptInfoBottom{
+    margin-top: 90px; display: flex; justify-content: space-between; width: 100%;
+    .left{
+        width: 191px; margin-right: 150px; 
+        li{
+            &.myInfo{
+                font-size: 18px; font-weight: 500; letter-spacing: -0.45px;
+                &.active{
+                    color: var(--prm-color);
+                }
+                @include media('mobile'){
+                    font-size: 14px; font-weight: 400;
+                }
+            }
+            &.myInfoFir{
+                .myInfoImg{
+                    display: inline-block; background: url(../../images/common/ico_user_p.svg) no-repeat 0 0; width: 24px; height: 24px; vertical-align: middle; margin-right: 5px;
+                }
+            }
+            &.myInfoSec{
+                .myInfoImg{
+                    display: inline-block; background: url(../../images/common/ico_benefit_b.svg) no-repeat 0 0; width: 24px; height: 24px; vertical-align: middle; margin-right: 5px;
+                }
+            }
+            &.myInfoThi{
+                .myInfoImg{
+                    display: inline-block; background: url(../../images/common/ico_money_b.svg) no-repeat 0 0; width: 24px; height: 24px; vertical-align: middle; margin-right: 5px;
+                }
+                @include media('mobile'){
+                    ul{
+                        padding-bottom: 0;
+                    }
+                }
+            }
+            ul{
+                padding: 25px 30px;
+                li{
+                    font-size: 16px; font-weight: 500; letter-spacing: -0.4px; padding-bottom: 15px;
+                    &.myInfo2{
+                        &.active a{
+                            color: var(--prm-color); text-decoration-line: underline;
+                        }
+                    }
+                    a{
+                        font-size: 16px; font-weight: 500; letter-spacing: -0.4px; color: var(--txt-gray02);
+                        &:hover{
+                            color: var(--prm-color);
+                        }
+                        @include media('mobile'){
+                            font-size: 14px; font-weight: 400;
+                        }
+                    }
+                    &:last-child{
+                        padding-bottom: 0;
+                    }
+                    @include media('mobile'){
+                        font-size: 14px; font-weight: 400; padding-bottom: 10px;
+                    }
+                }
+                @include media('mobile'){
+                    padding: 20px 0 25px 30px;
+                }
+            }
+        }
+        @include media('mobile'){
+            display: none; z-index: 19; position: absolute; left: 118px; top: 130px; background: var(--clr-white); box-shadow: 2px 6px 16px 0px rgba(0, 0, 0, 0.06); border: 1px solid var(--txt-gray04); border-radius: 8px; padding: 35px 25px; margin-right: 0;
+        }
+    }
+    .right{
+        width: calc(100% - 330px);
+        .mypageTit{
+            margin-bottom: 55px;
+            h5{
+                position: relative; padding-left: 12px;
+                &::before{
+                    content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; background: var(--txt-black); position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+                }
+                @include media('tablet'){
+                    padding-bottom: 0;
+                }
+            }
+            @include media('tablet'){
+                margin-bottom: 0;
+            }
+        }
+        .infoTitle{
+            color: var(--txt-black); font-weight: 700; font-size: 18px; letter-spacing: -0.45px; border-bottom: 1px solid var(--txt-gray04); padding-bottom: 15px; margin-bottom: 30px; margin-top: 55px;
+            @include media('mobile'){
+                font-size: 16px; padding-bottom: 12px; margin-top: 40px; margin-bottom: 25px;
+            }
+        }
+        .mypageFrm{
+            margin-bottom: 15px;
+            .iptMypage{
+                input{
+                    width: 100%;
+                }
+            }
+            .iptArray{
+                @include media('tablet'){
+                    display: flex; flex-direction: row; flex-wrap: nowrap; width: 100%;
+                    input{
+                        width: 100%;
+                    }
+                    .cptBtnForm{
+                        width: 90px; border-radius: 6px;
+                    }
+                }
+            }
+        }
+        .cptFrmMypage{
+            margin-bottom: 15px;
+            .labelTxt{
+                @include media('mobile'){
+                    font-size: 14px;
+                }
+            }
+        }
+        .btnMypage{
+            max-width: 480px; margin: 0 auto; padding-top: 70px;
+            @include media('mobile'){
+                width: 100%; max-width: 100%; padding-top: 40px;
+            }
+        }
+        @include media('mobile'){
+            width: 100%;
+        }
+    }
+    @include media('mobile'){
+        margin-top: 40px;
+    }
+}

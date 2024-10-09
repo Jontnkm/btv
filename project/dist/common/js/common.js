@@ -947,3 +947,47 @@ function aptSearch() {
     $(aptSch).parents('.cptForm').next("div").show();
     $(moAptRst).show();
 }
+
+
+//============================================================================================================//
+//================================= mypage - index.html 모바일 '나의정보' 클릭 =================================//
+//============================================================================================================//
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.mypageMTxt').addEventListener('click', function() {
+        const leftElement = document.querySelector('.left');
+        
+        if (leftElement.style.display === 'none' || leftElement.style.display === '') {
+            leftElement.style.display = 'block';
+        } else {
+            leftElement.style.display = 'none';
+        }
+    });
+});
+
+
+//============================================================================================================//
+//================================ mypage - index.html 모바일 정보 아코디언 메뉴 ===============================//
+//============================================================================================================//
+document.addEventListener('DOMContentLoaded', function () {
+    const moreMobile = document.querySelector('.moreMobile');
+    const boxWrap = document.querySelector('.boxWrap');
+
+    function toggleBox() {
+        // 모바일 사이즈에서만 작동 (768px 이하)
+        if (window.innerWidth <= 768) {
+            boxWrap.classList.toggle('hidden');
+            moreMobile.classList.toggle('active'); 
+        }
+    }
+
+    moreMobile.addEventListener('click', toggleBox);
+
+    // PC 화면일 경우 boxWrap이 항상 보이도록 설정
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 768) {
+            boxWrap.classList.remove('hidden');
+            moreMobile.classList.remove('active');
+        }
+    });
+});
+
