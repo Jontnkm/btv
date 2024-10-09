@@ -1,20 +1,20 @@
 /*===================================================================================*/
 /*====================================로그인페이지====================================*/
 /*===================================================================================*/
-.loginPageArea {
+.memberPageArea {
     width:100%; max-width: 480px; margin:0 auto; position:relative; padding-top:10px;
     @include media ('mobile') {
-        width:90.75%; margin:4rem auto 0; 
+        margin:4rem auto 0; 
     }
-    .logTitle {
+    .memberTitle {
         font-size:32px; margin-bottom:56px; color:var(--txt-black); font-weight:700; line-height:45px; letter-spacing:-0.8px; text-align:center;
         @include media ('mobile') {
-            font-size:2rem; margin-bottom:3rem;
+            font-size:30px; margin-bottom:3rem;
         }
     }
 
     .cptForm {
-        display:flex; flex-flow:column; justify-content: flex-start; gap:16px; margin-bottom:40px;
+        display:flex; flex-flow:column; justify-content: flex-start; gap:24px; margin-bottom:40px;
         @include media ('mobile') {
             margin-bottom:2rem;
         }
@@ -55,6 +55,245 @@
 
             > span:last-of-type {
                 font-size:14px; color:var(--txt-gray01);
+            }
+        }
+    }
+
+    /*아이디 찾기*/
+    .memberDesc {
+        margin:24px 0 56px; font-size:18px; color:var(--txt-gray02); font-weight:400; line-height:1.4; text-align:center;
+
+        @include media ('tablet'){
+            font-size:16px; word-break:break-word;
+        }
+    }
+
+    .reqTxt {
+        font-size:16px; color:var(--txt-gray01); font-weight:400; margin-bottom:16px;
+        @include media ('tablet'){
+            font-size:14px;
+        }
+        .required {
+            color: var(--snd-color);
+        }
+    }
+
+    .resultArea {
+        width:100%; position:relative; margin-bottom:40px;
+        .inner {
+            padding:30px 0 ; background:var(--txt-gray05); border-radius:8px;
+            .result {
+                > p {
+                    width:100%; font-size:16px; color:var(--txt-gray01); font-weight:400; text-align:center;
+                    @include media ('tablet'){
+                        font-size:14px;
+                    }
+                    &.idRst {
+                        color:var(--prm-color); font-weight:500; margin-top:16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .pwOption {
+        display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between; margin-top:16px;
+
+        > a {
+            display:block; font-size:16px; color:var(--txt-gray02);
+            @include media ('tablet'){
+                font-size:14px;
+            }
+
+            &.pwSch {
+                position:relative; padding-right:14px; 
+                &::after {
+                    content:''; position:absolute; top:50%; right:0; width:4px; height:7px; background:url(../../images/common/ico_arr03.svg)50% 50% no-repeat; transform:translateY(-50%);
+                }
+            }
+        }
+    }
+
+    /*회원가입*/
+    &.register {
+        max-width: 870px;
+        @include media ('tablet'){
+            max-width:none;
+        }  
+        .regTypeOpt {
+            position:relative; width:100%; 
+            > ul {
+                display:flex; flex-flow:row nowrap; align-items: center; justify-content: center; gap:30px;
+                @include media ('tablet'){
+                    flex-flow:column;
+                }
+                > li {
+                    width:calc(50% - 15px); border:1px solid var(--txt-gray04); border-radius:24px; background:var(--clr-white); padding:56px 40px; text-align:center;
+                    @include media ('tablet'){
+                        width:100%; padding:25px 20px;
+                    }   
+                    > .ico {
+                        display:inline-block; position:relative; width:90px; height:90px; background: var(--txt-gray05); border-radius:50%; margin-bottom:40px;
+                        @include media ('tablet'){
+                            margin-bottom:20px;
+                        }  
+                    }
+                    &.normal {
+                        > .ico {
+                            &::after {
+                                content:''; position:absolute; width:40px; height:40px; top:50%; left:50%; transform: translate(-50%,-50%); background:url(../../images/common/ico_reg01.svg)50% 50% no-repeat;
+                            }
+                        }
+                    }
+
+                    &.agency {
+                        > .ico {
+                            &::after {
+                                content:''; position:absolute; width:48px; height:40px; top:50%; left:50%; transform: translate(-50%,-50%); background:url(../../images/common/ico_reg02.svg)50% 50% no-repeat;
+                            }
+                        }
+                    }
+
+                    > .tit {
+                        font-size:20px; color:var(--txt-black); font-weight:500; margin-bottom:16px;
+                        @include media ('tablet'){
+                            font-size:18px;
+                        }
+                    }
+
+                    .desc {
+                        width:75%; font-size:16px; color:var(--txt-gray02); font-weight:400; margin:0 auto 72px;
+                        @include media ('tablet'){
+                            font-size:14px; margin: 0 auto 40px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .note {
+            width:100%; margin-top:40px; position:relative; background:var(--txt-gray05); border-radius:8px; padding: 24px; display:flex; flex-flow:column; align-items: flex-start; justify-content: flex-start; gap:16px;
+
+            .tit {
+                width:100%; font-size:16px; color:var(--txt-gray01); font-weight:bold;
+            }
+
+            .desc {
+                padding-left:7px; font-size:16px; color:var(--txt-gray01); font-weight:400; position:relative;
+                &::after {
+                    content:''; position:absolute; top:50%; left:0; width:3px; height:3px; border-radius:50%; background:var(--txt-gray01); 
+                }
+            }
+        }
+
+        .regBox {
+            padding:50px 40px; position:relative; width:100%; border:1px solid var(--txt-gray04); border-radius:24px;
+            @include media ('tablet') {
+                padding:30px 20px;
+            }
+            .titArea {
+                padding-bottom:15px; border-bottom:1px solid var(--txt-gray04); display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:16px; margin-bottom:30px;
+
+                .tit {
+                    font-size:18px; color:var(--txt-black); font-weight:bold; 
+                    @include media ('tablet'){
+                        font-size:16px;
+                    }
+                }
+                .desc {
+                    font-size:14px; color:var(--txt-gray02); font-weight:400;
+                    @include media ('tablet'){
+                        font-size:12px;
+                    }
+                    > .required {display:inline-block; margin-right:4px;}   
+                }
+                .required {
+                    color:var(--snd-color);
+                }
+            }
+
+            .cptForm {
+                .frmIpt {
+                    label {
+                        .infoMsg {
+                            font-size:14px; font-weight:400;
+                            @include media ('tablet') {
+                                display:block; word-break:keep-all; font-size:12px;
+                            }
+                            &.type01 {
+                                color: var(--prm-color);
+                            }
+
+                            &.type02 {
+                                color: var(--txt-gray02);
+                            }
+                        }
+                    }
+                }
+
+                &:not(:last-of-type) {
+                    margin-bottom:56px;
+                }
+
+                &:last-of-type {
+                    margin-bottom:0;
+                }
+
+                .withMore {
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+                    @include media ('tablet') {
+                        label {width:calc(100% - 70px); word-break:keep-all; height:auto;}
+                    }
+                    > button {
+                        padding-right:12px; position:relative; font-size:14px; color:var(--txt-gray01); font-weight:400; 
+                        @include media ('tablet') {
+                            width:50px; font-size:12px;
+                        }
+
+                        &::after {
+                            content:''; position:absolute; top:50%; right:0; width:4px; height:7px; background:url(../../images/common/ico_arr03.svg)50% 50% no-repeat; transform:translateY(-50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.regiComp {
+        position:relative; width:100%; padding-top:28px; text-align:center;
+        @include media ('tablet'){
+            padding-top:0;
+        }
+        .ico {
+            display:inline-block; position:relative; width:80px; height:80px; 
+
+            &::after {
+                content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:url(../../images/common/ico_complete.svg)50% 50% no-repeat; width:80px; height:80px;
+            }
+        }
+
+        > .tit {
+            font-size:24px; color:var(--prm-color); font-weight:bold; margin:24px 0 16px;
+            @include media ('tablet'){
+                font-size:22px;
+            }
+        }
+
+        > .desc {
+            font-size:18px; color:var(--txt-gray01); font-weight:400; margin-bottom:56px;
+            @include media ('tablet'){
+                font-size:16px; word-break:keep-all;
+            }
+            &:last-of-type {
+                margin-bottom:0;
+            }
+        }
+
+        > .cptBtnForm {
+            position:relative; width:100%; margin-top:40px; display:flex; flex-flow:row nowrap; align-items: center; justify-content:center; gap:10px;
+
+            > button {
+                width:240px;
             }
         }
     }
