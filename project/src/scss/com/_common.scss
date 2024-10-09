@@ -34,7 +34,7 @@
         width:100%; position:relative;
 
         label {
-            display:inline-block; vertical-align: middle; font-size:16px; color:var(--txt-gray01); font-weight:400; line-height:22px; letter-spacing:-0.4px; margin-bottom:8px;
+            display:inline-block; vertical-align: middle; font-size:16px; color:var(--txt-gray01); font-weight:400; line-height:22px; letter-spacing:-0.4px; margin-bottom:16px;
             @include media ('tablet') {
                 font-size:14px;
             }
@@ -47,7 +47,7 @@
             }
         }
 
-        input[type="text"] {
+        input {
             width:100%; padding: 0 16px; font-size:16px; color:var(--txt-black); font-weight:400; height:48px; line-height:48px; letter-spacing:-0.4px; border:1px solid var(--txt-gray04); border-radius:8px; background:var(--clr-white); transition:all 0.4s;
             @include media ('tablet') {
                 font-size:14px;
@@ -59,9 +59,13 @@
             }
         }
         &.err {
-            input[type="text"] {
+            input {
                 border:1px solid var(--snd-color);
                 &:focus {outline:1px solid var(--snd-color);}
+            }
+
+            .errTxt {
+                display:block; font-size:14px; color:var(--snd-color); font-weight:500; margin-top:8px;
             }
         }
 
