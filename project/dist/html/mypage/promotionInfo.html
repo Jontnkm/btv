@@ -287,13 +287,13 @@
 
             <div class="cptInfoBottom">
                 <ul class="left">
-                    <li class="myInfo myInfoFir active"><span class="myInfoImg"></span>나의정보
+                    <li class="myInfo myInfoFir active1"><span class="myInfoImg"></span>나의정보
                         <ul>
                             <li class="myInfo2 active"><a href="#">회원정보</a></li>
                             <li><a href="#">비밀번호 변경</a></li>
                         </ul>
                     </li>
-                    <li class="myInfo myInfoSec"><span class="myInfoImg"></span>나의 혜택/광고관리
+                    <li class="myInfo myInfoSec active2"><span class="myInfoImg"></span>나의 혜택/광고관리
                         <ul> 
                             <li><a href="#">프로모션 정보</a></li>
                             <li><a href="#">포인트 현황</a></li>
@@ -302,7 +302,7 @@
                             <li><a href="#">비즈니스 관리</a></li>
                         </ul>
                     </li>
-                    <li class="myInfo myInfoThi"><span class="myInfoImg"></span>결제 정보
+                    <li class="myInfo myInfoThi active3"><span class="myInfoImg"></span>결제 정보
                         <ul>
                             <li><a href="#">결제내역</a></li>
                         </ul>
@@ -310,110 +310,329 @@
                 </ul>
                 <div class="right">
                     <div class="comSubTitle mypageTit">
-                        <h5>나의정보</h5>
+                        <h5>프로모션 정보</h5>
                     </div>
 
-                    <!-- 기본정보 -->
-                    <div class="infoTitle">
-                        기본정보
+                    <!-- 프로모션정보 테이블 -->
+                    <div class="cptTable">
+                        <table>
+                            <colgroup>
+                                <col style="width:5%" />
+                                <col style="width:10%" />
+                                <col style="width:auto" />
+                                <col style="width:7%" />
+                                <col style="width:7%" />
+                                <col style="width:7%" />
+                                <col style="width:7%" />
+                                <col style="width:7%" />
+                                <col style="width:7%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th><span>순번</span></th>
+                                    <th><span>캠페인명</span></th>
+                                    <th><span>소재정보</span></th>
+                                    <th><span>최초 생성일</span></th>
+                                    <th><span>수정일</span></th>
+                                    <th><span>결제일</span></th>
+                                    <th><span>프로모션 정보</span></th>
+                                    <th><span>노출여부</span></th>
+                                    <th><span>광고효과</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10</td>
+                                    <td class="thumb">
+                                        <span>
+                                            <img src="../../images/temp/tableThumb.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td class="title"><span>소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보</span></td>
+                                    <td class="date"><span>2024. 06.01</span></td><!--최초생성일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--수정일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--결제일-->
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">수정</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">미노출</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">보기</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td class="thumb">
+                                        <span>
+                                            <img src="../../images/temp/tableThumb.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td class="title"><span>소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보</span></td>
+                                    <td class="date"><span>2024. 06.01</span></td><!--최초생성일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--수정일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--결제일-->
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">수정</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">미노출</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">보기</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td class="thumb">
+                                        <span>
+                                            <img src="../../images/temp/tableThumb.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td class="title"><span>소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보</span></td>
+                                    <td class="date"><span>2024. 06.01</span></td><!--최초생성일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--수정일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--결제일-->
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">수정</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">미노출</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">보기</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="thumb">
+                                        <span>
+                                            <img src="../../images/temp/tableThumb.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td class="title"><span>소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보</span></td>
+                                    <td class="date"><span>2024. 06.01</span></td><!--최초생성일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--수정일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--결제일-->
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">수정</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">미노출</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">보기</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td class="thumb">
+                                        <span>
+                                            <img src="../../images/temp/tableThumb.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td class="title"><span>소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보</span></td>
+                                    <td class="date"><span>2024. 06.01</span></td><!--최초생성일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--수정일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--결제일-->
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">수정</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">미노출</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">보기</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td class="thumb">
+                                        <span>
+                                            <img src="../../images/temp/tableThumb.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td class="title"><span>소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보</span></td>
+                                    <td class="date"><span>2024. 06.01</span></td><!--최초생성일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--수정일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--결제일-->
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">수정</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">미노출</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">보기</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="thumb">
+                                        <span>
+                                            <img src="../../images/temp/tableThumb.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td class="title"><span>소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보</span></td>
+                                    <td class="date"><span>2024. 06.01</span></td><!--최초생성일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--수정일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--결제일-->
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">수정</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">미노출</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">보기</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="thumb">
+                                        <span>
+                                            <img src="../../images/temp/tableThumb.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td class="title"><span>소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보</span></td>
+                                    <td class="date"><span>2024. 06.01</span></td><!--최초생성일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--수정일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--결제일-->
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">수정</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">미노출</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">보기</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="thumb">
+                                        <span>
+                                            <img src="../../images/temp/tableThumb.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td class="title"><span>소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보</span></td>
+                                    <td class="date"><span>2024. 06.01</span></td><!--최초생성일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--수정일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--결제일-->
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">수정</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">미노출</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">보기</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="thumb">
+                                        <span>
+                                            <img src="../../images/temp/tableThumb.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td class="title"><span>소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보소재정보 소재정보 소재정보 소재정보 소재정보 소재정보 소재정보</span></td>
+                                    <td class="date"><span>2024. 06.01</span></td><!--최초생성일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--수정일-->
+                                    <td class="date"><span>2024. 06.01</span></td><!--결제일-->
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">수정</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">미노출</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd mini">보기</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="cptForm mypageFrm">
-                        <div class="frmIpt">
-                            <label for="iptInfo01">회원유형</label>
-                            <input type="text" placeholder="test" id="iptInfo01" disabled value="회원유형"/>
-                        </div>
-                    </div>
-                    <div class="cptForm mypageFrm">
-                        <div class="frmIpt">
-                            <label for="iptInfo02">아이디</label>
-                            <input type="text" placeholder="test" id="iptInfo02" disabled value="test0000"/>
-                        </div>
-                    </div>
-                    <div class="cptForm mypageFrm">
-                        <div class="frmIpt">
-                            <label for="iptInfo03">이름</label>
-                            <input type="text" placeholder="test" id="iptInfo03" disabled value="홍길동"/>
-                        </div>
-                    </div>
-                    <div class="cptForm mypageFrm">
-                        <div class="frmIpt">
-                            <label for="iptInfo04">휴대폰번호</label>
-                            <input type="text" placeholder="test" id="iptInfo04" disabled value="010-0000-0000"/>
-                        </div>
-                    </div>
-                    <!--// 기본정보 -->
+                    <!--// 프로모션정보 테이블 -->
 
-                    <!-- 사업자 정보 -->
-                    <div class="infoTitle">
-                        사업자 정보
+                    <!-- pagination -->
+                    <div class="comPagination">
+                        <a href="#" class="start"></a>
+                        <a href="#" class="prev"></a>
+                        <ul class="numList">
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                        </ul>
+                        <a href="#" class="next">
+                            <img src="../../images/common/ico_pagArrRight.svg" alt="오른쪽 방향 아이콘">
+                        </a>
+                        <a href="#" class="end"></a>
                     </div>
-                    <div class="cptForm mypageFrm">
-                        <div class="frmIpt withBtn">
-                            <label for="iptInfo05">업체명</label>
-                            <div class="iptArea iptMypage">
-                                <input type="text" placeholder="test" id="iptInfo05" value="서울 40년 전통 할아버지 왕만두">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cptForm mypageFrm">
-                        <div class="frmIpt withBtn">
-                            <label for="iptInfo06">사업자등록번호</label>
-                            <div class="iptArea iptArray">
-                                <input type="text" placeholder="test" id="iptInfo06" value="123456789">
-                                <div class="cptBtnForm">
-                                    <button type="button" class="btn scnd">번호확인</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cptForm mypageFrm">
-                        <div class="frmIpt withBtn">
-                            <label for="iptInfo07">사업자등록증</label>
-                            <div class="iptArea iptArray">
-                                <input type="text" placeholder="파일을 첨부해주세요" id="iptInfo07">
-                                <div class="cptBtnForm">
-                                    <button type="button" class="btn scnd">첨부하기</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cptForm mypageFrm">
-                        <div class="frmIpt withBtn">
-                            <label for="iptInfo08">소상공인증명서</label>
-                            <div class="iptArea iptArray">
-                                <input type="text" placeholder="파일을 첨부해주세요" id="iptInfo08">
-                                <div class="cptBtnForm">
-                                    <button type="button" class="btn scnd">첨부하기</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--// 사업자 정보 -->
-
-                    <!-- 마케팅 수신 동의 -->
-                    <div class="infoTitle">
-                        마케팅 수신 동의
-                    </div>
-                    <div class="cptForm cptFrmMypage">
-                        <label class="frmChk">
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                            <span class="labelTxt">마케팅/프로모션을 위한 개인정보 수집/활용동의 (선택)</span>
-                        </label>
-                    </div>
-                    <div class="cptForm cptFrmMypage">
-                        <label class="frmChk">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="labelTxt">마케팅/프로모션을 위한 광고성 정보 수신동의 (선택)</span>
-                        </label>
-                    </div>
-                    <!-- 마케팅 수신 동의 -->
-
-                    <div class="cptBtnForm d-flex gap10 btnMypage">
-                        <!--default-->
-                        <button type="button" class="btn prmy">변경하기</button>
-                    </div>
+                    <!--// pagination -->
 
                 </div>
             </div>

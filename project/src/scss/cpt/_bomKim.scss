@@ -535,24 +535,30 @@
         li{
             &.myInfo{
                 font-size: 18px; font-weight: 500; letter-spacing: -0.45px;
-                &.active{
-                    color: var(--prm-color);
-                }
                 @include media('mobile'){
                     font-size: 14px; font-weight: 400;
                 }
             }
             &.myInfoFir{
+                &.active1{
+                    color: var(--prm-color);
+                }
                 .myInfoImg{
-                    display: inline-block; background: url(../../images/common/ico_user_p.svg) no-repeat 0 0; width: 24px; height: 24px; vertical-align: middle; margin-right: 5px;
+                    display: inline-block; background: url(../../images/common/ico_user_b.svg) no-repeat 0 0; width: 24px; height: 24px; vertical-align: middle; margin-right: 5px;
                 }
             }
             &.myInfoSec{
+                &.active2{
+                    color: var(--prm-color);
+                }
                 .myInfoImg{
-                    display: inline-block; background: url(../../images/common/ico_benefit_b.svg) no-repeat 0 0; width: 24px; height: 24px; vertical-align: middle; margin-right: 5px;
+                    display: inline-block; background: url(../../images/common/ico_benefit_p.svg) no-repeat 0 0; width: 24px; height: 24px; vertical-align: middle; margin-right: 5px;
                 }
             }
             &.myInfoThi{
+                &.active3{
+                    color: var(--prm-color);
+                }
                 .myInfoImg{
                     display: inline-block; background: url(../../images/common/ico_money_b.svg) no-repeat 0 0; width: 24px; height: 24px; vertical-align: middle; margin-right: 5px;
                 }
@@ -660,3 +666,5 @@
         margin-top: 40px;
     }
 }
+
+/* mypage - promotionInfo */
