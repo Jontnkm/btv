@@ -1093,3 +1093,14 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+//============================================================================================================//
+//======================================= customer - faq - reservPhoneCs =====================================//
+//============================================================================================================//
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.callList li').forEach(item => {
+        item.addEventListener('click', function() {
+            document.querySelectorAll('.callList li').forEach(li => li.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
