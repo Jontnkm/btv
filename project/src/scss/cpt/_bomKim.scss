@@ -402,11 +402,11 @@
         }
     }
     .mypageMTxt{
-        display: none;
+        display: none; 
         @include media('mobile'){
             display: block; padding-left: 25px; font-size: 18px; font-weight: 400; letter-spacing: -0.45px; color: var(--prm-color);
             div{
-                display: flex; justify-content: center; align-items: center;
+                display: flex; justify-content: center; align-items: center; cursor: pointer;
                 .mobileImg{
                     display: inline-block; padding-right: 8px; 
                 }
