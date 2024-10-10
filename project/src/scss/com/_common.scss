@@ -1317,6 +1317,14 @@
                             position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:100%; height:auto; word-break:keep-all; line-height:16px;
                         }
                     }
+
+                    &.add {
+                        span {color:var(--prm-color);}
+                    }
+
+                    &.subtract {
+                        span {color:var(--snd-color);}
+                    }
                 }
             }
         }
