@@ -287,17 +287,17 @@
 
             <div class="cptInfoBottom">
                 <ul class="left">
-                    <li class="myInfo myInfoFir"><span class="myInfoImg"><img src="../../images/common/ico_user_b.svg" alt=""></span>나의정보
+                    <li class="myInfo myInfoFir active"><span class="myInfoImg"><img src="../../images/common/ico_user_p.svg" alt=""></span>나의정보
                         <ul>
                             <li><a href="#">회원정보</a></li>
-                            <li><a href="#">비밀번호 변경</a></li>
+                            <li class="myInfoItem"><a href="#">비밀번호 변경</a></li>
                         </ul>
                     </li>
-                    <li class="myInfo myInfoSec active"><span class="myInfoImg"><img src="../../images/common/ico_benefit_p.svg" alt=""></span>나의 혜택/광고관리
+                    <li class="myInfo myInfoSec"><span class="myInfoImg"><img src="../../images/common/ico_benefit_b.svg" alt=""></span>나의 혜택/광고관리
                         <ul> 
                             <li><a href="#">프로모션 정보</a></li>
                             <li><a href="#">포인트 현황</a></li>
-                            <li class="myInfoItem"><a href="#">쿠폰 현황</a></li>
+                            <li><a href="#">쿠폰 현황</a></li>
                             <li><a href="#">광고송출 정보</a></li>
                             <li><a href="#">비즈니스 관리</a></li>
                         </ul>
@@ -310,87 +310,37 @@
                 </ul>
                 <div class="right">
                     <div class="comSubTitle mypageTit">
-                        <h5>쿠폰 현황</h5>
+                        <h5>나의정보</h5>
                     </div>
 
-                    <!-- 쿠폰번호 등록 -->
+                    <!-- 기본정보 -->
+                    <div class="infoTitle">
+                        비밀번호 변경
+                    </div>
                     <div class="cptForm mypageFrm">
-                        <div class="frmIpt withBtn">
-                            <div class="iptArea iptArray">
-                                <input type="text" placeholder="쿠폰번호를 입력해주세요" id="iptCp01">
-                                <div class="cptBtnForm">
-                                    <button type="button" class="btn scnd">등록하기</button>
-                                </div>
-                            </div>
+                        <div class="frmIpt">
+                            <label for="iptInfo01">현재 비밀번호</label>
+                            <input type="text" placeholder="비밀번호를 입력해주세요." id="iptPw01" />
                         </div>
                     </div>
-                    <!--// 쿠폰번호 등록 -->
-
-                    <!-- 테이블 선택 -->
-                    <div class="tableTop couponTop">
-                        <ul class="pointChk">
-                            <li class="chkItem active"><span><img src="../../images/common/ico_chk_p.svg" alt=""></span>보유 쿠폰</li>
-                            <li class="chkItem"><span><img src="../../images/common/ico_chk_b.svg" alt=""></span>사용/만료 쿠폰</li>
-                        </ul>
+                    <div class="cptForm mypageFrm">
+                        <div class="frmIpt">
+                            <label for="iptInfo02">변경 할 비밀번호</label>
+                            <input type="text" placeholder="비밀번호를 입력해주세요." id="iptPw02" />
+                        </div>
                     </div>
-                    <!--// 테이블 선택 -->
-
-                    <!-- 쿠폰 테이블 -->
-                    <div class="cptTable"> 
-                        <table>
-                            <colgroup>
-                                <col style="width:5%" />
-                                <col style="width:auto" />
-                                <col style="width:15%" />
-                                <col style="width:auto" />
-                                <col style="width:15%" />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th><span>순번</span></th>
-                                    <th><span>쿠폰명</span></th>
-                                    <th><span>할인금액</span></th>
-                                    <th><span>사용조건</span></th>
-                                    <th><span>유효기간</span></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>2</td>
-                                    <td class="title"><span>쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명</span></td>
-                                    <td class="money">+1,000</td>
-                                    <td class="txt"><span>사용조건사용조건사용조건사용조건사용조건사용조건사용조건사용조건사용조건</span></td>
-                                    <td><span>2024.06.01</span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td class="txt"><span>쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명쿠폰명</span></td>
-                                    <td class="money">+1,000</td>
-                                    <td class="txt"><span>사용조건사용조건사용조건사용조건사용조건사용조건사용조건사용조건사용조건</span></td>
-                                    <td class="date"><span>2024.06.01</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="cptForm mypageFrm">
+                        <div class="frmIpt">
+                            <label for="iptInfo03">변경 할 비밀번호 확인</label>
+                            <input type="text" placeholder="비밀번호를 입력해주세요." id="iptPw03"/>
+                        </div>
                     </div>
-                    <!--// 쿠폰 테이블 -->
+                    <!--// 기본정보 -->
 
-                    <!-- pagination -->
-                    <div class="comPagination">
-                        <a href="#" class="start"></a>
-                        <a href="#" class="prev"></a>
-                        <ul class="numList">
-                            <li><a href="#" class="active">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                        </ul>
-                        <a href="#" class="next">
-                            <img src="../../images/common/ico_pagArrRight.svg" alt="오른쪽 방향 아이콘">
-                        </a>
-                        <a href="#" class="end"></a>
+                    <div class="cptBtnForm d-flex gap10 btnMypage">
+                        <!--default-->
+                        <button type="button" class="btn prmy">비밀번호 변경하기</button>
                     </div>
-                    <!--// pagination -->
 
                 </div>
             </div>
@@ -480,4 +430,4 @@
 </body>
 
 
-</html> 
+</html>

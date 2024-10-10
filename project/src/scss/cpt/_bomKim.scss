@@ -108,7 +108,7 @@
                                 }
                             }
                             &.active{ 
-                                background:var(--prm-color); color:var(--clr-white);
+                                background: var(--clr-white); color: var(--prm-color);
                                 .tmpIcon{
                                     background: url(../../images/common/ico_tmpArrUp.svg) no-repeat 0 0;
                                 }
@@ -611,18 +611,18 @@
     .right{
         width: calc(100% - 330px);
         .mypageTit{
-            margin-bottom: 55px;
+            margin-bottom: 55px; 
             h5{
                 position: relative; padding-left: 12px;
                 &::before{
                     content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; background: var(--txt-black); position: absolute; left: 0; top: 50%; transform: translateY(-50%);
                 }
                 @include media('tablet'){
-                    padding-bottom: 0;
+                    padding-bottom: 0; font-size: 20px;
                 }
             }
             @include media('tablet'){
-                margin-bottom: 0;
+                margin-bottom: 30px;
             }
         }
         .infoTitle{
@@ -679,4 +679,95 @@
     }
  }
 
-/* mypage - promotionInfo */
+/* mypage - point */
+.cptPoint{
+    width: 100%; border-radius: 8px; border: 1px solid var(--txt-gray04); padding: 25px;
+    .pointArea{
+        display: flex; align-items: center; justify-content: space-between;
+        .item{
+            font-size: 16px; font-weight: 500; letter-spacing: -0.4px; color: var(--txt-gray02); width: 31%; position: relative; display: flex; justify-content: space-between; align-items: center; padding-right: 30px;
+            .pt{
+                display: inline-block; font-size: 18px; font-weight: 500; letter-spacing: -0.45px; color: var(--txt-black);
+                &.ptFirst{
+                    color: var(--prm-color);
+                }
+                @include media('tablet'){
+                    font-size: 16px;
+                }
+            }
+            &::after{
+                content: ''; display: block; width: 1px; height: 24px; background: var(--txt-gray04); position: absolute; right: 0px; top: 0; margin-left: 25px;
+                @include media('tablet'){
+                    top: 50%; transform: translateY(-50%);
+                }
+            }
+            &:last-child{
+                padding-right: 0;
+                &::after{
+                    display: none;
+                }
+            }
+            @include media('tablet'){
+                font-size: 14px; flex-direction: column;
+            }
+            @include media('mobile'){
+                padding-right: 20px;
+            }
+        }
+    }
+}
+.tableTop{
+    display: flex; align-items: center; justify-content: space-between; margin: 55px 0 25px 0;
+    .cptForm{
+        .drpCov{
+            width: 240px;
+            .listBox{
+                .height{
+                    height: 100px;
+                }
+            }
+            @include media('tablet'){
+                width: 200px;
+            }
+        }
+    }
+    .pointChk{
+        display: flex; align-items: center; letter-spacing: -0.4px; font-weight: 400; color: var(--txt-gray02);
+        .chkItem{
+            padding: 0 10px 0 10px; font-size: 16px; position: relative; cursor: pointer;
+            span{
+                display: inline-block; vertical-align: middle; 
+            }
+            &.active{
+                color: var(--prm-color);
+            }
+            &:last-child{
+                padding: 0 0 0 10px;
+                &::after{
+                    display: none;
+                }
+            }
+            &::after{ 
+                content: ''; display: block; width: 3px; height: 3px; background: var(--txt-gray03); border-radius: 50%; position: absolute; right: -5px; top: 50%; transform: translateY(-50%);
+            }
+            @include media('mobile'){
+                font-size: 14px;
+            }
+        }
+    }
+    @include media('mobile'){
+        margin: 30px 0 25px 0;
+    }
+}
+
+/* coupon */
+.couponTop{
+    justify-content: right;
+}
+.cptTable{
+    .txt{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

@@ -1022,3 +1022,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+//============================================================================================================//
+//======================================== mypage - 커서 포인트 & 이미지 ======================================//
+//============================================================================================================//
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.chkItem').forEach(item => {
+        item.addEventListener('click', function() {
+            document.querySelectorAll('.chkItem').forEach(li => {
+                li.classList.remove('active');
+                const img = li.querySelector('img');
+                img.src = '../../images/common/ico_chk_b.svg'; 
+            });
+            
+            this.classList.add('active');
+            const img = this.querySelector('img');
+            img.src = '../../images/common/ico_chk_p.svg';
+        });
+    });
+});
+
+
