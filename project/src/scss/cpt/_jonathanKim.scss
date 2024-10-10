@@ -11,6 +11,10 @@
         @include media ('mobile') {
             font-size:30px; margin-bottom:3rem;
         }
+
+        .innerDesc {
+            display:block; font-size:18px; color:var(--txt-gray02); font-weight:400; margin-top:24px; line-height:1.4
+        }
     }
 
     .cptForm {
@@ -179,7 +183,7 @@
             }
 
             .desc {
-                padding-left:7px; font-size:16px; color:var(--txt-gray01); font-weight:400; position:relative;
+                padding-left:7px; font-size:14px; color:var(--txt-gray01); font-weight:400; position:relative;
                 &::after {
                     content:''; position:absolute; top:50%; left:0; width:3px; height:3px; border-radius:50%; background:var(--txt-gray01); 
                 }
@@ -253,6 +257,32 @@
                         &::after {
                             content:''; position:absolute; top:50%; right:0; width:4px; height:7px; background:url(../../images/common/ico_arr03.svg)50% 50% no-repeat; transform:translateY(-50%);
                         }
+                    }
+                }
+            }
+
+            .adDuration {
+                span {
+                    display:block; font-size:16px; color:var(--txt-gray01); font-weight:400; line-height:22px; letter-spacing:-0.4px; margin-bottom:16px;
+                }
+                .inner {
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:10px;
+
+                    > div {
+                        position:relative; width:calc(50% - 10px);
+                        > label {
+                            width:100%; border:1px solid var(--txt-gray02); background:var(--clr-white); font-size:18px; color:var(--txt-black); font-weight:500; text-align:center; line-height:48px; height:48px; border-radius:8px;
+                        }
+                        > input {
+                            position:absolute; top:0; left:0; width:1px; height:1px;
+
+                            &:checked {
+                                & + label {
+                                    border:1px solid var(--prm-color); color: var(--prm-color);
+                                }
+                            }
+                        }
+                        
                     }
                 }
             }
@@ -1176,9 +1206,9 @@
                 }
 
                 > .desc {
-                    position:relative; font-size:16px; color:var(--txt-gray01); font-weight:400; line-height:22px; margin-bottom:8px; padding-left:11px; word-break:keep-all;
+                    position:relative; font-size:14px; color:var(--txt-gray01); font-weight:400; line-height:22px; margin-bottom:8px; padding-left:11px; word-break:keep-all;
                     @include media('tablet'){
-                        font-size:14px;
+                        font-size:12px;
                     }
                     &::before {
                         content:''; position:absolute; top: 9px; left:0; width:3px; height:3px; background:var(--txt-gray01); 
@@ -2011,6 +2041,95 @@
     }
 }
 
+/*광고효과*/
+.adEffect {
+    @include media ('tablet') {
+        margin:40px auto 0;
+    }
+}
+.adDetail {
+    width:100%; position:relative; display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:30px;
+    @include media ('tablet') {
+        flex-flow:column;
+    }
+    > .adThumb {
+        position:relative; width:912px; border-radius:24px; overflow:hidden;
+        @include media ('tablet') {
+            width:100%;
+        }
+        > img {max-width:100%;}
+
+        &:hover {
+            .hoverBg {
+                position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);
+
+                &::after {
+                    content:'';  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:90px; height:90px; background:url(../../images/common/ico_play.svg)50% 50% no-repeat; cursor:pointer;
+                }
+            }
+        }
+    }
+
+    > .adDetailBox {
+        position:relative; width:calc(100% - 942px); background:var(--sub-color04); padding:50px 40px; border-radius:24px; min-height:513px;
+        @include media ('tablet') {
+            width:100%; min-height:auto;
+        }
+
+        > ul {
+            display:flex; flex-flow: column; align-items: flex-start; justify-content: flex-start;
+
+            > li {
+                > .tit {
+                    font-size:16px; color:var(--txt-gray01); font-weight:bold; margin-bottom:16px;
+                }
+
+                > .desc {
+                    font-size:16px; color:var(--txt-gray01); font-weight:400; margin-bottom:30px;
+                }
+
+                .cptBtnForm {
+                    button {
+                        position:relative; width:154px; height:40px; line-height:40px; padding: 0;
+                        > span {
+                            position:relative; padding-left:24px;
+                            &::after {
+                                content:''; position:absolute; top:50%; left:0; width:16px; height:18px; background:url(../../images/common/ico_downLoad.svg)50% 50% no-repeat; transform:translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.adReport {
+    width:100%; position:relative;
+
+    .cptButtonForm {
+        margin:48px 0;
+        ul {
+            display:flex; flex-flow:row wrap; align-items: center; justify-content: flex-start; gap:10px;
+            > li {
+                position:relative; width:max-content;
+                label {
+                    display:inline-block; font-size:16px; width:max-content; height:46px; line-height:46px; color:var(--txt-gray02); font-weight:400; text-align:center; padding:0 16px; background: var(--txt-gray05); border-radius:30px; cursor:pointer;
+                    @include media ('tablet') {
+                        font-size:14px;
+                    }
+                }
+                input {
+                    position:absolute; top:0; left:0; width:1px; height:1px;
+                    &:checked + label {
+                        background:var(--txt-black); color:var(--clr-white);
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*갤러리 게시판*/
 .galleryLayout {
     overflow-x:hidden;
@@ -2018,9 +2137,15 @@
 }
 .galleryTitle {
     display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between; margin: 64px auto 56px !important;
-
+    @include media ('tablet') {
+        margin: 0 auto 26px !important;
+    }
     > .swiper-button {
         display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:10px;
+
+        @include media ('tablet') {
+            display:none;
+        }
         > a {
             display:block; width:40px; height:40px; background:url(../../images/main/adSlideArr_off.svg) 50% 50% no-repeat;
             &::after {display:none;}
@@ -2042,6 +2167,9 @@
     .monthAd {
         .swiper-slide {
             position:relative; width:912px; border-radius:24px; overflow:hidden;
+            @include media ('tablet') {
+                width:100%;
+            }
             > img {max-width:100%;}
     
             &:hover {
@@ -2059,18 +2187,28 @@
 
 .locationAd {
     position:relative; width:100%; padding: 65px 0; background:var(--txt-gray05); margin-top:90px; overflow-x:hidden;
-
+    @include media ('tablet') {
+        border-radius:24px;
+        margin-top:40px;
+        padding: 35px 15px;
+    }
     .locationAdTit {
         max-width:1320px; margin:0 auto 48px; display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between;
 
         > p {
             font-size:24px; color:var(--txt-black); font-weight:500; padding-left:44px; position:relative; 
+            @include media ('tablet') {
+                font-size:22px;
+            }
             &::after {
                 content:''; position:absolute; top:50%; left:0; width:36px; height:36px; background:url(../../images/common/ico_map_pin.svg)50% 50% no-repeat; transform:translateY(-50%);
             }
 
             > .addDetail {
                 position:relative; font-size:18px; color:var(--txt-gray02); font-weight:400; padding-left:8px; margin-left:8px;
+                @include media ('tablet') {
+                    font-size:16px;
+                }
                 &::after {
                     content:''; position:absolute; top:50%; left:0; width:1px; height: 24px; background:var(--txt-gray04); transform:translateY(-50%);
                 }
@@ -2079,6 +2217,9 @@
 
         > .swiper-button {
             display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:10px;
+            @include media ('tablet') {
+                display:none;
+            }
             > a {
                 display:block; width:40px; height:40px; background:url(../../images/main/adSlideArr_off.svg) 50% 50% no-repeat;
                 &::after {display:none;}
@@ -2117,12 +2258,18 @@
 
             > .title {
                 width:100%; margin:16px 0 12px; font-size:18px; color:var(--txt-black); font-weight:400; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+                @include media ('tablet') {
+                    font-size:16px;
+                }
             }
             > .typeInfo {
                 widtH:100%; display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start;
 
                 > .type {
                     position:relative; font-size:16px; color:var(--txt-gray02); font-weight:400; padding-right:9px; margin-right:9px; 
+                    @include media ('tablet') {
+                        font-size:14px;
+                    }
                     &::after {
                         content:''; position:absolute; top:50%; right:0; width:3px; height:3px; background: var(--txt-gray02); border-radius:50%;  transform:translateY(-50%);
                     }
@@ -2130,6 +2277,9 @@
 
                 > .duration {
                     position:relative; padding-left:24px; font-size:16px; color:var(--txt-gray02); font-weight:400;
+                    @include media ('tablet') {
+                        font-size:14px;
+                    }
                     &::before {
                         content:''; position:absolute; top:50%; left:0; width:20px; height:20px; background: url(../../images/common/ico_time.svg)50% 50% no-repeat; transform:translateY(-50%);
                     }
@@ -2141,11 +2291,20 @@
 
 .adListArea {
     width:100%; position:relative; margin:0 auto 75px !important;
+    @include media ('tablet') {
+        margin:0 auto 36px !important;
+    }
 
     > .adFilterCov {
         margin:90px 0 46px;
+        @include media ('tablet') {
+            margin:40px 0;
+        }
         > ul {
             display:flex; flex-flow: row wrap; align-items: center; justify-content: flex-start; gap:16px 16px;
+            @include media ('tablet') {
+                gap:8px 8px;
+            }
 
             > li {
                 width:max-content; position:relative;
@@ -2153,6 +2312,9 @@
                 > .cptButtonForm {
                     label {
                         display:inline-block; font-size:16px; width:max-content; height:46px; line-height:46px; color:var(--txt-gray02); font-weight:400; text-align:center; padding:0 16px; background: var(--txt-gray05); border-radius:30px; cursor:pointer;
+                        @include media ('tablet') {
+                            font-size:14px;
+                        }
                     }
                     input {
                         position:absolute; top:0; left:0; width:1px; height:1px;
@@ -2167,26 +2329,45 @@
 
     > .adSearchCov {
         width:100%; display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between;
+        @include media ('tablet') {
+            flex-flow:column; justify-content: flex-start; gap:8px;;
+        }
 
-        button {
-            width:150px; min-width:auto; height:48px; line-height:48px; padding: 0 ;
-            > span {
-                position:relative; padding-left:32px;
+        .cptBtnForm {
+            @include media ('tablet') {
+                width:100%;
+            }
+            button {
+                width:150px; min-width:auto; height:48px; line-height:48px; padding: 0 ;
+                @include media ('tablet') {
+                    width:100%; min-width:100%;
+                }
+                > span {
+                    position:relative; padding-left:32px;
 
-                &::after {
-                    content:''; position:absolute; top:50%; left:0; width:24px; height:24px; transform:translateY(-50%); background: url(../../images/common/ico_map_pin.svg)50% 50% no-repeat;
-                } 
-
-                &:hover {
                     &::after {
-                        background:url(../../images/common/ico_map_pin_on.svg)50% 50% no-repeat;
+                        content:''; position:absolute; top:50%; left:0; width:24px; height:24px; transform:translateY(-50%); background: url(../../images/common/ico_map_pin.svg)50% 50% no-repeat;
+                    } 
+
+                    &:hover {
+                        &::after {
+                            background:url(../../images/common/ico_map_pin_on.svg)50% 50% no-repeat;
+                        }
                     }
                 }
             }
         }
 
         .cptForm {
-            input {width:360px;}
+            @include media ('tablet') {
+                width:100%;
+            }
+            input {
+                width:360px;
+                @include media ('tablet') {
+                    width:100%;
+                }
+            }
             button {
                 position:absolute; top:50%; right:11px; width:24px; height:24px; background:url(../../images/common/ico_srch_small.svg)50% 50% no-repeat; transform:translateY(-50%);
             }
@@ -2198,9 +2379,14 @@
 
         > ul {
             display:flex; flex-flow: row wrap; align-items: center; justify-content: flex-start; gap:70px 30px;
-
+            @include media ('tablet') {
+                flex-flow:column; gap:24px;
+            }
             > li {
                 width:calc(33.3333% - 20px);
+                @include media ('tablet') {
+                    width:100%;
+                }
 
                 > .thumbCov {
                     position:relative; border-radius:24px; overflow:hidden;
@@ -2221,12 +2407,18 @@
         
                     > .title {
                         width:100%; margin:16px 0 12px; font-size:18px; color:var(--txt-black); font-weight:400; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+                        @include media ('tablet') {
+                            font-size:16px;
+                        }
                     }
                     > .typeInfo {
                         widtH:100%; display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start;
         
                         > .type {
                             position:relative; font-size:16px; color:var(--txt-gray02); font-weight:400; padding-right:9px; margin-right:9px; 
+                            @include media ('tablet') {
+                                font-size:14px;
+                            }
                             &::after {
                                 content:''; position:absolute; top:50%; right:0; width:3px; height:3px; background: var(--txt-gray02); border-radius:50%;  transform:translateY(-50%);
                             }
@@ -2234,10 +2426,346 @@
         
                         > .duration {
                             position:relative; padding-left:24px;  font-size:16px; color:var(--txt-gray02); font-weight:400;
+                            @include media ('tablet') {
+                                font-size:14px;
+                            }
                             &::before {
                                 content:''; position:absolute; top:50%; left:0; width:20px; height:20px; background: url(../../images/common/ico_time.svg)50% 50% no-repeat; transform:translateY(-50%);
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*지역 설정*/
+.selLoc {
+    .fieldBox {
+        padding: 30px; background:var(--clr-white); margin-top:16px; border-radius:8px;
+        ul {
+            display:flex; flex-flow:row wrap; align-items: center; justify-content: flex-start; gap:10px;
+            > li {
+                position:relative; width:max-content;
+                label {
+                    display:inline-block; font-size:16px; width:max-content; height:46px; line-height:46px; color:var(--txt-gray02); font-weight:400; text-align:center; padding:0 16px; background: var(--txt-gray05); border-radius:30px; cursor:pointer;
+                    @include media ('tablet') {
+                        font-size:14px;
+                    }
+                }
+                input {
+                    position:absolute; top:0; left:0; width:1px; height:1px;
+                    &:checked + label {
+                        background:var(--txt-black); color:var(--clr-white);
+                    }
+                }
+            }
+        }
+
+        .fieldTxt {font-size:16px; color:var(--txt-gray01); font-weight:400; margin-bottom:30px;}
+    }
+}
+
+/*광고제작 체험관*/
+.experience {
+    > div > *:not(.expTemplate) {width:100%; max-width:1320px; margin:0 auto;}
+
+    > .experienceBox {
+        .cptSubTop {
+            margin:64px auto 24px;
+            @include media ('tablet') {
+                margin:0px auto 40px;
+            }
+        }
+
+        .desc {
+            font-size:18px; color:var(--txt-gray02); font-weight:400;
+        }
+
+        .stepList {
+            width:100%; position:relative; margin-top:56px;
+
+            > ul {
+                display:flex; flex-flow:row wrap; align-items: center; justify-content: flex-start; gap:30px 30px;
+                @include media ('tablet') {
+                    flex-flow:column;
+                }
+                > li {
+                    width:calc(50% - 15px); border:1px solid var(--txt-gray04); border-radius:24px; overflow:hidden; display:flex; flex-flow:row nowrap; align-items: flex-start; justify-content: flex-start;
+                    @include media ('tablet') {
+                        width:100%; flex-flow:column; position:relative;
+                    }
+                    > .thumb {
+                        width:380px;
+                        @include media ('tablet') {
+                            width:100%;
+                        }
+                        > img {
+                            max-width:100%;
+                            @include media ('tablet') {
+                                width:100%;
+                            }
+                        }
+                    }
+
+                    > .stepBox {
+                        width:calc(100% - 380px); padding:40px 24px;
+                        @include media ('tablet') {
+                            width:100%; padding:24px;
+                        }
+
+                        > .flag {
+                            display:inline-block; width:max-content; padding: 0 8px; text-align:center; line-height:32px; font-size:14px; color:var(--clr-white); font-weight:500; background:var(--prm-color); border-radius:25px;
+                            @include media ('tablet') {
+                                position:absolute; top:20px; left:20px;
+                            }
+                        }
+
+                        > .tit {
+                            margin:30px 0 16px; font-size:18px; color:var(--txt-black); font-weight:500;
+                            @include media ('tablet') {
+                                margin:0 0 16px 0;
+                            }
+                        }
+
+                        > .desc {
+                            font-size:16px; color:var(--txt-gray02); font-weight:400; word-break:keep-all;
+                        }
+                    }
+                }
+            }
+        }
+
+        .expTemplate {
+            position:relative; width:100%; padding: 65px 0; background:var(--txt-gray05); margin-top:90px; overflow-x:hidden;
+            @include media ('tablet') {
+                border-radius:24px;
+                margin-top:40px;
+                padding: 35px 15px;
+            }
+            .expTemplateTit {
+                max-width:1320px; margin:0 auto 48px; display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between;
+        
+                > p {
+                    font-size:24px; color:var(--txt-black); font-weight:500; position:relative; 
+                    @include media ('tablet') {
+                        font-size:22px; word-break:keep-all;
+                    }
+        
+                    > .addDetail {
+                        position:relative; font-size:18px; color:var(--txt-gray02); font-weight:400; padding-left:8px; margin-left:8px;
+                        @include media ('tablet') {
+                            font-size:16px;
+                        }
+                        &::after {
+                            content:''; position:absolute; top:50%; left:0; width:1px; height: 24px; background:var(--txt-gray04); transform:translateY(-50%);
+                        }
+                    }
+                }
+        
+                > .swiper-button {
+                    display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:10px;
+                    @include media ('tablet') {
+                        display:none;
+                    }
+                    > a {
+                        display:block; width:40px; height:40px; background:url(../../images/main/adSlideArr_off.svg) 50% 50% no-repeat;
+                        &::after {display:none;}
+                        &:hover {background:url(../../images/main/adSlideArr_on.svg) 50% 50% no-repeat;}
+                    }
+                    .swiper-button-prev05 {
+                        &:hover{transform:rotate(180deg);}
+                    }
+            
+                    .swiper-button-next05 {
+                        transform:rotate(180deg);   
+                        &:hover{transform:rotate(0deg);}
+                    }
+                }
+            }
+        
+            .swiper-slide {
+                position:relative; width:420px;
+                img {max-width:100%;}
+        
+                > .cover {
+                    position:relative; border-radius:24px; overflow:hidden;
+                    &:hover {
+                        .hoverBg {
+                            position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);
+            
+                            &::after {
+                                content:'';  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:48px; height:48px; background:url(../../images/common/ico_play.svg)50% 50% no-repeat; cursor:pointer; background-size:contain;
+                            }
+                        }
+                    }
+                }
+        
+                .adInfo {
+                    width:100%; position:relative;
+        
+                    > .title {
+                        width:100%; margin:16px 0 12px; font-size:18px; color:var(--txt-black); font-weight:400; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+                        @include media ('tablet') {
+                            font-size:16px;
+                        }
+                    }
+                    > .typeInfo {
+                        widtH:100%; display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start;
+        
+                        > .type {
+                            position:relative; font-size:16px; color:var(--txt-gray02); font-weight:400; padding-right:9px; margin-right:9px; 
+                            @include media ('tablet') {
+                                font-size:14px;
+                            }
+                            &::after {
+                                content:''; position:absolute; top:50%; right:0; width:3px; height:3px; background: var(--txt-gray02); border-radius:50%;  transform:translateY(-50%);
+                            }
+                        }
+        
+                        > .duration {
+                            position:relative; padding-left:24px; font-size:16px; color:var(--txt-gray02); font-weight:400;
+                            @include media ('tablet') {
+                                font-size:14px;
+                            }
+                            &::before {
+                                content:''; position:absolute; top:50%; left:0; width:20px; height:20px; background: url(../../images/common/ico_time.svg)50% 50% no-repeat; transform:translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*광고비 알아보기 (결과)*/
+.priceResult {
+    position:relative; width:100%; max-width:870px; margin:0 auto;
+    @include media ('tablet') {
+        max-width:none;
+    }
+    > .inner {
+        .titleArea {
+            position:relative;
+
+            > .icon {
+                display:block; width:80px; height:80px; position:relative; margin:0 auto;
+                &::after {
+                    content:''; position:absolute; width:80px; height:80px; top:50%; left:50%; transform:translate(-50%,-50%); background:url(../../images/common/ico_complete.svg)50% 50% no-repeat;
+                }
+            }
+
+            > .tit {
+                font-size:24px; color:var(--prm-color); font-weight:bold; text-align:center; margin:24px 0 16px;
+                @include media ('tablet') {
+                    font-size:22px;
+                }
+            }
+
+            > .desc {
+                font-size:18px; color:var(--txt-gray01); font-weight:400; margin-bottom:56px; text-align:center;
+                @include media ('tablet') {
+                    font-size:16px; word-break:keep-all;
+                }
+            }
+        }
+
+        .estPrice {
+            widtH:100%; border:1px solid var(--txt-gray04); border-radius:24px; padding:48px 40px;
+            @include media ('tablet') {
+                padding:15px;
+            }
+            >.estInner {
+                > .tit {
+                    font-size:16px; color:var(--txt-black); font-weight:500; margin-bottom:16px;
+                }
+
+                > ul {
+                    display:flex; flex-flow: column; justify-content: flex-start; gap:16px; margin-bottom:56px;
+                    > li {
+                        display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+                        @include media ('tablet') {
+                            flex-flow:column; align-items: flex-start; justify-content: flex-start;
+                        }
+
+                        > span {
+                            display:inline-block; font-size:16px; color:var(--txt-gray02); font-weight:400; width:200px;
+                            @include media ('tablet') {
+                                width:100%; text-align:left;
+                            }
+                        }
+
+                        > p {
+                            font-size:16px; color:var(--txt-black); font-weight:400; width:calc(100% - 200px); word-break:keep-all; text-align: right;
+                            @include media ('tablet') {
+                                width:100%; text-align:left; margin-top:8px;
+                            }
+                        }
+                    }
+                }
+
+                > .estPriceCov {
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; padding: 24px; background:var(--txt-gray05); border-radius:8px; margin-bottom:16px;
+                    @include media ('tablet') {
+                        flex-flow:column;
+                    }
+                    > div {
+                        width:50%; padding-right:24px;
+                        @include media ('tablet') {
+                            width:100%; padding:0;
+                        }
+
+                        > p.cate {
+                            font-size:16px; color:var(--prm-color); font-weight:500; margin-bottom:30px;
+                            @include media ('tablet') {
+                                margin-bottom:8px;
+                            }
+                        }
+
+                        > p.price {
+                            font-size:24px; color:var(--txt-black); font-weight:500; margin-bottom:4px; text-align:right;
+                        }
+
+                        > p.adShowCnt {
+                            font-size:16px; color:var(--txt-gray01); font-weight:400;  text-align:right;
+                        }
+                        &:last-of-type {
+                            border-left:1px solid var(--txt-gray04); padding-right:0; padding-left:24px;
+                            @include media ('tablet') {
+                                border-left:0; padding-left:0; border-top:1px solid var(--txt-gray04); padding-top:16px; margin-top:16px;
+                            }
+                        }
+                    }
+                }
+
+                > .cautionArea {
+                    width:100%; margin-bottom:40px;
+
+                    > p {
+                        position:relative; width:100%; padding-left:7px; font-size:14px; color:var(--txt-gray01); font-weight:400; margin-bottom:4px;
+
+                        &::after {
+                            content:''; position:absolute; top:50%; left:0; width:3px; height:3px; border-radius:50%; background:var(--txt-gray01);
+                        }
+
+                        @include media ('tablet') {
+                            &::after {
+                                top:10px; transform:none;
+                            }
+                        }
+                    }
+                }
+
+                > .cptBtnForm {
+                    display:flex; flex-flow: row nowrap; align-items: flex-start; justify-content: flex-start; padding: 0 25px; gap:10px;
+                    @include media ('tablet') {
+                        flex-flow:column; padding:0;
+                    }
+
+                    > button {
+                        padding: 15px 0;
                     }
                 }
             }

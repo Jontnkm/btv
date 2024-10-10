@@ -48,31 +48,81 @@ document.addEventListener("DOMContentLoaded", function () {
     //==================================갤러리 슬라이드 01========================================//
     //===================================================================================//
     
-    var adSlide = new Swiper(".monthAd", {
-        slidesPerView: 'auto',
-        loop: false,
+    var moAdSlide = new Swiper(".monthAd", {
+        autoplay: {
+            slidePerView:1,
+            centeredSlides: true,
+            delay: 3000,
+            disableOnInteraction: false
+        },
+        loop: true,
         allowTouchMove: true,
         spaceBetween:30,
         navigation: {
             nextEl: ".swiper-button-next03",
             prevEl: ".swiper-button-prev03"
-        }
+        },
+        breakpoints: {
+            1023: {
+                slidesPerView: 'auto',
+                autoplay: false,
+                loop:false,
+            },
+        },
     });
 
     //===================================================================================//
     //==================================갤러리 슬라이드 02========================================//
     //===================================================================================//
     
-    var adSlide = new Swiper(".locationAd", {
-        slidesPerView: 'auto',
+    var loAdSlide = new Swiper(".locationAd", {
+        autoplay: {
+            slidePerView:1,
+            centeredSlides: true,
+            delay: 3000,
+            disableOnInteraction: false
+        },
         loop: true,
         allowTouchMove: true,
-        centeredSlides: true,
         spaceBetween:30,
         navigation: {
             nextEl: ".swiper-button-next04",
             prevEl: ".swiper-button-prev04"
-        }
+        },
+        breakpoints: {
+            1023: {
+                slidesPerView: 'auto',
+                autoplay: false,
+                loop:false,
+            },
+        },
+    });
+
+    //===================================================================================//
+    //==================================갤러리 슬라이드 02========================================//
+    //===================================================================================//
+    
+    var expSlide = new Swiper(".expTemplate", {
+        autoplay: {
+            slidePerView:1,
+            centeredSlides: true,
+            delay: 3000,
+            disableOnInteraction: false
+        },
+        loop: true,
+        allowTouchMove: true,
+        spaceBetween:30,
+        navigation: {
+            nextEl: ".swiper-button-next05",
+            prevEl: ".swiper-button-prev05"
+        },
+        breakpoints: {
+            1023: {
+                slidesPerView: 'auto',
+                autoplay: false,
+                loop:false,
+            },
+        },
     });
 
     //===================================================================================//
