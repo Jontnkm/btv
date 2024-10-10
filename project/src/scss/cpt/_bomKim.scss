@@ -108,7 +108,7 @@
                                 }
                             }
                             &.active{ 
-                                background:var(--prm-color); color:var(--clr-white);
+                                background: var(--clr-white); color: var(--prm-color);
                                 .tmpIcon{
                                     background: url(../../images/common/ico_tmpArrUp.svg) no-repeat 0 0;
                                 }
@@ -611,14 +611,14 @@
     .right{
         width: calc(100% - 330px);
         .mypageTit{
-            margin-bottom: 55px;
+            margin-bottom: 55px; 
             h5{
                 position: relative; padding-left: 12px;
                 &::before{
                     content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; background: var(--txt-black); position: absolute; left: 0; top: 50%; transform: translateY(-50%);
                 }
                 @include media('tablet'){
-                    padding-bottom: 0;
+                    padding-bottom: 0; font-size: 20px;
                 }
             }
             @include media('tablet'){
@@ -734,9 +734,9 @@
     .pointChk{
         display: flex; align-items: center; letter-spacing: -0.4px; font-weight: 400; color: var(--txt-gray02);
         .chkItem{
-            padding: 0 10px 0 10px; font-size: 16px; position: relative;
+            padding: 0 10px 0 10px; font-size: 16px; position: relative; cursor: pointer;
             span{
-                display: inline-block; vertical-align: middle;
+                display: inline-block; vertical-align: middle; 
             }
             &.active{
                 color: var(--prm-color);
@@ -750,14 +750,24 @@
             &::after{ 
                 content: ''; display: block; width: 3px; height: 3px; background: var(--txt-gray03); border-radius: 50%; position: absolute; right: -5px; top: 50%; transform: translateY(-50%);
             }
+            @include media('mobile'){
+                font-size: 14px;
+            }
         }
     }
+    @include media('mobile'){
+        margin: 30px 0 25px 0;
+    }
+}
+
+/* coupon */
+.couponTop{
+    justify-content: right;
 }
 .cptTable{
-    .earn{
-        color: var(--prm-color);
-    }
-    .deducted{
-        color: var(--snd-color);
+    .txt{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
