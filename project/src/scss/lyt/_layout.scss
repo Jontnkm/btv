@@ -16,6 +16,10 @@
                 padding: 0 15px;  margin:40px auto 0; min-height:auto;
             }
 
+            &.galleryLayout {
+                max-width:none;
+            }
+
             .layoutMainCont{
                 width:100%;
             }

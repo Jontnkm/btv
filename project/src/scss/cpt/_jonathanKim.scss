@@ -2010,3 +2010,237 @@
         }
     }
 }
+
+/*갤러리 게시판*/
+.galleryLayout {
+    overflow-x:hidden;
+    > *:not(.locationAd) {width:100%; max-width:1320px; margin:0 auto;}
+}
+.galleryTitle {
+    display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between; margin: 64px auto 56px !important;
+
+    > .swiper-button {
+        display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:10px;
+        > a {
+            display:block; width:40px; height:40px; background:url(../../images/main/adSlideArr_off.svg) 50% 50% no-repeat;
+            &::after {display:none;}
+            &:hover {background:url(../../images/main/adSlideArr_on.svg) 50% 50% no-repeat;}
+        }
+        .swiper-button-prev03 {
+            &:hover{transform:rotate(180deg);}
+        }
+
+        .swiper-button-next03 {
+            transform:rotate(180deg);   
+            &:hover{transform:rotate(0deg);}
+        }
+    }
+}
+.galleryBoard {
+    width:100%; position:relative; 
+
+    .monthAd {
+        .swiper-slide {
+            position:relative; width:912px; border-radius:24px; overflow:hidden;
+            > img {max-width:100%;}
+    
+            &:hover {
+                .hoverBg {
+                    position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);
+    
+                    &::after {
+                        content:'';  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:90px; height:90px; background:url(../../images/common/ico_play.svg)50% 50% no-repeat; cursor:pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.locationAd {
+    position:relative; width:100%; padding: 65px 0; background:var(--txt-gray05); margin-top:90px; overflow-x:hidden;
+
+    .locationAdTit {
+        max-width:1320px; margin:0 auto 48px; display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between;
+
+        > p {
+            font-size:24px; color:var(--txt-black); font-weight:500; padding-left:44px; position:relative; 
+            &::after {
+                content:''; position:absolute; top:50%; left:0; width:36px; height:36px; background:url(../../images/common/ico_map_pin.svg)50% 50% no-repeat; transform:translateY(-50%);
+            }
+
+            > .addDetail {
+                position:relative; font-size:18px; color:var(--txt-gray02); font-weight:400; padding-left:8px; margin-left:8px;
+                &::after {
+                    content:''; position:absolute; top:50%; left:0; width:1px; height: 24px; background:var(--txt-gray04); transform:translateY(-50%);
+                }
+            }
+        }
+
+        > .swiper-button {
+            display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:10px;
+            > a {
+                display:block; width:40px; height:40px; background:url(../../images/main/adSlideArr_off.svg) 50% 50% no-repeat;
+                &::after {display:none;}
+                &:hover {background:url(../../images/main/adSlideArr_on.svg) 50% 50% no-repeat;}
+            }
+            .swiper-button-prev04 {
+                &:hover{transform:rotate(180deg);}
+            }
+    
+            .swiper-button-next04 {
+                transform:rotate(180deg);   
+                &:hover{transform:rotate(0deg);}
+            }
+        }
+    }
+
+    .swiper-slide {
+        position:relative; width:420px;
+        img {max-width:100%;}
+
+        > .cover {
+            position:relative; border-radius:24px; overflow:hidden;
+            &:hover {
+                .hoverBg {
+                    position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);
+    
+                    &::after {
+                        content:'';  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:48px; height:48px; background:url(../../images/common/ico_play.svg)50% 50% no-repeat; cursor:pointer; background-size:contain;
+                    }
+                }
+            }
+        }
+
+        .adInfo {
+            width:100%; position:relative;
+
+            > .title {
+                width:100%; margin:16px 0 12px; font-size:18px; color:var(--txt-black); font-weight:400; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+            }
+            > .typeInfo {
+                widtH:100%; display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start;
+
+                > .type {
+                    position:relative; font-size:16px; color:var(--txt-gray02); font-weight:400; padding-right:9px; margin-right:9px; 
+                    &::after {
+                        content:''; position:absolute; top:50%; right:0; width:3px; height:3px; background: var(--txt-gray02); border-radius:50%;  transform:translateY(-50%);
+                    }
+                }
+
+                > .duration {
+                    position:relative; padding-left:24px; font-size:16px; color:var(--txt-gray02); font-weight:400;
+                    &::before {
+                        content:''; position:absolute; top:50%; left:0; width:20px; height:20px; background: url(../../images/common/ico_time.svg)50% 50% no-repeat; transform:translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.adListArea {
+    width:100%; position:relative; margin:0 auto 75px !important;
+
+    > .adFilterCov {
+        margin:90px 0 46px;
+        > ul {
+            display:flex; flex-flow: row wrap; align-items: center; justify-content: flex-start; gap:16px 16px;
+
+            > li {
+                width:max-content; position:relative;
+
+                > .cptButtonForm {
+                    label {
+                        display:inline-block; font-size:16px; width:max-content; height:46px; line-height:46px; color:var(--txt-gray02); font-weight:400; text-align:center; padding:0 16px; background: var(--txt-gray05); border-radius:30px; cursor:pointer;
+                    }
+                    input {
+                        position:absolute; top:0; left:0; width:1px; height:1px;
+                        &:checked + label {
+                            background:var(--txt-black); color:var(--clr-white);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    > .adSearchCov {
+        width:100%; display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between;
+
+        button {
+            width:150px; min-width:auto; height:48px; line-height:48px; padding: 0 ;
+            > span {
+                position:relative; padding-left:32px;
+
+                &::after {
+                    content:''; position:absolute; top:50%; left:0; width:24px; height:24px; transform:translateY(-50%); background: url(../../images/common/ico_map_pin.svg)50% 50% no-repeat;
+                } 
+
+                &:hover {
+                    &::after {
+                        background:url(../../images/common/ico_map_pin_on.svg)50% 50% no-repeat;
+                    }
+                }
+            }
+        }
+
+        .cptForm {
+            input {width:360px;}
+            button {
+                position:absolute; top:50%; right:11px; width:24px; height:24px; background:url(../../images/common/ico_srch_small.svg)50% 50% no-repeat; transform:translateY(-50%);
+            }
+        }
+    }
+
+    > .listCov {
+        width:100%; position:relative; margin-top:46px;
+
+        > ul {
+            display:flex; flex-flow: row wrap; align-items: center; justify-content: flex-start; gap:70px 30px;
+
+            > li {
+                width:calc(33.3333% - 20px);
+
+                > .thumbCov {
+                    position:relative; border-radius:24px; overflow:hidden;
+                    img {max-width:100%;}
+                    &:hover {
+                        .hoverBg {
+                            position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);
+            
+                            &::after {
+                                content:'';  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:48px; height:48px; background:url(../../images/common/ico_play.svg)50% 50% no-repeat; cursor:pointer; background-size:contain;
+                            }
+                        }
+                    }
+                }
+
+                .info {
+                    width:100%; position:relative;
+        
+                    > .title {
+                        width:100%; margin:16px 0 12px; font-size:18px; color:var(--txt-black); font-weight:400; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+                    }
+                    > .typeInfo {
+                        widtH:100%; display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start;
+        
+                        > .type {
+                            position:relative; font-size:16px; color:var(--txt-gray02); font-weight:400; padding-right:9px; margin-right:9px; 
+                            &::after {
+                                content:''; position:absolute; top:50%; right:0; width:3px; height:3px; background: var(--txt-gray02); border-radius:50%;  transform:translateY(-50%);
+                            }
+                        }
+        
+                        > .duration {
+                            position:relative; padding-left:24px;  font-size:16px; color:var(--txt-gray02); font-weight:400;
+                            &::before {
+                                content:''; position:absolute; top:50%; left:0; width:20px; height:20px; background: url(../../images/common/ico_time.svg)50% 50% no-repeat; transform:translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
