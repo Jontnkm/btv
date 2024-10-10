@@ -540,33 +540,39 @@
                 }
             }
             &.myInfoFir{
-                &.active1{
-                    color: var(--prm-color);
-                }
                 .myInfoImg{
-                    display: inline-block; background: url(../../images/common/ico_user_b.svg) no-repeat 0 0; width: 24px; height: 24px; vertical-align: middle; margin-right: 5px;
+                    display: inline-block; margin-right: 5px; margin-bottom: 3px; vertical-align: middle; width: 24px;
+                }
+                .myInfoItem a{
+                    color: var(--prm-color); text-decoration: underline;
                 }
             }
             &.myInfoSec{
-                &.active2{
-                    color: var(--prm-color);
-                }
                 .myInfoImg{
-                    display: inline-block; background: url(../../images/common/ico_benefit_p.svg) no-repeat 0 0; width: 24px; height: 24px; vertical-align: middle; margin-right: 5px;
+                    display: inline-block; margin-right: 5px; vertical-align: top; width: 24px;
+                    &.active2{
+                        background: url(../../images/common/ico_benefit_p.svg) no-repeat 0 0;
+                    }
+                }
+                .myInfoItem a{
+                    color: var(--prm-color); text-decoration: underline;
                 }
             }
             &.myInfoThi{
-                &.active3{
-                    color: var(--prm-color);
-                }
                 .myInfoImg{
-                    display: inline-block; background: url(../../images/common/ico_money_b.svg) no-repeat 0 0; width: 24px; height: 24px; vertical-align: middle; margin-right: 5px;
+                    display: inline-block; margin-right: 5px; vertical-align: top; width: 24px;
+                }
+                .myInfoItem a{
+                    color: var(--prm-color); text-decoration: underline;
                 }
                 @include media('mobile'){
                     ul{
                         padding-bottom: 0;
                     }
                 }
+            }
+            &.active{
+                color: var(--prm-color);
             }
             ul{
                 padding: 25px 30px;
@@ -666,5 +672,11 @@
         margin-top: 40px;
     }
 }
+.secession{
+    font-size: 16px; color: var(--txt-gray01); font-weight: 400; letter-spacing: -0.4px; max-width: 480px; margin: 0 auto; text-align: right; padding-top: 15px;
+    span{
+        display: inline-block; margin-left: 8px;
+    }
+ }
 
 /* mypage - promotionInfo */
