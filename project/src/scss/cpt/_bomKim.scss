@@ -945,3 +945,38 @@
         }
     }
 }
+
+/* news - index */
+.stepNews{
+    ul{
+        li{
+            .stepBox{
+                display: flex; flex-direction: column; height: 100%; 
+                .titLines{
+                    margin: 0 0 15px 0 !important; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+                    @include media('tablet'){
+                        font-size: 16px;
+                    }
+                }
+                .desc{
+                    font-size: 14px;
+                }
+                .link{
+                    color: var(--txt-gray01); font-size: 14px; font-weight: 400; letter-spacing: -0.35px; margin-top: 98px;
+                    span{
+                        display: inline-block; vertical-align: middle; margin-left: 8px; 
+                        @include media('tablet'){
+                            margin-left: 3px;
+                        }
+                    }
+                    @include media('tablet'){
+                        margin-top: 50px;
+                    }
+                    @include media('mobile'){
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
