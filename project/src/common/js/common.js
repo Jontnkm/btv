@@ -740,6 +740,11 @@ function showTab2(index) {
 
     modTabBtn2[index].classList.add('active');
     modTabCont2[index].classList.add('active');
+
+    // 슬라이더가 존재하는 탭에 있을 경우 슬라이더 업데이트(makeExperience.html 슬라이드 오류)
+    if (document.querySelector('.expTemplate').swiper) {
+        document.querySelector('.expTemplate').swiper.update();
+    }
 }
 
 //================================= 탭 메뉴 타입 3 (지역, 직접) =======================================//

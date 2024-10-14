@@ -983,5 +983,17 @@
 
 /* html - makeExperience */
 .aiTab{
-    margin-top: 55px;
+    margin-top: 54px; max-width: 100% !important;
+    .tabMenu{
+        max-width: 1320px; margin: 56px auto; border-radius: 8px;
+    }
+    .cptSubTop{
+        max-width: 1320px; margin: 0 auto;
+    }
+    .desc{
+        max-width: 1320px; margin: 0 auto;
+    }
+    .stepList{
+        max-width: 1320px; margin: 0 auto;
+    }
 }
