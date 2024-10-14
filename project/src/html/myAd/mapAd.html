@@ -97,7 +97,7 @@
 
                                         <div class="recomList">
                                             <ul>
-                                                <li>
+                                                <li class="item">
                                                     <div class="cptForm">
                                                         <label class="frmChk" for="loc01">
                                                             <input type="checkbox" id="loc01">
@@ -118,7 +118,7 @@
                                                         </ul>
                                                     </div>
                                                 </li>
-                                                <li>
+                                                <li class="item">
                                                     <div class="cptForm">
                                                         <label class="frmChk" for="loc02">
                                                             <input type="checkbox" id="loc02">
@@ -139,7 +139,7 @@
                                                         </ul>
                                                     </div>
                                                 </li>
-                                                <li>
+                                                <li class="item">
                                                     <div class="cptForm">
                                                         <label class="frmChk"  for="loc03">
                                                             <input type="checkbox" id="loc03">
@@ -648,243 +648,245 @@
                                             오른쪽 지도 상단에서 아파트를 검색해 주세요.
                                         </p>
 
-                                        <div class="cptForm moSchApt">
-                                            <div class="frmIpt">
-                                                <input type="text" placeholder="아파트 명을 입력해주세요" onkeyup="aptSearch();"/>
-                                                <button type="button" class="schBtn" onclick="aptSearch();"><span class="hidden">검색</span></button>
-                                            </div>
-                                        </div> 
-            
-                                        <div class="txtSearchBox moRst">
-                                            <div class="locationList">
-                                                <ul>
-                                                    <li>
-                                                        <div class="cptForm">
-                                                            <label class="frmChk">
-                                                                <input type="radio" checked="checked" name="apt">
-                                                                <span class="radiomark"></span>
-                                                                <span class="labelTxt">서울특별시 마포구 서강동</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="aptList">
-                                                            <span>신촌태영데시앙</span>,
-                                                            <span>레미안밤섬리베뉴2</span>,
-                                                            <span>서강해모로</span>,
-                                                            <span>레미안밤섬리베뉴 i</span>,
-                                                            <span>한강밤섬자이</span>,
-                                                            <span>창전삼성</span>,
-                                                            <span>서강쌍용예가</span>
-                                                        </div>
-                                                    </li>
-            
-                                                    <li>
-                                                        <div class="cptForm">
-                                                            <label class="frmChk">
-                                                                <input type="radio" checked="checked" name="apt">
-                                                                <span class="radiomark"></span>
-                                                                <span class="labelTxt">서울특별시 동대문구 답십리제2동</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="aptList">
-                                                            <span>답십리청솔우성제2</span>,
-                                                            <span>답십리청솔우성</span>,
-                                                            <span>답십리파크자이</span>,
-                                                            <span>대십리동서울한양</span>,
-                                                            <span>래미안엘파인</span>,
-                                                            <span>답십리우성그린</span>,
-                                                            <span>답십리두산</span>,
-                                                            <span>답십리동아제2</span>,
-                                                            <span>답십리두산위브</span>
-                                                        </div>
-                                                    </li>
-            
-                                                    <li>
-                                                        <div class="cptForm">
-                                                            <label class="frmChk">
-                                                                <input type="radio" checked="checked" name="apt">
-                                                                <span class="radiomark"></span>
-                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="aptList">
-                                                            <span>신길파크자이</span>,
-                                                            <span>신길우성2차</span>,
-                                                            <span>신길남서울</span>,
-                                                            <span>신길우성3차</span>,
-                                                            <span>보라매경남아너스빌</span>
-                                                        </div>
-                                                    </li>
-            
-                                                    <li>
-                                                        <div class="cptForm">
-                                                            <label class="frmChk">
-                                                                <input type="radio" checked="checked" name="apt">
-                                                                <span class="radiomark"></span>
-                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="aptList">
-                                                            <span>신길파크자이</span>,
-                                                            <span>신길우성2차</span>,
-                                                            <span>신길남서울</span>,
-                                                            <span>신길우성3차</span>,
-                                                            <span>보라매경남아너스빌</span>
-                                                        </div>
-                                                    </li>
-            
-                                                    <li>
-                                                        <div class="cptForm">
-                                                            <label class="frmChk">
-                                                                <input type="radio" checked="checked" name="apt">
-                                                                <span class="radiomark"></span>
-                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="aptList">
-                                                            <span>신길파크자이</span>,
-                                                            <span>신길우성2차</span>,
-                                                            <span>신길남서울</span>,
-                                                            <span>신길우성3차</span>,
-                                                            <span>보라매경남아너스빌</span>
-                                                        </div>
-                                                    </li>
-            
-                                                    <li>
-                                                        <div class="cptForm">
-                                                            <label class="frmChk">
-                                                                <input type="radio" checked="checked" name="apt">
-                                                                <span class="radiomark"></span>
-                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="aptList">
-                                                            <span>신길파크자이</span>,
-                                                            <span>신길우성2차</span>,
-                                                            <span>신길남서울</span>,
-                                                            <span>신길우성3차</span>,
-                                                            <span>보라매경남아너스빌</span>
-                                                        </div>
-                                                    </li>
-            
-                                                    <li>
-                                                        <div class="cptForm">
-                                                            <label class="frmChk">
-                                                                <input type="radio" checked="checked" name="apt">
-                                                                <span class="radiomark"></span>
-                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="aptList">
-                                                            <span>신길파크자이</span>,
-                                                            <span>신길우성2차</span>,
-                                                            <span>신길남서울</span>,
-                                                            <span>신길우성3차</span>,
-                                                            <span>보라매경남아너스빌</span>
-                                                        </div>
-                                                    </li>
-            
-                                                    <li>
-                                                        <div class="cptForm">
-                                                            <label class="frmChk">
-                                                                <input type="radio" checked="checked" name="apt">
-                                                                <span class="radiomark"></span>
-                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="aptList">
-                                                            <span>신길파크자이</span>,
-                                                            <span>신길우성2차</span>,
-                                                            <span>신길남서울</span>,
-                                                            <span>신길우성3차</span>,
-                                                            <span>보라매경남아너스빌</span>
-                                                        </div>
-                                                    </li>
-            
-                                                    <li>
-                                                        <div class="cptForm">
-                                                            <label class="frmChk">
-                                                                <input type="radio" checked="checked" name="apt">
-                                                                <span class="radiomark"></span>
-                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="aptList">
-                                                            <span>신길파크자이</span>,
-                                                            <span>신길우성2차</span>,
-                                                            <span>신길남서울</span>,
-                                                            <span>신길우성3차</span>,
-                                                            <span>보라매경남아너스빌</span>
-                                                        </div>
-                                                    </li>
-            
-                                                    <li>
-                                                        <div class="cptForm">
-                                                            <label class="frmChk">
-                                                                <input type="radio" checked="checked" name="apt">
-                                                                <span class="radiomark"></span>
-                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="aptList">
-                                                            <span>신길파크자이</span>,
-                                                            <span>신길우성2차</span>,
-                                                            <span>신길남서울</span>,
-                                                            <span>신길우성3차</span>,
-                                                            <span>보라매경남아너스빌</span>
-                                                        </div>
-                                                    </li>
-            
-                                                    <li>
-                                                        <div class="cptForm">
-                                                            <label class="frmChk">
-                                                                <input type="radio" checked="checked" name="apt">
-                                                                <span class="radiomark"></span>
-                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="aptList">
-                                                            <span>신길파크자이</span>,
-                                                            <span>신길우성2차</span>,
-                                                            <span>신길남서울</span>,
-                                                            <span>신길우성3차</span>,
-                                                            <span>보라매경남아너스빌</span>
-                                                        </div>
-                                                    </li>
-            
-                                                    <li>
-                                                        <div class="cptForm">
-                                                            <label class="frmChk">
-                                                                <input type="radio" checked="checked" name="apt">
-                                                                <span class="radiomark"></span>
-                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="aptList">
-                                                            <span>신길파크자이</span>,
-                                                            <span>신길우성2차</span>,
-                                                            <span>신길남서울</span>,
-                                                            <span>신길우성3차</span>,
-                                                            <span>보라매경남아너스빌</span>
-                                                        </div>
-                                                    </li>
-            
-                                                    <li>
-                                                        <div class="cptForm">
-                                                            <label class="frmChk">
-                                                                <input type="radio" checked="checked" name="apt">
-                                                                <span class="radiomark"></span>
-                                                                <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="aptList">
-                                                            <span>신길파크자이</span>,
-                                                            <span>신길우성2차</span>,
-                                                            <span>신길남서울</span>,
-                                                            <span>신길우성3차</span>,
-                                                            <span>보라매경남아너스빌</span>
-                                                        </div>
-                                                    </li>
-                                                </ul>
+                                        <div class="moSchAptBox">
+                                            <div class="cptForm moSchApt">
+                                                <div class="frmIpt">
+                                                    <input type="text" placeholder="아파트 명을 입력해주세요" onkeyup="aptSearch();"/>
+                                                    <button type="button" class="schBtn" onclick="aptSearch();"><span class="hidden">검색</span></button>
+                                                </div>
+                                            </div> 
+                
+                                            <div class="txtSearchBox moRst">
+                                                <div class="locationList">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="cptForm">
+                                                                <label class="frmChk">
+                                                                    <input type="radio" checked="checked" name="apt">
+                                                                    <span class="radiomark"></span>
+                                                                    <span class="labelTxt">서울특별시 마포구 서강동</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="aptList">
+                                                                <span>신촌태영데시앙</span>,
+                                                                <span>레미안밤섬리베뉴2</span>,
+                                                                <span>서강해모로</span>,
+                                                                <span>레미안밤섬리베뉴 i</span>,
+                                                                <span>한강밤섬자이</span>,
+                                                                <span>창전삼성</span>,
+                                                                <span>서강쌍용예가</span>
+                                                            </div>
+                                                        </li>
+                
+                                                        <li>
+                                                            <div class="cptForm">
+                                                                <label class="frmChk">
+                                                                    <input type="radio" checked="checked" name="apt">
+                                                                    <span class="radiomark"></span>
+                                                                    <span class="labelTxt">서울특별시 동대문구 답십리제2동</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="aptList">
+                                                                <span>답십리청솔우성제2</span>,
+                                                                <span>답십리청솔우성</span>,
+                                                                <span>답십리파크자이</span>,
+                                                                <span>대십리동서울한양</span>,
+                                                                <span>래미안엘파인</span>,
+                                                                <span>답십리우성그린</span>,
+                                                                <span>답십리두산</span>,
+                                                                <span>답십리동아제2</span>,
+                                                                <span>답십리두산위브</span>
+                                                            </div>
+                                                        </li>
+                
+                                                        <li>
+                                                            <div class="cptForm">
+                                                                <label class="frmChk">
+                                                                    <input type="radio" checked="checked" name="apt">
+                                                                    <span class="radiomark"></span>
+                                                                    <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="aptList">
+                                                                <span>신길파크자이</span>,
+                                                                <span>신길우성2차</span>,
+                                                                <span>신길남서울</span>,
+                                                                <span>신길우성3차</span>,
+                                                                <span>보라매경남아너스빌</span>
+                                                            </div>
+                                                        </li>
+                
+                                                        <li>
+                                                            <div class="cptForm">
+                                                                <label class="frmChk">
+                                                                    <input type="radio" checked="checked" name="apt">
+                                                                    <span class="radiomark"></span>
+                                                                    <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="aptList">
+                                                                <span>신길파크자이</span>,
+                                                                <span>신길우성2차</span>,
+                                                                <span>신길남서울</span>,
+                                                                <span>신길우성3차</span>,
+                                                                <span>보라매경남아너스빌</span>
+                                                            </div>
+                                                        </li>
+                
+                                                        <li>
+                                                            <div class="cptForm">
+                                                                <label class="frmChk">
+                                                                    <input type="radio" checked="checked" name="apt">
+                                                                    <span class="radiomark"></span>
+                                                                    <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="aptList">
+                                                                <span>신길파크자이</span>,
+                                                                <span>신길우성2차</span>,
+                                                                <span>신길남서울</span>,
+                                                                <span>신길우성3차</span>,
+                                                                <span>보라매경남아너스빌</span>
+                                                            </div>
+                                                        </li>
+                
+                                                        <li>
+                                                            <div class="cptForm">
+                                                                <label class="frmChk">
+                                                                    <input type="radio" checked="checked" name="apt">
+                                                                    <span class="radiomark"></span>
+                                                                    <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="aptList">
+                                                                <span>신길파크자이</span>,
+                                                                <span>신길우성2차</span>,
+                                                                <span>신길남서울</span>,
+                                                                <span>신길우성3차</span>,
+                                                                <span>보라매경남아너스빌</span>
+                                                            </div>
+                                                        </li>
+                
+                                                        <li>
+                                                            <div class="cptForm">
+                                                                <label class="frmChk">
+                                                                    <input type="radio" checked="checked" name="apt">
+                                                                    <span class="radiomark"></span>
+                                                                    <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="aptList">
+                                                                <span>신길파크자이</span>,
+                                                                <span>신길우성2차</span>,
+                                                                <span>신길남서울</span>,
+                                                                <span>신길우성3차</span>,
+                                                                <span>보라매경남아너스빌</span>
+                                                            </div>
+                                                        </li>
+                
+                                                        <li>
+                                                            <div class="cptForm">
+                                                                <label class="frmChk">
+                                                                    <input type="radio" checked="checked" name="apt">
+                                                                    <span class="radiomark"></span>
+                                                                    <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="aptList">
+                                                                <span>신길파크자이</span>,
+                                                                <span>신길우성2차</span>,
+                                                                <span>신길남서울</span>,
+                                                                <span>신길우성3차</span>,
+                                                                <span>보라매경남아너스빌</span>
+                                                            </div>
+                                                        </li>
+                
+                                                        <li>
+                                                            <div class="cptForm">
+                                                                <label class="frmChk">
+                                                                    <input type="radio" checked="checked" name="apt">
+                                                                    <span class="radiomark"></span>
+                                                                    <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="aptList">
+                                                                <span>신길파크자이</span>,
+                                                                <span>신길우성2차</span>,
+                                                                <span>신길남서울</span>,
+                                                                <span>신길우성3차</span>,
+                                                                <span>보라매경남아너스빌</span>
+                                                            </div>
+                                                        </li>
+                
+                                                        <li>
+                                                            <div class="cptForm">
+                                                                <label class="frmChk">
+                                                                    <input type="radio" checked="checked" name="apt">
+                                                                    <span class="radiomark"></span>
+                                                                    <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="aptList">
+                                                                <span>신길파크자이</span>,
+                                                                <span>신길우성2차</span>,
+                                                                <span>신길남서울</span>,
+                                                                <span>신길우성3차</span>,
+                                                                <span>보라매경남아너스빌</span>
+                                                            </div>
+                                                        </li>
+                
+                                                        <li>
+                                                            <div class="cptForm">
+                                                                <label class="frmChk">
+                                                                    <input type="radio" checked="checked" name="apt">
+                                                                    <span class="radiomark"></span>
+                                                                    <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="aptList">
+                                                                <span>신길파크자이</span>,
+                                                                <span>신길우성2차</span>,
+                                                                <span>신길남서울</span>,
+                                                                <span>신길우성3차</span>,
+                                                                <span>보라매경남아너스빌</span>
+                                                            </div>
+                                                        </li>
+                
+                                                        <li>
+                                                            <div class="cptForm">
+                                                                <label class="frmChk">
+                                                                    <input type="radio" checked="checked" name="apt">
+                                                                    <span class="radiomark"></span>
+                                                                    <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="aptList">
+                                                                <span>신길파크자이</span>,
+                                                                <span>신길우성2차</span>,
+                                                                <span>신길남서울</span>,
+                                                                <span>신길우성3차</span>,
+                                                                <span>보라매경남아너스빌</span>
+                                                            </div>
+                                                        </li>
+                
+                                                        <li>
+                                                            <div class="cptForm">
+                                                                <label class="frmChk">
+                                                                    <input type="radio" checked="checked" name="apt">
+                                                                    <span class="radiomark"></span>
+                                                                    <span class="labelTxt">서울특별시 영등포구 신길 제6동</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="aptList">
+                                                                <span>신길파크자이</span>,
+                                                                <span>신길우성2차</span>,
+                                                                <span>신길남서울</span>,
+                                                                <span>신길우성3차</span>,
+                                                                <span>보라매경남아너스빌</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

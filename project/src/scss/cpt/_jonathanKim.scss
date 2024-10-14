@@ -1723,9 +1723,13 @@
                                     }
                                 }
                             }
-        
+                            
+                            .moSchAptBox {
+                                display:none;
+                            }
+
                             .txtSearchBox {
-                                display:none; width:100%; background:var(--clr-white); padding:30px; border-radius:8px; margin-top:16px;
+                                display:none; width:100%; background:var(--clr-white); padding:30px 0; border-radius:8px; margin-top:16px; /*2024.10.14 수정*/
         
                                 > .locationList {
                                     width:100%; position:relative;
@@ -1771,7 +1775,7 @@
                         padding: 30px 20px; border-bottom:1px solid var(--txt-gray04); margin-bottom:16px;
 
                         > ul {
-                            display:flex; flex-flow:column; gap:16px;
+                            display:flex; flex-flow:column; gap:16px; max-height:265px; overflow-y:scroll;
 
                             &::-webkit-scrollbar {display:none;}
 
@@ -1937,6 +1941,12 @@
                                         }
                                     }
                                 }
+                            }
+                        }
+                        /*2024.10.14 추가*/
+                        @include media ('tablet') {
+                            &.moRst {
+                                display:none;
                             }
                         }
                     }

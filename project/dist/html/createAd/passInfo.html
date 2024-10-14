@@ -239,40 +239,53 @@
         <div class="layoutContainer" id="container">
             <!-- 메인 콘텐츠 영역 -->
             <div class="comSubTitle">
-                <h5>광고 만들기</h5>
+                <h5>정보입력</h5>
             </div>
             <div class="cptSubTop">
                 <div class="subTopTxt">
-                    <h3>타이틀 타이틀<br>영상을 만들어보세요</h3>
+                    <h3>광고주님의 업체 정보를 입력해주세요.</h3>
                 </div>
             </div>
             
-            <div class="createOption">
+            <div class="infoArea"> 
                 <ul>
                     <li>
-                        <span class="flag">AI영상</span>
-                        <p class="title">AI가 5분이면 광고영상을<br>만들어 드려요.</p>
-                        <button type="button" class="startBtn">영상 만들기</button>
+                        <div class="cptForm">
+                            <div class="frmIpt">
+                                <label for="infoIpt01">이름</label>
+                                <input type="text" id="infoIpt01" />
+                            </div>
+                        </div>
                     </li>
                     <li>
-                        <span class="flag">템플릿 영상</span>
-                        <p class="title">타이틀영역 타이틀영역<br>타이틀영역 타이틀영역</p>
-                        <button type="button" class="startBtn">영상 만들기</button>
+                        <div class="cptForm">
+                            <div class="frmIpt">
+                                <label for="infoIpt02">업체명</label>
+                                <input type="text" id="infoIpt02" />
+                            </div>
+                        </div>
                     </li>
                     <li>
-                        <span class="flag">내 컴퓨터</span>
-                        <p class="title">타이틀영역 타이틀영역<br>타이틀영역 타이틀영역</p>
-                        <button type="button" class="startBtn">영상 만들기</button>
+                        <div class="cptForm">
+                            <div class="frmIpt">
+                                <label for="infoIpt03">주소</label>
+                                <input type="text" id="infoIpt03" />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cptForm">
+                            <div class="frmIpt">
+                                <label for="infoIpt04">사업자등록증</label>
+                                <input type="text" id="infoIpt04" />
+                            </div>
+                        </div>
                     </li>
                 </ul>
-            </div>
 
-            <div class="callCenter">
-                 <p class="tit">B tv 우리동네광고 전화 상담을 원하시면 1566-7762으로 문의 바랍니다.</p>
-                 <p class="date">평일 AM 09시 ~ PM 18시</p>
-                 <div class="cptBtnForm">
-                    <button type="button" class="btn scnd">전화상담 예약</button>
-                 </div>
+                <div class="cptBtnForm">
+                    <button type="button" class="btn prmy">완료</button>
+                </div>
             </div>
             <!-- //메인 콘텐츠 영역 -->
         </div>
@@ -354,30 +367,6 @@
     </div>
 </div>
 
-<div class="modPopup type02 popOpen" id="haveAd"><!--2024.10.14 이미 광고가 있을때 알려주는 안내팝업 (like confirm)-->
-    <div class="popupDim">딤 영역</div>
-    <div class="popupBox"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
-        <!-- 팝업 타이틀 -->
-        <div class="popTitArea">
-            <button class="closeBtn" onclick="popClose('haveAd')">팝업 닫기</button>
-        </div>
-
-        <!-- 팝업 컨텐츠 -->
-        <div class="popContArea">
-            <div class="comClause">
-                <p class="basicTxt">
-                    <p class="title">이미 제작 중인 광고가 있습니다.<br>이어서 하시겠습니까?</p>
-                </p>                        
-            </div>
-        </div>
-
-        <!-- 팝업 버튼 -->
-        <div class="popBtnArea">
-            <button type="button" class="popBtn white" onclick="popClose('haveAd')">취소</button>
-            <button type="button" class="popBtn blue" onclick="popClose('haveAd')">이어하기</button>
-        </div>
-    </div>
-</div>
 <!-- Bottom -->
 
 </div>

@@ -1,0 +1,97 @@
+ <!-- Header -->
+ <%- include('../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <!-- 메인 콘텐츠 영역 -->
+            <div class="comSubTitle">
+                <h5>정보입력</h5>
+            </div>
+            <div class="cptSubTop">
+                <div class="subTopTxt">
+                    <h3>광고주님의 업체 정보를 입력해주세요.</h3>
+                </div>
+            </div>
+            
+            <div class="infoArea"> 
+                <ul>
+                    <li>
+                        <div class="cptForm">
+                            <div class="frmIpt">
+                                <label for="infoIpt01">이름</label>
+                                <input type="text" id="infoIpt01" />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cptForm">
+                            <div class="frmIpt">
+                                <label for="infoIpt02">업체명</label>
+                                <input type="text" id="infoIpt02" />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cptForm">
+                            <div class="frmIpt">
+                                <label for="infoIpt03">주소</label>
+                                <input type="text" id="infoIpt03" />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cptForm">
+                            <div class="frmIpt">
+                                <label for="infoIpt04">사업자등록증</label>
+                                <input type="text" id="infoIpt04" />
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="cptBtnForm">
+                    <button type="button" class="btn prmy">완료</button>
+                </div>
+            </div>
+            <!-- //메인 콘텐츠 영역 -->
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../ejs/quick.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>

@@ -80,29 +80,5 @@
     </div>
 </div>
 
-<div class="modPopup type02 popOpen" id="haveAd"><!--2024.10.14 이미 광고가 있을때 알려주는 안내팝업 (like confirm)-->
-    <div class="popupDim">딤 영역</div>
-    <div class="popupBox"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
-        <!-- 팝업 타이틀 -->
-        <div class="popTitArea">
-            <button class="closeBtn" onclick="popClose('haveAd')">팝업 닫기</button>
-        </div>
-
-        <!-- 팝업 컨텐츠 -->
-        <div class="popContArea">
-            <div class="comClause">
-                <p class="basicTxt">
-                    <p class="title">이미 제작 중인 광고가 있습니다.<br>이어서 하시겠습니까?</p>
-                </p>                        
-            </div>
-        </div>
-
-        <!-- 팝업 버튼 -->
-        <div class="popBtnArea">
-            <button type="button" class="popBtn white" onclick="popClose('haveAd')">취소</button>
-            <button type="button" class="popBtn blue" onclick="popClose('haveAd')">이어하기</button>
-        </div>
-    </div>
-</div>
 <!-- Bottom -->
 <%- include('../ejs/bottom.ejs', { }) %>

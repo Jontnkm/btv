@@ -266,7 +266,7 @@
                     <div class="thmbInfo">
 
                         <div class="thumbArea">
-                            <img src="../../images/temp/tmp_thumbnail.png" alt="" />
+                            <img src="../../images/temp/tmp_thumbnail.png" alt="" onclick="popOpen('showMyAd')"/>
                             <p class="adTitle">
                                 광고제목 테스트 입니다. / 광고제목 테스트 입니다. / 광고제목 테스트 입니다. / 광고제목 테스트 입니다.
                             </p>
@@ -768,6 +768,31 @@
     </div>
 </div>
 
+
+<!--2024.10.14 영상 썸네일 재생 팝업-->
+<div class="modPopup type01" id="showMyAd">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">내 광고 영상</div>
+            <button class="closeBtn" onclick="popClose('showMyAd')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="tempBox" style="background:rgba(255,0,0,0.2); width:100%; height:500px;">
+
+            </div>
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <button type="button" class="popBtn white" onclick="popClose('showMyAd')">취소</button>
+            <button type="button" class="popBtn blue" onclick="popClose('showMyAd')">확인</button>
+        </div>
+    </div>
+</div>
 <!-- Bottom -->
 
 </div>

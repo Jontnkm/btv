@@ -316,163 +316,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-
-    //===================================================================================//
-    //============================대출안내 하단 floating==================================//
-    //===================================================================================//
-    document.addEventListener("scroll", function(){
-        let floatLoan = document.querySelector(".floatWrap");
-        let footer = document.querySelector(".layoutFooter")
-        let scrlT = window.pageYOffset;
-        let downT = document.documentElement.scrollHeight - (window.innerHeight + footer.offsetHeight);
-
-        if(floatLoan) {
-            if(scrlT > 30 && scrlT < downT) {
-                floatLoan.classList.remove("floatNone");
-                floatLoan.classList.add("floatOn");
-            } else if(scrlT >= downT) {
-                floatLoan.classList.remove("floatOn");
-                floatLoan.classList.add("floatNone");
-            } else {
-                floatLoan.classList.remove("floatOn", "floatNone");
-            }
-        }
-    })
-
-    //===================================================================================//
-    //===============================인재영입-카드 효과====================================//
-    //===================================================================================//
-
-    let cardItem = document.querySelectorAll(".cardItem");
-
-    cardItem.forEach(function(card){
-        card.addEventListener("click", function(){
-            card.classList.toggle("on");
-        })
-    })
-
-    //===================================================================================//
-    //=========================대출정보조회 - 테이블 아코디언===============================//
-    //===================================================================================//
-    let acrBtn = document.querySelectorAll(".comAccorTable .accorTit");
-
-    acrBtn.forEach(function(acract){
-        acract.addEventListener("click", function(){
-            acract.classList.toggle("nowOn");
-        })
-    })
-
-    //===================================================================================//
-    //===========================form focus effect script================================//
-    //===================================================================================//
-    //input focus & blur title effect & clear function
-    var inputs = document.querySelectorAll('.item input[type="text"]');
-    
-    inputs.forEach(function(inputElement) {
-        var parent = inputElement.closest('.item');
-        var optTit = parent.querySelector('.optTit');
-        var rsBtn = parent.querySelector('.resetBtn');
-        
-        inputElement.addEventListener('focusin', function() {
-            optTit.style.color = '#005ce6'; // 포커스 되었을 때 텍스트 색상 변경
-            if (rsBtn) {
-                rsBtn.style.display = 'block'; // 버튼 보이기
-            }
-        });
-
-        inputElement.addEventListener('focusout', function() {
-            optTit.style.color = ''; // 포커스가 해제되었을 때 텍스트 색상 원래대로 변경
-
-            if (event.relatedTarget === rsBtn) {
-                rsBtn.addEventListener('click', function() {
-                    inputElement.value = ''; // 버튼을 클릭하면 입력 내용 지우기
-
-                    if (rsBtn) {
-                        rsBtn.style.display = 'none'; // 버튼 숨기기
-                    }
-                
-                });
-            }else{
-                if (rsBtn) {
-                    rsBtn.style.display = 'none'; // 버튼 숨기기
-                }
-            }
-        });
-    });
-
-    //===================================================================================//
-    //===========================form btninput activation================================//
-    //===================================================================================//
-
-    // 옵션 버튼 적용
-    /*
-    	옵션버튼 반복 적용 ==> (대출 신청 페이지로 이동)
-    let btnIpt = document.querySelectorAll(".btnInput.val .btn");
-    btnIpt.forEach(function(activeBtn){
-        activeBtn.addEventListener("click", function(){
-            frmBtnGroup = activeBtn.closest(".frmBtnGroup");
-            if (frmBtnGroup) {
-                let ipt = frmBtnGroup.previousElementSibling.querySelector("input");
-                if (ipt) {
-                    let txt = activeBtn.textContent.slice(0,-2);
-                    ipt.value = txt;
-                } else {
-                    console.error("Input element not found");
-                }
-            } else {
-                console.error(".frmBtnGroup not found");
-            }
-        })
-    })
-
-    // 옵션버튼 반복 적용
-    function updateInputValue(value, btnOption) {
-        let inputElement = btnOption.closest(".frmBtnGroup.for").previousElementSibling.querySelector("input");
-        if (inputElement) {
-            let currentValue = parseInt(inputElement.value.replace(/,/g, '') || 0);
-            let buttonValue = parseInt(value.replace(/,/g, '') || 0);
-            let newValue = currentValue + buttonValue;
-            inputElement.value = newValue.toLocaleString();
-        } else {
-            console.error("Input element not found");
-        }
-    }
-
-    let btnOptions = document.querySelectorAll(".btn.option");
-    btnOptions.forEach(function(btnOption) {
-        btnOption.addEventListener("click", function() {
-            updateInputValue(btnOption.textContent, btnOption);
-        });
-    });
-    */
-    
-
-    //===================================================================================//
-    //==============================대출정보 조회 리스트===================================//
-    //===================================================================================//
-    document.querySelectorAll('.cptLoanDetail .card').forEach(function(card) {
-        card.addEventListener('click', function() {
-            document.querySelectorAll('.cptLoanDetail .card').forEach(function(card) {
-                card.classList.remove('nowOn');
-            });
-            this.classList.add('nowOn');
-    
-            var cardItemIndex = Array.from(this.closest('.cardItem').parentElement.children).indexOf(this.closest('.cardItem'));
-    
-            document.querySelectorAll('.cptLoanDetail .loanDtGroup .dtItem').forEach(function(dtItem) {
-                dtItem.classList.remove('on');
-            });
-    
-            var loanDtGroup = this.closest('.cardBtnGroup').nextElementSibling;
-            loanDtGroup.querySelectorAll('.dtItem')[cardItemIndex].classList.add('on');
-    
-            datepick();
-        });
-    });
-
-    // datepick
-    datepick();
-
     //===================================================================================//
     //==================================END OF SCRIPT====================================//
     //===================================================================================//
@@ -781,6 +624,8 @@ function showTab4(index) {
     var filter = document.querySelector(".schRecom");
     var filterSch = document.querySelector(".schLoc");
     var filterApt = document.querySelector(".schApt");
+    var mo_filterApt = document.querySelector(".moSchAptBox");//2024.10.14 추가
+    var w_wid = window.innerWidth;//2024.10.14 추가
 
     for (var i = 0; i < modTabBtn4.length; i++) {
         modTabBtn4[i].classList.remove('active');
@@ -797,7 +642,13 @@ function showTab4(index) {
     }else if (index == 2) {
         filter.style.display = 'none';
         filterSch.style.display = 'none';
-        filterApt.style.display = 'block';
+        console.log(w_wid);
+        //2024.10.14 추가
+        if(w_wid > 1024) {
+            filterApt.style.display = 'block';
+        }else if(w_wid < 1024) {
+            mo_filterApt.style.display = 'block';
+        }
     }else {
         filterSch.style.display = 'none';
         filterApt.style.display = 'none';
@@ -969,7 +820,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     //모바일환경 차트 보기
-    const label = document.querySelector('.recomList ul li label');
+    const label = document.querySelector('.recomList ul li');
     const chart = document.querySelector('.chartPop');
     const dim = document.querySelector(".chartBoxDim");
     const chartCls = document.querySelector('.chartPop .chartCls');
@@ -1009,7 +860,7 @@ function schTyping() {
     $(schTxt).parent('.frmIpt').addClass("typing");
     $(schTxt).next('button').show();
     $(".selectList > ul").css({
-        'max-height' : '185px',
+        'max-height' : '85px',
         'overflow-y' : 'scroll',
     })
 }
