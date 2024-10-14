@@ -390,7 +390,10 @@
                     background:var(--prm-color); color: var(--clr-white); font-weight:bold; border-radius:8px; 
                 }
                 @include media('tablet'){
-                    font-size: 17px; height: 60px;
+                    font-size: 16px; height: 60px; line-height: 60px;
+                }
+                @include media('mobile'){
+                    font-size: 14px;
                 }
             }
         }
@@ -1347,7 +1350,7 @@
 /*=================================================================================================*/
 .comSubTitle{
     h3{
-        font-size: 32px; color: var(--txt-black); font-weight: 700; letter-spacing: -0.8px; margin-bottom: 65px;
+        font-size: 32px; color: var(--txt-black); font-weight: 700; letter-spacing: -0.8px; margin-bottom:65px;
         @include media('tablet'){
             font-size: 18px; margin-bottom: 30px;
         }
