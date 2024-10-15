@@ -2909,3 +2909,11 @@
         }
     }
 }
+
+[data-effect ^="animate__fadeIn"]{
+    opacity:0;
+}
+
+.animate__animated {
+    animation-duration: 0.5s;
+}
