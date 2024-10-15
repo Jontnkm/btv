@@ -792,7 +792,9 @@ document.addEventListener("DOMContentLoaded", function() {
       console.error('Footer element not found.');
     }
     
-
+    //=====================================================================================================//
+    //=====================================지역설정 페이지 스크립트 =====================================//
+    //=====================================================================================================//
     //모바일환경 상세검색 열기
     const detBtn = document.querySelector('.detailSearchBtn'); 
     const moFil = document.querySelector('.schRecom');
@@ -848,6 +850,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var scr = window.scrollY;
     console.log(scr);
+
+    //상권분석 팝업 오픈 스크립트
+    const recom = document.querySelector('.mapSch .cptBtnForm .txt');
+    const analize = document.querySelector('.analizePop');
+    const analizeDim = document.querySelector('.analizeDim');
+    const analizeCls = document.querySelector('.analizePop a.chartCls');
+    recom.addEventListener('click', () => {
+        analize.style.display = "block";
+        analizeDim.style.display = "block";
+    })
+
+    analizeCls.addEventListener('click', () => {
+        analize.style.display = "none";
+        analizeDim.style.display = "none";
+    })
 });
 
 //============================================================================================================//

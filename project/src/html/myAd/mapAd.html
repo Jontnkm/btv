@@ -31,39 +31,44 @@
                                         <input type="text" placeholder="test"/>
                                         <button type="button" class="schBtn"><span class="hidden">검색</span></button>
                                     </div> 
+                                    <div class="comboCov"> 
+                                        <div class="frmCombo">
+                                            <div class="drpCov">
+                                                <button type="button" class="drpBtn">업종</button>
+                                                <div class="listBox">
+                                                    <ul class="drpList">
+                                                        <li><a href="#none">text</a></li>
+                                                        <li><a href="#none">text</a></li>
+                                                        <li><a href="#none">text</a></li>
+                                                        <li><a href="#none">text</a></li>
+                                                        <li><a href="#none">text</a></li>
+                                                        <li><a href="#none">text</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                    <div class="frmCombo">
-                                        <div class="drpCov">
-                                            <button type="button" class="drpBtn">업종을 선택해주세요.</button>
-                                            <div class="listBox">
-                                                <ul class="drpList">
-                                                    <li><a href="#none">text</a></li>
-                                                    <li><a href="#none">text</a></li>
-                                                    <li><a href="#none">text</a></li>
-                                                    <li><a href="#none">text</a></li>
-                                                    <li><a href="#none">text</a></li>
-                                                    <li><a href="#none">text</a></li>
-                                                </ul>
+                                        <div class="frmCombo">
+                                            <div class="drpCov">
+                                                <button type="button" class="drpBtn">하위업종</button>
+                                                <div class="listBox">
+                                                    <ul class="drpList">
+                                                        <li><a href="#none">text</a></li>
+                                                        <li><a href="#none">text</a></li>
+                                                        <li><a href="#none">text</a></li>
+                                                        <li><a href="#none">text</a></li>
+                                                        <li><a href="#none">text</a></li>
+                                                        <li><a href="#none">text</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="frmCombo">
-                                        <div class="drpCov">
-                                            <button type="button" class="drpBtn">하위업종을 선택해주세요.</button>
-                                            <div class="listBox">
-                                                <ul class="drpList">
-                                                    <li><a href="#none">text</a></li>
-                                                    <li><a href="#none">text</a></li>
-                                                    <li><a href="#none">text</a></li>
-                                                    <li><a href="#none">text</a></li>
-                                                    <li><a href="#none">text</a></li>
-                                                    <li><a href="#none">text</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                    <div class="cptBtnForm">
+                                        <button type="button" class="btn scnd">조회</button>
+                                        <button type="button" class="btn txt">상권 분석 요약 보기</button>
                                     </div>
-
                                     <!--for tablet & mobile device only-->
                                     <div class="moSearchArea">
                                         <div class="cptBtnForm">
@@ -84,29 +89,8 @@
                                         <button class="closeBtn"><img src="../../images/common/ico_pop_close.svg" alt="팝업 닫기"></button>
                                     </div>
                                     <!--//모바일전용-->
-                                    <div class="analize">
-                                        <p class="mapPopTit">상권 분석 요약</p>
-                                        <div class="baseList">
-                                            <p class="listTitle">Ai 상권분석 기반 추천</p>
-                                            <div class="locList">
-                                                <p>
-                                                    <span>청담동</span>
-                                                    <span>삼성2동</span>
-                                                    <span>논현2동</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="baseList">
-                                            <p class="listTitle">광고주 선택 기반 추천</p>
-                                            <div class="locList">
-                                                <p>
-                                                    <span>청담동</span>
-                                                    <span>삼성2동</span>
-                                                    <span>논현2동</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+
+                                    <!--2024.10.15 상권분석요약 제거 팝업으로 이동 최 하단 참고-->
 
                                     <div class="recomendList">
                                         <p class="mapPopTit">매장 주변 광고지역 추천</p>
@@ -1822,22 +1806,22 @@
                  </div>
 
                  <!--차트-->
-                 <div class="chartBoxDim"></div>
-                 <div class="chartPop">
+                <div class="chartBoxDim"></div>
+                <div class="chartPop">
                     <div class="inner">
-                         <a href="#none" class="chartCls"><span class="hidden">닫기</span></a>
+                        <a href="#none" class="chartCls"><span class="hidden">닫기</span></a>
                 
-                         <p class="location">서울 강남구 삼성1동</p>
+                        <p class="location">서울 강남구 삼성1동</p>
                 
-                         <div class="star">
+                        <div class="star">
                             <span class="clrd star"></span>
                             <span class="clrd star"></span>
                             <span class="star"></span>
                             <span class="star"></span>
                             <span class="star"></span>
-                         </div>
+                        </div>
                 
-                         <div class="chartBox">
+                        <div class="chartBox">
                             <div class="chart01">
                                 <p class="tit">전체 인구 수</p>
                                 <div class="chartArea" style="width:100%; height:100px; background: red; opacity:0.2;"><!--임시 css 작업시 style 제거 필요-->
@@ -1862,10 +1846,39 @@
                                     <!--차트 영역-->
                                 </div>
                             </div>
-                         </div>
+                        </div>
                     </div>
                 </div>
-            
+                
+                <div class="analizeDim"></div>
+                <div class="analizePop">
+                    <div class="inner">
+                        <a href="#none" class="chartCls"><span class="hidden">닫기</span></a>
+                
+                        <p class="tit">상권분석요약</p>
+                
+                        <div class="analize">
+                            <div class="baseList">
+                                <p class="listTitle">Ai 상권분석 기반 추천</p>
+                                <div class="locList">
+                                    <p>
+                                        <span>청담동</span>
+                                        <span>삼성2동</span>
+                                        <span>논현2동</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="analizeBox">
+                                <p>
+                                    고객님이 선택하신 반경 <span>1km 내에 총 3개의</span> 행정동에 광고가능 가구수 합계는 <span>5,200 가구</span>입니다.<br>
+                                    가구당 연평균 소득은 <span>7,000 만원</span> 입니다.<br>
+                                    AI가 고객 분석 결과 해당 지역 소비자의 업종의 관심도는 <span>소공동 > 명동 > 회현동</span> 순으로 나타났습니다.<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
