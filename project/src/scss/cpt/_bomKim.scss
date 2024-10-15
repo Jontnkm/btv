@@ -962,7 +962,7 @@
                     font-size: 14px;
                 }
                 .link{
-                    color: var(--txt-gray01); font-size: 14px; font-weight: 400; letter-spacing: -0.35px; margin-top: 98px;
+                    color: var(--txt-gray01); font-size: 14px; font-weight: 400; letter-spacing: -0.35px; margin-top: 98px; cursor: pointer;
                     span{
                         display: inline-block; vertical-align: middle; margin-left: 8px; 
                         @include media('tablet'){
@@ -996,4 +996,7 @@
     .stepList{
         max-width: 1320px; margin: 0 auto;
     }
+}
+.makeExBtn{
+    max-width: 480px; margin: 65px auto;
 }
