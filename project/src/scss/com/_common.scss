@@ -381,7 +381,7 @@
 .modTabWide{
     width:100%; background: var(--clr-white); margin: 0 auto;
     .tabMenu{
-        display: flex; justify-content: center; align-items: center; gap: 0; width: 100%;  background:var(--txt-gray05);
+        display: flex; justify-content: center; align-items: center; gap: 0; width: 100%;  background:var(--txt-gray05); margin-bottom: 56px;
         .tabItem{
             width: 50%;
             .tabName{
