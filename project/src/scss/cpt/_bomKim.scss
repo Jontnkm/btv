@@ -1000,3 +1000,118 @@
 .makeExBtn{
     max-width: 480px; margin: 65px auto;
 }
+
+/* gallery - detail.html */
+.cptDetail{
+    max-width: 1024px; margin: 0 auto; border: 1px solid var(--txt-gray04); border-radius: 24px; margin-top: 55px;
+    .detailImg{
+        text-align: center;
+        img{
+            width: 100%; border-radius: 24px 24px 0 0;
+        }
+    }
+    .detailBox{
+        padding: 30px 30px 40px 30px;  
+        .txtBox{
+            .title{
+                font-size: 24px; color: var(--txt-black); font-weight: 500; letter-spacing: -0.6;
+                @include media('mobile'){
+                    font-size: 22px;
+                }
+            }
+            .type{
+                font-size: 16px; font-weight: 400; color: var(--txt-gray02); letter-spacing: -0.4; margin-top: 8px; margin-bottom: 30px;
+                @include media('mobile'){
+                    font-size: 14px;
+                }
+            }
+            .subTitle{
+                font-size: 18px; color: var(--txt-black); font-weight: 500; letter-spacing: -0.45;
+                @include media('mobile'){
+                    font-size: 16px;
+                }
+            }
+            .explain{
+                font-size: 16px; font-weight: 400; color: var(--txt-gray02); letter-spacing: -0.4; margin-top: 8px; margin-bottom: 30px;
+                @include media('mobile'){
+                    font-size: 14px;
+                }
+            }
+        }
+        .thumbnail{
+            display: flex; gap: 10px; 
+            p{
+                width: 97px; height: 97px;
+                img{
+                    border-radius: 16px; width: 100%;
+                }
+                @include media('mobile'){
+                    display: none;
+                    &:nth-child(1){
+                        display: block;
+                    }
+                    &:nth-child(2){
+                        display: block;
+                    }
+                    &:nth-child(3){
+                        display: block;
+                    }
+                }
+            }
+        }
+        .detailMap{
+            display: flex; justify-content: space-between; width: 100%; margin: 30px 0 35px 0;
+            .mapBox{
+                width: 638px; height: 388px; margin-right: 23px;
+                img{
+                    width: 100%; height: 100%; border-radius: 16px; 
+                }
+                @include media('tablet'){
+                    width: 100%; height: auto;
+                }
+            }
+            .mapInfo{
+                width: calc(100% - 661px);
+                > p{
+                    display: flex; 
+                }
+                .addr{
+                    color: var(--txt-gray01); font-size: 16px; font-weight: 400; letter-spacing: -0.4; margin-bottom: 25px;
+                    &::before{
+                        content: ''; display: inline-block; width: 24px; height: 24px; background: url(../../images/common/ico_map_info01.svg) no-repeat 0 0; margin-right: 8px;
+                    }
+                    @include media('tablet'){
+                        margin-bottom: 15px; margin-top: 20px; font-size: 14px;
+                    }
+                }
+                .call{
+                    font-family: Roboto; color: var(--txt-gray01); font-size: 16px; font-weight: 400; letter-spacing: -0.4;
+                    &::before{
+                        content: ''; display: inline-block; width: 24px; height: 24px; background: url(../../images/common/ico_map_info02.svg) no-repeat 0 0; margin-right: 8px;
+                    }
+                    @include media('tablet'){
+                        font-size: 14px;
+                    }
+                }
+                @include media('tablet'){
+                    width: 100%; 
+                }
+            }
+            @include media('tablet'){
+                flex-direction: column;
+            }
+        }
+        .detailBtn{
+            display: flex; justify-content: center; gap: 10px;
+            @include media('tablet'){
+                flex-direction: column;
+            }
+        }
+        @include media('tablet'){
+            padding: 20px;
+        }
+    }
+    @include media('tablet'){
+        margin-top: 30px;
+    }
+}
