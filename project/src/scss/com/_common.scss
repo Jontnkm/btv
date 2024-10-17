@@ -48,7 +48,7 @@
         }
 
         input {
-            width:100%; padding: 0 16px; font-size:16px; color:var(--txt-black); font-weight:400; height:48px; line-height:48px; letter-spacing:-0.4px; border:1px solid var(--txt-gray04); border-radius:8px; background:var(--clr-white); transition:all 0.4s;
+            width:100%; padding: 0 16px; font-size:16px; color:var(--txt-black); font-weight:400; height:48px; line-height:48px; letter-spacing:-0.4px; border:1px solid var(--txt-gray04); border-radius:8px; background:var(--clr-white); transition:all 0.4s; margin: 0 1px;
             @include media ('tablet') {
                 font-size:14px;
             }

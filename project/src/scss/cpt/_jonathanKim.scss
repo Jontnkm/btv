@@ -586,19 +586,19 @@
 }
 
 /*나의광고 서브메인*/
+/* kb 나의광고 프로그레스바 2024.10.17 */
 .pageLocationBar {
     width:100%; position:sticky; margin-top:56px; border-radius:8px; top:0; z-index:999;
     @include media('tablet'){
         display:none;/*임시*/
     }
     > ul {
-        display:flex; flex-flow:row nowrap; align-items: center; justify-content: center; gap:124px; padding:30px 80px; background:var(--txt-gray05);
+        display:flex; flex-flow:row nowrap; align-items: center; justify-content: center; gap:124px; padding:30px 80px; background:var(--txt-gray05); border-radius: 8px;
         &::after {content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:83%; height:1px; background:var(--txt-gray03); margin-top:-32px; z-index:1;}
 
         > li {
             width:max-content; position:relative; z-index:2;
             &::before {content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:48px; height:48px; background:url(../../images/common/ico_location_off.svg)50% 50% no-repeat;}
-            // &::after {content:''; position:absolute; top:50%; right:-136px; transform:translateY(-50%); width:145px; height:1px; background:var(--txt-gray03); margin-top:-22px;}
             > a {
                 display:block; text-align:center; font-size:16px; color:var(--txt-gray02); font-weight:400; line-height:18px; margin-top:52px;
             }
@@ -1284,7 +1284,10 @@
 /*결제완료*/
 .payComp {
     width:100%; position:relative; max-width:520px; margin:200px auto 0;
-
+    /* kb 나의광고 결제완료 2024.10.17 */
+    @include media('tablet'){
+        margin: 100px auto 0;
+    }
     > .ico {
         display:block; width:80px; height:80px; position:relative; margin:0 auto;
         &::after {content:''; position:absolute; top:50%; left:50%; width:80px; height:80px; transform:translate(-50%,-50%); background:url(../../images/common/ico_complete.svg)50% 50% no-repeat;}
@@ -2275,8 +2278,9 @@
                         position:relative; width:154px; height:40px; line-height:40px; padding: 0;
                         > span {
                             position:relative; padding-left:24px;
+                            /* kb 나의광고 광고효과보기 2024.10.17 */
                             &::after {
-                                content:''; position:absolute; top:50%; left:0; width:16px; height:18px; background:url(../../images/common/ico_downLoad.svg)50% 50% no-repeat; transform:translateY(-50%);
+                                content:''; position:absolute; top:50%; left:0; width:18px; height: 21px; background:url(../../images/common/ico_downLoad.svg)50% 50% no-repeat; transform:translateY(-50%);
                             }
                         }
                     }
