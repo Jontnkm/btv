@@ -60,13 +60,20 @@
         & > * {opacity: 0;}
         &::before {display: block; content: ""; width: 0; height: 0;background: #fff; position: absolute; top: 50%; left: 50%; z-index: -1;}
     }
+    /* kb 템플릿으로영상만들기 팝업 2024.10.17 */
     .popContArea {
-        height: auto; overflow-y: auto; overflow-x:hidden;
+        overflow-y: auto; overflow-x:hidden;
         &::-webkit-scrollbar{
             width:4px; background:rgba(0,0,0,0.1);
         }
         &::-webkit-scrollbar-thumb{
             background:rgba(0,0,0,0.2);
+        }
+        .previewArea{
+            width: 100%; height: 100%;
+            img{
+                width: 100%; height: 100%;
+            }
         }
     }
     

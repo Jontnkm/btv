@@ -484,6 +484,12 @@
 }
 
 /*광고만들기 서브메인*/
+/* kb 광고만들기 메인페이지 반응형 2024.10.17 */
+// .createAdIndex{
+//     > *:not(.callCenter) {width:100%; max-width:1320px; margin:0 auto;}
+// }
+
+
 .createOption {
     width:100%; position:relative; margin-top:40px;
 
@@ -495,32 +501,50 @@
 
             > span.flag {
                 display:inline-block; background:var(--clr-white); padding: 0 16px; line-height:37px; font-size:16px; color:var(--prm-color); font-weight:bold; border-radius:38px; margin-bottom:40px;
+                @include media ('mobile') {
+                    font-size: 14px; margin-bottom: 25px;
+                }
             }
 
             > p.title {
                 font-size:24px; color:var(--txt-black); font-weight:400;
+                @include media ('mobile') {
+                    font-size: 22px;
+                }
             }
 
             > button {
                 position:absolute; bottom:30px; left:30px; width:calc(100% - 60px); padding: 0 40px; background:var(--prm-color); line-height:56px; height:56px; font-size:18px; color:var(--clr-white); font-weight:500; text-align:center; border-radius:8px;
                 @include media ('tablet') {
-                    position:relative; bottom:auto; left:auto; width:100%; margin-top:40px;
+                    position: absolute; left: 25px; bottom: 30px; width: calc(100% - 50px);
                 }
             }
             &:first-of-type {
-                background:var(--sub-color05);
-                // background:var(--sub-color05) url(../../images/common/createBg02.png) right 30px bottom 150px no-repeat;
+                // 추후 이미지 변경 예정
+                background:var(--sub-color04) url(../../images/common/createBg02.png) right 30px bottom 150px no-repeat;
+                @include media ('mobile') {
+                    background-size: 140px;
+                    background-position: right 25px bottom 110px;
+                }
             }
             &:nth-of-type(2) {
                 background:var(--sub-color04) url(../../images/common/createBg02.png) right 30px bottom 150px no-repeat;
+                @include media ('mobile') {
+                    background-size: 140px;
+                    background-position: right 25px bottom 110px;
+                }
             }
 
             &:last-of-type {
                 background:var(--sub-color03) url(../../images/common/createBg03.png) right 30px bottom 150px no-repeat;
+                @include media ('mobile') {
+                    background-size: 140px;
+                    background-position: right 25px bottom 110px;
+                }
             }
 
             @include media ('tablet') {
-                width:100%; height:auto; min-height:auto;
+                width:100%; min-height: 390px; padding: 30px 25px;
             }
         }
         @include media ('tablet') {
@@ -534,13 +558,29 @@
 
     > .tit {
         font-size:24px; color:var(--txt-black); font-weight:bold;
+        /* kb 광고만들기 메인페이지 반응형 2024.10.17 */
+        @include media('mobile'){
+            width: 300px; word-break: break-all; font-size: 18px;
+        }
     }
 
     > .date {
         font-size:16px; color:var(--txt-gray02); margin:8px 0 24px;
+        /* kb 광고만들기 메인페이지 반응형 2024.10.17 */
+        @include media('mobile'){
+            font-size: 14px;
+        }
     }
 
     button {max-width:220px;} 
+
+    /* kb 광고만들기 메인페이지 반응형 2024.10.17 */
+    @include media('tablet'){
+        border-radius: 0; margin-top: 30px;
+    }
+    @include media('mobile'){
+        background-position: right 15px bottom 0px; background-size: 100px; padding: 30px 15px;
+    }
 }
 
 /*나의광고 서브메인*/
@@ -2696,9 +2736,23 @@
                     padding-left: 15px; padding-right: 15px;
                 }
                 .tabMenu{
-                    padding-left: 15px; padding-right: 15px;
+                    margin-left: 15px; margin-right: 15px; width: calc(100% - 30px);
                 }
                 .stepList{
+                    padding-left: 15px; padding-right: 15px;
+                }
+            }
+            &.createAd{
+                @include media ('tablet') {
+                    padding: 0;
+                }
+                .comSubTitle{
+                    padding-left: 15px; padding-right: 15px;
+                }
+                .cptSubTop{
+                    padding-left: 15px; padding-right: 15px;
+                }
+                .createOption{
                     padding-left: 15px; padding-right: 15px;
                 }
             }
