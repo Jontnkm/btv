@@ -66,12 +66,14 @@
     }
     .cptBtnForm{
         .btn{
-            height: 40px; padding: 8px 15px; font-size: 16px; font-weight: 500; letter-spacing: -0.4px; color: var(--txt-gray01); border: 1px solid var(--txt-gray04);
-            span{
-                display: inline-block; background: url(../../images/common/ico_tv.svg) center no-repeat; width: 24px; height: 22px; margin-right: 8px; vertical-align: top;
-                @include media('tablet'){
-                    height: 20px;
+            height: 40px; padding: 8px 15px; font-size: 16px; font-weight: 500; letter-spacing: -0.4px; color: var(--txt-gray01); border: 1px solid var(--txt-gray04); display: flex; justify-content: center; align-items: center;
+            &:hover{
+                span{
+                    background: url(../../images/common/ico_tv_p.svg) 50% 50% no-repeat;
                 }
+            }
+            span{
+                display: inline-block; background: url(../../images/common/ico_tv.svg) 50% 50% no-repeat; width: 24px; height: 20px; margin-right: 8px;
             }
             @include media('tablet'){
                 font-size: 14px; width: 50%;
