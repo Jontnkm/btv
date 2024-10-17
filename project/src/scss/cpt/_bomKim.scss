@@ -17,7 +17,7 @@
                     margin-bottom: 110px;
                 }
                 .filterMArea{
-                    padding: 8px 12px; border-radius: 24px; border: 1px solid var(--txt-gray02); color: var(--Gray-02, #797979); font-size: 14px; font-weight: 400; letter-spacing: -0.35px; display: flex; justify-content: center; align-items: center; margin-top: 15px;
+                    padding: 8px 12px; border-radius: 24px; border: 1px solid var(--txt-gray02); color: var(--Gray-02, #797979); font-size: 14px; font-weight: 400; letter-spacing: -0.35px; display: flex; justify-content: center; align-items: center;
                     .filterMImg{
                         display: inline-block; background: url(../../images/common/ico_filter.svg) no-repeat 0 0; width: 24px; height: 24px; margin-right: 8px;
                     }
@@ -52,9 +52,9 @@
             }
         }
         .filter{
-            color: var(--txt-gray02); font-size: 18px; font-weight: 400; letter-spacing: -0.45px; position: relative;
+            color: var(--txt-gray02); font-size: 18px; font-weight: 400; letter-spacing: -0.45px; position: relative; padding-left: 40px;
             &::before{
-                content: ''; display: block; width: 1px; height: 36px; background: var(--txt-gray04); position: absolute; left: -15px; top: -5px;
+                content: ''; display: block; width: 1px; height: 36px; background: var(--txt-gray04); position: absolute; left: 20px; top: -5px;
             }
             @include media('tablet'){
                 display: none;
@@ -1066,7 +1066,7 @@
 .aiTab{
     margin-top: 54px; max-width: 100% !important;
     .tabMenu{
-        max-width: 1320px; margin: 56px auto; border-radius: 8px;
+        max-width: 1320px; border-radius: 8px;
     }
     .cptSubTop{
         max-width: 1320px; margin: 0 auto;
@@ -1080,6 +1080,9 @@
 }
 .makeExBtn{
     max-width: 480px; margin: 65px auto;
+    @include media('mobile'){
+        width: 100%; padding: 0 15px;
+    }
 }
 
 /* gallery - detail.html */

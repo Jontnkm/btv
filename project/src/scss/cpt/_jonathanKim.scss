@@ -13,7 +13,11 @@
         }
 
         .innerDesc {
-            display:block; font-size:18px; color:var(--txt-gray02); font-weight:400; margin-top:24px; line-height:1.4
+            display:block; font-size:18px; color:var(--txt-gray02); font-weight:400; margin-top:24px; line-height:1.4;
+            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+            @include media ('mobile') {
+                font-size: 16px;
+            }
         }
     }
 
@@ -272,6 +276,10 @@
                         position:relative; width:calc(50% - 10px);
                         > label {
                             width:100%; border:1px solid var(--txt-gray02); background:var(--clr-white); font-size:18px; color:var(--txt-black); font-weight:500; text-align:center; line-height:48px; height:48px; border-radius:8px;
+                            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+                            @include media ('tablet'){
+                                font-size: 16px; line-height: 44px;
+                            }
                         }
                         > input {
                             position:absolute; top:0; left:0; width:1px; height:1px;
@@ -335,7 +343,7 @@
 .myAdCover {
 
     .uploadRule {
-        width:100%; position:relative; margin-top:56px; padding: 40px; background:var(--txt-gray05); border-radius:24px; margin-bottom:40px;
+        width:100%; position:relative; padding: 40px; background:var(--txt-gray05); border-radius:24px; margin-bottom:40px;
         @include media ('tablet'){
             padding:20px;
         }
@@ -483,15 +491,9 @@
     }
 }
 
-/*광고만들기 서브메인*/
-/* kb 광고만들기 메인페이지 반응형 2024.10.17 */
-// .createAdIndex{
-//     > *:not(.callCenter) {width:100%; max-width:1320px; margin:0 auto;}
-// }
-
-
+/* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
 .createOption {
-    width:100%; position:relative; margin-top:40px;
+    width:100%; position:relative;
 
     > ul {
         display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:30px;
@@ -835,10 +837,18 @@
 
         > p.title {
             font-size:24px; color:var(--txt-black); margin:30px 0 16px; font-weight:500; line-height:26px;
+            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+            @include media('tablet'){
+                font-size: 22px;
+            }
         }
 
         > p.desc {
             font-size:18px; color:var(--txt-gray02); font-weight:400; line-height:26px; margin-bottom:40px;
+            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+            @include media('tablet'){
+                font-size: 16px;
+            }
         }
 
         button {
@@ -850,8 +860,9 @@
 /*냐의광고 결제*/
 .payInfoBox {
     width:100%; position:sticky; display:flex; flex-flow:row nowrap; align-items: start; justify-content: flex-start; gap:30px; margin-top:80px; top:30px; z-index:997; background:var(--clr-white);
+    /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
     @include media('tablet'){
-        display:block;
+        display:block; margin-top: 0;
     }
     > .moPaymentBtn {
         display:none; position:fixed; bottom:10px; left:50%; width:94%; height:50px; line-height:50px; border-radius:8px; border:1px solid var(--txt-gray04); background:var(--clr-white); font-size:16px; color:var(--clr-white); font-weight:500;  z-index:9999; background:var(--prm-color); transform:translateX(-50%);
@@ -1281,17 +1292,32 @@
 
     > .tit {
         font-size:24px; color:var(--prm-color); font-weight:bold; text-align:center; margin:24px 0 16px; text-align:center;
+        /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+        @include media('tablet'){
+            font-size: 22px;
+        }
     }
 
     > .desc {
         font-size:18px; color:var(--txt-gray01); font-weight:400; text-align:center; word-break:keep-all; margin-bottom:40px; letter-spacing: -0.45px;
+        @include media('tablet'){
+            font-size: 16px;
+        }
     }
 
     >.cptBtnForm {
         display:flex; flex-flow: row nowrap; align-items: center; justify-content: center; gap:10px;
+        /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+        @include media('tablet'){
+            flex-direction: column;
+        }
 
         > button {
             min-width:240px;
+            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+            @include media('tablet'){
+                
+            }
         }
     }
 }
@@ -1364,6 +1390,10 @@
 
                         > a {
                             display:block; width:100%; height:60px; line-height:60px; background:var(--clr-white); text-align:center; font-size: 18px; color:var(--txt-gray02); font-weight:500; border-bottom:1px solid var(--txt-gray04);
+                            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+                            @include media ('tablet') {
+                                font-size: 16px;
+                            }
                         }
 
                         &.active {
@@ -1565,8 +1595,9 @@
                                 }
                                 > a {
                                     display:block; width:100%; font-size:18px; color:var(--txt-black); font-weight:500; text-align:center;
+                                    /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
                                     @include media ('tablet') {
-                                        max-width:auto; border:1px solid var(--txt-gray02); border-radius:8px; line-height: 48px; height:48px;
+                                        max-width:auto; border:1px solid var(--txt-gray02); border-radius:8px; line-height: 43px; height:48px; font-size: 16px;
                                     }
                                 }
 
@@ -2194,7 +2225,7 @@
 /*광고효과*/
 .adEffect {
     @include media ('tablet') {
-        margin:40px auto 0;
+        margin: 0px auto 0;
     }
 }
 .adDetail {
@@ -2222,8 +2253,9 @@
 
     > .adDetailBox {
         position:relative; width:calc(100% - 942px); background:var(--sub-color04); padding:50px 40px; border-radius:24px; min-height:513px;
+        /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
         @include media ('tablet') {
-            width:100%; min-height:auto;
+            width:100%; min-height:auto; padding: 20px;
         }
 
         > ul {
@@ -2290,12 +2322,14 @@
         } 
     }  
 }
+/* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
 .galleryTitle {
-    display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between; margin: 64px auto 56px !important;
+    display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between; margin: 0 auto !important; padding-bottom: 55px;
     @include media ('tablet') {
-        margin: 0 auto 26px !important;
+        padding-bottom: 0px; margin-bottom: 0 !important;
     }
 }
+
 .galleryBoard {
     width:100%; position:relative; 
 
@@ -2727,19 +2761,30 @@
                     padding: 0;
                 }
                 .comSubTitle{
-                    padding-left: 15px; padding-right: 15px;
+                    @include media ('tablet') {
+                        padding-left: 15px; padding-right: 15px;
+                    }
                 }
                 .cptSubTop{
-                    padding-left: 15px; padding-right: 15px;
+                    @include media ('tablet') {
+                        padding-left: 15px; padding-right: 15px;
+                    }
                 }
                 .desc{
-                    padding-left: 15px; padding-right: 15px;
+                    @include media ('tablet') {
+                        padding-left: 15px; padding-right: 15px;
+                    }
                 }
                 .tabMenu{
-                    margin-left: 15px; margin-right: 15px; width: calc(100% - 30px);
+                    @include media ('tablet') {
+                        margin-left: 15px; margin-right: 15px;
+                    }
+                    width: calc(100% - 30px);
                 }
                 .stepList{
-                    padding-left: 15px; padding-right: 15px;
+                    @include media ('tablet') {
+                        padding-left: 15px; padding-right: 15px;
+                    }
                 }
             }
             &.createAd{
@@ -2747,13 +2792,19 @@
                     padding: 0;
                 }
                 .comSubTitle{
-                    padding-left: 15px; padding-right: 15px;
+                    @include media ('tablet') {
+                        padding-left: 15px; padding-right: 15px;
+                    }
                 }
                 .cptSubTop{
-                    padding-left: 15px; padding-right: 15px;
+                    @include media ('tablet') {
+                        padding-left: 15px; padding-right: 15px;
+                    }
                 }
                 .createOption{
-                    padding-left: 15px; padding-right: 15px;
+                    @include media ('tablet') {
+                        padding-left: 15px; padding-right: 15px;
+                    }
                 }
             }
         }
@@ -2763,20 +2814,25 @@
 .experience {
     > div > *:not(.expTemplate) {width:100%; max-width:1320px; margin:0 auto;}
 
+    /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
     > .experienceBox {
         .cptSubTop {
-            margin:64px auto 24px;
+            margin-bottom: 24px;
             @include media ('tablet') {
-                margin:0px auto 40px;
+                margin-bottom: 0;
             }
         }
 
         .desc {
             font-size:18px; color:var(--txt-gray02); font-weight:400;
+            @include media ('tablet') {
+                font-size: 16px;
+            }
         }
 
+        /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
         .stepList {
-            width:100%; position:relative; margin-top:56px;
+            width:100%; position:relative;
 
             > ul {
                 display:flex; flex-flow:row wrap; align-items: center; justify-content: flex-start; gap:30px 30px;
@@ -2810,19 +2866,24 @@
                         > .flag {
                             display:inline-block; width:max-content; padding: 0 8px 5px 8px; text-align:center; line-height:32px; font-size:14px; color:var(--clr-white); font-weight:500; background:var(--prm-color); border-radius:25px;
                             @include media ('tablet') {
-                                margin-bottom: 10px;
+                                margin-bottom: 10px; font-size: 12px; padding: 0 8px 2px 8px; 
                             }
                         }
 
+                        /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
                         > .tit {
                             margin:30px 0 16px; font-size:18px; color:var(--txt-black); font-weight:500;
                             @include media ('tablet') {
-                                margin:0 0 16px 0;
+                                margin:0 0 16px 0; font-size: 16px;
                             }
                         }
 
+                        /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
                         > .desc {
-                            font-size:16px; color:var(--txt-gray02); font-weight:400; word-break:keep-all;
+                            font-size:16px; color:var(--txt-gray02); font-weight:400; word-break:keep-all; padding: 0;
+                            @include media ('tablet') {
+                                font-size: 14px;
+                            }
                         }
                     }
                 }
@@ -3016,10 +3077,18 @@
 
                         > p.price {
                             font-size:24px; color:var(--txt-black); font-weight:500; margin-bottom:4px; text-align:right;
+                            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+                            @include media ('tablet') {
+                                font-size: 22px;
+                            }
                         }
 
                         > p.adShowCnt {
-                            font-size:16px; color:var(--txt-gray01); font-weight:400;  text-align:right;
+                            font-size:14px; color:var(--txt-gray01); font-weight:400;  text-align:right;
+                            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+                            @include media ('tablet') {
+                                font-size: 12px;
+                            }
                         }
                         &:last-of-type {
                             border-left:1px solid var(--txt-gray04); padding-right:0; padding-left:24px;

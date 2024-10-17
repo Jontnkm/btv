@@ -351,7 +351,7 @@
     >.tabInner {
         width:100%; margin-bottom:56px;
         @include media('tablet'){
-            overflow-x:scroll;
+            overflow-x:scroll; margin-bottom: 30px;
             &::-webkit-scrollbar {display:none;}
         }
         .tabMenu{
@@ -391,7 +391,7 @@
 .modTabWide{
     width:100%; background: var(--clr-white); margin: 0 auto;
     .tabMenu{
-        display: flex; justify-content: center; align-items: center; gap: 0; width: 100%;  background:var(--txt-gray05); margin-bottom: 56px;
+        display: flex; justify-content: center; align-items: center; gap: 0; width: 100%; background:var(--txt-gray05); margin: 56px auto;
         .tabItem{
             width: 50%;
             .tabName{
@@ -408,7 +408,7 @@
             }
         }
         @include media('tablet'){
-            width: 100%; 
+            width: 100%; margin: 30px auto;
         }
     }
     .tabContainer{
@@ -1365,15 +1365,23 @@
 /*=================================================================================================*/
 .comSubTitle{
     h3{
-        font-size: 32px; color: var(--txt-black); font-weight: 700; letter-spacing: -0.8px; margin-bottom:65px;
+        font-size: 32px; color: var(--txt-black); font-weight: 700; letter-spacing: -0.45px; margin-bottom: 64px;
         @include media('tablet'){
-            font-size: 18px; margin-bottom: 30px;
+            font-size: 18px; margin-bottom: 40px;
         }
     }
-    h5{
-        font-size: 24px; font-weight: 700; letter-spacing: -0.6px; color: var(--txt-black);
+}
+.subTopTxt{
+    .subTitle{
+        font-size: 40px; color: var(--txt-black); font-weight: 400; letter-spacing: -0.7px;
         @include media('tablet'){
-            padding-bottom: 40px;
+            font-size: 28px; margin-bottom: 40px; 
         }
+    }
+}
+.mypageTitle{
+    font-size: 24px; color: var(--txt-black); font-weight: 500; letter-spacing: -0.6px;
+    @include media('tablet'){
+        font-size: 22px;
     }
 }
