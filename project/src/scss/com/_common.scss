@@ -1044,7 +1044,7 @@
         > ul {
             display:flex; flex-flow:column; gap:30px;
             > li {
-                display:flex; flex-flow:column; gap:4px; text-align:center;
+                display:flex; flex-flow:column; gap:4px; text-align:center; cursor: pointer;
                 > .qmIcon {
                     display:block; width:48px; height:48px; margin:0 auto; text-indent:-9999px; font-size:0;
                     &.tutorial {background: url(../../images/common/ico_produce.svg)50% 50% no-repeat;}
