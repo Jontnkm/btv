@@ -240,41 +240,29 @@
         <!-- 중단영역 -->
         <div class="layoutContainer" id="container">
             <!-- 메인 콘텐츠 영역 -->
-            <div class="comSubTitle">
-                <h3>광고 만들기</h5>
-            </div>
-            <div class="cptSubTop">
-                <div class="subTopTxt">
-                    <p class="subTitle">타이틀 타이틀<br>영상을 만들어보세요</p>
-                </div>
-            </div>
-            
-            <div class="createOption">
-                <ul>
-                    <li>
-                        <span class="flag">AI영상</span>
-                        <p class="title">AI가 5분이면 광고영상을<br>만들어 드려요.</p>
-                        <button type="button" class="startBtn">영상 만들기</button>
-                    </li>
-                    <li>
-                        <span class="flag">템플릿 영상</span>
-                        <p class="title">타이틀영역 타이틀영역<br>타이틀영역 타이틀영역</p>
-                        <button type="button" class="startBtn">영상 만들기</button>
-                    </li>
-                    <li>
-                        <span class="flag">내 컴퓨터</span>
-                        <p class="title">타이틀영역 타이틀영역<br>타이틀영역 타이틀영역</p>
-                        <button type="button" class="startBtn">영상 만들기</button>
-                    </li>
+            <!-- tab 와이드 버전2 -->
+            <div class="modTabWide tutorialWrap">
+                <ul class="tabMenu">
+                    <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab(0)">광고만들기</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(1)">메뉴1</button></li>
+                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(2)">메뉴2</button></li>
+                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(3)">메뉴3</button></li>
+                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(4)">메뉴4</button></li>
+                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(5)">메뉴5</button></li>
                 </ul>
-            </div>
-
-            <div class="callCenter">
-                 <p class="tit">B tv 우리동네광고 전화 상담을 원하시면 1566-7762으로 문의 바랍니다.</p>
-                 <p class="date">평일 AM 09시 ~ PM 18시</p>
-                 <div class="cptBtnForm">
-                    <button type="button" class="btn scnd">전화상담 예약</button>
-                 </div>
+                <div class="tabContainer">
+                    <div class="tabCont active">
+                        <div class="cptNoData">
+                            <div class="noImg">
+                                <img src="../../images/common/ico_warning.svg" alt="경고 아이콘">
+                            </div>
+                            <p class="noTxt">진행중인 이벤트가 없습니다.</p>
+                        </div>
+                    </div> 
+                    <div class="tabCont">
+                        탭내용2
+                    </div>
+                </div>
             </div>
             <!-- //메인 콘텐츠 영역 -->
         </div>
