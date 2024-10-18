@@ -1588,8 +1588,10 @@
 }
 
 /*지역설정 (지도영역)*/
+/* kb 광고지역설정  2024.10.18 */
 .mapCover {
-    width:100%; height:100%; position:relative; overflow:hidden;
+    width:100%; height:100%; position:relative;
+    //  overflow:hidden;
 
     .mapInner {
         width:100%; height:100%; display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start;
@@ -2113,7 +2115,7 @@
             }
 
             .filterArea {
-                position:absolute; top:0; left:0; background:var(--txt-gray05); width:100%; padding: 17px 40px 17px; border-bottom:1px solid var(--txt-gray04);
+                position:absolute; top:0; left:0; background:var(--txt-gray05); width:100%; padding: 17px 40px 17px; border-bottom:1px solid var(--txt-gray04); overflow-y: scroll;
 
                 .filterTab {
                     width:100%; position:relative;
