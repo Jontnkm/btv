@@ -919,6 +919,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //============================================================================================================//
+//=================================== myAd - noList.html 모바일 '제작중' 클릭 ==================================//
+//============================================================================================================//
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.mobileTop .mobileClick').addEventListener('click', function() {
+        const leftElement = document.querySelector('.pageLocationBar');
+        
+        if (leftElement.style.display === 'none' || leftElement.style.display === '') {
+            leftElement.style.display = 'block';
+        } else {
+            leftElement.style.display = 'none';
+        }
+    });
+});
+
+
+//============================================================================================================//
 //================================ mypage - index.html 모바일 정보 아코디언 메뉴 ===============================//
 //============================================================================================================//
 document.addEventListener('DOMContentLoaded', function () {

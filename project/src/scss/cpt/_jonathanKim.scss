@@ -586,39 +586,262 @@
 }
 
 /*나의광고 서브메인*/
-/* kb 나의광고 프로그레스바 2024.10.17 */
-.pageLocationBar {
-    width:100%; position:sticky; margin-top:56px; border-radius:8px; top:0; z-index:999;
-    @include media('tablet'){
-        display:none;/*임시*/
-    }
-    > ul {
-        display:flex; flex-flow:row nowrap; align-items: center; justify-content: center; gap:124px; padding:30px 80px; background:var(--txt-gray05); border-radius: 8px;
-        &::after {content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:83%; height:1px; background:var(--txt-gray03); margin-top:-32px; z-index:1;}
-
-        > li {
-            width:max-content; position:relative; z-index:2;
-            &::before {content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:48px; height:48px; background:url(../../images/common/ico_location_off.svg)50% 50% no-repeat;}
-            > a {
-                display:block; text-align:center; font-size:16px; color:var(--txt-gray02); font-weight:400; line-height:18px; margin-top:52px;
-            }
-
-            &:last-of-type {
-                &::after {display:none;}
-            }
-
-            &.active {
-                &::before {background:url(../../images/common/ico_location_on.svg)50% 50% no-repeat;}
-
-                > a {
-                    color: var(--prm-color);
+/* kb 나의광고 프로그레스바 2024.10.18 */
+.mobileTop{
+    h3{
+        @include media('wide'){
+            display: flex; align-items: center;
+        }
+        .mobileClick{
+            display: none; cursor: pointer; line-height: 2;
+            @include media('wide'){
+                display: block; font-size: 18px; font-weight: 400; letter-spacing: -0.45px; color: var(--prm-color); margin-left: 30px; position: relative;
+                .img{
+                    display: inline-block; width: 30px; height: 30px; background: url(../../images/common/ico_prog01_m_p.svg) no-repeat 0 0 / 100%; transform: translateY(8px); margin-right: 8px;
+                }
+                .count{
+                    display: inline-block;
+                }
+                .arrow{
+                    display: inline-block; margin-left: 8px; vertical-align: middle;
+                }
+                &::before{
+                    content: ''; display: block; width: 1px; height: 18px; background-color: var(--txt-gray04); position: absolute; left: -15px; top: 50%; transform: translateY(-50%);
                 }
             }
+        }
+    }
+}
+.pageLocationBar {
+    position: sticky; margin-top: 56px; border-radius: 8px; top:0; z-index: 999; width: 100%;
+    @include media('wide'){
+        position: absolute; left: 155px; top: 220px; background: var(--clr-white); box-shadow: 2px 6px 16px 0px rgba(0, 0, 0, 0.06); border: 1px solid var(--txt-gray04); border-radius: 8px; padding: 35px 25px; margin-top: 0; width: auto; display: none;
+    }
+    @include media('tablet'){
+        left: 110px; top: 145px;
+    }
+    > ul {
+        display: flex; flex-flow :row nowrap; align-items: center; justify-content: center; gap: 124px; padding: 30px 80px; background: var(--txt-gray05); border-radius: 8px; 
+        @include media('wide'){
+            background: var(--clr-white); flex-direction: column; gap: 24px; padding: 0; align-items: flex-start;
+        }
+        &::after {
+            content:''; position: absolute; top:50%; left:50%; transform:translate(-50%,-50%); width: 81%; height:1px; background:var(--txt-gray03); margin-top:-32px; z-index:1;
+            @include media('wide'){
+                display: none;
+            }
+        }
+        > li {
+            position:relative; z-index: 2; 
+            > a {
+                display:block; text-align: center; font-size:16px; color:var(--txt-gray02); font-weight:400; margin-top: 50px; width: max-content; line-height: 1.2;
+                .cnt{
+                    display: block;
+                }
+                @include media('wide'){
+                    font-size: 14px; margin-top: 0; text-align: left;
+                }
+            }
+
+            &:nth-child(1){
+                a{
+                    @include media('wide'){
+                        display: flex; align-items: center; justify-content: center;
+                    }
+                    &::before{
+                        content: ''; display: block; background: url(../../images/common/ico_prog01.svg) no-repeat 0 0; width: 48px; height: 48px; position: absolute; left: 0; top: 0px;
+                        @include media('wide'){
+                            position: unset; background: url(../../images/common/ico_prog01_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                        }
+                    }
+                }
+                &.active{
+                    a{
+                        color: var(--prm-color);
+                        @include media('wide'){
+                            color:var(--txt-gray02);
+                        }
+                        &::before{
+                            background: url(../../images/common/ico_prog01_p.svg) no-repeat 0 0; width: 48px; height: 48px; z-index: 10;
+                            @include media('wide'){
+                                background: url(../../images/common/ico_prog01_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(2){
+                a{
+                    @include media('wide'){
+                        display: flex; align-items: center; justify-content: center; color:var(--txt-gray02);
+                    }
+                   
+                    &::before{
+                        content: ''; display: block; background: url(../../images/common/ico_prog02.svg) no-repeat 0 0; width: 48px; height: 48px; position: absolute; left: 6px; top: 0px; 
+                        @include media('wide'){
+                            position: unset; background: url(../../images/common/ico_prog02_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                        }
+                    }
+                }
+                &.active{
+                    a{
+                        color: var(--prm-color);
+                        @include media('wide'){
+                            color:var(--txt-gray02);
+                        }
+                        &::before{
+                            background: url(../../images/common/ico_prog02_p.svg) no-repeat 0 0; width: 48px; height: 48px; z-index: 10;
+                            @include media('wide'){
+                                background: url(../../images/common/ico_prog02_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(3){
+                a{
+                    @include media('wide'){
+                        display: flex; align-items: center; justify-content: center;
+                    }
+                    &::before{
+                        content: ''; display: block; background: url(../../images/common/ico_prog03.svg) no-repeat 0 0; width: 48px; height: 48px; position: absolute; left: 7px; top: 0px; 
+                        @include media('wide'){
+                            position: unset; background: url(../../images/common/ico_prog03_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                        }
+                    }
+                }
+                &.active{
+                    a{
+                        color: var(--prm-color);
+                        @include media('wide'){
+                            color:var(--txt-gray02);
+                        }
+                        &::before{
+                            background: url(../../images/common/ico_prog03_p.svg) no-repeat 0 0; width: 48px; height: 48px; z-index: 10;
+                            @include media('wide'){
+                                background: url(../../images/common/ico_prog03_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(4){
+                a{
+                    @include media('wide'){
+                        display: flex; align-items: center; justify-content: center;
+                    }
+                    &::before{
+                        content: ''; display: block; background: url(../../images/common/ico_prog04.svg) no-repeat 0 0; width: 48px; height: 48px; position: absolute; left: -2px; top: 0px; 
+                        @include media('wide'){
+                            position: unset; background: url(../../images/common/ico_prog04_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                        }
+                    }
+                }
+                &.active{
+                    a{
+                        color: var(--prm-color);
+                        @include media('wide'){
+                            color:var(--txt-gray02);
+                        }
+                        &::before{
+                            background: url(../../images/common/ico_prog04_p.svg) no-repeat 0 0; width: 48px; height: 48px; z-index: 10;
+                            @include media('wide'){
+                                background: url(../../images/common/ico_prog04_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(5){
+                a{
+                    @include media('wide'){
+                        display: flex; align-items: center; justify-content: center;
+                    }
+                    &::before{
+                        content: ''; display: block; background: url(../../images/common/ico_prog05.svg) no-repeat 0 0; width: 48px; height: 48px; position: absolute; left: 6px; top: 0px; 
+                        @include media('wide'){
+                            position: unset; background: url(../../images/common/ico_prog05_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                        }
+                    }
+                }
+                &.active{
+                    a{
+                        color: var(--prm-color);
+                        @include media('wide'){
+                            color:var(--txt-gray02);
+                        }
+                        &::before{
+                            background: url(../../images/common/ico_prog05_p.svg) no-repeat 0 0; width: 48px; height: 48px; z-index: 10;
+                            @include media('wide'){
+                                background: url(../../images/common/ico_prog05_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(6){
+                a{
+                    @include media('wide'){
+                        display: flex; align-items: center; justify-content: center;
+                    }
+                    &::before{
+                        content: ''; display: block; background: url(../../images/common/ico_prog06.svg) no-repeat 0 0; width: 48px; height: 48px; position: absolute; left: 5px; top: 0px; 
+                        @include media('wide'){
+                            position: unset; background: url(../../images/common/ico_prog06_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                        }
+                    }
+                }
+                &.active{
+                    a{
+                        color: var(--prm-color);
+                        @include media('wide'){
+                            color:var(--txt-gray02);
+                        }
+                        &::before{
+                            background: url(../../images/common/ico_prog06_p.svg) no-repeat 0 0; width: 48px; height: 48px; z-index: 10;
+                            @include media('wide'){
+                                background: url(../../images/common/ico_prog06_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(7){
+                a{
+                    @include media('wide'){
+                        display: flex; align-items: center; justify-content: center;
+                    }
+                    &::before{
+                        content: ''; display: block; background: url(../../images/common/ico_prog07.svg) no-repeat 0 0; width: 48px; height: 48px; position: absolute; left: 17px; top: 0px; 
+                        @include media('wide'){
+                            position: unset; background: url(../../images/common/ico_prog07_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                        }
+                    }
+                }
+                &.active{
+                    a{
+                        color: var(--prm-color);
+                        @include media('wide'){
+                            color:var(--txt-gray02);
+                        }
+                        &::before{
+                            background: url(../../images/common/ico_prog07_p.svg) no-repeat 0 0; width: 48px; height: 48px; z-index: 10;
+                            @include media('wide'){
+                                background: url(../../images/common/ico_prog07_m.svg) no-repeat 0 0; width: 30px; height: 30px; background-size: 100%; margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
 
     > .whiteBg {
         width:100%; height:30px; background:var(--clr-white);
+        @include media('wide'){
+            display: none;
+        }
     }
 }
 
@@ -718,10 +941,14 @@
                             > .rytOpt {
                                 display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:10px;
 
+                                /* kb 나의광고 2024.10.18 */
                                 > button {
                                     display:inline-block; width:32px; height:32px;
                                     &.insertVideoBtn {background:url(../../images/common/ico_insert.svg)50% 50% no-repeat;}
                                     &.settingBtn {background:url(../../images/common/ico_setting.svg)50% 50% no-repeat;}
+                                    @include media ('tablet') {
+                                        width: 24px; height: 24px;
+                                    }
                                 }
                             }
                         }
