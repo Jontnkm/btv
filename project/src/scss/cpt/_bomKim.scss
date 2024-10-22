@@ -1205,8 +1205,176 @@
     margin-top: 40px;
 }
 
-/* createAd - tutorial */
-.tutorialWrap{
-    max-width: 806px;
+/* createAd - tutorialStep */
+.lytLayout{
+    .layoutArea{
+        .tutorial{
+            padding: 0; margin: 0; display: none;
+            @include media('tablet'){
+                display: block;
+            }
+        }
+    }
+}
+.tutorialTop{
+    width: 100%; border-bottom: 1px solid var(--txt-gray04); padding: 15px 30px;
+    .tutorialTitle{
+        color: var(--black, #000); font-size: 20px; font-weight: 500; letter-spacing: -0.5px;
+    }
+}
+.tutorialTab{
+    .ttTabMenu1{
+        margin: 0; padding: 0;
+        .tabItem{
+            .tabName{
+                &.active{
+                    @include media('mobile'){
+                        border-radius: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+} 
+.tutorialTabWrap{
+    padding: 0 30px; 
+    .tutorialTab{
+        margin-top: 30px;
+        .ttTabMenu1Wrap{
+            overflow-x: scroll !important; width: 100%;
+            .ttTabMenu1{
+                position: relative; display: flex; border-radius: 8px; transition: transform 0.3s ease-in-out;  z-index: 10; position: fixed; left: 0; top: 80px; width: 92%; margin: 0 30px;
+                .tabItem{
+                    &:nth-child(4){
+                        border-radius: 0 8px 8px 0;
+                        @include media('mobile'){
+                            border-radius: 0;
+                        }
+                    }
+                    @include media('mobile'){
+                        width: 115px; 
+                    }
+                }
+                @include media('mobile'){
+                    margin: 0 auto; border-radius: 0; flex-flow: row nowrap; display: flex; width: max-content; top: 55px;
+                }
+            }
+        }
+        .clickWrap{
+            .prevClick{
+                position: absolute; left: 5px; top: 100px; z-index: 10; transform: rotate(180deg); cursor: pointer; 
+                @include media('mobile'){
+                    top: 80px;
+                }
+            }
+            .nextClick{
+                position: absolute; right: 5px; top: 100px; z-index: 10; cursor: pointer;
+                @include media('mobile'){
+                    top: 80px;
+                }
+            }
+            img{
+                width: 20px; height: 14px; 
+            }
+            // @include media('mobile'){
+            //     display: none;
+            // }
+        }
+        .ttContainer{
+            margin-top: 70px;
+            .tabCont{
+                display: none;
+                &.active{
+                    display: block;
+                }
+                .ttTabDepth2{
+                    .tabInner{
+                        // position: fixed; left: 30px; top: 170px; z-index: 10;
+                        .ttTabMenu2{
+                            margin: 0; background: transparent; 
+                            .tabItem{
+                                width: auto;
+                                .tabName{
+                                    padding: 12px 24px; width: 100%; border-radius: 30px; font-weight: 500; font-size: 18px; letter-spacing: -0.45px;
+                                    @include media('mobile'){
+                                        font-size: 14px; height: 38px; line-height: 15px; padding: 8px 10px;
+                                    }
+                                }
+                            }
+                        }
+                        @include media('mobile'){
+                            // left: 15px; top: 140px;
+                        }
+                    }
+                    @include media('mobile'){
+                        padding: 0 15px; 
+                    }
+                }
+            }
+        }
+        @include media('mobile'){
+            margin-top: 0;
+        }
+    }
+    @include media('mobile'){
+        padding: 0;
+    }
+}
+.tutorialList{
+    width:100%; position:relative;
+
+    > ul {
+        display:flex; flex-flow:row wrap; align-items: center; justify-content: flex-start; gap: 55px;
+        @include media ('tablet') {
+            flex-flow:column; gap: 30px;
+        }
+        > li {
+            width:calc(50% - 15px); overflow:hidden; display:flex; flex-flow:row nowrap; align-items: flex-start; justify-content: flex-start;
+            @include media ('tablet') {
+                width:100%; flex-flow:column; position:relative;
+            }
+            > .thumb {
+                width:380px; border:1px solid var(--txt-gray04); border-radius: 24px;
+                @include media ('tablet') {
+                    width:100%;
+                }
+                > img {
+                    max-width:100%; border-radius: 24px;
+                    @include media ('tablet') {
+                        width:100%;
+                    }
+                }
+            }
+
+            > .stepBox {
+                width:calc(100% - 380px); margin-top: 28px;
+                @include media ('tablet') {
+                    width:100%;
+                }
+
+                > .flag {
+                    display:inline-block; width:max-content; padding: 0 8px 5px 8px; text-align:center; line-height:32px; font-size:14px; color:var(--clr-white); font-weight:500; background:var(--prm-color); border-radius:25px;
+                    @include media ('tablet') {
+                        font-size: 12px; padding: 0 8px 2px 8px; 
+                    }
+                }
+
+                > .tit {
+                    margin: 25px 0 16px; font-size:18px; color:var(--txt-black); font-weight:500;
+                    @include media ('tablet') {
+                        font-size: 16px; margin: 15px 0;
+                    }
+                }
+
+                > .desc {
+                    font-size:16px; color:var(--txt-gray02); font-weight:400; word-break:keep-all; padding: 0; line-height: 2;
+                    @include media ('tablet') {
+                        font-size: 14px; margin: 15px 0 !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
+/* createAd - tutorialStepPopup */

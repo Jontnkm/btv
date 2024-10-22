@@ -994,6 +994,91 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 //============================================================================================================//
-//======================================== 튜토리얼 윈도우 새창 팝업 ===========================================//
+//===================================== 튜토리얼 탭메뉴 (이중중첩) =============================================//
 //============================================================================================================//
+function showTab4(index) {
+    var modTabBtn4 = document.querySelectorAll('.ttTabMenu1 .tabName');
+    var modTabCont4 = document.querySelectorAll('.ttContainer > .tabCont');
+
+    for (var i = 0; i < modTabBtn4.length; i++) {
+        modTabBtn4[i].classList.remove('active');
+        modTabCont4[i].classList.remove('active');
+    }
+
+    modTabBtn4[index].classList.add('active');
+    modTabCont4[index].classList.add('active');
+
+    showTab5(0); 
+}
+
+function showTab5(index) {
+    var modTabBtn5 = document.querySelectorAll('.ttTabMenu2 .tabName');
+    var modTabCont5 = document.querySelectorAll('.ttTabDepth2 .tabContainer .tabCont');
+
+    for (var i = 0; i < modTabBtn5.length; i++) {
+        modTabBtn5[i].classList.remove('active');
+        modTabCont5[i].classList.remove('active');
+    }
+
+    modTabBtn5[index].classList.add('active');
+    modTabCont5[index].classList.add('active');
+}
+
+
+//============================================================================================================//
+//============================================= 튜토리얼 스크롤  ==============================================//
+//============================================================================================================//
+document.addEventListener('DOMContentLoaded', function () {
+    let currentTabIndex = 0; 
+    const tabItems = document.querySelectorAll('.ttTabMenu1 .tabItem'); 
+    const totalTabs = tabItems.length; 
+    const itemsPerPage = 4; 
+
+    function updateTabDisplay() {
+        tabItems.forEach((item, index) => {
+            item.style.display = (index >= currentTabIndex && index < currentTabIndex + itemsPerPage) ? 'block' : 'none';
+        });
+
+        document.querySelector('.prevClick').style.display = currentTabIndex === 0 ? 'none' : 'block';
+        document.querySelector('.nextClick').style.display = currentTabIndex + itemsPerPage >= totalTabs ? 'none' : 'block';
+    }
+
+    function nextTab() {
+        if (currentTabIndex + itemsPerPage < totalTabs) {
+            currentTabIndex += itemsPerPage; 
+            updateTabDisplay(); 
+        }
+    }
+    function prevTab() {
+        if (currentTabIndex - itemsPerPage >= 0) {
+            currentTabIndex -= itemsPerPage; 
+            updateTabDisplay(); 
+        }
+    }
+
+    document.querySelector('.nextClick').addEventListener('click', nextTab);
+    document.querySelector('.prevClick').addEventListener('click', prevTab);
+
+    updateTabDisplay();
+
+    // 화면 크기에 따라 기능 활성화/비활성화
+    function checkScreenSize() {
+        if (window.innerWidth > 806) {
+            // 806px 초과시 탭 비활성화
+            tabItems.forEach(item => item.style.display = 'block'); 
+            document.querySelector('.prevClick').style.display = 'none'; 
+            document.querySelector('.nextClick').style.display = 'none'; 
+        } else {
+            // 806px 이하일 때 탭 기능 활성화
+            updateTabDisplay();
+        }
+    }
+
+    // 초기 화면 크기 체크
+    checkScreenSize();
+
+    // 화면 크기 변경 시 체크
+    window.addEventListener('resize', checkScreenSize);
+});
