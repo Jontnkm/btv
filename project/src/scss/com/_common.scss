@@ -151,7 +151,7 @@
 
     /*드롭다운*/
     .frmCombo {
-        width:100%; height:48px; position:relative;
+        width:100%; height:48px; position:relative; margin: 1px;
 
         &.err {
             > .drpCov {

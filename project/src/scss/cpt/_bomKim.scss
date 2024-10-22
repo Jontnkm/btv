@@ -731,7 +731,7 @@
             width: 240px;
             .listBox{
                 .height{
-                    height: 100px;
+                    height: 250px;
                 }
             }
             @include media('tablet'){
@@ -768,7 +768,7 @@
     }
 }
 
-/* coupon */
+/* mypage - coupon */
 .couponTop{
     justify-content: right;
 }
@@ -779,6 +779,62 @@
         text-overflow: ellipsis;
     }
 }
+
+/* mypage -promotionPopup */
+.promotionPop{
+    .popTop{
+        margin-bottom: 50px;
+        .popTitle{
+            font-size: 20px; font-weight: 500; text-align: center; margin-bottom: 30px;
+        }
+        .popImg{
+            width: 100%; height: auto; 
+        }
+    }
+    .promotionFrm{
+        display: flex; flex-direction: column; gap: 25px;
+        .frmIpt{
+            .promotioAddr{
+                margin: 10px 0;
+            }
+            .ppTxtArea{
+                width: 100%; height: 100px; padding: 15px; font-size: 16px; color: var(--txt-black); font-weight: 400; letter-spacing: -0.4px; border: 1px solid var(--txt-gray04); border-radius: 8px; background: var(--clr-white); transition: all 0.4s; margin: 0 1px;
+            }
+            .ppAddImg{
+                display: flex; flex-direction: row; gap: 15px; overflow: scroll; padding: 20px 0 5px 0;
+                > li{
+                    border: 1px solid var(--txt-gray04); border-radius: 8px;
+                    > ul{
+                        position: relative; width: 120px; height: 80px;
+                        &.addClick{
+                            cursor: pointer;
+                        }
+                        > li{
+                            &.img{
+                                width: 120px; height: 80px; border-radius: 8px;
+                                img{
+                                    width: 100%; height: 100%;  border-radius: 8px;
+                                }
+                            }
+                            &.addTxt{
+                                font-size: 12px; position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%);
+                            }
+                            &.addImg{
+                                position: absolute; left: 50%; top: 40%; transform: translate3d(-50%, -50%, 0);
+                            }
+                            &.addClose{
+                                position: absolute; right: -10px; top: -10px; z-index: 5; cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 
 /* customer - faq - reservPhoneCs */
 .cptCallTop{
@@ -1205,7 +1261,7 @@
     margin-top: 40px;
 }
 
-/* createAd - tutorialStep */
+/* createAd - tutorialStep & tutorialStepPopup */
 .lytLayout{
     .layoutArea{
         .tutorial{
@@ -1276,9 +1332,6 @@
             img{
                 width: 20px; height: 14px; 
             }
-            // @include media('mobile'){
-            //     display: none;
-            // }
         }
         .ttContainer{
             margin-top: 70px;
@@ -1289,7 +1342,6 @@
                 }
                 .ttTabDepth2{
                     .tabInner{
-                        // position: fixed; left: 30px; top: 170px; z-index: 10;
                         .ttTabMenu2{
                             margin: 0; background: transparent; 
                             .tabItem{
@@ -1301,9 +1353,6 @@
                                     }
                                 }
                             }
-                        }
-                        @include media('mobile'){
-                            // left: 15px; top: 140px;
                         }
                     }
                     @include media('mobile'){
@@ -1377,4 +1426,3 @@
     }
 }
 
-/* createAd - tutorialStepPopup */

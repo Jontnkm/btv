@@ -289,7 +289,7 @@
 
             <div class="cptInfoBottom">
                 <ul class="left">
-                    <li class="myInfo myInfoFir"><span class="myInfoImg"><img src="../../images/common/ico_user_b.svg" alt=""></span>나의정보 <!-- onclick="popOpen('clause02')" 팝업 클릭 버튼 -->
+                    <li class="myInfo myInfoFir"><span class="myInfoImg"><img src="../../images/common/ico_user_b.svg" alt=""></span>나의정보
                         <ul>
                             <li><a href="#">회원정보</a></li>
                             <li><a href="#">비밀번호 변경</a></li>
@@ -733,6 +733,250 @@
         <!-- //상단영역 -->
     </div>
 </div>
+
+
+<!-- 프로모션 정보 팝업 -->
+<div class="modPopup type01 popOpen" id="clause02">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">프로모션 정보</div>
+            <button class="closeBtn" onclick="popClose('clause02')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea promotionPop">
+            <div class="comClause">
+                <div class="popTop">
+                    <p class="popTitle">영상 타이틀</p>
+                    <div class="popImg">
+                        <img src="../../images/temp/preview_temp.png" alt="임시 이미지">
+                    </div>
+                </div>       
+                <div class="cptForm promotionFrm">
+                        
+                    <div class="frmIpt">
+                        <label for="ppIpt01">상호명 <span class="required">*</span>
+                            <div class="tooltip">
+                                <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                                <div class="toolBox">
+                                    <span class="relCov">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                        사업자명, 우리가게 이름을 알려주세요.
+                                    </span>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="text" placeholder="업체명을 입력해주세요." id="ppIpt01" />
+                    </div>
+
+                    <div class="frmIpt">
+                        <label for="ppIpt02">업종 <span class="required">*</span>
+                            <div class="tooltip">
+                                <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                                <div class="toolBox">
+                                    <span class="relCov">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                        서비스 분야, 우리가게 서비스에 어울리는 업종을 알려주세요.
+                                    </span>
+                                </div>
+                            </div>
+                        </label>
+                        <div class="frmCombo">
+                            error case
+                            <div class="drpCov">
+                                <button type="button" class="drpBtn">text</button>
+                                <div class="listBox">
+                                    <ul class="drpList">
+                                        <li><a href="#none">text</a></li>
+                                        <li><a href="#none">text</a></li>
+                                        <li><a href="#none">text</a></li>
+                                        <li><a href="#none">text</a></li>
+                                        <li><a href="#none">text</a></li>
+                                        <li><a href="#none">text</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="frmIpt">
+                        <label for="ppIpt03">하위업종
+                            <div class="tooltip">
+                                <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                                <div class="toolBox">
+                                    <span class="relCov">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                        서비스 분야, 우리가게 서비스에 어울리는 업종을 알려주세요.
+                                    </span>
+                                </div>
+                            </div>
+                        </label>
+                        <div class="frmCombo">
+                            error case
+                            <div class="drpCov">
+                                <button type="button" class="drpBtn">text</button>
+                                <div class="listBox">
+                                    <ul class="drpList">
+                                        <li><a href="#none">text</a></li>
+                                        <li><a href="#none">text</a></li>
+                                        <li><a href="#none">text</a></li>
+                                        <li><a href="#none">text</a></li>
+                                        <li><a href="#none">text</a></li>
+                                        <li><a href="#none">text</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="frmIpt withBtn">
+                        <label for="ppIpt04">주소 <span class="required">*</span>
+                            <div class="tooltip">
+                                <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                                <div class="toolBox">
+                                    <span class="relCov">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                        우리 가게의 정확한 위치를 알려주세요.
+                                    </span>
+                                </div>
+                            </div>
+                        </label>
+                        <div class="iptArea">
+                            <input type="text" placeholder="00000" id="ppIpt04" />
+                            <div class="cptBtnForm">
+                                <button type="button" class="btn scnd">주소검색</button>
+                            </div>
+                        </div>
+                        <div class="frmIpt promotioAddr">
+                            <input type="text" placeholder="상세주소" id="ppIpt04" />
+                        </div>
+                        <div class="frmIpt">
+                            <input type="text" placeholder="상세주소" id="ppIpt04" />
+                        </div>
+                    </div>
+
+                    <div class="frmIpt">
+                        <label for="ppIpt05">가게 연락처
+                            <div class="tooltip">
+                                <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                                <div class="toolBox">
+                                    <span class="relCov">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                        우리가게의 연락처를 알려주세요.
+                                    </span>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="tel" placeholder="010-0000-0000" id="ppIpt05" />
+                    </div>
+
+                    <div class="frmIpt">
+                        <label for="ppIpt06">가게 소개
+                            <div class="tooltip">
+                                <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                                <div class="toolBox">
+                                    <span class="relCov">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                        우리가게의 이벤트나 정보를 널리 알려주세요.
+                                    </span>
+                                </div>
+                            </div>
+                        </label>
+                        <textarea id="ppIpt06" name="가게소개" placeholder="입력해주세요." class="ppTxtArea"></textarea>
+                    </div>
+
+                    <div class="frmIpt">
+                        <label for="ppIpt07">가게 이미지
+                            <div class="tooltip">
+                                <span class="tooltipTrig"><span class="hidden">설명열기</span></span>
+                                <div class="toolBox">
+                                    <span class="relCov">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                        우리가게의 멋진 모습을 등록해주세요.
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="required">jpg, png 형식 가능, 용량제한 30mb 이하</span>
+                        </label>
+                        <ul class="ppAddImg">
+                            <li>
+                                <ul class="addClick">
+                                    <li class="addImg"><img src="../../images/common/ico_imgAdd.svg" alt="이미지 추가 아이콘"></li>
+                                    <li class="addTxt">이미지 추가</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="img"><img src="../../images/temp/miniThumb.png" alt=""></li>
+                                    <li class="addClose"><img src="../../images/common/ico_imgClose.svg" alt="추가 된 이미지"></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="img"><img src="../../images/temp/miniThumb.png" alt=""></li>
+                                    <li class="addClose"><img src="../../images/common/ico_imgClose.svg" alt="추가 된 이미지"></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="img"><img src="../../images/temp/miniThumb.png" alt=""></li>
+                                    <li class="addClose"><img src="../../images/common/ico_imgClose.svg" alt="추가 된 이미지"></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="img"><img src="../../images/temp/miniThumb.png" alt=""></li>
+                                    <li class="addClose"><img src="../../images/common/ico_imgClose.svg" alt="추가 된 이미지"></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="img"><img src="../../images/temp/miniThumb.png" alt=""></li>
+                                    <li class="addClose"><img src="../../images/common/ico_imgClose.svg" alt="추가 된 이미지"></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="img"><img src="../../images/temp/miniThumb.png" alt=""></li>
+                                    <li class="addClose"><img src="../../images/common/ico_imgClose.svg" alt="추가 된 이미지"></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="img"><img src="../../images/temp/miniThumb.png" alt=""></li>
+                                    <li class="addClose"><img src="../../images/common/ico_imgClose.svg" alt="추가 된 이미지"></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="img"><img src="../../images/temp/miniThumb.png" alt=""></li>
+                                    <li class="addClose"><img src="../../images/common/ico_imgClose.svg" alt="추가 된 이미지"></li>
+                                </ul>
+                            </li>
+                        <ul/>
+                    </div>
+
+                    <div class="cptBtnForm d-flex gap10"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
+                        <!--default-->
+                        <button type="button" class="btn scnd">노출</button>
+                        <!--disabled-->
+                        <button type="button" class="btn scnd">미노출</button>
+                    </div>
+
+                </div>              
+            </div>
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <button type="button" class="popBtn white" onclick="popClose('clause02')">취소</button>
+            <button type="button" class="popBtn blue" onclick="popClose('clause02')">수정</button>
+        </div>
+    </div>
+</div>
+
 
 <!-- Bottom -->
 
