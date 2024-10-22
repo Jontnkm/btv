@@ -522,8 +522,7 @@
                 }
             }
             &:first-of-type {
-                // 추후 이미지 변경 예정
-                background:var(--sub-color04) url(../../images/common/createBg02.png) right 30px bottom 150px no-repeat;
+                background:var(--sub-color05) url(../../images/common/createBg01.png) right 30px bottom 150px no-repeat;
                 @include media ('mobile') {
                     background-size: 140px;
                     background-position: right 25px bottom 110px;

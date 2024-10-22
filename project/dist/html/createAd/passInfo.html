@@ -249,46 +249,44 @@
                 </div>
             </div>
             
-            <div class="infoArea"> 
-                <ul>
-                    <li>
-                        <div class="cptForm">
-                            <div class="frmIpt">
-                                <label for="infoIpt01">이름</label>
-                                <input type="text" id="infoIpt01" />
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="cptForm">
-                            <div class="frmIpt">
-                                <label for="infoIpt02">업체명</label>
-                                <input type="text" id="infoIpt02" />
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="cptForm">
-                            <div class="frmIpt">
-                                <label for="infoIpt03">주소</label>
-                                <input type="text" id="infoIpt03" />
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="cptForm">
-                            <div class="frmIpt">
-                                <label for="infoIpt04">사업자등록증</label>
-                                <input type="text" id="infoIpt04" />
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="cptBtnForm passInfoBtn">
-                    <button type="button" class="btn prmy">완료</button>
+            <div class="cptModeSuggest">
+                <div class="modeSuggestBox">
+                    <p class="modeAsk">1. 광고하실 지역은 어디신가요?</p>
+                    <ul class="modeList">
+                        <li>매장인근 (0KM ~ 1KM ) 광고대상수 : 0000</li>
+                        <li>매장인근 (1KM ~ 3KM ) 광고대상수 : 0000</li>
+                        <li>매장인근 (3KM ~ 5KM ) 광고대상수 : 0000</li>
+                        <li>매장인근 (5KM ~ 10KM ) 광고대상수 : 0000</li>
+                    </ul>
                 </div>
+                <div class="modeSuggestBox">
+                    <p class="modeAsk">2. 광고는 언제부터 송출하고 싶은신가요?</p>
+                    <div class="cptForm">
+                        <div class="frmIpt withBtn">
+                            <div class="iptArea">
+                                <input type="text" placeholder="2024-10-01 ~ 2024-10-31 (31일간)" id="ipt05" />
+                                <div class="cptBtnForm">
+                                    <button type="button" class="btn scnd date">기간 설정</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modeSuggestBox">
+                    <p class="modeAsk">3. 광고비용은 얼마정도 생각하고 계신가요?</p>
+                    <ul class="modeList">
+                        <li>20만원</li>
+                        <li>30만원</li>
+                        <li>50만원</li>
+                        <li>직접입력</li>
+                    </ul>
+                </div>
+                <div class="cptBtnForm d-flex gap10 excpBtn"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
+                    <!--default-->
+                    <button type="button" class="btn prmy">다음</button>
+                </div>    
             </div>
+
             <!-- //메인 콘텐츠 영역 -->
         </div>
         <!-- //중단영역 -->

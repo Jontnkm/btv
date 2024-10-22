@@ -378,6 +378,188 @@
     }
 }
 
+/* createAd - modeSelect */
+.cptMode{
+    display: flex; flex-direction: row; gap: 30px;
+    .modeBox{
+        background: var(--txt-gray05); border-radius: 24px; width: calc(100% - 30px); display: flex; align-items: center; justify-content: center; height: 320px; position: relative;
+        .modeImg{
+            margin-right: 48px;
+            img{
+                @include media('tablet'){
+                    width: 150px;
+                }
+            }
+            @include media('tablet'){
+                position: absolute; right: -30px; top: 10px;
+            }
+        }
+        .modeTxt{
+            padding: 0 20px;
+            .title{
+                font-size: 20px; font-weight: 500; letter-spacing: -0.5px; color: var(--txt-black);
+                @include media('tablet'){
+                    font-size: 18px; 
+                }
+            }
+            .sub{
+                font-size: 16px; font-weight: 400; letter-spacing: -0.4px; color: var(--txt-gray02); margin: 15px 0 30px 0;
+                @include media('tablet'){
+                    font-size: 14px;
+                }
+            }
+            .cptBtnForm{
+                @include media('tablet'){
+                    position: absolute; left: 30px; bottom: 30px;
+                }
+            }
+            @include media('tablet'){
+                padding: 0;
+            }
+        }
+        @include media('tablet'){
+            width: 100%; height: 300px; padding: 30px; justify-content: flex-start; align-items: flex-start; 
+        }
+    }
+    @include media('tablet'){
+        flex-direction: column; 
+    }
+}
+
+/* createAd - passInfo */
+.cptModeSuggest{
+    border-radius: 24px; border: 1px solid var(--txt-gray04); padding: 40px 30px; display: flex; flex-direction: column; gap: 55px;
+    .modeSuggestBox{
+        .modeAsk{
+            font-size: 18px; font-weight: 500; letter-spacing: -0.45px; margin-bottom: 25px;
+        }
+        .modeList{
+            display: flex; align-items: center; flex-wrap: wrap; gap: 15px;
+            li{
+                font-size: 18px; font-weight: 400; letter-spacing: -0.45px; background: var(--txt-gray05); padding: 12px 24px; border-radius: 30px; width: auto; color: var(--txt-gray02); cursor: pointer;
+                &:hover{
+                    background: var(--txt-black); color: var(--clr-white);
+                }
+                &.active{
+                    background: var(--txt-black); color: var(--clr-white);
+                }
+                @include media('tablet'){
+                    font-size: 16px; padding: 8px 12px;
+                }
+            }
+        }
+        @include media('tablet'){
+            font-size: 16px;
+        }
+    }
+    .cptBtnForm{
+        &.excpBtn{
+            justify-content: center; margin: 0 auto;
+        }
+    }
+    @include media('tablet'){
+        padding: 30px 20px; gap: 40px;
+    }
+}
+
+/* createAd - modePayment */
+.modePayment{
+    .payLeftBox{
+        width: calc(100% - 450px);
+        .thmbInfo{
+            .thumbArea{
+                width: 100% !important;
+            }
+        }
+        .modePayMap{
+            display: flex; justify-content: space-between; width: 100%; margin: 30px 0 35px 0;
+            .mapBox{
+                width: calc(100% - 250px); height: 388px;
+                img{
+                    width: 100%; height: 100%; border-radius: 16px 0 0 16px; 
+                }
+                @include media('tablet'){
+                    width: 100%; height: auto;
+                }
+            }
+            .mapInfo{
+                width: 250px; background: var(--txt-gray05); border-radius: 0 16px 16px 0; padding: 30px 15px;
+                > p{
+                    display: flex; 
+                }
+                .addr{
+                    color: var(--txt-gray01); font-size: 16px; font-weight: 400; letter-spacing: -0.4; margin-bottom: 25px;
+                    &::before{
+                        content: ''; display: inline-block; width: 24px; height: 24px; background: url(../../images/common/ico_map_info01.svg) no-repeat 0 0; margin-right: 8px;
+                    }
+                    @include media('tablet'){
+                        margin-bottom: 15px; margin-top: 20px; font-size: 14px;
+                    }
+                }
+                .call{
+                    font-family: Roboto; color: var(--txt-gray01); font-size: 16px; font-weight: 400; letter-spacing: -0.4;
+                    &::before{
+                        content: ''; display: inline-block; width: 24px; height: 24px; background: url(../../images/common/ico_map_info02.svg) no-repeat 0 0; margin-right: 8px;
+                    }
+                    @include media('tablet'){
+                        font-size: 14px;
+                    }
+                }
+                @include media('tablet'){
+                    width: 100%; 
+                }
+            }
+            @include media('tablet'){
+                flex-direction: column;
+            }
+        }
+        .modePayTime{
+            .title{
+                font-size: 16px; font-weight: 500; color: var(--txt-black); 
+            }
+            .payTimeBox{
+                border-radius: 8px; background: var(--txt-gray05); padding: 25px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; height: 126px; margin-top: 15px;
+                .item{
+                    width: 29%; position: relative; display: flex; flex-direction: column;
+                    .txt{
+                        font-size: 16px; font-weight: 500; color: var(--prm-color); margin-bottom: 30px;
+                        @include media('tablet'){
+                            margin-bottom: 20px; font-size: 14px;
+                        }
+                    }
+                    .result{
+                        font-size: 18px; font-weight: 500; color: var(--txt-black); text-align: right;
+                        @include media('tablet'){
+                            font-size: 16px;
+                        }
+                    }
+                    &::after{
+                        content: ''; display: block; width: 1px; height: 78px; background: var(--txt-gray04); position: absolute; right: -25px; top: 50%; transform: translateY(-50%);
+                        @include media('tablet'){
+                            width: 100%; height: 1px; position: absolute; left: 0px; top: 100%; transform: translateY(0);
+                        }
+                    }
+                    &:last-child{
+                        &::after{
+                            display: none;
+                        }
+                    }
+                    @include media('tablet'){
+                        width: 100%; height: auto; padding: 20px 0;
+                    }
+                }
+                @include media('tablet'){
+                    flex-direction: column; height: auto;
+                }
+            }
+        }
+    }
+    .payRightBox{
+        width: 420px;
+    }
+}
+
+
 /* faq - question */
 .questionTab{
     margin-top: 55px;
@@ -833,8 +1015,27 @@
     }
 }
 
-
-
+/* mypage - managementPopup */
+.manageTxt{
+    display: flex; flex-direction: column; gap: 20px;
+    .txt{
+        font-size: 18px; font-weight: 400; color: var(--txt-gray01);
+        span{
+            display: inline-block; color: var(--txt-black); font-weight: 500; margin-left: 5px;
+        }
+    }
+}
+.manageSrch{
+    height: 48px; font-size: 16px;
+    .frmIpt{
+        input[type=text]{
+            font-size: 16px !important; height: 48px !important;
+        }
+        .srchBtn{
+            width: 24px !important; height: 24px !important; background: url(../../images/common/ico_srch_small.svg) 50% 50% no-repeat !important;
+        }
+    }
+}
 
 /* customer - faq - reservPhoneCs */
 .cptCallTop{
@@ -1425,4 +1626,3 @@
         }
     }
 }
-

@@ -1082,3 +1082,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // 화면 크기 변경 시 체크
     window.addEventListener('resize', checkScreenSize);
 });
+
+
+//============================================================================================================//
+//======================================== 광고만들기 - passInfo 클릭  =========================================//
+//============================================================================================================//
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.modeList li').forEach(item => {
+        item.addEventListener('click', function() {
+            document.querySelectorAll('.modeList li').forEach(li => li.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
