@@ -868,7 +868,7 @@
                         }
 
                         .dropDown {
-                            display:none; position:absolute; width:max-content; top:40px; left:50%; background:var(--clr-white); border:1px solid var(--txt-gray04); box-shadow:2px 6px 16px 0px rgba(0,0,0,0.06); padding:30px 0; border-radius:8px; transform:translateX(-50%);
+                            display:none; position:absolute; width:max-content; top:40px; left:50%; background:var(--clr-white); border:1px solid var(--txt-gray04); box-shadow:2px 6px 16px 0px rgba(0,0,0,0.06); padding:30px 0 24px 0; border-radius:8px; transform:translateX(-50%);
 
                             .status {
                                 position:relative; padding-bottom:24px; border-bottom:1px solid var(--txt-gray04); margin: 0 24px 16px 24px;
