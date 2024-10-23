@@ -94,10 +94,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 autoplay: false,
                 loop:false,
             },    
-            767: {
+            375: {
                 slidesPerView: 1.3,
                 spaceBetween: 20,
-              },
+            },
         },
     });
 

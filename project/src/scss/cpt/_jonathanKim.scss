@@ -2774,6 +2774,12 @@
                 &:hover{transform:rotate(0deg);}
             }
         }
+
+        /* KB 2024.10.23 */
+        @include media ('mobile') {
+            margin: 0 auto 30px;
+        }
+
     }
 
     .swiper-slide {
