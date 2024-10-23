@@ -464,6 +464,7 @@
 
 /* createAd - modePayment */
 .modePayment{
+    margin-top: 0px !important;
     .payLeftBox{
         width: calc(100% - 450px);
         .thmbInfo{
@@ -555,10 +556,15 @@
         }
     }
     .payRightBox{
-        width: 420px;
+        width: 420px; top: 30px !important;
     }
 }
-
+.whiteWrap{
+    position: sticky; top: 0; z-index: 999;
+    .whiteBgPay{
+        width: 100%; height: 30px; background: var(--clr-white);
+    }
+}
 
 /* faq - question */
 .questionTab{
@@ -1463,11 +1469,14 @@
 }
 
 /* createAd - tutorialStep & tutorialStepPopup */
+.tutorialTit{
+    justify-content: flex-start !important; border-bottom: 1px solid var(--txt-gray04) !important;
+}
 .lytLayout{
     .layoutArea{
         .tutorial{
             padding: 0; margin: 0; display: none;
-            @include media('tablet'){
+            @include media('window'){
                 display: block;
             }
         }
@@ -1479,63 +1488,58 @@
         color: var(--black, #000); font-size: 20px; font-weight: 500; letter-spacing: -0.5px;
     }
 }
-.tutorialTab{
-    .ttTabMenu1{
-        margin: 0; padding: 0;
-        .tabItem{
-            .tabName{
-                &.active{
-                    @include media('mobile'){
-                        border-radius: 0 !important;
-                    }
-                }
-            }
-        }
-    }
-} 
+
 .tutorialTabWrap{
     padding: 0 30px; 
     .tutorialTab{
-        margin-top: 30px;
+
+        /* 윈도우 새창 탭메뉴 */
         .ttTabMenu1Wrap{
-            overflow-x: scroll !important; width: 100%;
+            overflow: auto !important; width: 100%;
+            &::after{
+                content: ''; display: block; background: var(--clr-white); height: 180px; width: 100%; position: absolute; left: 0; top: 54px; z-index: 9;
+                @include media('mobile'){
+                    height: 150px;
+                }
+            }
             .ttTabMenu1{
-                position: relative; display: flex; border-radius: 8px; transition: transform 0.3s ease-in-out;  z-index: 10; position: fixed; left: 0; top: 80px; width: 92%; margin: 0 30px;
+                position: relative; display: flex; border-radius: 8px; transition: transform 0.3s ease-in-out; z-index: 10; position: fixed; left: 30px; top: 80px; margin: 0; width: calc(100% - 60px);
                 .tabItem{
-                    &:nth-child(4){
-                        border-radius: 0 8px 8px 0;
-                        @include media('mobile'){
-                            border-radius: 0;
+                    .tabName{
+                        &.active{
+                            border-radius: 8px;
                         }
                     }
-                    @include media('mobile'){
-                        width: 115px; 
+                    &:nth-child(4){
+                        border-radius: 0 8px 8px 0;
                     }
                 }
                 @include media('mobile'){
-                    margin: 0 auto; border-radius: 0; flex-flow: row nowrap; display: flex; width: max-content; top: 55px;
+                    left: 30px; width: calc(100% - 60px);
                 }
             }
         }
+
         .clickWrap{
             .prevClick{
                 position: absolute; left: 5px; top: 100px; z-index: 10; transform: rotate(180deg); cursor: pointer; 
                 @include media('mobile'){
-                    top: 80px;
+                    left: 0; top: 105px;
                 }
             }
             .nextClick{
                 position: absolute; right: 5px; top: 100px; z-index: 10; cursor: pointer;
                 @include media('mobile'){
-                    top: 80px;
+                    right: 0; top: 105px;
                 }
             }
             img{
                 width: 20px; height: 14px; 
             }
         }
+
         .ttContainer{
-            margin-top: 70px;
+            margin-top: 200px;
             .tabCont{
                 display: none;
                 &.active{
@@ -1543,6 +1547,7 @@
                 }
                 .ttTabDepth2{
                     .tabInner{
+                        position: fixed; left: 30px; top: 160px; z-index: 10;
                         .ttTabMenu2{
                             margin: 0; background: transparent; 
                             .tabItem{
@@ -1555,21 +1560,26 @@
                                 }
                             }
                         }
+                        @include media('mobile'){
+                            left: 30px; 
+                        }
                     }
                     @include media('mobile'){
                         padding: 0 15px; 
                     }
                 }
             }
+            @include media('mobile'){
+                margin-top: 180px;
+            }
         }
-        @include media('mobile'){
-            margin-top: 0;
-        }
+
     }
     @include media('mobile'){
         padding: 0;
     }
 }
+
 .tutorialList{
     width:100%; position:relative;
 

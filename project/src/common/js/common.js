@@ -996,11 +996,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 //============================================================================================================//
-//===================================== 튜토리얼 탭메뉴 (이중중첩) =============================================//
+//===================================== 튜토리얼 탭메뉴 (윈도우 새창) ==========================================//
 //============================================================================================================//
 function showTab4(index) {
-    var modTabBtn4 = document.querySelectorAll('.ttTabMenu1 .tabName');
-    var modTabCont4 = document.querySelectorAll('.ttContainer > .tabCont');
+    var modTabBtn4 = document.querySelectorAll('.tutorialTabWrap1 .ttTabMenu1 .tabName');
+    var modTabCont4 = document.querySelectorAll('.tutorialTabWrap1 .ttContainer > .tabCont');
 
     for (var i = 0; i < modTabBtn4.length; i++) {
         modTabBtn4[i].classList.remove('active');
@@ -1014,8 +1014,8 @@ function showTab4(index) {
 }
 
 function showTab5(index) {
-    var modTabBtn5 = document.querySelectorAll('.ttTabMenu2 .tabName');
-    var modTabCont5 = document.querySelectorAll('.ttTabDepth2 .tabContainer .tabCont');
+    var modTabBtn5 = document.querySelectorAll('.tutorialTabWrap1 .ttTabMenu2 .tabName');
+    var modTabCont5 = document.querySelectorAll('.tutorialTabWrap1 .ttTabDepth2 .tabContainer .tabCont');
 
     for (var i = 0; i < modTabBtn5.length; i++) {
         modTabBtn5[i].classList.remove('active');
@@ -1063,15 +1063,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateTabDisplay();
 
-    // 화면 크기에 따라 기능 활성화/비활성화
     function checkScreenSize() {
         if (window.innerWidth > 806) {
-            // 806px 초과시 탭 비활성화
             tabItems.forEach(item => item.style.display = 'block'); 
             document.querySelector('.prevClick').style.display = 'none'; 
             document.querySelector('.nextClick').style.display = 'none'; 
-        } else {
-            // 806px 이하일 때 탭 기능 활성화
+        } else if (window.innerWidth <= 806) {
             updateTabDisplay();
         }
     }
@@ -1095,3 +1092,28 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+//============================================================================================================//
+//========================================== 튜토리얼 - 윈도우 새창  ===========================================//
+//============================================================================================================//
+function openTutorial(){
+    window.open("tutorialStep.html", "_blank", "width=806, height=3000, scrollbars=yes, resizable=no, left=20, top=20");
+}
+
+
+//============================================================================================================//
+//========================================== 튜토리얼 - 고정 스킄롤 ===========================================//
+//============================================================================================================//
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.ttTabMenu1');
+    const scrollPosition = window.scrollY; 
+
+    if (scrollPosition > 50) {  
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+
