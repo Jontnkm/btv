@@ -2570,12 +2570,14 @@
 }
 
 /*갤러리 게시판*/
+/* kb 갤러리 페이지 반응형 수정 2024.10.16 */
 .galleryLayout {
-    overflow-x:hidden;
+    overflow-x:hidden; 
+    // margin: 0 !important; padding: 0 !important;
     > *:not(.locationAd) {width:100%; max-width:1320px; margin:0 auto; overflow:hidden;
         /* kb 갤러리 페이지 반응형 수정 2024.10.16 */
         @include media ('tablet') {
-            overflow: unset;
+            overflow: unset; 
         } 
     }  
 }

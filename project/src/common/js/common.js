@@ -125,6 +125,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 autoplay: false,
                 loop:false,
             },
+            375: {
+                slidesPerView: 1.3,
+                spaceBetween: 20,
+            },
         },
     });
 
