@@ -93,7 +93,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 slidesPerView: 'auto',
                 autoplay: false,
                 loop:false,
-            },
+            },    
+            767: {
+                slidesPerView: 1.3,
+                spaceBetween: 20,
+              },
         },
     });
 
@@ -488,6 +492,16 @@ document.addEventListener('DOMContentLoaded', function() {
             showTabTmp(index); 
         });
     });
+
+
+    // 상세검색 클릭
+    document.querySelector('.contBox .detailTitle').addEventListener('click', function() {
+        const detailBox = document.querySelector('.detailBox');
+        const titleImg = document.querySelector('.titleImg');
+
+        titleImg.classList.toggle('toggle');
+        detailBox.classList.toggle('show');
+      });
 
 });
 

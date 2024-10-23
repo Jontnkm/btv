@@ -228,7 +228,7 @@
             position:absolute; opacity:0; cursor:pointer; width:0; height:0;
 
             + .checkmark {
-                position:absolute; top:0; left:0; width:24px; height:24px; background:var(--clr-white); border-radius:6px; overflow:hidden; border:1px solid var(--txt-gray04);
+                position:absolute; top:3px; left:0; width:24px; height:24px; background:var(--clr-white); border-radius:6px; overflow:hidden; border:1px solid var(--txt-gray04);
 
                 &::after {content:''; position:absolute; display:none; top:4px; left:8px; width:5px; height:9px; border: solid var(--clr-white); border-width:0 2px 2px 0; transform:rotate(45deg);}
             }
@@ -742,7 +742,7 @@
                 }
                 .logo {
                     .pcLogo {
-                        display:block;
+                        display:block; width: 173px;
                         @include media('tablet'){
                             display:none;
                         }
@@ -750,7 +750,7 @@
                     .moLogo {
                         display:none;
                         @include media('tablet'){
-                            display:block;
+                            display:block; width: 118px;
                         }
                     }
                 }
@@ -893,8 +893,7 @@
                                     display:flex; flex-flow: column; gap:4px;
                                     > li {
                                         > a {
-                                            &::before {content:''; position:absolute; top:50%; left:24px; transform:translateY(-50%); width:24px; height:24px; background: url(../../images/common/ico_logout.svg) 50% 50% no-repeat;}
-                                            position:relative; display:block; padding:10px 24px 10px 56px; font-size:16px; color:var(--txt-gray02); font-weight:400; line-height:24px; letter-spacing:-0.4px;
+                                            position:relative; display:block; padding: 10px 25px; font-size:16px; color:var(--txt-gray02); font-weight:400; line-height:24px; letter-spacing:-0.4px;
 
                                             &:hover {background:var(--txt-gray05);}
                                         }
@@ -971,7 +970,7 @@
                                 &.item01 {
                                     span.icon {
                                         &::after {
-                                            background:url(../../images/common/ico_tutorial.svg)50% 50% no-repeat;
+                                            background:url(../../images/common/ico_produce.svg) 50% 50% no-repeat
                                         }
                                     }
                                 }
