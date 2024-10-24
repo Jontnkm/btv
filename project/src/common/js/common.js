@@ -70,8 +70,10 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
+
+    // KB 2024-10-24 수정 //
     //===================================================================================//
-    //==================================갤러리 슬라이드 02========================================//
+    //==================================갤러리 슬라이드 02================================//
     //===================================================================================//
     
     var loAdSlide = new Swiper(".locationAd", {
@@ -90,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         breakpoints: {
             1023: {
-                slidesPerView: 'auto',
+                slidesPerView: '4.5',
                 autoplay: false,
                 loop:false,
             },    

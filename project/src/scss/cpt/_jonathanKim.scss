@@ -2571,13 +2571,30 @@
 
 /*갤러리 게시판*/
 /* kb 갤러리 페이지 반응형 수정 2024.10.16 */
+.lytLayout{
+    .layoutArea{
+        .layoutContainer{
+            @include media ('tablet') {
+                padding: 0;
+            }
+            &.galleryLayout{
+                .locationAd{
+                    border-radius: 0;
+                }
+                > *:not(.locationAd){
+                   padding: 0 15px;
+                }
+            }
+        }
+    }
+}
 .galleryLayout {
     overflow-x:hidden; 
     // margin: 0 !important; padding: 0 !important;
     > *:not(.locationAd) {width:100%; max-width:1320px; margin:0 auto; overflow:hidden;
         /* kb 갤러리 페이지 반응형 수정 2024.10.16 */
         @include media ('tablet') {
-            overflow: unset; 
+            overflow: unset;
         } 
     }  
 }
