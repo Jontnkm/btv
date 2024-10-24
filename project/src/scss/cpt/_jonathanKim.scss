@@ -2693,7 +2693,7 @@
 
         .swiper-button-prev03 {
             &:hover{transform:translateY(-50%) rotate(180deg);}
-            left: -10px; z-index: 30; transform:translateY(-50%);
+            left: 10px; z-index: 30; transform:translateY(-50%);
 
             @include media ('tablet') {
                 left: -10px;
@@ -2702,7 +2702,7 @@
     
         .swiper-button-next03 {
             &:hover{transform:translateY(-50%) rotate(0deg);}
-            right: -10px; z-index: 30; transform:translateY(-50%) rotate(180deg);
+            right: 20px; z-index: 30; transform:translateY(-50%) rotate(180deg);
 
             @include media ('tablet') {
                 right: -10px; z-index: 19;
