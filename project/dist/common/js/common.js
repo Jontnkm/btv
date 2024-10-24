@@ -11,11 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
     //===================================================================================//
 
     var mainSlide = new Swiper(".mainVisual", {
-        
+        effect : "fade",
+        speed:1500,
         autoplay: {
             slidePerView:1,
             centeredSlides: true,
-            delay: 3000,
+            delay: 5000,
             disableOnInteraction: false
         },
         loop: true,
@@ -30,16 +31,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //===================================================================================//
+    //==================================인터뷰 슬라이드========================================//
+    //===================================================================================//
+
+    var swiper02 = new Swiper(".mainSlide02", {
+        effect: "coverflow",
+        autoplay: {
+            delay:2000,
+        },
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        spaceBetween:30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next02",
+            prevEl: ".swiper-button-prev02"
+        },
+    });
+
+    //===================================================================================//
     //==================================광고슬라이더========================================//
     //===================================================================================//
     
-    var adSlide = new Swiper(".adVisual", {
+    var affSlide = new Swiper(".affSlide", {
         slidesPerView: 'auto',
         loop: false,
         allowTouchMove: true,
         navigation: {
-            nextEl: ".swiper-button-next02",
-            prevEl: ".swiper-button-prev02"
+            nextEl: ".swiper-button-next03",
+            prevEl: ".swiper-button-prev03"
         }
       });
 
@@ -1135,3 +1165,34 @@ window.addEventListener('scroll', function() {
 });
 
 
+$(document).ready(function(){
+    var a = $(".chatBox ul li");
+    var i = 0;
+    setInterval(function(){
+        if(i === 0) {
+            $(a).eq(0).fadeIn();                
+            i = 1;
+        }else if(i === 1) {
+            $(a).eq(1).fadeIn();                
+            i = 2;
+        }else if(i === 2) {
+            $(a).eq(2).fadeIn();                
+            i = 3;
+        }else if(i === 3) {
+            $(a).eq(0).hide();
+            $(a).eq(3).fadeIn();                
+            i = 4;
+        }else if(i === 4) {
+            $(a).eq(1).hide();
+            $(a).eq(4).fadeIn();                
+            i = 5;
+        }else if(i === 5){
+            $(a).eq(2).hide();
+            $(a).eq(5).fadeIn();                
+            i = 6;
+        }else if(i === 6) {
+            i = 0;
+            $(a).hide();
+        }
+    }, 5000);
+})

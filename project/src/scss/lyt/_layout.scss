@@ -41,7 +41,10 @@
             .layoutFloat {width: 100%;}
         }
         .layoutFooter{
-            width:100%;
+            width:100%; margin-top:120px;
+            &.main {
+                margin-top:0;
+            }
         }
     }
 }
