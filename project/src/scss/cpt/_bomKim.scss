@@ -961,10 +961,24 @@
     justify-content: right;
 }
 .cptTable{
+    .tableTitle{
+        font-weight: 400; font-size: 18px; margin: 55px 0 25px 0;
+    }
     .txt{
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+    table{
+        tbody{
+            tr{
+                .stBtn{
+                    span{
+                        display: inline-block; font-size: 16px; color: var(--txt-gray01) !important; font-weight: 500; border-radius: 8px; border: 1px solid var(--txt-gray04); cursor: pointer; padding: 6px 12px; width: 70px !important; height: 35px !important; display: flex; justify-content: center; align-items: center; margin: 0 auto;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1041,7 +1055,11 @@
             width: 24px !important; height: 24px !important; background: url(../../images/common/ico_srch_small.svg) 50% 50% no-repeat !important;
         }
     }
+    @include media('tablet'){
+        height: auto;
+    }
 }
+
 
 /* customer - faq - reservPhoneCs */
 .cptCallTop{
