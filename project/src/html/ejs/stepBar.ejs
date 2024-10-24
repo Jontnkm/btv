@@ -1,6 +1,20 @@
+
 <%
+var depth2 = locals.depth2 ? locals.depth2 : 1;
+
 var url = locals.url ? locals.url : '../../';
+var depth2P = [];
+console.log(url);
+for(var i=1;i<=7;i++){
+    alert();
+    if(depth2==i){
+        depth2P[i] = 'active';
+    }else{ 
+        depth2P[i] = "";
+    }
+}
 %>
+
 <div class="pageLocationBar">
     <ul>
         <li class="active"><a href="#none">제작 중<span class="cnt">00</span></a></li>
