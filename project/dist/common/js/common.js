@@ -1245,5 +1245,5 @@ $(document).ready(function(){
             i = 0;
             $(a).hide();
         }
-    }, 5000);
+    }, 3500);
 })
