@@ -20,6 +20,7 @@
         <!-- 중단영역 -->
         <div class="layoutContainer" id="container">
             <!-- 메인 콘텐츠 영역 -->  
+             <!-- KB 2024.10.24 수정 -->
             <div class="comSubTitle mypageM">
                 <h3 class="standard">마이페이지</h3>
                 <div class="mypageMTxt">
@@ -30,6 +31,7 @@
                     </div>
                 </div>
             </div>
+            <!--// KB 2024.10.24 수정 -->
 
             <div class="cptInfoTop">
                 <div class="top">
@@ -68,6 +70,7 @@
             </div>
 
             <div class="cptInfoBottom">
+                <!-- KB 2024.10.24 수정 -->
                 <ul class="left">
                     <li class="myInfo myInfoFir"><span class="myInfoImg"><img src="../../images/common/ico_user_b.svg" alt=""></span>나의정보
                         <ul>
@@ -90,11 +93,13 @@
                         </ul>
                     </li>
                 </ul>
+                <!--// KB 2024.10.24 수정 -->
                 <div class="right">
                     <div class="comSubTitle mypageTit">
-                        <h5 class="mypageTitle">비즈니스 관리 <span class="noRequest">*권한 요청이 없습니다</span></h5>
+                        <h5 class="mypageTitle">비즈니스 관리</h5>
                     </div>
 
+                    <!-- KB 2024.10.24 수정 -->
                     <div class="cptForm searchBar manageSrch">
 
                         <!-- id 검색창 -->
@@ -103,52 +108,39 @@
                             <button type="button" class="srchBtn"><span class="hidden">검색</span></button> <!--onclick="popOpen('clause01')" 광고주 권한 요청 팝업-->
                         </div>
 
-                        <!-- 권한 요청이 없는 검색창 -->
-                        <!-- <div class="cptForm">
-                            <div class="frmIpt">
-                                <input type="text" placeholder="권한 요청이 없습니다." disabled/>
-                            </div>
-                        </div> -->
-
-                        <!-- 권한 요청건 검색창 거절하기, 수락하기 버튼 -->
-                        <!-- <div class="frmIpt withBtn">
-                            <div class="iptArea">
-                                <input type="text" placeholder="0000회사 – 홍길동님의 권한 요청 건이 있습니다." disabled />
-                                <div class="cptBtnForm">
-                                    <button type="button" class="btn scnd">거절하기</button>
-                                </div>
-                                <div class="cptBtnForm">
-                                    <button type="button" class="btn prmy">수락하기</button>
-                                </div>
-                            </div>
-                        </div> -->
-
                     </div>
+                    <!--// KB 2024.10.24 수정 -->
 
+                    <!-- KB 2024.10.24 수정 -->
                     <!-- 테이블 선택 -->
-                    <div class="tableTop couponTop">
+                    <!-- <div class="tableTop couponTop">
                         <ul class="pointChk">
                             <li class="chkItem active"><span><img src="../../images/common/ico_chk_p.svg" alt=""></span>전체</li>
                             <li class="chkItem"><span><img src="../../images/common/ico_chk_b.svg" alt=""></span>승인</li>
                             <li class="chkItem"><span><img src="../../images/common/ico_chk_b.svg" alt=""></span>대기</li>
                             <li class="chkItem"><span><img src="../../images/common/ico_chk_b.svg" alt=""></span>거절/삭제</li>
                         </ul>
-                    </div>
+                    </div> -->
                     <!--// 테이블 선택 -->
+                    <!--// KB 2024.10.24 수정 -->
 
+                    <!-- KB 2024.10.24 수정 -->
                     <!-- 쿠폰 테이블 -->
                     <div class="cptTable"> 
+                        <div class="tableTitle">보유 광고주</div>
                         <table>
                             <colgroup>
+                                <col style="width:15%" />
                                 <col style="width:15%" />
                                 <col style="width:15%" />
                                 <col style="width:15%" />
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th><span>광고관리</span></th>
-                                    <th><span>광고 담당자</span></th>
-                                    <th><span>상태</span></th>
+                                    <th><span>광고주 아이디</span></th>
+                                    <th><span>이름</span></th>
+                                    <th><span>등록일</span></th>
+                                    <th><span>액션</span></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -161,23 +153,27 @@
                                 </tr> -->
                                 <tr>
                                     <td class="txt"><span>텍스트</span></td>
-                                    <td class="txt"><span>승인</span></td>
-                                    <td class="subtract"><span>삭제</span></td>
+                                    <td class="txt"><span>이름</span></td>
+                                    <td class="txt"><span>2024.00.00</span></td>
+                                    <td class="subtract stBtn"><span>삭제</span></td>
                                 </tr>
                                 <tr>
                                     <td class="txt"><span>텍스트</span></td>
-                                    <td class="txt"><span>텍스트</span></td>
-                                    <td class="add"><span>승인</span></td>
+                                    <td class="txt"><span>이름</span></td>
+                                    <td class="txt"><span>2024.00.00</span></td>
+                                    <td class="subtract stBtn"><span>삭제</span></td>
                                 </tr>
                                 <tr>
                                     <td class="txt"><span>텍스트</span></td>
-                                    <td class="txt"><span>텍스트</span></td>
-                                    <td class="txt"><span>대기</span></td>
+                                    <td class="txt"><span>이름</span></td>
+                                    <td class="txt"><span>2024.00.00</span></td>
+                                    <td class="subtract stBtn"><span>삭제</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <!--// 쿠폰 테이블 -->
+                    <!-- KB 2024.10.24 수정 -->
 
                     <!-- pagination -->
                     <div class="comPagination">

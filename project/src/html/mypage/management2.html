@@ -19,8 +19,8 @@
 
         <!-- 중단영역 -->
         <div class="layoutContainer" id="container">
-            <!-- 메인 콘텐츠 영역 -->
-            <!-- KB 2024.10.24 수정 -->
+            <!-- 메인 콘텐츠 영역 -->  
+             <!-- KB 2024.10.24 수정 -->
             <div class="comSubTitle mypageM">
                 <h3 class="standard">마이페이지</h3>
                 <div class="mypageMTxt">
@@ -81,10 +81,10 @@
                     <li class="myInfo myInfoSec active"><span class="myInfoImg"><img src="../../images/common/ico_benefit_p.svg" alt=""></span>나의 혜택/광고관리
                         <ul> 
                             <li><a href="#">프로모션 정보</a></li>
-                            <li class="myInfoItem"><a href="#">포인트 현황</a></li>
+                            <li><a href="#">포인트 현황</a></li>
                             <li><a href="#">쿠폰 현황</a></li>
                             <li><a href="#">광고송출 정보</a></li>
-                            <li><a href="#">비즈니스 관리</a></li>
+                            <li class="myInfoItem"><a href="#">비즈니스 관리</a></li>
                         </ul>
                     </li>
                     <li class="myInfo myInfoThi"><span class="myInfoImg"><img src="../../images/common/ico_money_b.svg" alt=""></span>결제 정보
@@ -95,94 +95,84 @@
                 </ul>
                 <!--// KB 2024.10.24 수정 -->
                 <div class="right">
+                    <!-- KB 2024.10.24 수정 -->
                     <div class="comSubTitle mypageTit">
-                        <h5 class="mypageTitle">포인트 현황</h5>
+                        <h5 class="mypageTitle">비즈니스 관리</h5>
                     </div>
+                    <!--// KB 2024.10.24 수정 -->
 
-                    <!-- 포인트 보유 현황 -->
-                    <div class="cptPoint">
-                        <ul class="pointArea">
-                            <li class="item">보유 포인트 <span class="pt ptFirst">10,000P</span></li>
-                            <li class="item">적립 포인트 <span class="pt">3,000P</span></li>
-                            <li class="item">사용 포인트 <span class="pt">3,000P</span></li>
-                        </ul>
-                    </div>
-                    <!--// 포인트 보유 현황 -->
+                    <div class="cptForm searchBar manageSrch">
 
-                    <!-- 테이블 선택 -->
-                    <div class="tableTop">
-                        <div class="cptForm d-flex">
-                            <div class="frmCombo">
-                                기본 & focus effect
-                                <div class="drpCov">
-                                    <button type="button" class="drpBtn">전체</button>
-                                    <!-- KB 2024.10.24 수정 -->
-                                    <div class="listBox">
-                                        <ul class="drpList height">
-                                            <li><a href="#none">1개월</a></li>
-                                            <li><a href="#none">3개월</a></li>
-                                            <li><a href="#none">6개월</a></li>
-                                            <li><a href="#none">9개월</a></li>
-                                            <li><a href="#none">12개월</a></li>
-                                        </ul>
-                                    </div>
-                                    <!--// KB 2024.10.24 수정 -->
+                        <!-- KB 2024.10.24 수정 -->
+                        <!-- 권한 요청건 검색창 거절하기, 수락하기 버튼 -->
+                        <div class="frmIpt withBtn">
+                            <div class="iptArea">
+                                <input type="text" placeholder="0000회사 – 홍길동님의 권한 요청 건이 있습니다." disabled />
+                                <div class="cptBtnForm">
+                                    <button type="button" class="btn scnd">거절하기</button>
+                                </div>
+                                <div class="cptBtnForm">
+                                    <button type="button" class="btn prmy">수락하기</button>
                                 </div>
                             </div>
                         </div>
+                        <!--// KB 2024.10.24 수정 -->
+
+                    </div>
+
+                    <!-- 테이블 선택 -->
+                    <div class="tableTop couponTop">
                         <ul class="pointChk">
                             <li class="chkItem active"><span><img src="../../images/common/ico_chk_p.svg" alt=""></span>전체</li>
-                            <li class="chkItem"><span><img src="../../images/common/ico_chk_b.svg" alt=""></span>적립</li>
-                            <li class="chkItem"><span><img src="../../images/common/ico_chk_b.svg" alt=""></span>사용</li>
+                            <li class="chkItem"><span><img src="../../images/common/ico_chk_b.svg" alt=""></span>승인</li>
+                            <li class="chkItem"><span><img src="../../images/common/ico_chk_b.svg" alt=""></span>대기</li>
+                            <li class="chkItem"><span><img src="../../images/common/ico_chk_b.svg" alt=""></span>거절/삭제</li>
                         </ul>
                     </div>
                     <!--// 테이블 선택 -->
 
-                    <!-- 포인트 현황 테이블 -->
+                    <!-- 쿠폰 테이블 -->
                     <div class="cptTable"> 
                         <table>
                             <colgroup>
-                                <col style="width:5%" />
                                 <col style="width:15%" />
-                                <col style="width:auto" />
                                 <col style="width:15%" />
                                 <col style="width:15%" />
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th><span>순번</span></th>
-                                    <th><span>날짜</span></th>
-                                    <th><span>적립/사용내역</span></th>
-                                    <th><span>적립/사용</span></th>
-                                    <th><span>포인트잔액</span></th>
+                                    <th><span>광고관리</span></th>
+                                    <th><span>광고 담당자</span></th>
+                                    <th><span>상태</span></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <!-- 조회 된 목록이 없을때 주석처리 -->
                                 <!-- <tr>
-                                    <td class="noList" colspan="5">
+                                    <td class="noList" colspan="3">
                                         <span class="ico"><span class="hidden">목록없음</span></span>
                                         <p>결제된 광고 캐페인 목록이 없습니다.</p>
                                     </td>
                                 </tr> -->
                                 <tr>
-                                    <td>2</td>
-                                    <td class="date"><span>2024.06.01</span></td>
-                                    <td class="title"><span>SK PAY 결제</span></td>
-                                    <td class="add"><span>+1,000</span></td>
-                                    <td><span>10,000P</span></td>
+                                    <td class="txt"><span>텍스트</span></td>
+                                    <td class="txt"><span>승인</span></td>
+                                    <td class="subtract"><span>삭제</span></td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td class="date"><span>2024.06.01</span></td>
-                                    <td class="title"><span>SK PAY 결제</span></td>
-                                    <td class="subtract"><span>-1,000</span></td>
-                                    <td><span>10,000P</span></td>
+                                    <td class="txt"><span>텍스트</span></td>
+                                    <td class="txt"><span>텍스트</span></td>
+                                    <td class="add"><span>승인</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="txt"><span>텍스트</span></td>
+                                    <td class="txt"><span>텍스트</span></td>
+                                    <td class="txt"><span>대기</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <!--// 포인트 현황 테이블 -->
+                    <!--// 쿠폰 테이블 -->
 
                     <!-- pagination -->
                     <div class="comPagination">
