@@ -31,6 +31,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //===================================================================================//
+    //==================================모바일용 카드 슬라이드========================================//
+    //===================================================================================//
+    var moCardSlide = new Swiper(".moCard", {
+        slidesPerView: 1.5,
+        spaceBetween: 30,
+        freeMode: true,
+        breakpoints: {
+            1023: {
+                slidesPerView: 2.5,
+                spaceBetween: 30,
+                freeMode: true,
+            },
+        },
+    });
+    //===================================================================================//
     //==================================인터뷰 슬라이드========================================//
     //===================================================================================//
 
@@ -1219,31 +1234,31 @@ window.addEventListener('scroll', function() {
 $(document).ready(function(){
     var a = $(".chatBox ul li");
     var i = 0;
-    setInterval(function(){
-        if(i === 0) {
-            $(a).eq(0).fadeIn();                
-            i = 1;
-        }else if(i === 1) {
-            $(a).eq(1).fadeIn();                
-            i = 2;
-        }else if(i === 2) {
-            $(a).eq(2).fadeIn();                
-            i = 3;
-        }else if(i === 3) {
-            $(a).eq(0).hide();
-            $(a).eq(3).fadeIn();                
-            i = 4;
-        }else if(i === 4) {
-            $(a).eq(1).hide();
-            $(a).eq(4).fadeIn();                
-            i = 5;
-        }else if(i === 5){
-            $(a).eq(2).hide();
-            $(a).eq(5).fadeIn();                
-            i = 6;
-        }else if(i === 6) {
-            i = 0;
-            $(a).hide();
-        }
-    }, 3500);
+    // setInterval(function(){
+    //     if(i === 0) {
+    //         $(a).eq(0).fadeIn();                
+    //         i = 1;
+    //     }else if(i === 1) {
+    //         $(a).eq(1).fadeIn();                
+    //         i = 2;
+    //     }else if(i === 2) {
+    //         $(a).eq(2).fadeIn();                
+    //         i = 3;
+    //     }else if(i === 3) {
+    //         $(a).eq(0).hide();
+    //         $(a).eq(3).fadeIn();                
+    //         i = 4;
+    //     }else if(i === 4) {
+    //         $(a).eq(1).hide();
+    //         $(a).eq(4).fadeIn();                
+    //         i = 5;
+    //     }else if(i === 5){
+    //         $(a).eq(2).hide();
+    //         $(a).eq(5).fadeIn();                
+    //         i = 6;
+    //     }else if(i === 6) {
+    //         i = 0;
+    //         $(a).hide();
+    //     }
+    // }, 5000);
 })

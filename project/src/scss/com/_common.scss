@@ -726,7 +726,9 @@
 /*=================================================================================================*/
 .cptHeader {
     width:100%;
-    
+    @include media ('wide') {
+        overflow-x:hidden;
+    }    
     .headerInner { 
         width:100%; position:relative; z-index:3;  border-bottom:1px solid #f2f2f2;
         .gnbArea {
@@ -1034,7 +1036,7 @@
 /*=========================================== QUICK MENU ===============================================*/
 /*======================================================================================================*/
 .quickMenu {
-    @include media('tablet'){
+    @include media('wide'){
         display:none;
     }
     position:fixed; top:50%; right:0; transform:translateY(-50%); background:var(--clr-white); border:1px solid #f2f2f2; border-right:0; box-shadow:2px 6px 16px 0px rgba(0,0,0,0.06); padding:30px 24px; border-radius:8px 0 0 8px; z-index: 1000;
