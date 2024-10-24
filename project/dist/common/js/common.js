@@ -1168,19 +1168,3 @@ function openTutorial(){
 }
 
 
-// KB 2024-10-24 수정 //
-//============================================================================================================//
-//========================================== 튜토리얼 - 고정 스킄롤 ===========================================//
-//============================================================================================================//
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.ttTabMenu1');
-    const scrollPosition = window.scrollY; 
-
-    if (scrollPosition > 50) {  
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
-
-
