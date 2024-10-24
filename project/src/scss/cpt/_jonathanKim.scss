@@ -2574,15 +2574,15 @@
 .lytLayout{
     .layoutArea{
         .layoutContainer{
-            @include media ('tablet') {
-                padding: 0;
-            }
             &.galleryLayout{
                 .locationAd{
                     border-radius: 0;
                 }
                 > *:not(.locationAd){
                    padding: 0 15px;
+                }
+                @include media ('tablet') {
+                    padding: 0;
                 }
             }
         }

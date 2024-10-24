@@ -502,13 +502,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // 상세검색 클릭
-    document.querySelector('.contBox .detailTitle').addEventListener('click', function() {
-        const detailBox = document.querySelector('.detailBox');
-        const titleImg = document.querySelector('.titleImg');
+    const detailTitle = document.querySelector('.contBox .detailTitle');
+    const detailBox = document.querySelector('.detailBox');
+    const titleImg = document.querySelector('.titleImg');
 
-        titleImg.classList.toggle('toggle');
-        detailBox.classList.toggle('show');
-      });
+    // 요소들이 존재하는지 확인
+    if (detailTitle && detailBox && titleImg) {
+        detailTitle.addEventListener('click', function() {
+            titleImg.classList.toggle('toggle');
+            detailBox.classList.toggle('show');
+        });
+    } else {
+        console.warn('detailTitle, detailBox, or titleImg element not found.');
+    }
 
 });
 
@@ -930,15 +936,19 @@ function aptSearch() {
 //================================= mypage - index.html 모바일 '나의정보' 클릭 =================================//
 //============================================================================================================//
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.mypageMTxt').addEventListener('click', function() {
-        const leftElement = document.querySelector('.left');
-        
-        if (leftElement.style.display === 'none' || leftElement.style.display === '') {
-            leftElement.style.display = 'block';
-        } else {
-            leftElement.style.display = 'none';
-        }
-    });
+    const mypageMTxt = document.querySelector('.mypageMTxt');
+    
+    if (mypageMTxt) {
+        mypageMTxt.addEventListener('click', function() {
+            const leftElement = document.querySelector('.left');
+            
+            if (leftElement.style.display === 'none' || leftElement.style.display === '') {
+                leftElement.style.display = 'block';
+            } else {
+                leftElement.style.display = 'none';
+            }
+        });
+    }
 });
 
 
@@ -947,16 +957,22 @@ document.addEventListener('DOMContentLoaded', function() {
 //=================================== myAd - noList.html 모바일 '제작중' 클릭 ==================================//
 //============================================================================================================//
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.mobileTop .mobileClick').addEventListener('click', function() {
-        const leftElement = document.querySelector('.pageLocationBar');
-        
-        if (leftElement.style.display === 'none' || leftElement.style.display === '') {
-            leftElement.style.display = 'block';
-        } else {
-            leftElement.style.display = 'none';
-        }
-    });
+    const mobileClick = document.querySelector('.mobileTop .mobileClick');
+    const leftElement = document.querySelector('.pageLocationBar');
+
+    if (mobileClick && leftElement) {
+        mobileClick.addEventListener('click', function() {
+            if (leftElement.style.display === 'none' || leftElement.style.display === '') {
+                leftElement.style.display = 'block';
+            } else {
+                leftElement.style.display = 'none';
+            }
+        });
+    } else {
+        console.warn('mobileClick or leftElement not found.');
+    }
 });
+
 
 
 // KB 2024-10-24 수정 //
@@ -967,24 +983,28 @@ document.addEventListener('DOMContentLoaded', function () {
     const moreMobile = document.querySelector('.moreMobile');
     const boxWrap = document.querySelector('.boxWrap');
 
-    function toggleBox() {
-        // 모바일 사이즈에서만 작동 (768px 이하)
-        if (window.innerWidth <= 768) {
-            boxWrap.classList.toggle('hidden');
-            moreMobile.classList.toggle('active'); 
+    if (moreMobile && boxWrap) { 
+        function toggleBox() {
+            // 모바일 사이즈에서만 작동 (768px 이하)
+            if (window.innerWidth <= 768) {
+                boxWrap.classList.toggle('hidden');
+                moreMobile.classList.toggle('active');
+            }
         }
+
+        moreMobile.addEventListener('click', toggleBox);
+
+        // PC 화면일 경우 boxWrap이 항상 보이도록 설정
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768) {
+                boxWrap.classList.remove('hidden');
+                moreMobile.classList.remove('active');
+            }
+        });
     }
-
-    moreMobile.addEventListener('click', toggleBox);
-
-    // PC 화면일 경우 boxWrap이 항상 보이도록 설정
-    window.addEventListener('resize', function () {
-        if (window.innerWidth > 768) {
-            boxWrap.classList.remove('hidden');
-            moreMobile.classList.remove('active');
-        }
-    });
 });
+    
+
 
 
 // KB 2024-10-24 수정 //
@@ -1067,13 +1087,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalTabs = tabItems.length; 
     const itemsPerPage = 4; 
 
+    const nextClick = document.querySelector('.nextClick');
+    const prevClick = document.querySelector('.prevClick');
+
+    // nextClick과 prevClick이 존재하는지 확인
+    if (!nextClick || !prevClick) {
+        console.warn('nextClick or prevClick element not found.');
+        return; 
+    }
+
     function updateTabDisplay() {
         tabItems.forEach((item, index) => {
             item.style.display = (index >= currentTabIndex && index < currentTabIndex + itemsPerPage) ? 'block' : 'none';
         });
 
-        document.querySelector('.prevClick').style.display = currentTabIndex === 0 ? 'none' : 'block';
-        document.querySelector('.nextClick').style.display = currentTabIndex + itemsPerPage >= totalTabs ? 'none' : 'block';
+        prevClick.style.display = currentTabIndex === 0 ? 'none' : 'block';
+        nextClick.style.display = currentTabIndex + itemsPerPage >= totalTabs ? 'none' : 'block';
     }
 
     function nextTab() {
@@ -1082,6 +1111,7 @@ document.addEventListener('DOMContentLoaded', function () {
             updateTabDisplay(); 
         }
     }
+    
     function prevTab() {
         if (currentTabIndex - itemsPerPage >= 0) {
             currentTabIndex -= itemsPerPage; 
@@ -1089,16 +1119,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    document.querySelector('.nextClick').addEventListener('click', nextTab);
-    document.querySelector('.prevClick').addEventListener('click', prevTab);
+    nextClick.addEventListener('click', nextTab);
+    prevClick.addEventListener('click', prevTab);
 
     updateTabDisplay();
 
     function checkScreenSize() {
         if (window.innerWidth > 806) {
             tabItems.forEach(item => item.style.display = 'block'); 
-            document.querySelector('.prevClick').style.display = 'none'; 
-            document.querySelector('.nextClick').style.display = 'none'; 
+            prevClick.style.display = 'none'; 
+            nextClick.style.display = 'none'; 
         } else if (window.innerWidth <= 806) {
             updateTabDisplay();
         }
@@ -1110,6 +1140,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 화면 크기 변경 시 체크
     window.addEventListener('resize', checkScreenSize);
 });
+
 
 
 
