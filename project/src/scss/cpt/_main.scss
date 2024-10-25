@@ -685,13 +685,16 @@ p.mcSubDesc {
         overflow:hidden;
         .lineCov {
             margin-top:40px; display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between;
-
-
+            @include media ('tablet') {
+                display:block;
+            }
         }
 
         .slideBtn {
             display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:10px;
-
+            @include media ('tablet') {
+                display:none;
+            }
             .swiper-button-prev02 {
                 display:inline-block; width:40px; height:40px; background:url(../../images/main/slide_arr_lt_off.svg) 50% 50% no-repeat;
                 &:hover {

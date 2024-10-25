@@ -1257,8 +1257,9 @@ $(document).ready(function(){
             $(a).eq(5).fadeIn();                
             i = 6;
         }else if(i === 6) {
-            i = 0;
             $(a).hide();
+            $(a).eq(0).show();
+            i = 1;
         }
-    }, 3500);
+    }, 2000);
 })
