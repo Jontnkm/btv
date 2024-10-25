@@ -44,17 +44,21 @@ p.mcSubDesc {
     [data-animate="bottom"] { transform: translate3d(0, 15px, 0); }
 
     .bg01 {
-        position:relative; background: #090D43 url(../../images/main/mainCont01_img01.png) center center no-repeat; height:560px;
+        position:relative; background: #090D43 url(../../images/main/mainCont01_img01.png) center center no-repeat; height:460px;
         @include media ('tablet'){
-            // background: #090D43 url(../../images/main/mainCont01_img01_mo.png) center center no-repeat;
-            background:#090d43; height:auto;
+            background: #090d43 url(../../images/main/mainCont01_img01_mo.png) center right no-repeat; background-size:contain;
+        }
+        @include media ('moDeep') {
+            background: #090d43 url(../../images/main/mainCont01_img01_mo.png) center center no-repeat; background-size:cover;
         }
     }
     .bg02 {
-        position:relative; background: #F1DEFF url(../../images/main/mainCont01_img02.png) center center no-repeat; height:560px;
+        position:relative; background: #F1DEFF url(../../images/main/mainCont01_img02.png) center center no-repeat; height:460px;
         @include media ('tablet'){
-            // background: #f1deff url(../../images/main/mainCont01_img02_mo.png) center center no-repeat;
-            background: #f1deff; height:auto;
+            background: #F1DEFF url(../../images/main/mainCont01_img02_mo.png) center right no-repeat; background-size:contain;
+        }
+        @include media ('moDeep') {
+            background: #F1DEFF url(../../images/main/mainCont01_img02_mo.png) center center no-repeat; background-size:cover;
         }
     }
 
@@ -339,31 +343,42 @@ p.mcSubDesc {
     .mcInner {
         width:100%; max-width:1320px; margin:0 auto; display:flex; flex-flow:row nowrap; align-items: flex-start; justify-content: space-between; gap:150px; position:relative;
         @include media ('wide') {
-            flex-flow:column-reverse; gap:0; width:93.75%; max-width:auto;
+            flex-flow:column-reverse; gap:56px; width:93.75%; max-width:none;
         }
         .object {
             position:absolute; animation:blink-effect 1s infinite;
-            @include media ('mobile') {
-                display:none;
-            }
         }
         .obj01 {
             top:0px; left: 150px; width:64px; height:64px; background:url(../../images/main/mainCont03_icon01.svg) 50% 50% no-repeat;
             @include media ('wide') {
                 top:600px;
             }
+            @include media ('mobile') {
+                left:auto; right:0; top:250px;
+            }
         }
-        .obj02 {bottom:37px; left:100px; width:32px; height:32px; background:url(../../images/main/mainCont03_icon02.svg) 50% 50% no-repeat;}
+        .obj02 {
+            bottom:37px; left:100px; width:32px; height:32px; background:url(../../images/main/mainCont03_icon02.svg) 50% 50% no-repeat;
+            @include media ('mobile') {
+                bottom:0; left:0;
+            }
+        }
         .obj03 {
             bottom:135px; right: 500px; width:32px; height:32px; background:url(../../images/main/mainCont03_icon03.svg) 50% 50% no-repeat;
             @include media ('wide') {
                 bottom:275px; right:200px;
+            }
+            @include media ('mobile') {
+                right:40px;
             }
         }
         .obj04 {
             bottom: 48px; right: 410px; width:52px; height:52px; background:url(../../images/main/mainCont03_icon04.svg) 50% 50% no-repeat;
             @include media ('wide') {
                 bottom:0;
+            }
+            @include media ('mobile') {
+                bottom:200px; right:0;
             }
         }
 
@@ -389,19 +404,27 @@ p.mcSubDesc {
             .chatBox {
                 ul {
                     height:516px; margin-top:35px; display:flex; flex-flow:column; overflow-y:auto;
+                    @include media ('tablet') {
+                        height:auto; min-height:460px;
+                    }
                     &::-webkit-scrollbar {display:none;}
                     > li { 
-                        width:100%; position:relative; display:none;
+                        width:100%; position:relative; display:block;
 
                         .inner {
                             position:relative; 
                             .chatTxt {
                                 display:flex; flex-flow: row nowrap; align-items: flex-end; justify-content: flex-start;
-
+                                @include media ('mobile') {
+                                    display:block; position:relative;
+                                }
                                 > p {
                                     position:relative; width:max-content; padding:30px; border:1px solid var(--txt-gray04); border-radius:16px; background:var(--clr-white); font-size:20px; color:var(--txt-black); font-weight:400; word-break:keep-all; z-index:1; margin-bottom:40px; box-shadow:2px 6px 25px rgba(0, 0, 0, 0.12);
                                     @include media ('tablet') {
                                         padding: 24px; font-size:18px;
+                                    }
+                                    @include media ('mobile') {
+                                        width:90%;
                                     }
                                 }
 
@@ -409,7 +432,12 @@ p.mcSubDesc {
                                     display:inline-block; width:80px; height:80px; border-radius:50%; overflow:hidden; z-index:2; position:relative; right:40px;
                                     @include media ('tablet') {
                                         width:64px; height:64px;
-                                        
+                                        img {
+                                            width:100%;
+                                        }
+                                    }
+                                    @include media ('mobile'){
+                                        position:absolute; bottom:-24px;
                                     }
                                 }
                             }
@@ -423,10 +451,16 @@ p.mcSubDesc {
                                         @include media ('tablet'){
                                             left:0;
                                         }
+                                        @include media ('mobile') {
+                                            
+                                        }
                                     }
                                     p {
                                         @include media ('tablet'){
                                             left:-40px;
+                                        }
+                                        @include media ('mobile') {
+                                            display:block; left:30px; text-align:right;
                                         }
                                     }
                                 }
@@ -440,6 +474,9 @@ p.mcSubDesc {
                                         text-align:right;
                                         @include media ('tablet'){
                                             right:-40px;
+                                        }
+                                        @include media ('mobile') {
+                                            right:0; text-align:left;
                                         }
                                     }
                                     justify-content: flex-end;
@@ -491,6 +528,9 @@ p.mcSubDesc {
 /*메인 컨텐츠 04번 구역*/
 .mainCont04 {
     width:100%; margin:180px auto 0; padding:120px 0; background:var(--txt-gray05);  overflow-x:hidden;
+    @include media ('tablet') {
+        margin:56px auto 0;
+    }
     .mcInner {
         width:100%; max-width:1320px; margin:0 auto;
         @include media ('tablet') {

@@ -1242,7 +1242,7 @@ $(document).ready(function(){
     //         $(a).eq(1).fadeIn();                
     //         i = 2;
     //     }else if(i === 2) {
-    //         $(a).eq(2).fadeIn();                
+    //         $(a).eq(2).fadeIn();                 
     //         i = 3;
     //     }else if(i === 3) {
     //         $(a).eq(0).hide();
