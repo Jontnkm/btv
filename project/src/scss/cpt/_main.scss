@@ -2,7 +2,7 @@
 p.mcTit {
     padding:0 13px; font-size:16px; color:var(--prm-color); font-weight:bold; position:relative; width:max-content;
     @include media ('tablet') {
-        font-size:14px;
+        font-size:16px;
     }
     &::before {
         content:''; position:absolute; top:50%; left:0; width:5px; height:5px; background:var(--prm-color); border-radius:50%;
@@ -409,7 +409,7 @@ p.mcSubDesc {
                     }
                     &::-webkit-scrollbar {display:none;}
                     > li { 
-                        width:100%; position:relative; display:none;
+                        width:100%; position:relative; display:none; height:max-content; transition:all 0.4s;
 
                         .inner {
                             position:relative; 
@@ -686,7 +686,7 @@ p.mcSubDesc {
         .lineCov {
             margin-top:40px; display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between;
             @include media ('tablet') {
-                display:block;
+                display:block; margin-top:24px;
             }
         }
 
@@ -712,7 +712,9 @@ p.mcSubDesc {
 
         .mainSlide02 {
             margin-top:80px; position:relative; 
-
+            @include media ('tablet') {
+                display:none;
+            }
             .swiper-slide {
                 width:824px; border-radius:24px; overflow:hidden;
                 img {width:100%;}
@@ -725,12 +727,29 @@ p.mcSubDesc {
             }
         }
 
+        .mainSlide02_mo {
+            display:none;
+            @include media ('tablet') {
+                display:block; margin-top:26px;
+                .swiper-slide {
+                    width:80%; border-radius:24px; overflow:hidden;
+                    img {width:100%;}
+                }
+            }
+        }
+
         .curtain01 {
             position:absolute; top:-50px; left:0; width:200px; height:540px; background:linear-gradient(to left, transparent 5%, var(--clr-white) 90%); z-index:3;
+            @include media ('tablet'){
+                display:none;
+            }
         }
 
         .curtain02 {
             position:absolute; top:-50px; right:0; width:200px; height:540px; background:linear-gradient(to right, transparent 5%, var(--clr-white) 90%); z-index:3;
+            @include media ('tablet'){
+                display:none;
+            }
         }
     }
 }
@@ -738,23 +757,59 @@ p.mcSubDesc {
 /*메인 컨텐츠 06번 구역*/
 .mainCont06 {
     margin-bottom:120px;  overflow-x:hidden;
+    @include media ('tablet') {
+        margin-bottom:56px;
+    }
     .mcInner {
         width:100%; max-width:1320px; margin:0 auto; display:flex; flex-flow:row nowrap; align-items: flex-start; justify-content: flex-start; gap:90px;
-
+        @include media ('tablet') {
+            width:93.75%; max-width:none; flex-flow:column; gap:0;
+        }
         .left {
             width:840px; overflow:hidden; border-radius:16px; 
             img {
                 width:100%;
             }
+            .affSlide {
+                .swiper-slide {
+                    border-radius:16px; overflow:hidden;
+                }
+            }
+            @include media ('tablet') {
+                width:100%;
+            }
+
+            .moTit {
+                display:none;
+                @include media ('tablet') {
+                    display:block; margin-bottom:24px;
+                }
+            }
         }
 
         .right {
             width:calc(100% - 930px);
+            @include media ('tablet') {
+                width:100%;
+            }
+
+            .pcTit {
+                @include media ('tablet') {
+                    display:none;
+                }
+            }
+
             p.mcSubTit {
                 font-size:32px; margin:48px 0 24px;
+                @include media ('tablet') {
+                    font-size:18px; margin:16px 0 8px;
+                }
             }
             p.desc {
                 font-size:18px; color:var(--txt-gray02); font-weight:400; margin-bottom:48px;
+                @include media ('tablet') {
+                    font-size:14px; margin-bottom:16px;
+                }
             }
             .slideBtn {
                 display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:10px;
@@ -780,6 +835,16 @@ p.mcSubDesc {
 /*메인 컨텐츠 07번 구역*/
 .mainCont07 {
     margin-bottom:120px;  overflow-x:hidden;
+    @include media ('tablet'){
+        margin-bottom:0;
+    }
+    .temp {
+        width:1320px; margin:0 auto; height:280px; background:var(--sub-color03);
+
+        @include media ('tablet'){
+            width:100%; height:180px; margin-bottom:0;
+        }
+    }
 }
 
 /*메인 컨텐츠 08번 구역*/
@@ -791,25 +856,59 @@ p.mcSubDesc {
             position:absolute; background-size:100% 100%;
             &.obj01 {
                 width:337px; height:308px; right:55px; top:-88px; background:url(../../images/main/obj1.png)0 0 no-repeat;
+                @include media ('mobile'){
+                    right:-90px;
+                }
             }
             &.obj02 {
                width:57px; height:58px; top:55px; left:61px; background:url(../../images/main/obj2.png)0 0 no-repeat;
+               @include media ('mobile'){
+                   right:-90px;
+               }
             }
             &.obj03 {
                 width:70px; height:70px; top:244px; left:443px; background:url(../../images/main/obj3.png)0 0 no-repeat;
+                @include media ('mobile'){
+                    right:-90px;
+                }
             }
             &.obj04 {
                 width:104px; height:96px; bottom:51px; left:145px; background:url(../../images/main/obj4.png)0 0 no-repeat; z-index:2;
+                @include media ('mobile'){
+                    left: 8px;
+                }
             }
             &.obj05 {
                 width:374px; height:385px; bottom:-286px; left:96px; background:url(../../images/main/obj5.png)0 0 no-repeat; z-index:1;
+                @include media ('mobile'){
+                    left: 176px;
+                }
             }
             &.obj06 {
                 width:89px; height:91px; bottom:39px; right:300px; background:url(../../images/main/obj6.png)0 0 no-repeat;
+                @include media ('mobile'){
+                    left: 8px;
+                    bottom:0;
+                }
             }
         }
 
-        .bannerTit {margin-top:112px; margin-bottom:40px; position:relative; z-index:3; font-size:40px; color:var(--txt-black); font-weight:400; text-align:center; }
+        .bannerTit {
+            margin-top:112px; position:relative; z-index:3; font-size:40px; color:var(--txt-black); font-weight:400; text-align:center; 
+            
+            @include media ('tablet'){
+                font-size:30px; word-break:keep-all;
+            }
+
+            & + p {
+                margin-top:0; margin-bottom:40px;
+
+                @include media ('tablet'){
+                    margin-top:16px;
+                }
+            }
+            
+        }
         .cptBtnForm {
             width:240px; margin:0 auto; position:relative; z-index:3;
         }

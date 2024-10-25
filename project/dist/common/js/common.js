@@ -71,11 +71,17 @@ document.addEventListener("DOMContentLoaded", function () {
         navigation: {
             nextEl: ".swiper-button-next02",
             prevEl: ".swiper-button-prev02"
-        },
+        }
+    });
+
+    /*mobile type*/
+    var swiper02Mo = new Swiper(".mainSlide02_mo", {
+        slidesPerView: 1,
+        spaceBetween: 20,
     });
 
     //===================================================================================//
-    //==================================광고슬라이더========================================//
+    //==================================제휴사이트========================================//
     //===================================================================================//
     
     var affSlide = new Swiper(".affSlide", {
