@@ -44,7 +44,7 @@ p.mcSubDesc {
     [data-animate="bottom"] { transform: translate3d(0, 15px, 0); }
 
     .bg01 {
-        position:relative; background: #090D43 url(../../images/main/mainCont01_img01.png) center center no-repeat; height:460px;
+        position:relative; background: #090D43 url(../../images/main/mainCont01_img01.png) center center no-repeat; height:540px;
         @include media ('tablet'){
             background: #090d43 url(../../images/main/mainCont01_img01_mo.png) center right no-repeat; background-size:contain;
         }
@@ -53,7 +53,7 @@ p.mcSubDesc {
         }
     }
     .bg02 {
-        position:relative; background: #F1DEFF url(../../images/main/mainCont01_img02.png) center center no-repeat; height:460px;
+        position:relative; background: #F1DEFF url(../../images/main/mainCont01_img02.png) center center no-repeat; height:540px;
         @include media ('tablet'){
             background: #F1DEFF url(../../images/main/mainCont01_img02_mo.png) center right no-repeat; background-size:contain;
         }
