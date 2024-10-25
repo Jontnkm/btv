@@ -678,7 +678,9 @@ p.mcSubDesc {
 /*메인 컨텐츠 05번 구역*/
 .mainCont05 {
     width:100%; max-width:1320px; margin:180px auto 150px; position:relative;  overflow-x:hidden;
-
+    @include media ('tablet') {
+        width:93.75%; max-width:none; margin:56px auto;
+    }
     > .mcInner {
         overflow:hidden;
         .lineCov {
