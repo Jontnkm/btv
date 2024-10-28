@@ -1671,6 +1671,9 @@
     .cptBtnForm{
         .btn{
             margin-bottom: 10px !important;
+            a{
+                display: inline-block; width: 100%;
+            }
         }
     }
 }
