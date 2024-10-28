@@ -2745,8 +2745,9 @@
 
         }
 
+        /* kb 2024.10.28 수정 */
         .miniThumb {
-            position:relative; width:100%; display:flex; flex-flow:row wrap; align-items: center; justify-content: flex-start; gap:10px 10px;
+            position:relative; width:100%; display:flex; flex-flow:row wrap; align-items: center; justify-content: flex-start; gap: 4px 10px;
 
             > a {
                 display:block; width:97px; height:97px; overflow:hidden; border-radius:16px;
