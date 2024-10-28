@@ -982,7 +982,7 @@ function aptSearch() {
 }
 
 
-// KB 2024-10-24 수정 //
+// KB 2024-10-28 수정 //
 //============================================================================================================//
 //================================= mypage - index.html 모바일 '나의정보' 클릭 =================================//
 //============================================================================================================//
@@ -998,12 +998,15 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 leftElement.style.display = 'none';
             }
+
+            mypageMTxt.classList.toggle('active');
         });
     }
 });
 
 
-// KB 2024-10-24 수정 //
+
+// KB 2024-10-28 수정 //
 //============================================================================================================//
 //=================================== myAd - noList.html 모바일 '제작중' 클릭 ==================================//
 //============================================================================================================//
@@ -1013,15 +1016,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (mobileClick && leftElement) {
         mobileClick.addEventListener('click', function() {
-            if (leftElement.style.display === 'none' || leftElement.style.display === '') {
-                leftElement.style.display = 'block';
-            } else {
-                leftElement.style.display = 'none';
-            }
+
+            leftElement.style.display = leftElement.style.display === 'none' || leftElement.style.display === '' ? 'block' : 'none';
+
+            mobileClick.classList.toggle('active');
         });
-    } else {
-        console.warn('mobileClick or leftElement not found.');
-    }
+    } else {}
 });
 
 

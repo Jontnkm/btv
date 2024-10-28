@@ -612,8 +612,16 @@
         @include media('wide'){
             display: flex; align-items: center;
         }
+        /* kb 2024.10.28 */
         .mobileClick{
             display: none; cursor: pointer; line-height: 2;
+            &.active{
+                @include media('tablet'){
+                    .arrow{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
             @include media('wide'){
                 display: block; font-size: 18px; font-weight: 400; letter-spacing: -0.45px; color: var(--prm-color); margin-left: 30px; position: relative;
                 .img{
