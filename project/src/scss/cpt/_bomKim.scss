@@ -1660,3 +1660,17 @@
     }
 }
 
+/* 시나리오 예시 */
+.exScenario{
+    .box{
+        margin: 50px 0;
+    }
+    p{
+        text-align: center; font-size: 30px; color: gray; 
+    }
+    .cptBtnForm{
+        .btn{
+            margin-bottom: 10px !important;
+        }
+    }
+}

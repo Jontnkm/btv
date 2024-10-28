@@ -2,7 +2,7 @@
 /*====================================로그인페이지====================================*/
 /*===================================================================================*/
 .memberPageArea {
-    width:100%; max-width: 480px; margin:0 auto; position:relative; padding-top:10px;
+    width:100%; max-width: 480px; margin:0 auto; position:relative; padding-top:10px; 
     @include media ('mobile') {
         margin:4rem auto 0; 
     }
@@ -287,6 +287,7 @@
             }
 
             /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+            /* kb 2024.10.28 */
             .adDuration {
                 span {
                     display:block; font-size:16px; color:var(--txt-gray01); font-weight:400; line-height:22px; letter-spacing:-0.4px; margin-bottom:16px;
@@ -297,7 +298,7 @@
                     > div {
                         position:relative; width:calc(50% - 10px);
                         > label {
-                            border-radius: 30px; width:100%; font-size:18px; font-weight:500; text-align:center; line-height:48px; height:48px; background: var(--txt-gray05);
+                            border-radius: 30px; width:100%; font-size:18px; font-weight:500; text-align:center; line-height:48px; height:48px; background: var(--txt-gray05); cursor: pointer;
                             @include media ('tablet'){
                                 font-size: 16px; line-height: 44px;
                             }
@@ -307,7 +308,7 @@
 
                             &:checked {
                                 & + label {
-                                    color: var(--clr-white); background: var(--txt-black);
+                                    color: var(--clr-white); background: var(--txt-black); 
                                 }
                             }
                         }
