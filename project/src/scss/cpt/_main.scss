@@ -255,12 +255,13 @@ p.mcSubDesc {
                 }
 
                 &.item01 {
-                    background:var(--sub-color04);
+                    background:var(--sub-color04); 
                     > p:nth-of-type(3) {
                         &::before {background:url(../../images/main/mainCont02_bg01.png)50% 50% no-repeat;}
                     }
+                    /* kb 2024-10-29 */
                     > p:nth-of-type(4) {
-                        color:var(--sub-color04);
+                        // color:var(--sub-color04);
                     }
                 }
                 &.item02 {
@@ -568,6 +569,10 @@ p.mcSubDesc {
                 &.item01 {
                     .ico {
                         &::after {background:url(../../images/main/mainCont03_img01.svg)50% 50% no-repeat;}
+                    }
+                    /* kb 2024-10-29 */
+                    &::before{
+                        content: ''; display: block; background:url(../../images/main/ico_badge.svg) 50% 50% no-repeat; background-size: contain; width: 42px; height: 42px; position: absolute; left: 20px; top: 20px; z-index: 11;
                     }
                 }
 
