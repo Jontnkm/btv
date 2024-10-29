@@ -1199,14 +1199,55 @@ document.addEventListener('DOMContentLoaded', function () {
 //============================================================================================================//
 //======================================== 광고만들기 - passInfo 클릭  =========================================//
 //============================================================================================================//
-window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.modeList li').forEach(item => {
-        item.addEventListener('click', function() {
-            document.querySelectorAll('.modeList li').forEach(li => li.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-});
+// window.addEventListener('DOMContentLoaded', () => {
+//     document.querySelectorAll('.modeList li').forEach(item => {
+//         item.addEventListener('click', function() {
+//             document.querySelectorAll('.modeList li').forEach(li => li.classList.remove('active'));
+//             this.classList.add('active');
+//         });
+//     });
+// });
+
+
+
+// KB 2024-10-29 수정 //
+//============================================================================================================//
+//====================================== 광고만들기 - passInfo 툴팁 클릭 =======================================//
+//============================================================================================================//
+// document.querySelectorAll('.recommend').forEach((recommendBtn) => {
+//     recommendBtn.addEventListener('click', (event) => {
+//         // 클릭된 항목의 부모 리스트 아이템에서 툴팁 찾기
+//         const tooltip = recommendBtn.closest('li').querySelector('.modeTooltip');
+
+//         // 클릭된 항목의 툴팁 열기/닫기
+//         if (tooltip) {
+//             // 툴팁이 현재 보이지 않는 경우만 보여주기
+//             if (!tooltip.classList.contains('active')) {
+//                 // 다른 모든 툴팁 닫기
+//                 document.querySelectorAll('.modeTooltip.active').forEach((t) => {
+//                     t.classList.remove('active');
+//                 });
+//                 tooltip.classList.add('active'); // 현재 툴팁 열기
+//             } else {
+//                 tooltip.classList.remove('active'); // 이미 열려있는 경우 닫기
+//             }
+//         }
+
+//         event.stopPropagation(); // 부모 요소로의 이벤트 전파 방지
+//     });
+// });
+
+// // .imgClose 클릭 시 툴팁 닫기
+// document.querySelectorAll('.modeTooltip .imgClose').forEach((closeBtn) => {
+//     closeBtn.addEventListener('click', (event) => {
+//         const tooltip = closeBtn.closest('.modeTooltip');
+//         if (tooltip) {
+//             tooltip.classList.remove('active'); // 툴팁 닫기
+//         }
+//         event.stopPropagation(); // 부모 요소로의 이벤트 전파 방지
+//     });
+// });
+
 
 
 
@@ -1269,3 +1310,6 @@ $(document).ready(function(){
         }
     }, 2000);
 })
+
+
+
