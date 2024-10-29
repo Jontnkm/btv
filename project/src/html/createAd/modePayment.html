@@ -33,7 +33,18 @@
             <div class="payInfoBox modePayment">
                 <button type="button" class="moPaymentBtn" onclick="popOpen('payDetail')">결제 상세보기<span class="hidden">결제정보확인</span></button>
                 <div class="payLeftBox">
-                    <p class="payTitle">기본정보</p>
+
+                    <!-- kb 2024.10.29 수정 -->
+                    <div class="payTop">
+                        <p class="payTitle">결제정보</p>
+                        <p class="payDate">2024.08.30</p>
+                    </div>
+
+                       <!-- kb 2024.10.29 수정 -->
+                    <div class="payTopTitle">
+                        <span>강경불고기 영종도점</span>의<br>
+                        광고는 아래와 같이 송출됩니다.
+                    </div>
 
                     <div class="thmbInfo">
 
@@ -75,6 +86,11 @@
                                 <p class="result">2만회</p>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="cptBtnForm d-flex gap10 excpBtn"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
+                        <!--default-->
+                        <button type="button" class="btn scnd">이전</button>
                     </div>
 
                 </div>

@@ -180,7 +180,7 @@ p.mcSubDesc {
         > .swiper-pagination-bullet-active {
             width:48px; height:6px; border-radius:6px; background:#999; position:relative; overflow:hidden;
             &::after {
-                content:''; position:absolute; top:0; left:0; width:0; height:6px; background:var(--clr-white); animation: swSlide 5s linear; z-index:9;
+                content:''; position:absolute; top:0; left:0; height:6px; background:var(--clr-white); animation: swSlide 5s linear;  z-index:9;
             }
         }
 
@@ -189,7 +189,7 @@ p.mcSubDesc {
                 width:0;
             }
             100% {
-                width:48px;
+                width:100%;
             }
         }
     }
@@ -409,7 +409,7 @@ p.mcSubDesc {
                     }
                     &::-webkit-scrollbar {display:none;}
                     > li { 
-                        width:100%; position:relative; display:none; height:max-content; transition:all 0.4s;
+                        width:100%; position:relative; height:max-content; transition:all 0.4s; opacity:0;
 
                         .inner {
                             position:relative; 
