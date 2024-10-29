@@ -541,7 +541,7 @@
                         .modeTooltip{
                             display: none; position: absolute; left: 50%; top: -70px; background: var(--prm-color); color: var(--clr-white); font-size: 14px; font-weight: 400; letter-spacing: -0.35px; padding: 6px 10px; border-radius: 8px; text-align: center; width: 300px; transform: translateX(-50%);
                             &::after{
-                                content: ''; display: block;  width: 0; height: 0; border-bottom: 10px solid transparent; border-top: 10px solid transparent; border-left: 10px solid var(--prm-color); border-right: 10px solid transparent; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%) rotate(90deg); z-index: 11;
+                                content: ''; display: block; width: 0; height: 0; border-bottom: 10px solid transparent; border-top: 10px solid transparent; border-left: 10px solid var(--prm-color); border-right: 10px solid transparent; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%) rotate(90deg); z-index: 11;
                             }
                             &.active{
                                 display: block;
@@ -550,7 +550,7 @@
                                 position: absolute; right: 5px; top: 5px; cursor: pointer;
                             }
                             @include media('tablet'){
-                                text-align: left;
+                                text-align: left; font-size: 12px; width: 235px; top: -60px;
                             }
                         }
                     }
