@@ -1177,6 +1177,34 @@
                 }
             }
         }
+        .adDuration {
+            span {
+                display:block; font-size:16px; color:var(--txt-gray01); font-weight:400; line-height:22px; letter-spacing:-0.4px; margin-bottom:16px;
+            }
+            .inner {
+                display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:10px;
+
+                > div {
+                    position:relative; width:calc(50% - 10px);
+                    > label {
+                        border-radius: 30px; width:100%; font-size:18px; font-weight:500; text-align:center; line-height:48px; height:48px; background: var(--txt-gray05); cursor: pointer;
+                        @include media ('tablet'){
+                            font-size: 16px; line-height: 44px;
+                        }
+                    }
+                    > input {
+                        position:absolute; top:0; left:0; width:1px; height:1px;
+
+                        &:checked {
+                            & + label {
+                                color: var(--clr-white); background: var(--txt-black); 
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
     }
 }
 

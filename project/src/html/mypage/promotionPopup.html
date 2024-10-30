@@ -633,7 +633,7 @@
                         <ul class="ppAddImg">
                             <li>
                                 <ul class="addClick">
-                                    <li class="addImg"><img src="../images/common/ico_imgAdd.svg" alt="이미지 추가 아이콘"></li>
+                                    <li class="addImg"><img src="../../images/common/ico_imgAdd.svg" alt="이미지 추가 아이콘" /></li>
                                     <li class="addTxt">이미지 추가</li>
                                 </ul>
                             </li>
@@ -688,11 +688,22 @@
                         <ul/>
                     </div>
 
-                    <div class="cptBtnForm d-flex gap10"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
-                        <!--default-->
-                        <button type="button" class="btn scnd">노출</button>
-                        <!--disabled-->
-                        <button type="button" class="btn scnd">미노출</button>
+                    <!-- <div class="cptBtnForm d-flex gap10 showBtn">
+                        <button type="button" class="popBtn firBtn">노출</button>
+                        <button type="button" class="popBtn secBtn">미노출</button>
+                    </div> -->
+
+                    <div class="frmIpt adDuration">
+                        <div class="inner">
+                            <div>
+                                <input type="radio" name="durateChk" checked id="second01">
+                                <label for="second01">15초</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="durateChk" id="second02">
+                                <label for="second02">30초</label>
+                            </div>
+                        </div>
                     </div>
 
                 </div>              
