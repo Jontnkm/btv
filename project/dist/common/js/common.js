@@ -862,9 +862,13 @@ document.addEventListener("DOMContentLoaded", function() {
         var scrollThreshold = documentHeight - windowHeight - footerHeight;
   
         if (scrollTop >= scrollThreshold) {
-          btn.classList.add('stp');
+            if(btn) {
+                btn.classList.add('stp');
+            }
         } else {
-          btn.classList.remove('stp');
+            if(btn) {
+                btn.classList.remove('stp');
+            }
         }
       });
     } else {
@@ -878,72 +882,92 @@ document.addEventListener("DOMContentLoaded", function() {
     const detBtn = document.querySelector('.detailSearchBtn'); 
     const moFil = document.querySelector('.schRecom');
     const moFilCls = document.querySelector('.schRecom .moFilterHeader .closeBtn');
-
-    detBtn.addEventListener('click', function(){
-        moFil.classList.add('open');
-    })
+    if(detBtn){
+        detBtn.addEventListener('click', function(){
+            moFil.classList.add('open');
+        })
+    }
     
-    moFilCls.addEventListener('click', function(){
-        moFil.classList.remove('open');
-    })
+    if(moFilCls){
+        moFilCls.addEventListener('click', function(){
+            moFil.classList.remove('open');
+        })
+    }
 
     //모바일환경 검색결과 열기
     const resultBtn = document.querySelector('.resultSearchBtn');
     const moRes = document.querySelector('.resultGrp');
     const moResCls = document.querySelector('.resultGrp .moFilterHeader .closeBtn');
     
-    resultBtn.addEventListener('click', function(){
-        moRes.classList.add('open');
-    })
+    if(resultBtn){
+        resultBtn.addEventListener('click', function(){
+            moRes.classList.add('open');
+        })
+    }
     
-    moResCls.addEventListener('click', function(){
-        moRes.classList.remove('open');
-    })
+    if(moResCls){
+        moResCls.addEventListener('click', function(){
+            moRes.classList.remove('open');
+        })
+    }
 
     //모바일환경 차트 보기
     const label = document.querySelector('.recomList ul li');
     const chart = document.querySelector('.chartPop');
     const dim = document.querySelector(".chartBoxDim");
     const chartCls = document.querySelector('.chartPop .chartCls');
-    label.addEventListener('click', () => {
-        chart.style.display = "block";
-        dim.style.display = "block";
-    })
 
-    chartCls.addEventListener('click', () => {
-        chart.style.display = "none";
-        dim.style.display = "none";
-    })
+    if(label){
+        label.addEventListener('click', () => {
+            chart.style.display = "block";
+            dim.style.display = "block";
+        })
+    }
+
+    if(chartCls) {
+        chartCls.addEventListener('click', () => {
+            chart.style.display = "none";
+            dim.style.display = "none";
+        })
+    }
 
     //모바일 검색결과 보기 
     const rstBtn = document.querySelector('.moSchResult > a');
     const moRstPop = document.querySelector('.moSchLocation');
     const moRstPopCls = document.querySelector('.moSchLocation .closeBtn');
-    rstBtn.addEventListener('click', function(){
-        moRstPop.classList.add('on');
-    })
+    if(rstBtn) {
+        rstBtn.addEventListener('click', function(){
+            moRstPop.classList.add('on');
+        })
+    }
 
-    moRstPopCls.addEventListener('click', () => {
-        moRstPop.classList.remove('on');
-    })
+    if(moRstPopCls){
+        moRstPopCls.addEventListener('click', () => {
+            moRstPop.classList.remove('on');
+        })
+    }
 
     var scr = window.scrollY;
-    console.log(scr);
+    // console.log(scr);
 
     //상권분석 팝업 오픈 스크립트
     const recom = document.querySelector('.mapSch .cptBtnForm .txt');
     const analize = document.querySelector('.analizePop');
     const analizeDim = document.querySelector('.analizeDim');
     const analizeCls = document.querySelector('.analizePop a.chartCls');
-    recom.addEventListener('click', () => {
-        analize.style.display = "block";
-        analizeDim.style.display = "block";
-    })
+    if(recom){
+        recom.addEventListener('click', () => {
+            analize.style.display = "block";
+            analizeDim.style.display = "block";
+        })
+    }
 
-    analizeCls.addEventListener('click', () => {
-        analize.style.display = "none";
-        analizeDim.style.display = "none";
-    })
+    if(analizeCls){
+        analizeCls.addEventListener('click', () => {
+            analize.style.display = "none";
+            analizeDim.style.display = "none";
+        })
+    }
 });
 
 //============================================================================================================//
@@ -1269,9 +1293,13 @@ window.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY; 
 
     if (scrollPosition > 50) {  
-        header.classList.add('scrolled');
+        if(header){
+            header.classList.add('scrolled');
+        }
     } else {
-        header.classList.remove('scrolled');
+        if(header){
+            header.classList.remove('scrolled');
+        }
     }
 });
 
