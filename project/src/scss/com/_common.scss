@@ -1405,3 +1405,65 @@
         font-size: 22px;
     }
 }
+
+/*2024.10.30 모바일 하단 바 추가*/
+.moBarCov {display:none;}
+@include media("mobile"){
+    .moBarCov {
+        display:block; position:fixed; bottom:0; width:100%; height:64px; z-index:9999;
+    
+        .inner {
+            position:relative; width:100%; height:64px; background:#fff;
+    
+            > img {
+                position:absolute; top:-15px; left:50%; transform:translateX(-50%); width:1000px;
+            }
+    
+            > a.barMenu {
+                display:block; width:47px; height:47px; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); border-radius:50%; background:var(--prm-color); color:var(--clr-white); padding-top: 8px ; text-align:center; margin-top:-30px;
+    
+                > span {
+                    font-size:12px; font-weight:bold; line-height:1;
+                }
+            }
+            > ul {
+                display:flex; flex-flow: row nowrap; align-items: flex-end; justify-content: center; width:100%; height:56px;
+                > li {
+                    width:20%; position:relative;
+    
+                    > a {
+                        display:block; width:100%; height:100%;
+    
+                        > .ico {
+                            display:block; width:24px; height:24px; margin:0 auto;
+    
+                            &.home {background:url(../../images/common/mobar_home.svg)50% 50% no-repeat;}
+                            &.adcreate {background:url(../../images/common/mobar_adcreate.svg)50% 50% no-repeat;}
+                            &.exp {background:url(../../images/common/mobar_experience.svg)50% 50% no-repeat;}
+                            &.mypage {background:url(../../images/common/mobar_mypage.svg)50% 50% no-repeat;}
+                        }
+    
+                        > span.txt {
+                            font-size:12px; display:block; text-align:center; line-height:20px; margin-top:4px;
+                        }
+                    }
+    
+                    &.active {
+                        > a {  
+                            > .ico {
+                                &.home {background:url(../../images/common/mobar_home_on.svg)50% 50% no-repeat;}
+                                &.adcreate {background:url(../../images/common/mobar_adcreate_on.svg)50% 50% no-repeat;}
+                                &.exp {background:url(../../images/common/mobar_experience_on.svg)50% 50% no-repeat;}
+                                &.mypage {background:url(../../images/common/mobar_mypage_on.svg)50% 50% no-repeat;}
+                            }
+        
+                            > span.txt {
+                                color:var(--prm-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
