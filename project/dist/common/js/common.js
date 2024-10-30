@@ -1284,32 +1284,36 @@ $(document).ready(function(){
     var i = 0;
     setInterval(function(){
         if(i === 0) {
-            $(a).eq(0).fadeIn();                
+            $(a).eq(0).css("opacity","1");
             i = 1;
         }else if(i === 1) {
-            $(a).eq(1).fadeIn();                
+            $(a).eq(1).css("opacity","1");
             i = 2;
         }else if(i === 2) {
-            $(a).eq(2).fadeIn();                 
+            $(a).eq(2).css("opacity","1") ;
             i = 3;
         }else if(i === 3) {
             $(a).eq(0).hide();
-            $(a).eq(3).fadeIn();                
+            $(a).eq(0).css("opacity","0");
+            $(a).eq(3).css("opacity","1");
             i = 4;
         }else if(i === 4) {
             $(a).eq(1).hide();
-            $(a).eq(4).fadeIn();                
+            $(a).eq(1).css("opacity","0");
+            $(a).eq(4).css("opacity","1");
             i = 5;
         }else if(i === 5){
             $(a).eq(2).hide();
-            $(a).eq(5).fadeIn();                
+            $(a).eq(2).css("opacity","0");
+            $(a).eq(5).css("opacity","1");
             i = 6;
         }else if(i === 6) {
-            $(a).hide();
-            $(a).eq(0).show();
+            $(a).show();
+            $(a).css("opacity","0");
+            $(a).eq(0).css("opacity","1");
             i = 1;
         }
-    }, 2000);
+    }, 3000);
 })
 
 
