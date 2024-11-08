@@ -1,4 +1,14 @@
 /* ---------------------------------------- 기본 레이아웃 ---------------------------------------- */
+
+html, body {
+    width:100%;
+    .wrap {
+        padding-bottom:0;
+    }
+    @include media ('mobile'){
+        .wrap {padding-bottom:23vw;}
+    }
+}
 .lytLayout{
     width:100%;
 
