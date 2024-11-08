@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         },
     });
+    
     //===================================================================================//
     //==================================인터뷰 슬라이드========================================//
     //===================================================================================//
@@ -735,22 +736,25 @@ function showTab4(index) {
     }
 }
 
+/* kb 2024-11-04 수정 */
 //================================= 탭 메뉴 타입 5 (지도 상단 필터 탭)=======================================//
-function showTab5(index) {
-    var modTabBtn5 = document.querySelectorAll('.filterTab li');
-    var modTabCont5 = document.querySelectorAll('.filterCont .tabContBox');
-    var filter = document.querySelector(".schRecom");
-    var filterSch = document.querySelector(".schLoc");
-    var filterApt = document.querySelector(".schApt");
+function showTab7(index) {
+    var tabButtons = document.querySelectorAll('.filterTab .filterBtn');
+    var tabContents = document.querySelectorAll('.filterCont .tabContBox');
 
-    for (var i = 0; i < modTabBtn5.length; i++) {
-        modTabBtn5[i].classList.remove('active');
-        modTabCont5[i].classList.remove('active');
+    // index가 tabButtons와 tabContents 범위 내에 있는지 확인
+    if (index < 0 || index >= tabButtons.length || index >= tabContents.length) {
+        console.error("Index out of bounds:", index);
+        return;
     }
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    tabContents.forEach(content => content.classList.remove('active'));
 
-    modTabBtn5[index].classList.add('active');
-    modTabCont5[index].classList.add('active');    
+    tabButtons[index].classList.add('active');
+    tabContents[index].classList.add('active');
 }
+
+
 
 //================================= 탭 메뉴 타입 6 (지도 상단 지역선택 탭)=======================================//
 function showTab6(index) {
@@ -1122,17 +1126,17 @@ window.addEventListener('DOMContentLoaded', () => {
 //============================================================================================================//
 //===================================== 튜토리얼 탭메뉴 (윈도우 새창) ==========================================//
 //============================================================================================================//
-function showTab4(index) {
-    var modTabBtn4 = document.querySelectorAll('.tutorialTabWrap1 .ttTabMenu1 .tabName');
-    var modTabCont4 = document.querySelectorAll('.tutorialTabWrap1 .ttContainer > .tabCont');
+function showTab8(index) {
+    var modTabBtn8 = document.querySelectorAll('.tutorialTabWrap1 .ttTabMenu1 .tabName');
+    var modTabCont8 = document.querySelectorAll('.tutorialTabWrap1 .ttContainer > .tabCont');
 
-    for (var i = 0; i < modTabBtn4.length; i++) {
-        modTabBtn4[i].classList.remove('active');
-        modTabCont4[i].classList.remove('active');
+    for (var i = 0; i < modTabBtn8.length; i++) {
+        modTabBtn8[i].classList.remove('active');
+        modTabCont8[i].classList.remove('active');
     }
 
-    modTabBtn4[index].classList.add('active');
-    modTabCont4[index].classList.add('active');
+    modTabBtn8[index].classList.add('active');
+    modTabCont8[index].classList.add('active');
 
     showTab5(0); 
 }
@@ -1149,6 +1153,7 @@ function showTab5(index) {
     modTabBtn5[index].classList.add('active');
     modTabCont5[index].classList.add('active');
 }
+
 
 
 
@@ -1276,12 +1281,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// KB 2024-10-24 수정 //
+// KB 2024-11.04 수정 //
 //============================================================================================================//
-//========================================== 튜토리얼 - 윈도우 새창  ===========================================//
+//=============================== 튜토리얼 - 윈도우 새창(영상 제작 튜토리얼)  ===================================//
 //============================================================================================================//
 function openTutorial(){
-    window.open("tutorialStep.html", "_blank", "width=806, height=3000, scrollbars=yes, resizable=no, left=20, top=20");
+    window.open("tutorialStep.html", "_blank", "width=700, height=3000, scrollbars=yes, resizable=no, left=0, top=0");
+}
+// 경로 다른 버전
+function openTutorial2(){
+    window.open("../createAd/tutorialStep.html", "_blank", "width=700, height=3000, scrollbars=yes, resizable=no, left=0, top=0");
 }
 
 
