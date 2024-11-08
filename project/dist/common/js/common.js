@@ -1354,4 +1354,29 @@ $(document).ready(function(){
 })
 
 
+/* kb 2024-11-08 추가 */
+//============================================================================================================//
+//======================================= createAd - rendering 슬라이드 =======================================//
+//============================================================================================================//
 
+document.addEventListener("DOMContentLoaded", function () {
+    
+    var tipSlide = new Swiper(".renderingSlide", {
+        autoplay: {
+            slidePerView:1,
+            centeredSlides: true,
+            disableOnInteraction: false
+        },
+        loop: true,
+        allowTouchMove: true,
+        navigation: {
+            nextEl: ".swiper-button-next06",
+            prevEl: ".swiper-button-prev06"
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+    });
+
+});

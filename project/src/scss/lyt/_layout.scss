@@ -111,7 +111,9 @@ html, body {
     // 타이틀 있는 팝업
     &.type01 {
         .popupBox {
-            max-height: 95%; border-radius: 24px; padding:24px 24px 30px 24px;
+            // max-height: 95%; 원래 95%지만 하단의 모바일 바로 인해 75%로 조정 / kb 2024-11-08 수정
+            max-height: 75%; 
+            border-radius: 24px; padding:24px 24px 30px 24px;
             &::before {border-radius: 24px;} 
                     
             .popTitArea {
@@ -128,7 +130,10 @@ html, body {
             .popBtnArea {
                 width: 100%; padding-top: 30px; display: flex; justify-content: center; align-items: center; column-gap: 10px;
                 .popBtn {
-                    display:inline-block; min-width: 160px; height:56px; line-height:56px; padding: 0 40px; border-radius: 8px; font-size: 18px; text-align: center;
+                    display:inline-block;
+                    /* kb 2024-11-08 수정 */
+                    width: 160px; 
+                    height:56px; line-height:56px; padding: 0 40px; border-radius: 8px; font-size: 18px; text-align: center;
                     &.blue { background:var(--prm-color); color:var(--clr-white);}
                     &.white { background:var(--clr-white); color:var(--txt-black); border:1px solid var(--txt-gray02);}
                 }
@@ -161,7 +166,10 @@ html, body {
             .popBtnArea {
                 width: 100%; padding-top: 30px; display: flex; justify-content: center; align-items: center; column-gap: 10px;
                 .popBtn {
-                    display:inline-block; min-width: 160px; height:56px; line-height:56px; padding: 0 40px; border-radius: 8px; font-size: 18px; text-align: center;
+                    display:inline-block;
+                    /* kb 2024-11-08 수정 */
+                    width: 160px; 
+                    height:56px; line-height:56px; padding: 0 40px; border-radius: 8px; font-size: 18px; text-align: center;
                     &.blue { background:var(--prm-color); color:var(--clr-white);}
                     &.white { background:var(--clr-white); color:var(--txt-black); border:1px solid var(--txt-gray02);}
                 }

@@ -19,202 +19,8 @@
 
         <!-- 중단영역 -->
         <div class="layoutContainer" id="container">
+
             <!-- 메인 콘텐츠 영역 -->
-             <!--// KB 2024.10.24 수정 -->
-            <div class="comSubTitle mobileTop">
-                <h3>나의 광고 <p class="mobileClick"><span class="img"></span>제작 중 <span class="count">00</span> <span class="arrow"><img src="../../images/common/ico_infoDown.svg" alt=""></span></p></h3>
-            </div>
-            <!-- KB 2024.10.24 수정 -->
-
-            <!-- KB 2024.10.24 수정 -->
-            <!--스탭 영역-->
-            <%- include('../ejs/stepBar.ejs', {
-                depth2: 6,
-                url: "../../"
-            }) %>
-            <!--//스탭 영역-->
-            <!--// KB 2024.10.24 수정 -->
-
-            <!-- KB 2024.10.24 수정 -->
-            <div class="cptSubTop">
-                <div class="subTopTxt">
-                    <p class="subTitle">현재 송출 중인 광고들 입니다.</p>
-                </div>
-                <div class="cptBtnForm d-flex gap10">
-                    <!-- kb 2024-11-04 수정 -->
-                    <button type="button" class="btn scnd" onclick="openTutorial2()"><span></span>영상 제작 튜토리얼</button>
-                    <!--// kb 2024-11-04 수정 -->
-                </div>
-            </div>
-            <!--// KB 2024.10.24 수정 -->
-
-            <div class="cptAdList">
-                <div class="sortingArea">
-                    <div class="sortInner">
-                        <ul>
-                            <li class="active"><button type="button" class="btnSort creDt">생성일 순</button></li>
-                            <li><button type="button" class="btnSort insDt">수정일 순</button></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="innerBox">
-                    <ul>
-                        <li>
-                            <div class="cardCover">
-                                <div class="thumbArea">
-                                    <img src="../../images/temp/tmp_thumbnail.png" alt="" />
-                                </div>
-                                <div class="infoBox">
-                                    <div class="topArea">
-                                        <span class="flag onair">ON AIR</span>
-                                        <div class="rytOpt">
-                                            <!-- <button type="button" class="insertVideoBtn"><span class="hidden">광고수정하기</span></button>
-                                            <button type="button" class="settingBtn"><span class="hidden">설정</span></button> -->
-                                        </div>
-                                    </div>
-                                    <div class="midArea">
-                                        <p class="adTitle">광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트</p>
-                                        <div class="dateInfo">
-                                            <ul>
-                                                <li>
-                                                    <span>마지막 수정일</span>
-                                                    <span>2024.09.30</span>
-                                                </li>
-                                                <li>
-                                                    <span>최초 생성일</span>
-                                                    <span>2024.09.30</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="botArea">
-                                        <div class="cptBtnForm d-flex gap10">
-                                            <!-- <button type="button" class="btn scnd">성우 추가하기</button> -->
-                                            <button type="button" class="btn prmy">광고효과보기</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="settingCover">
-                                <div class="setInner">
-                                    <div class="buttonArea">
-                                        <ul>
-                                            <li class="videoTitSet"><a href="#none">영상 제목 변경하기</a></li>
-                                            <li class="videoCopy"><a href="#none">영상 복사하기</a></li>
-                                            <li class="videoErase"><a href="#none">영상 삭제하기</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="clsBtn">
-                                        <a href="#none"><span class="hidden">닫기</span></a>
-                                    </div>
-                                </div>
-                           </div>
-                        </li>
-                        <li>
-                            <div class="cardCover">
-                                <div class="thumbArea">
-                                    <img src="../../images/temp/tmp_thumbnail.png" alt="" />
-                                </div>
-                                <div class="infoBox">
-                                    <div class="topArea">
-                                        <span class="flag onair">ON AIR</span>
-                                        <div class="rytOpt">
-                                            <!-- <button type="button" class="insertVideoBtn"><span class="hidden">광고수정하기</span></button>
-                                            <button type="button" class="settingBtn"><span class="hidden">설정</span></button> -->
-                                        </div>
-                                    </div>
-                                    <div class="midArea">
-                                        <p class="adTitle">광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트</p>
-                                        <div class="dateInfo">
-                                            <ul>
-                                                <li>
-                                                    <span>마지막 수정일</span>
-                                                    <span>2024.09.30</span>
-                                                </li>
-                                                <li>
-                                                    <span>최초 생성일</span>
-                                                    <span>2024.09.30</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="botArea">
-                                        <div class="cptBtnForm d-flex gap10">
-                                            <!-- <button type="button" class="btn scnd">성우 추가하기</button> -->
-                                            <button type="button" class="btn prmy">광고효과보기</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="settingCover">
-                                <div class="setInner">
-                                    <div class="buttonArea">
-                                        <ul>
-                                            <li class="videoTitSet"><a href="#none">영상 제목 변경하기</a></li>
-                                            <li class="videoCopy"><a href="#none">영상 복사하기</a></li>
-                                            <li class="videoErase"><a href="#none">영상 삭제하기</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="clsBtn">
-                                        <a href="#none"><span class="hidden">닫기</span></a>
-                                    </div>
-                                </div>
-                           </div>
-                        </li>
-                        <li>
-                            <div class="cardCover">
-                                <div class="thumbArea">
-                                    <img src="../../images/temp/tmp_thumbnail.png" alt="" />
-                                </div>
-                                <div class="infoBox">
-                                    <div class="topArea">
-                                        <span class="flag onair">ON AIR</span>
-                                        <div class="rytOpt">
-                                            <!-- <button type="button" class="insertVideoBtn"><span class="hidden">광고수정하기</span></button>
-                                            <button type="button" class="settingBtn"><span class="hidden">설정</span></button> -->
-                                        </div>
-                                    </div>
-                                    <div class="midArea">
-                                        <p class="adTitle">광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트</p>
-                                        <div class="dateInfo">
-                                            <ul>
-                                                <li>
-                                                    <span>마지막 수정일</span>
-                                                    <span>2024.09.30</span>
-                                                </li>
-                                                <li>
-                                                    <span>최초 생성일</span>
-                                                    <span>2024.09.30</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="botArea">
-                                        <div class="cptBtnForm d-flex gap10">
-                                            <!-- <button type="button" class="btn scnd">성우 추가하기</button> -->
-                                            <button type="button" class="btn prmy">광고효과보기</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="settingCover">
-                                <div class="setInner">
-                                    <div class="buttonArea">
-                                        <ul>
-                                            <li class="videoTitSet"><a href="#none">영상 제목 변경하기</a></li>
-                                            <li class="videoCopy"><a href="#none">영상 복사하기</a></li>
-                                            <li class="videoErase"><a href="#none">영상 삭제하기</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="clsBtn">
-                                        <a href="#none"><span class="hidden">닫기</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
             <!-- //메인 콘텐츠 영역 -->
         </div>
         <!-- //중단영역 -->
@@ -239,6 +45,86 @@
     </div>
 </div>
 
+<div class="modPopup type01 popOpen" id="clause01">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">이용팁 및 주의사항</div>
+            <button class="closeBtn" onclick="popClose('clause01')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="modTab tipTab">
+                <div class="tabInner">
+                    <ul class="tabMenu">
+                        <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab(0)">이용팁</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(1)">주의사항</button></li>
+                    </ul>
+                </div>
+                <div class="tabContainer tipContainer">
+                    <div class="tabCont active">
+                        <div class="cptTip">
+                            <div class="tipBox">
+                                <p class="tipTitle">성우 선택​</p>
+                                <p>성우의 음성을 미리 들어보시고 광고 분위기에 맞는 성우를 선택해 주세요​</p>
+                            </div>
+                            <div class="tipBox">
+                                <p class="tipTitle">음성 길이​​</p>
+                                <p>내용이 길면 전달력이나 집중력이 떨어질 수 있으니 되도록 짧게 내용을 구성해 주세요​</p>
+                            </div>
+                            <div class="tipBox">
+                                <p class="tipTitle">단어, 표현​​</p>
+                                <p>광고에 어울리는 핵심 단어나 함축적인 표현으로 내용을 구성하시면 좋습니다.​​​</p>
+                            </div>
+                            <div class="tipBox">
+                                <p class="tipTitle">음성 개수​​</p>
+                                <p>광고의 내용 전개 및 자막 내용을 고려하여 음성 개수를 결정하세요.​​</p>
+                            </div>
+                            <div class="tipBox">
+                                <p class="tipTitle">띄어 읽기​​</p>
+                                <p>띄어 읽기를 해야 하는 경우 ','를 넣어 주세요(예시로 시스템에 맞게 특수 인식 기호 삽입)​​</p>
+                            </div>
+                            <div class="tipBox">
+                                <p class="tipTitle">영어, 숫자​​</p>
+                                <p>내용에 영어나 숫자 등이 포함된 경우 한글로 소리나는데로 적어 주시면 좋습니다​​<br>
+                                    (예: KBS:케이비에스, 1234:일이삼사)</p>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="tabCont">
+                        <div class="cptTip">
+                            <div class="cptTip">
+                                <div class="tipBox">
+                                    <p class="tipTitle">심의 기준 준수​​</p>
+                                    <p>방송광고 심의 기준에 따라 과장, 허위 등의 광고를 할 수 없습니다. 입증되거나 검증될 수 있는 사항을 넣어 주시면 좋습니다(예: 업계 최고, 1개월 50% 수익률 등의 경우 입증되어야 하며, 그렇지 못한 경우 심의에서 반려될 수도 있습니다)​​</p>
+                                </div>
+                                <div class="tipBox">
+                                    <p class="tipTitle">​음성과 광고 내용 일치​</p>
+                                    <p>음성이 해당되는 광고 영상 재생 시간 내에 종료되는 것이 좋습니다.​​</p>
+                                </div>
+                                <div class="tipBox">
+                                    <p class="tipTitle">음성 이용 선택​</p>
+                                    <p>자막 내용만으로 전달력이 충분한 경우 음성을 추가하지 않으셔도 좋습니다.​​​</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// 탭메뉴 -->
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <button type="button" class="popBtn blue" onclick="popClose('clause01')">확인</button>
+        </div>
+    </div>
+</div>
+
 <!-- Bottom -->
 <%- include('../ejs/bottom.ejs', { }) %>
+
+
 <%- include('../ejs/moBar.ejs', { }) %>

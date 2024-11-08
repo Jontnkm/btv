@@ -241,96 +241,248 @@
 
         <!-- 중단영역 -->
         <div class="layoutContainer" id="container">
-
             <!-- 메인 콘텐츠 영역 -->
-            
-            <div class="myAdCover">
-                <!-- KB 2024.10.24 수정 -->
-                <div class="comSubTitle">
-                    <h3>광고 만들기</h5>
-                </div>
-                <!--// KB 2024.10.24 수정 -->
-                <div class="cptSubTop">
-                    <div class="subTopTxt">
-                        <p class="subTitle">내 컴퓨터에서 불러오기</p>
+            <!-- KB 2024.10.24 수정 -->
+            <div class="comSubTitle">
+                <h3>광고 만들기</h3>
+            </div>
+            <!--// KB 2024.10.24 수정 -->
+            <div class="cptSubTop">
+                <div class="subTopTxt">
+                    <p class="subTitle">템플릿으로 영상 만들기</p>
+                    <div class="filterM filterExc">
+                        <div class="filterMArea" onclick="openPopup('popup01')"><span class="filterMImg"></span>필터검색</div>
                     </div>
-                    <div class="cptBtnForm d-flex gap10 excpBtn">
-                        <button type="button" class="btn scnd">다른 방법으로 영상 만들기</button>
-                        <button type="button" class="btn scnd"><span></span>영상 제작 튜토리얼</button>
+                    <div class="iptGroup">
+                        <div class="iptGroupArea">
+                            <input type="text" class="srchTitle" placeholder="검색" autocomplete="off" title="템플릿 영상 검색창" id="srchTitle" name="srchTitle" value="">
+                            <a href="#" class="srchBtn"></a>
+                        </div>
+                    </div>
+                       <!-- kb 2024-10-29 -->
+                    <!-- <p class="filter">필터 검색 해보세요</p> -->
+                </div>
+                <div class="cptBtnForm d-flex gap10 excpBtn">
+                    <!-- kb 2024-11-04 수정 -->
+                    <button type="button" class="btn scnd" onclick="openTutorial()"><span></span>영상 제작 튜토리얼</button>
+                </div>
+            </div>
+            <div class="modTemplateTab">
+                <div class="tmpTabArea">
+                    <div class="modPopupVer2"  id="popup01">
+                        <div class="cptTmp">
+                            <div class="popupBox">
+                                <!-- 팝업 타이틀 -->
+                                <div class="popTitArea">
+                                    <div class="tit">필터검색</div>
+                                    <button class="closeBtn" onclick="closePopup('popup01')"><img src="../../images/common/ico_pop_close.svg" alt="팝업 닫기"></button>
+                                </div>
+                                <!-- 팝업 컴텐츠 -->
+                                <div class="popContArea">
+                                    <div class="tmpMenu">
+                                        <ul class="tmpMenuArea">
+                                            <li class="tmpItem">
+                                                <button class="tmpName" title="선택 된 탭메뉴" onclick="showTab(0)">추천 템플릿
+                                                    <span class="tmpIcon"></span>
+                                                </button>
+                                            </li>
+                                            <li class="tmpItem">
+                                                <button class="tmpName" title="탭메뉴" onclick="showTab(1)">광고효과별 템플릿
+                                                    <span class="tmpIcon"></span>
+                                                </button>
+                                            </li>
+                                            <li class="tmpItem">
+                                                <button class="tmpName" title="탭메뉴" onclick="showTab(2)">업종별 템플릿
+                                                    <span class="tmpIcon"></span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tmpContainer">
+                                        <div class="tmpCont active">
+                                            <div class="tmpContArea">
+                                                <div class="contBox">
+                                                    <div class="industryTitle">
+                                                        <p class="title">광고할 상위 업종을 선택해주세요.</p>
+                                                        <div class="cptForm">
+                                                            <label class="frmChk">
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                                <span class="labelTxt">사진만 넣을래요</span>
+                                                            </label>
+                                                            <label class="frmChk">
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                                <span class="labelTxt">영상만 넣을래요</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="industryList">
+                                                        <li class="active">한식/중식/일식/양식/분식</li>
+                                                        <li>전문음식</li>
+                                                        <li>카페/디저트/패스트푸드</li>
+                                                        <li>도/소매</li>
+                                                        <li>의류/잡화/뷰티</li>
+                                                        <li>학원/교습/학습</li>
+                                                        <li>취미/레져</li>
+                                                        <li>생활서비스</li>
+                                                        <li>공공</li>
+                                                        <li>공공</li>
+                                                        <li>공공</li>
+                                                        <li>공공</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="contBox">
+                                                    <div class="industryTitle">
+                                                        <p class="title">광고할 상위 업종을 선택해주세요.</p>
+                                                    </div>
+                                                    <ul class="industryList">
+                                                        <li class="active">구이/볶음</li>
+                                                        <li>생선/회</li>
+                                                        <li>국수/냉면</li>
+                                                        <li>의류/잡화/뷰티</li>
+                                                        <li>닭/오리</li>
+                                                        <li>기타요리</li>
+                                                        <li>구이/볶음</li>
+                                                        <li>생선/회</li>
+                                                        <li>구이/볶음</li>
+                                                        <li>생선/회</li>
+                                                        <li>국수/냉면</li>
+                                                        <li>의류/잡화/뷰티</li>
+                                                        <li>닭/오리</li>
+                                                        <li>기타요리</li>
+                                                        <li>구이/볶음</li>
+                                                        <li>생선/회</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="contBox">
+                                                    <p class="title detailTitle">상세검색<span class="titleImg"></span></p>
+                                                    <div class="detailBox">
+                                                        <div class="detailBoxArea">
+                                                            <ul>
+                                                                <p class="first">필터</p>
+                                                                <li class="active">따뜻한</li>
+                                                                <li>차가운</li>
+                                                                <li>실험적인</li>
+                                                                <li>화려한</li>
+                                                                <li>입체적인</li>
+                                                                <li>감성적인</li>
+                                                                <li>모던/심플</li>
+                                                                <li>따뜻한</li>
+                                                                <li>차가운</li>
+                                                                <li>실험적인</li>
+                                                                <li>화려한</li>
+                                                                <li>입체적인</li>
+                                                                <li>감성적인</li>
+                                                                <li>모던/심플</li>
+                                                            </ul>
+                                                            <ul>
+                                                                <p class="first">광고시간</p>
+                                                                <li class="active">전체</li>
+                                                                <li>15초</li>
+                                                                <li>30초</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="tmpCont">
+                                            광고 템플릿
+                                        </div>
+                                        <div class="tmpCont">
+                                            업종 템플릿
+                                        </div>
+                                        <div class="cptBtnForm d-flex gap10">
+                                            <button type="button" class="btn scnd">초기화</button>
+                                            <button type="button" class="btn prmy">내게 맞는 템플릿 검색</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="uploadRule">
-                    <p class="ruleTitle">영상파일을 올리기 전 확인해 주세요!</p>
-                    <ul class="ruleList">
-                        <li class="item codec">
-                            <span class="ico"></span>
-                            <span class="tit">코덱</span>
-                            <span class="desc">영상 코덱이 'H.264'인 것을 확인하였습니다.</span>
+            </div>
+            <div class="cptCardList cptTmpList">
+                <div class="cardArea">
+                    <ul class="cardCont">
+                        <li class="item">
+                            <a href="#">
+                                <div class="thumbnail2" onclick="popOpen('clause02')"><img src="../../images/common/tmp_thumbnail.png" alt="영상 썸네일"></div>
+                                <ul class="thumbCont">
+                                    <li class="title2">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                    <li class="txtBox">
+                                        <ul>
+                                            <li class="txt">외식업</li>
+                                            <li class="sec">15초</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </a>
                         </li>
-                        <li class="item length">
-                            <span class="ico fin"></span> <!--2024.09.25 완료 아이콘 클래스 fin-->
-                            <span class="tit">길이</span>
-                            <span class="desc">영상의 길이가 '15초'인 것을 확인하였습니다.</span>
+                        <li class="item">
+                            <a href="#">
+                                <div class="thumbnail2" onclick="popOpen('clause02')"><img src="../../images/common/tmp_thumbnail.png" alt="영상 썸네일"></div>
+                                <ul class="thumbCont">
+                                    <li class="title2">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                    <li class="txtBox">
+                                        <ul>
+                                            <li class="txt">외식업</li>
+                                            <li class="sec">15초</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </a>
                         </li>
-                        <li class="item resolution">
-                            <span class="ico"></span>
-                            <span class="tit">해상도</span>
-                            <span class="desc">영상 해상도가 '1920 x 1080'인 것을 확인하였습니다.</span>
+                        <li class="item">
+                            <a href="#">
+                                <div class="thumbnail2" onclick="popOpen('clause02')"><img src="../../images/common/tmp_thumbnail.png" alt="영상 썸네일"></div>
+                                <ul class="thumbCont">
+                                    <li class="title2">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                    <li class="txtBox">
+                                        <ul>
+                                            <li class="txt">외식업</li>
+                                            <li class="sec">15초</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </a>
                         </li>
-                        <li class="item audio">
-                            <span class="ico err"></span> <!--2024.09.25 오류 아이콘 클래스 err-->
-                            <span class="tit">오디오</span>
-                            <span class="desc">영상의 오디오 평준화 -24 lkfs에 근접한 것을 확인하였습니다.</span>
+                        <li class="item">
+                            <a href="#">
+                                <div class="thumbnail2" onclick="popOpen('clause02')"><img src="../../images/common/tmp_thumbnail.png" alt="영상 썸네일"></div>
+                                <ul class="thumbCont">
+                                    <li class="title2">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                    <li class="txtBox">
+                                        <ul>
+                                            <li class="txt">외식업</li>
+                                            <li class="sec">15초</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </a>
                         </li>
-                        <li class="item frame">
-                            <span class="ico"></span>
-                            <span class="tit">프레임</span>
-                            <span class="desc">영상의 프레임이 '449(15초)' 또는 '899(30초)'인 것을 확인하였습니다.</span>
+                        <li class="item">
+                            <a href="#">
+                                <div class="thumbnail2" onclick="popOpen('clause02')"><img src="../../images/common/tmp_thumbnail.png" alt="영상 썸네일"></div>
+                                <ul class="thumbCont">
+                                    <li class="title2">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                    <li class="txtBox">
+                                        <ul>
+                                            <li class="txt">외식업</li>
+                                            <li class="sec">15초</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </a>
                         </li>
                     </ul>
                 </div>
-
-                <div class="uploadProgressArea">
-                    <!--2024.09.24 파일등록-->
-                    <!-- <div class="cptBtnForm">
-                        <button type="button" class="btn prmy">영상등록</button>
-                    </div> -->
-                    <!--// 2024.09.24 파일등록-->
-
-                    <!--2024.09.24 진행 중-->
-                    <div class="progressArea">
-                        <div class="bar"></div>
-                        <span class="balloon">업로드 중</span>
-                    </div>
-                    <!--// 2024.09.24 진행 중-->
-
-                    <!--2024.09.24 파일등록 오류-->
-                    <!-- <div class="cptBtnForm">
-                        <button type="button" class="btn prmy">다시올리기</button>
-                        <p class="infoTxt warining">
-                        <p class="infoTxt warning">
-                            영상의 옵션을 다시 한 번 확인하신 후 올려주세요!
-                        </p>
-                    </div> -->
-                    <!--// 2024.09.24 파일등록 오류-->
-
-                    <!--2024.09.24 파일등록 완료-->
-                    <!-- <div class="cptBtnForm">
-                        <button type="button" class="btn prmy">나의 영상 확인하러 가기</button>
-                        <p class="infoTxt">
-                            영상 업로드를 완료하였습니다.
-                        </p>
-                    </div> -->
-                    <!--// 2024.09.24 파일등록 완료-->
-                </div>
             </div>
-
             <!-- //메인 콘텐츠 영역 -->
-
         </div>
         <!-- //중단영역 -->
-
 
         <!-- 하단영역 -->
         <div class="layoutFooter">
@@ -408,8 +560,103 @@
     </div>
 </div>
 
-<!-- 팝업이 들어오는 영역 -->
+<div class="modPopup type01 popOpen" id="clause02" > <!--popOpen을 빼야 숨겨집니다.-->
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">렌더링</div>
+            <button class="closeBtn" onclick="popClose('clause02')">팝업 닫기</button>
+        </div>
 
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="cptRendering">
+                
+                <div class="renderingSlide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="thumbArea">
+                                <img src="../../images/temp/tmp_thumbnail.png" alt="" />
+                                <span class="hoverBg" onclick="popOpen('showAd')">
+                                    <span class="hidden">마우스오버 효과</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thumbArea">
+                                <img src="../../images/temp/tmp_thumbnail.png" alt="" />
+                                <span class="hoverBg" onclick="popOpen('showAd')">
+                                    <span class="hidden">마우스오버 효과</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thumbArea">
+                                <img src="../../images/temp/tmp_thumbnail.png" alt="" />
+                                <span class="hoverBg" onclick="popOpen('showAd')">
+                                    <span class="hidden">마우스오버 효과</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thumbArea">
+                                <img src="../../images/temp/tmp_thumbnail.png" alt="" />
+                                <span class="hoverBg" onclick="popOpen('showAd')">
+                                    <span class="hidden">마우스오버 효과</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                        <span class="swiper-pagination-bullet"></span>
+                        <span class="swiper-pagination-bullet"></span>
+                    </div>
+                    <div class="swiper-button">
+                        <a href="#none" class="swiper-button-prev06"></a>
+                        <a href="#none" class="swiper-button-next06"></a>
+                    </div>
+                </div>  
+
+                <div class="progressArea">
+                    <div class="bar"></div>
+                    <span class="balloon">업로드 중</span>
+                </div>
+                <!--2024.09.24 파일등록 오류-->
+                <!-- <div class="cptBtnForm">
+                    <button type="button" class="btn prmy">다시올리기</button>
+                    <p class="infoTxt warining">
+                    <p class="infoTxt warning">
+                        영상의 옵션을 다시 한 번 확인하신 후 올려주세요!
+                    </p>
+                </div> -->
+                <!--// 2024.09.24 파일등록 오류-->
+
+                <!--2024.09.24 파일등록 완료-->
+                <!-- <div class="cptBtnForm">
+                    <button type="button" class="btn prmy">나의 영상 확인하러 가기</button>
+                    <p class="infoTxt">
+                        영상 업로드를 완료하였습니다.
+                    </p>
+                </div> -->
+                <!--// 2024.09.24 파일등록 완료-->
+
+                <div class="renderingTxt">
+                    <p class="txt1">꼭 알아두세요</p>
+                    <p class="txt2">페이지에서 나가셔도 랜더링은 진행합니다.</p>
+                </div>
+
+            </div>            
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <!-- <div class="popBtnArea">
+            <button type="button" class="popBtn white" onclick="popClose('clause02')">취소</button>
+            <button type="button" class="popBtn blue" onclick="popClose('clause02')">확인</button>
+        </div> -->
+
+    </div>
+</div>
 <!-- Bottom -->
 
 </div>
@@ -418,12 +665,11 @@
 
 </html>
 
-
-
 <!--모바일전용 메뉴바 2024년 10월 30일-->
 <div class="moBarCov">
     <div class="inner">
-        <img src="../images/common/moBar.svg" alt="" />
+        <!-- kb 2024-11-08 수정 -->
+        <img src="../../images/common/moBar.svg" alt="" />
         <a href="#none" class="barMenu">
             <span class="midBtn">나의<br>광고</span>
         </a>

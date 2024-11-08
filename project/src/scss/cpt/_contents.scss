@@ -7,11 +7,11 @@
     @include media ('mobile') {
         margin:4rem auto 0; 
     }
-    /* kb 2024.10.24 수정 */
+
     .memberTitle {
         font-size:32px; margin-bottom: 56px; color:var(--txt-black); font-weight:700; line-height:45px; letter-spacing:-0.8px; text-align:center;
 
-        /* kb 2024.10.23 */
+
         &.mtMargin{
             margin-bottom: 56px !important;
         }
@@ -25,7 +25,6 @@
 
         .innerDesc {
             display:block; font-size:18px; color:var(--txt-gray02); font-weight:400; margin-top:24px; line-height:1.4;
-            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
             @include media ('mobile') {
                 font-size: 16px;
             }
@@ -190,7 +189,6 @@
             }
         }
 
-        /* kb 2024-10-24 */
         .note {
             width:100%; margin-top:40px; position:relative; background:var(--txt-gray05); border-radius:8px; padding: 24px; display:flex; flex-flow:column; align-items: flex-start; justify-content: flex-start; gap:16px;
 
@@ -298,8 +296,6 @@
                 }
             }
 
-            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
-            /* kb 2024.10.28 */
             .adDuration {
                 span {
                     display:block; font-size:16px; color:var(--txt-gray01); font-weight:400; line-height:22px; letter-spacing:-0.4px; margin-bottom:16px;
@@ -525,7 +521,6 @@
     }
 }
 
-/* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
 .createOption {
     width:100%; position:relative;
 
@@ -549,7 +544,6 @@
                 }
             }
 
-            /* kb 2024-10-29 */
             .subTitle{
                 font-size: 16px; font-weight: 400; color: var(--txt-gray02); margin-top: 8px;
             }
@@ -598,7 +592,6 @@
 
     > .tit {
         font-size:24px; color:var(--txt-black); font-weight:bold;
-        /* kb 광고만들기 메인페이지 반응형 2024.10.17 */
         @include media('mobile'){
             width: 300px; word-break: break-all; font-size: 18px;
         }
@@ -606,7 +599,6 @@
 
     > .date {
         font-size:16px; color:var(--txt-gray02); margin:8px 0 24px;
-        /* kb 광고만들기 메인페이지 반응형 2024.10.17 */
         @include media('mobile'){
             font-size: 14px;
         }
@@ -614,7 +606,6 @@
 
     button {max-width:220px;} 
 
-    /* kb 광고만들기 메인페이지 반응형 2024.10.17 */
     @include media('tablet'){
         border-radius: 0; margin-top: 30px;
     }
@@ -624,13 +615,11 @@
 }
 
 /*나의광고 서브메인*/
-/* kb 나의광고 프로그레스바 2024.10.18 */
 .mobileTop{
     h3{
         @include media('wide'){
             display: flex; align-items: center;
         }
-        /* kb 2024.10.28 */
         .mobileClick{
             display: none; cursor: pointer; line-height: 2;
             &.active{
@@ -987,7 +976,6 @@
                             > .rytOpt {
                                 display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:10px;
 
-                                /* kb 나의광고 2024.10.18 */
                                 > button {
                                     display:inline-block; width:32px; height:32px;
                                     &.insertVideoBtn {background:url(../../images/common/ico_insert.svg)50% 50% no-repeat;}
@@ -1110,7 +1098,6 @@
 
         > p.title {
             font-size:24px; color:var(--txt-black); margin:30px 0 16px; font-weight:500; line-height:26px;
-            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
             @include media('tablet'){
                 font-size: 22px;
             }
@@ -1118,13 +1105,11 @@
 
         > p.desc {
             font-size:18px; color:var(--txt-gray02); font-weight:400; line-height:26px; margin-bottom:40px;
-            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
             @include media('tablet'){
                 font-size: 16px;
             }
         }
 
-        /* kb 2024-10-24 수정 */
         button {
             width:360px; margin:0 auto;
             @include media('mobile'){
@@ -1137,7 +1122,6 @@
 /*냐의광고 결제*/
 .payInfoBox {
     width:100%; position:sticky; display:flex; flex-flow:row nowrap; align-items: start; justify-content: flex-start; gap:30px; margin-top:80px; top:30px; z-index:997; background:var(--clr-white);
-    /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
     @include media('tablet'){
         display:block; margin-top: 0;
     }
@@ -1207,7 +1191,6 @@
             }
         }
 
-        /* kb 나의광고 - 결제하기 2024.10.17 */
         .prodOption {
             width:100%; position:relative; display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:20px; margin-top: 30px;
             @include media('wide'){
@@ -1561,7 +1544,6 @@
 /*결제완료*/
 .payComp {
     width:100%; position:relative; max-width:520px; margin:200px auto 0;
-    /* kb 나의광고 결제완료 2024.10.17 */
     @include media('tablet'){
         margin: 100px auto 0;
     }
@@ -1572,7 +1554,6 @@
 
     > .tit {
         font-size:24px; color:var(--prm-color); font-weight:bold; text-align:center; margin:24px 0 16px; text-align:center;
-        /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
         @include media('tablet'){
             font-size: 22px;
         }
@@ -1587,14 +1568,12 @@
 
     >.cptBtnForm {
         display:flex; flex-flow: row nowrap; align-items: center; justify-content: center; gap:10px;
-        /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
         @include media('tablet'){
             flex-direction: column;
         }
 
         > button {
             min-width:240px;
-            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
             @include media('tablet'){
                 
             }
@@ -1638,7 +1617,6 @@
 }
 
 /*지역설정 (지도영역)*/
-/* kb 광고지역설정  2024.10.18 */
 .mapCover {
     width:100%; height:100%; position:relative;
     //  overflow:hidden;
@@ -1672,7 +1650,6 @@
 
                         > a {
                             display:block; width:100%; height:60px; line-height:60px; background:var(--clr-white); text-align:center; font-size: 18px; color:var(--txt-gray02); font-weight:500; border-bottom:1px solid var(--txt-gray04);
-                            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
                             @include media ('tablet') {
                                 font-size: 16px;
                             }
@@ -1877,7 +1854,6 @@
                                 }
                                 > a {
                                     display:block; width:100%; font-size:18px; color:var(--txt-black); font-weight:500; text-align:center;
-                                    /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
                                     @include media ('tablet') {
                                         max-width:auto; border:1px solid var(--txt-gray02); border-radius:8px; line-height: 43px; height:48px; font-size: 16px;
                                     }
@@ -2164,7 +2140,6 @@
                 width:100%; height:100%; background:url(../../images/temp/map_temp.png)50% 50% repeat; background-size:auto;
             }
 
-            /* kb 광고지역설정  2024.10.18 */
             .filterArea {
                 position:absolute; top:0; left:0; background:var(--txt-gray05); width:100%; border-bottom:1px solid var(--txt-gray04); overflow-y: scroll; padding: 17px 40px 17px;
 
@@ -2193,7 +2168,6 @@
                             }
                         }
 
-                        /* kb 광고지역설정  2024.10.18 */
                         .resetWrap{
                             font-weight: 500; font-size: 16px; color: var(--txt-gray01); border-radius: 4px; border: 1px solid var(--txt-gray04); background: var(--clr-white); padding: 0 8px; text-align: center;
                             .filterBtn{
@@ -2554,7 +2528,6 @@
 
     > .adDetailBox {
         position:relative; width:calc(100% - 942px); background:var(--sub-color04); padding:50px 40px; border-radius:24px; min-height:513px;
-        /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
         @include media ('tablet') {
             width:100%; min-height:auto; padding: 20px;
         }
@@ -2576,7 +2549,6 @@
                         position:relative; width:154px; height:40px; line-height:40px; padding: 0;
                         > span {
                             position:relative; padding-left:24px;
-                            /* kb 나의광고 광고효과보기 2024.10.17 */
                             &::after {
                                 content:''; position:absolute; top:50%; left:0; width:18px; height: 21px; background:url(../../images/common/ico_downLoad.svg)50% 50% no-repeat; transform:translateY(-50%);
                             }
@@ -2615,7 +2587,6 @@
 }
 
 /*갤러리 게시판*/
-/* kb 갤러리 페이지 반응형 수정 2024.10.16 */
 .lytLayout{
     .layoutArea{
         .layoutContainer{
@@ -2637,13 +2608,12 @@
     overflow-x:hidden; 
     // margin: 0 !important; padding: 0 !important;
     > *:not(.locationAd) {width:100%; max-width:1320px; margin:0 auto; overflow:hidden;
-        /* kb 갤러리 페이지 반응형 수정 2024.10.16 */
         @include media ('tablet') {
             overflow: unset;
         } 
     }  
 }
-/* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+
 .galleryTitle {
     display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between; margin-bottom: 55px !important;
     // margin: 0 auto !important;
@@ -2656,16 +2626,13 @@
     width:100%; position:relative; 
 
 
-    /* kb 갤러리 페이지 반응형 수정 2024.10.16 */
     @include media ('tablet') {
         display: flex; flex-direction: column; position: unset; 
     }
 
     .monthAd {
         width:912px; position:relative; display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:48px; 
-        // margin-left:20px;
 
-        /* kb 갤러리 페이지 반응형 수정 2024.10.16 */
         @include media ('tablet') {
             width: 100%; margin-left: 0;
         }
@@ -2676,8 +2643,6 @@
             .swiper-slide {
                 position:relative;
                 
-                
-                /* kb 2024.10.24 수정 */
                 > .thumbArea {
                     width:900px; position:relative; border-radius:24px;overflow:hidden;
 
@@ -2685,12 +2650,10 @@
                         width: 100%;
                     }
     
-                    /* kb 2024.10.29 수정 */
                     > img {
                         width:100%; 
                     }
-    
-                    /* kb 2024.10.24 */
+   
                     &:hover {
                         .hoverBg {
                             position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);
@@ -2707,7 +2670,6 @@
             }
         }
 
-        /* kb 갤러리 페이지 반응형 수정 2024.10.16 */
         > a {
             position:absolute; top:50%; display:block; width:40px; height:40px; background:url(../../images/main/adSlideArr_off.svg) 50% 50% no-repeat; transform:translateY(-50%);
             &::after {display:none;}
@@ -2738,10 +2700,8 @@
 
     }
 
-    /* kb 갤러리 페이지 반응형 수정 2024.10.16 */
     > .thumbInfoArea {
         background:var(--clr-white); width: 373px; position:absolute; top:0; right: 0px; z-index:3; z-index: 20;
-        // padding-left:30px;
 
         @include media ('tablet') {
             width: 100%; padding-left: 0px; position: unset;
@@ -2763,7 +2723,6 @@
             }
         }
 
-        /* kb 2024-10-29 */
         .desc {
             font-size:16px; color:var(--txt-gray02); font-weight:400; margin: 20px 0px; line-height:1.4; height: 137px; overflow-y: scroll;
             @include media ('tablet') {
@@ -2771,8 +2730,6 @@
             }
 
         }
-
-        /* kb 2024.10.28 수정 */
         .miniThumb {
             position:relative; width:100%; display:flex; flex-flow:row wrap; align-items: center; justify-content: flex-start; gap: 4px 10px;
 
@@ -2850,7 +2807,6 @@
             }
         }
 
-        /* KB 2024.10.23 */
         @include media ('mobile') {
             margin: 0 auto 30px;
         }
@@ -3089,8 +3045,6 @@
 }
 
 /*광고제작 체험관*/
-
-/* kb 퀵메뉴 - 영상제작체험관 2024.10.17 */
 .lytLayout{
     .layoutArea{
         .layoutContainer{
@@ -3152,7 +3106,6 @@
 .experience {
     > div > *:not(.expTemplate) {width:100%; max-width:1320px; margin:0 auto;}
 
-    /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
     > .experienceBox {
         .cptSubTop {
             margin-bottom: 24px;
@@ -3168,7 +3121,6 @@
             }
         }
 
-        /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
         .stepList {
             width:100%; position:relative;
 
@@ -3200,7 +3152,6 @@
                         @include media ('tablet') {
                             width:100%; padding:24px;
                         }
-                        /* kb 퀵메뉴 - 영상제작체험관 2024.10.17 */
                         > .flag {
                             display:inline-block; width:max-content; padding: 0 8px 5px 8px; text-align:center; line-height:32px; font-size:14px; color:var(--clr-white); font-weight:500; background:var(--prm-color); border-radius:25px;
                             @include media ('tablet') {
@@ -3208,7 +3159,6 @@
                             }
                         }
 
-                        /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
                         > .tit {
                             margin:30px 0 16px; font-size:18px; color:var(--txt-black); font-weight:500;
                             @include media ('tablet') {
@@ -3216,7 +3166,6 @@
                             }
                         }
 
-                        /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
                         > .desc {
                             font-size:16px; color:var(--txt-gray02); font-weight:400; word-break:keep-all; padding: 0;
                             @include media ('tablet') {
@@ -3227,7 +3176,6 @@
                 }
             }
         }
-        /* kb 퀵메뉴 - 영상제작체험관 2024.10.17 */
         .expTemplate {
             position:relative; width:100%; padding: 65px 0; background:var(--txt-gray05); margin-top:90px; overflow-x:hidden;
             @include media ('tablet') {
@@ -3415,7 +3363,7 @@
 
                         > p.price {
                             font-size:24px; color:var(--txt-black); font-weight:500; margin-bottom:4px; text-align:right;
-                            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+
                             @include media ('tablet') {
                                 font-size: 22px;
                             }
@@ -3423,7 +3371,7 @@
 
                         > p.adShowCnt {
                             font-size:14px; color:var(--txt-gray01); font-weight:400;  text-align:right;
-                            /* kb 전체 폰트 모바일 사이즈 조정 2024.10.17 */
+
                             @include media ('tablet') {
                                 font-size: 12px;
                             }
@@ -4350,6 +4298,8 @@
 }
 .cptInfoBottom{
     margin-top: 90px; display: flex; justify-content: space-between; width: 100%;
+    // overflow-x: auto;
+    overflow-x: hidden;
     .left{
         width: 191px; margin-right: 150px; 
         li{
@@ -4591,9 +4541,14 @@
                 font-size: 14px;
             }
         }
+        /* kb 2024-11-08 수정 */
+        @include media('mobile'){
+            margin-top: 30px;
+        }
     }
+    /* kb 2024-11-08 수정 */
     @include media('mobile'){
-        margin: 30px 0 25px 0;
+        margin: 30px 0 25px 0; flex-direction: column; justify-content: flex-start; align-items: self-start;
     }
 }
 
@@ -4642,6 +4597,10 @@
             }
             .ppAddImg{
                 display: flex; flex-direction: row; gap: 15px; overflow: scroll; padding: 20px 0 5px 0;
+                /* kb 2024-11-08 수정 */
+                &::-webkit-scrollbar{
+                    height: 5px; border-radius: 30px; 
+                }
                 > li{
                     border: 1px solid var(--txt-gray04); border-radius: 8px;
                     > ul{
@@ -5321,20 +5280,123 @@
     }
 }
 
-/* 시나리오 예시 */
-.exScenario{
-    .box{
-        margin: 50px 0;
+
+/* kb 2024-11-08 추가 */
+/* myAd - tip */
+.tipTab{
+    .tabInner{
+        margin-bottom: 30px;
     }
-    p{
-        text-align: center; font-size: 30px; color: gray; 
-    }
-    .cptBtnForm{
-        .btn{
-            margin-bottom: 10px !important;
-            a{
-                display: inline-block; width: 100%;
+    .tipContainer{
+        .cptTip{
+            display: flex; flex-direction: column;       gap: 30px;
+            .tipBox{
+                > p{
+                    color: var(--txt-gray02); font-size: 16px; font-weight: 400; letter-spacing: -0.4px;
+                    &.tipTitle{
+                        font-weight: 500;
+                    }
+                }
             }
+        }
+    }
+}
+
+/* createAd - rendering */
+.cptRendering{
+    .renderingSlide{
+        .swiper-slide {
+            position:relative;
+            > .thumbArea {
+                position:relative; overflow:hidden;
+                @include media ('tablet') {
+                    width: 100%;
+                }
+                > img {
+                    width:100%; 
+                }
+                &:hover {
+                    .hoverBg {
+                        position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);
+                        &::after {
+                            content:'';  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:90px; height:90px; background:url(../../images/common/ico_play.svg)50% 50% no-repeat; cursor:pointer;
+                            @include media ('tablet') {
+                                width: 60px; height: 60px; border-radius: 50%; background-size: contain
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .swiper-pagination-bullets{
+            position: static; margin-top: 20px;
+        }
+        .swiper-button {
+            display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:10px;
+            @include media ('tablet') {
+                display:none;
+            }
+            > a {
+                display:block; width:40px; height:40px; background:url(../../images/main/adSlideArr_off.svg) 50% 50% no-repeat;
+                &::after {display:none;}
+                &:hover {background:url(../../images/main/adSlideArr_on.svg) 50% 50% no-repeat;}
+            }
+            .swiper-button-prev06 {
+                position: absolute; left: 40px; top: 50%; transform: translateY(-50%); z-index: 10;
+                &:hover{
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+            .swiper-button-next06 {
+                position: absolute; right: 40px; top: 50%; transform: translateY(-50%) rotate(180deg); z-index: 10;
+                &:hover{
+                    transform: translateY(-50%) rotate(0deg);
+                }
+            }
+        }
+    }
+    > .progressArea {
+        position:relative; width:100%; max-width:900px; margin:60px auto 0; background:var(--txt-gray04); height:4px; border-radius:24px;
+        @include media ('tablet'){
+            max-width:80%;
+        }
+
+        > .bar {
+            position:absolute; top:0; left:0; height:4px; border-radius:24px; background:var(--prm-color); animation:progress 3s linear; animation-fill-mode:forwards;
+        }
+
+        > .balloon {
+            position:absolute; width:max-content; top:- 40px; left:0; margin-left:-44px; padding:0 12px; border:1px solid var(--prm-color); animation:balloon 3s linear; animation-fill-mode:forwards; font-size:14px; color:var(--prm-color); border-radius:5px; line-height:27px; font-weight:500;
+            &::before {content:''; position:absolute; top:27px; left:34px; border-top:7px solid var(--clr-white); border-left:6px solid transparent; border-right:7px solid transparent; border-bottom:0px solid transparent; z-index:3;}
+            &::after {content:''; position:absolute; top:27px; left:32px; border-top:8px solid var(--prm-color); border-left:8px solid transparent; border-right:8px solid transparent; border-bottom:0px solid transparent; z-index:2;}
+            @include media ('tablet'){
+                left:50%; margin-left:0; transform:translateX(-50%); animation:none;
+            }
+        }
+
+        @keyframes progress{
+            from{
+                width:0;
+            }to{
+                width:100%;
+            }
+        }
+
+        @keyframes balloon{
+            from{
+                left:0;
+            }to{
+                left:900px
+            }
+        }
+    }
+    .renderingTxt{
+        margin-top: 30px;
+        .txt1{
+            color: var(--txt-black); text-align: center; font-size: 14px; font-weight: 400; letter-spacing: -0.35px;
+        }
+        .txt2{
+            color: var(--txt-gray02); text-align: center; font-size: 14px; font-weight: 400; letter-spacing: -0.35px;
         }
     }
 }

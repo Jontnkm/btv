@@ -1305,8 +1305,12 @@
 /*table*/
 .cptTable {
     width:100%; 
+    /* kb 2024-11-08 수정 */
+    &::-webkit-scrollbar{
+        height: 5px; border-radius: 30px; 
+    }
     @include media ('tablet') {
-        min-width:862px; overflow-x:scroll;
+        min-width: auto; overflow-x:scroll;
     }
 
     > table {
