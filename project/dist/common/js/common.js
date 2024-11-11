@@ -1380,3 +1380,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+/* kb 2024-11-11 추가 */
+//============================================================================================================//
+//========================================== myAd - adEffect 클릭 ============================================//
+//============================================================================================================//
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.cptTabList li').forEach(item => {
+        item.addEventListener('click', function() {
+            document.querySelectorAll('.cptTabList li').forEach(li => li.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
+
+

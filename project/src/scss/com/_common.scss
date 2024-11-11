@@ -1086,7 +1086,7 @@
     @include media('tablet'){
         display:none;
     }
-    position:fixed; bottom:40px; right:72px; z-index:99;
+    position:fixed; bottom:40px; right:72px; z-index:9999;
 
     > ul {
         display:flex; flex-flow: column; gap:16px;
