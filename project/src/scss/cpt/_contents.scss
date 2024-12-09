@@ -4620,7 +4620,6 @@
             }
             .ppAddImg{
                 display: flex; flex-direction: row; gap: 15px; overflow: scroll; padding: 20px 0 5px 0;
-                /* kb 2024-11-08 수정 */
                 &::-webkit-scrollbar{
                     height: 5px; border-radius: 30px; 
                 }
@@ -5420,6 +5419,379 @@
         }
         .txt2{
             color: var(--txt-gray02); text-align: center; font-size: 14px; font-weight: 400; letter-spacing: -0.35px;
+        }
+    }
+}
+
+/* 24.12.10 kb */
+/* service.html */
+.lytLayout{
+    .layoutArea{
+        .layoutContainer{
+            &.lytService{
+                max-width: inherit; margin: 0; padding: 0;
+                > *:not(.cptService3, .cptService1){
+                    width: 100%; max-width: 1320px; margin: 0 auto;
+                }
+                .cptService{
+                    padding: 120px 0;
+                    @include media ('tablet'){
+                        padding: 60px 0;
+                    }
+                    /* 공통 */
+                    .comBigTitle{
+                        color: var(--txt-black); text-align: center; font-size: 48px; font-weight: 700; letter-spacing: -1.2px; padding-bottom: 40px;
+                        @include media ('mobile'){
+                            font-size: 24px; padding: 0 15px 40px 15px;
+                        }
+                    }
+                
+                    /* 우리가게, 우리동네와 더 가까이 cptService1 */
+                    &.cptService1{
+                        background: url(../../images/sub/service_banner.png); width: 100%; height: 1054px;
+                        .serviceArea{
+                            @include media ('tablet'){
+                                padding: 0 15px;
+                            }
+                            .comTopTitle{
+                                margin-bottom: 40px;
+                                @include media ('mobile'){
+                                    margin-bottom: 50px;
+                                }
+                                h3{
+                                    text-align: center; font-size: 72px; font-weight: 200; letter-spacing: -3.6px; background: linear-gradient(84deg, #6F44DC 3.65%, #3850E8 49.15%, #108FDE 93.75%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: transparent; line-height: 82px;@include media ('tablet'){
+                                        font-size: 50px; line-height: 60px; font-weight: 500;
+                                    }
+                                    @include media ('mobile'){
+                                        font-size: 40px; line-height: 60px;
+                                    }
+                                }
+                                h4{
+                                    color: var(--txt-gray05); font-size: 24px; text-align: center; font-weight: 400; padding: 40px 0 60px 0;
+                                    @include media ('mobile'){
+                                        font-size: 18px; line-height: 30px; padding: 30px 0; width: 320px; margin: 0 auto;
+                                    }
+                                }
+                                h5{
+                                    background-image: linear-gradient(to right, #108FDE, #491BC7); color: transparent; -webkit-background-clip: text; font-size: 32px; text-align: center; font-weight: 700; margin-bottom: 20px;
+                                    @include media ('mobile'){
+                                        font-size: 28px;
+                                    }
+                                }
+                                h6{
+                                    color: var(--txt-gray03); font-size: 20px; text-align: center; font-weight: 500;
+                                }
+                            }
+                            .pcCard {
+                                margin: 0 auto; display:flex; justify-content: center; flex-flow: row nowrap; align-items: center; gap: 30px; background: transparent; position:relative; 
+                                @include media ('tablet'){
+                                    flex-wrap: wrap; flex-direction: row; justify-content: space-between; gap: 15px;
+                                }
+                                > li {
+                                    padding: 45px 30px; border-radius:24px; width:307px; height: 360px; background: #060A40; box-shadow: 0px 4px 20px 10px rgba(35, 12, 98, 0.05);  
+                                    @include media ('tablet'){
+                                        width: 48.9%; height: 235px; padding: 25px 20px; border-radius: 15px;
+                                    }
+                                    @include media ('mobile'){
+                                        width: 47.5%; height: 250px; padding: 20px 15px;
+                                    }
+                                    > p:first-of-type {
+                                        font-size:72px; color: #BAA3FF; font-weight:bold; letter-spacing:-1.8px; text-align: center;
+                                        @include media ('tablet'){
+                                            font-size: 40px;
+                                        }
+                                        @include media ('mobile'){
+                                            font-size: 36px; text-align: left; 
+                                        }
+                                    }
+                                    > p:nth-of-type(2) {
+                                        margin-top:8px; font-size:18px; color: #DFD3FF;; font-weight:400; letter-spacing:-0.45px; text-align: center; padding-bottom: 35px; height: 70px;
+                                        @include media ('tablet'){
+                                            font-size: 16px; padding-bottom: 20px; height: auto;
+                                        }
+                                        @include media ('mobile'){
+                                            text-align: left; padding: 10px 0 15px 0; margin: 0; height: 65px;
+                                        }
+                                    }
+                                    > p:nth-of-type(3) {
+                                        width:max-content;  font-size: 20px; font-weight:500; letter-spacing:-0.6px; color:#BBA1FF; text-align: left; border-top: 1px dashed var(--txt-gray02); width: 100%; padding-top: 35px;
+                                        @include media ('tablet'){
+                                            font-size: 16px; padding-top: 20px;
+                                        }
+                                        @include media ('mobile'){
+                                            text-align: left; padding: 0; padding: 15px 0 10px 0;
+                                        }
+                                    }
+                                    > p:nth-of-type(4) {
+                                        margin-top: 6px; font-size:14px; color:var(--txt-gray02); font-weight:400;text-align: left; position:relative;
+                                        &::before {
+                                            content:''; position: absolute; bottom: 0; right:0; width:48px; height:48px;
+                                            @include media ('mobile'){
+                                                // right: -5px; width: 40px; background-size: contain !important;
+                                                display: none;
+                                            }
+                                        }
+                                        @include media ('mobile'){
+                                            margin: 0; font-size: 12px;
+                                        }
+                                    }
+                                    &.item01 {
+                                        > p:nth-of-type(4) {
+                                            &::before {
+                                                background:url(../../images/main/mainCont02_bg01.png)50% 50% no-repeat;
+                                            }
+                                        }
+                                    }
+                                    &.item02 {
+                                        > p:nth-of-type(4) {
+                                            &::before {
+                                                background:url(../../images/main/mainCont02_bg02.png)50% 50% no-repeat; bottom: 10px;
+                                            }
+                                        }
+                                    }
+                                    &.item03 {
+                                        > p:nth-of-type(4) {
+                                            &::before {
+                                                background:url(../../images/main/mainCont02_bg03.png)50% 50% no-repeat;
+                                            }
+                                        }
+                                    }
+                                    &.item04 {
+                                        > p:nth-of-type(4) {
+                                            &::before {
+                                                background:url(../../images/main/mainCont02_bg04.png)50% 50% no-repeat;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                
+                    /* 왜 Btv 우리동네 광고 일까요? cptService2 */
+                    &.cptService2{
+                        .serviceList{
+                            display: flex; flex-direction: column; row-gap: 25px;
+                            @include media ('tablet'){
+                                padding: 0 15px; row-gap: 20px;
+                            }
+                            > li{
+                                border-radius: 30px; padding: 50px 80px;
+                                @include media ('mobile'){
+                                    padding: 30px 20px;
+                                }
+                                &:nth-child(1){
+                                    background: #EFEFFF url(../../images/sub/sv_list01.png) right 80px top 50% no-repeat;
+                                    @include media ('mobile'){
+                                        background-size: 70px; background-position: right 20px top 20px;
+                                    }
+                                }
+                                &:nth-child(2){
+                                    background: #EFEFFF url(../../images/sub/sv_list02.png) right 80px top 50%  no-repeat;
+                                    @include media ('mobile'){
+                                        background-size: 70px; background-position: right 20px top 20px;
+                                    }
+                                }
+                                &:nth-child(3){
+                                    background: #EFEFFF url(../../images/sub/sv_list03.png) right 80px top 50% no-repeat;
+                                    @include media ('mobile'){
+                                        background-size: 70px; background-position: right 20px top 20px;
+                                    }
+                                }
+                                &:nth-child(4){
+                                    background: #EFEFFF url(../../images/sub/sv_list04.png) right 80px top 50%  no-repeat;
+                                    @include media ('mobile'){
+                                        background-size: 70px; background-position: right 20px top 20px;
+                                    }
+                                }
+                                &:nth-child(5){
+                                    background: #EFEFFF url(../../images/sub/sv_list05.png) right 80px top 50% no-repeat;
+                                    @include media ('mobile'){
+                                        background-size: 70px; background-position: right 20px top 20px;
+                                    }
+                                }
+                                > ul{
+                                    > li{
+                                        &.listTop{
+                                            font-size: 14px; font-weight: 500; background: var(--prm-color); color: var(--clr-white); display: inline-flex; justify-content: center; align-items: center; padding: 8px 20px; border-radius: 30px; margin-bottom: 20px;
+                                            @include media ('mobile'){
+                                                padding: 6px 12px; 
+                                            }
+                                        }
+                                        &.listMid{
+                                            font-size: 32px; font-weight: 500; color: var(--txt-black);  margin-bottom: 12px;
+                                            @include media ('mobile'){
+                                                font-size: 22px; line-height: 30px;
+                                            }
+                                        }
+                                        &.listBot{
+                                            font-size: 20px; font-weight: 500; color: var(--txt-black); 
+                                            @include media ('mobile'){
+                                                font-size: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                
+                    /* B tv 우리동네광고 상품 cptService3 */
+                    &.cptService3{
+                        background: var(--txt-gray05);
+                        .serviceArea{
+                            max-width: 1320px; margin: 0 auto;
+                            @include media ('tablet') {
+                                padding: 0 15px;
+                            }
+                            > ul {
+                                display:flex; flex-flow:row nowrap; align-items: center; justify-content:flex-start; gap:30px;
+                                @include media ('tablet') {
+                                    flex-flow:column; align-items: flex-start; gap:24px;
+                                }
+                                > li {
+                                    position:relative; width:calc(33.3333% - 15px); padding:40px 30px; border:1px solid var(--txt-gray04); border-radius:24px; min-height:703px; background:var(--clr-white); transition:all 0.4s;
+                                    @include media ('tablet') {
+                                        width:100%; min-height:auto;
+                                    }   
+                                    &:hover {
+                                        box-shadow: 2px 6px 25px 0px rgba(0, 0, 0, 0.12);
+                                    }
+                                    .title {
+                                        font-size:24px; font-weight:500; color:var(--txt-black); text-align:center; padding-bottom:24px; border-bottom:1px solid var(--txt-gray04); margin-bottom:40px;
+                                        @include media ('tablet') {
+                                            font-size:20px;
+                                        }
+                                    }
+                                    .ico {
+                                        display:block; margin:0 auto 40px; position:relative; width:56px; height:50px;
+                                        
+                                        &::after { content:''; position:absolute; width:56px; height:50px; top:0; left:0;}
+                                    }
+                                    &.item01 {
+                                        .ico {
+                                            &::after {background:url(../../images/main/mainCont03_img01.svg)50% 50% no-repeat;}
+                                        }
+                                        &::before{
+                                            content: ''; display: block; background:url(../../images/main/ico_badge.svg) 50% 50% no-repeat; background-size: contain; width: 42px; height: 42px; position: absolute; left: 20px; top: 20px; z-index: 11;
+                                        }
+                                    }
+                                    &.item02 {
+                                        .ico {
+                                            &::after {background:url(../../images/main/mainCont03_img02.svg)50% 50% no-repeat;}
+                                        }
+                                    }
+                                    &.item03 {
+                                        .ico {
+                                            width:184px; height:50px;
+                    
+                                            &::after {width:184px; height:50px; background:url(../../images/main/mainCont03_img03.svg)50% 50% no-repeat;}
+                                        }
+                                    }
+                                    > div {
+                                        .q {
+                                            position:relative; padding-left:32px; font-size:18px; color:var(--txt-black); font-weight:500; letter-spacing:-0.45px; margin-bottom:16px;
+                                            @include media ('tablet') {
+                                                font-size:16px;
+                                            }
+                                            &::after {
+                                                content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:24px; height:24px;
+                                            }
+                                        }
+                                        .a {
+                                            padding-left:7px; position:relative; font-size:16px; font-weight:400; color:var(--txt-gray01);
+                                            @include media ('tablet') {
+                                                font-size:14px;
+                                            }
+                                            & + .a {margin-top:8px;}
+                    
+                                            &::before {
+                                                content:''; position:absolute; top:12px; left:0; width:3px; height:3px; background:var(--txt-gray01); border-radius:50%;
+                                            }
+                                        }
+                    
+                                        &.q01 {
+                                            .q {
+                                                &::after {
+                                                    background: url(../../images/main/mainCont03_img04.svg) 50% 50% no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &.q02 {
+                                            .q {
+                                                margin-top:25px;
+                                                &::after {
+                                                    background: url(../../images/main/mainCont03_img05.svg) 50% 50% no-repeat;
+                                                } 
+                                            }
+                    
+                                            .a {
+                                                > span {
+                                                    position:relative; color:var(--txt-gray02);
+                                                    &::before {
+                                                        content:''; position:absolute; top:50%; left:50%; width:46px; height:8px; transform:translate(-50%,-50%); background:url(../../images/main/mainCont03_ico.svg) 50% 50% no-repeat; z-index:3;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .btnBox {
+                                        position:absolute; width:calc(100% - 60px); bottom:40px; left:50%; transform:translateX(-50%) !important;
+                                        @include media ('tablet') {
+                                            position:relative; width:100%; bottom:auto; left:auto; transform:none !important; margin-top:30px;
+                                        } 
+                                        .cptBtnForm {
+                                            button {min-width:auto;}
+                        
+                                            &:last-of-type {
+                                                margin-top:10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .banner {
+                                background: url(../../images/sub/service_bg.png); width: 1320px; height: 90px; padding:16px 0; border-radius:16px; margin-top:56px; width:100%; position:relative; display:flex; flex-flow:row nowrap;align-items: center; justify-content: center; gap:40px;
+                                @include media ('tablet') {
+                                    display:block; padding: 12px 15px; text-align: center;
+                                } 
+                                > p {
+                                    padding-left: 74px; position:relative; font-size:24px; color:var(--clr-white); font-weight:500; line-height:58px;
+                                    em{
+                                        font-weight: 700;
+                                    }
+                                    @include media ('tablet') {
+                                        line-height:22px; font-size:16px; padding:12px 0 12px 74px; 
+                                    } 
+                                    @include media ('mobile'){
+                                        width: 270px; margin: 0 auto;
+                                    }
+                                    &::before {
+                                        content:''; position:absolute; top:50%; left:0; width:54px; height:54px; background:url(../../images/sub/service_cal.png) 50% 50% no-repeat; transform:translateY(-50%);
+                                        @include media ('tablet'){
+                                            left: 130px;
+                                        }
+                                        @include media ('mobile'){
+                                            left: 0px;
+                                        }
+                                    }
+                                }
+                                > button {
+                                    display:inline-block; padding:12px 24px; border-radius:30px; font-size:18px; color:var(--clr-white); font-weight:500; text-align:center; border: 1px solid #0071B8; background: #008AD8;
+                                    @include media ('tablet') {
+                                        display:none;
+                                    } 
+                                }
+                            }
+                        }
+                    }
+                
+                    /* B tv 자주 묻는 질문 cptService4 */
+                    &.cptService4{
+                        padding-bottom: 0;
+                    }
+                }
+            }
         }
     }
 }

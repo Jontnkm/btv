@@ -689,17 +689,21 @@
                 .accoTop{
                     cursor: pointer; padding: 30px; 
                     .accoTitle{
-                        display: flex; align-items: center; justify-content: space-between; color: #000;  font-size: 18px; font-weight: 400; line-height: 26px; letter-spacing: -0.4px; word-break: keep-all;
-                        @include media('tablet'){
-                            .arrowImg{
-                                margin-left: 10px; transition: all 0.5s ease-in-out;
+                        display: flex; align-items: center; color: #000;  font-size: 18px; font-weight: 400; line-height: 26px; letter-spacing: -0.4px; word-break: keep-all;
+                        .arrowImg{
+                            margin: 0 0 0 auto;
+                            @include media('tablet'){
+                                transition: all 0.5s ease-in-out;
                                 img{
                                     width: 18px; height: 18px; 
                                 }
                             }
                         }
+                        &::before{
+                            content: 'Q'; display: block; font-weight: 700; font-size: 18px; color: var(--prm-color); padding-right: 10px;
+                        }
                         @include media('mobile'){
-                            font-size: 16px;
+                            font-size: 16px; align-items: flex-start;
                         }
                     }
                     &.active .arrowImg img{
@@ -740,8 +744,6 @@
     @include media ('wide') {
         overflow-x:hidden;
     }    
-
-    /* kb 2024-11-01 */
     .headerInner { 
         width:100%; position:relative; z-index: 999; border-bottom:1px solid #f2f2f2;
         .gnbArea {
@@ -882,7 +884,6 @@
                             &::after {transform: rotate(180deg);}
                         }
 
-                        /* kb 2024-11-01 */
                         .dropDown {
                             display:none; position:absolute; width:max-content; top:40px; left:50%; background:var(--clr-white); border:1px solid var(--txt-gray04); box-shadow:2px 6px 16px 0px rgba(0,0,0,0.06); padding:30px 0 24px 0; border-radius:8px; transform:translateX(-50%); z-index: 999 !important;
 
@@ -1305,7 +1306,6 @@
 /*table*/
 .cptTable {
     width:100%; 
-    /* kb 2024-11-08 수정 */
     &::-webkit-scrollbar{
         height: 5px; border-radius: 30px; 
     }
@@ -1474,3 +1474,4 @@
         }
     }
 }
+
