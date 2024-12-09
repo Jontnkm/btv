@@ -5448,7 +5448,7 @@
                 
                     /* 우리가게, 우리동네와 더 가까이 cptService1 */
                     &.cptService1{
-                        background: url(../../images/sub/service_banner.png) 50% 50% no-repeat; width: 100%; height: 1054px;
+                        background: url(../../images/sub/service_banner.png); width: 100%; height: 1054px;
                         @include media ('tablet'){
                             background-position: right -100px bottom;
                         }
