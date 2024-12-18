@@ -1396,3 +1396,164 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+/* kb 2024-12-10 추가 */
+//============================================================================================================//
+//========================================= main.html - 풀페이지 js ===========================================//
+//============================================================================================================//
+$(function(){
+    var page = $('.lytMain').fullpage({
+        sectionSelector: '.section',
+        anchors : ['cptMain1', 'cptMain2', 'cptMain3', 'cptMain4', 'cptMain5', 'cptMain6'],
+        navigation : false,
+        navigationPosition : 'left',
+        responsiveWidth: 1320,
+        keyboardScrolling: true,
+		responsiveWidth: 1023, 
+    });
+});
+
+
+/* kb 2024-12-10 추가 */
+//============================================================================================================//
+//=========================================== main.html - 슬롯 효과 ===========================================//
+//============================================================================================================//
+document.addEventListener('DOMContentLoaded', function() {
+    const youCanBuy = document.querySelector('.you-can-buy-js');
+    const fruits = document.querySelectorAll('.slotJs li');
+    const fruitsLength = fruits.length;
+    if (fruitsLength > 1) {
+        let activeIndex = 0;
+        function updateFruits() {
+            fruits[activeIndex].classList.remove('slotSelected');
+            fruits[fruitsLength - 1].classList.remove('reiniciar');
+            activeIndex = (activeIndex + 1) % fruitsLength;
+            fruits[activeIndex].classList.add('slotSelected');
+            youCanBuy.style.backgroundColor = fruits[activeIndex].getAttribute('data-color');
+            fruits[activeIndex];
+            if (activeIndex === 0) {
+                fruits[fruitsLength - 1].classList.add('reiniciar');
+            }
+        }
+        setInterval(updateFruits, 1000);
+    }
+});
+
+
+/* kb 2024-12-10 추가 */
+//============================================================================================================//
+//===================================== main.html - 슬라이드 무한 루프 ========================================//
+//============================================================================================================//
+function PlayRollingSwiper(target){
+    rollingSwiper = new Swiper('.swiperLoop', {
+      spaceBetween: 25,
+      centeredSlides: true,
+      speed: 5500,
+      autoplay: {
+        delay: 1,
+      },
+      loop: true,
+      slidesPerView: 'auto',
+      allowTouchMove: false,
+      disableOnInteraction: false,
+    });
+}
+// rollingSwiper 페이지 로드
+window.addEventListener('load', function(){
+    PlayRollingSwiper();
+});
+
+
+/* kb 2024-12-10 추가 */
+//============================================================================================================//
+//===================================== main.html - 슬라이드 탭메뉴 ===========================================//
+//============================================================================================================//
+function tabSwiperWrap(target2){
+    tabSwiper = new Swiper('.tabSwiper', {
+        spaceBetween: 50,
+        speed: 1000,
+        loop: false,
+        centeredSlides: false,
+        autoplay: false,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+          navigation: {
+            nextEl: ".btnNext",
+            prevEl: ".btnPrev",
+        },
+          breakpoints: {
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+              centeredSlides: false,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+              centeredSlides: true,
+            },
+        },
+    });
+
+    //정지 및 재생 기능
+    const btnPause = document.querySelector('.btnPause');
+    const btnStart = document.querySelector('.btnStart');
+
+    btnPause.addEventListener('click', function() {
+        tabSwiper.autoplay.stop();
+        btnPause.style.display = 'none';
+        btnStart.style.display = 'block';
+    });
+
+    btnStart.addEventListener('click', function() {
+        tabSwiper.autoplay.start();
+        btnStart.style.display = 'none';
+        btnPause.style.display = 'block';
+    });
+
+    btnPause.style.display = 'block';
+    btnStart.style.display = 'none';
+}
+// tabSwiper 페이지 로드
+window.addEventListener('load', function(){
+    tabSwiperWrap();
+});
+
+
+
+  /* kb 2024-12-10 추가 */
+//============================================================================================================//
+//======================================= main.html - 이벤트 탭메뉴 ===========================================//
+//============================================================================================================//
+function EventSwiperWrap(target3){
+    eventSwiper = new Swiper('.eventSwiper', {
+        spaceBetween: 0,
+        centeredSlides: true,
+        slidesPerGroup: 1,
+        speed: 1000,
+        loop: true,
+        autoplay: false,
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        effect: 'fade',
+    });
+}
+// eventSwiper 페이지 로드
+window.addEventListener('load', function(){
+    EventSwiperWrap();
+});
+
+
+
+

@@ -648,7 +648,7 @@
     }
 }
 .pageLocationBar {
-    position: sticky; margin-top: 56px; border-radius: 8px; top:0; z-index: 999; width: 100%;
+    position: sticky; margin-top: 56px; border-radius: 8px; top:0; z-index: 900; width: 100%;
     @include media('wide'){
         position: absolute; left: 155px; top: 220px; background: var(--clr-white); box-shadow: 2px 6px 16px 0px rgba(0, 0, 0, 0.06); border: 1px solid var(--txt-gray04); border-radius: 8px; padding: 35px 25px; margin-top: 0; width: auto; display: none;
     }
@@ -4155,7 +4155,7 @@
 .whiteWrap{
     position: sticky; top: 0; z-index: 999;
     .whiteBgPay{
-        width: 100%; height: 30px; background: var(--clr-white);
+        width: 100%; height: 30px; background: transparent;
         @include media('tablet'){
             display: none;
         }
@@ -5654,7 +5654,9 @@
                                     flex-flow:column; align-items: flex-start; gap:24px;
                                 }
                                 > li {
-                                    position:relative; width:calc(33.3333% - 15px); padding:40px 30px; border:1px solid var(--txt-gray04); border-radius:24px; min-height:703px; background:var(--clr-white); transition:all 0.4s;
+                                    position:relative; padding:40px 30px; border:1px solid var(--txt-gray04); border-radius:24px; min-height:703px; background:var(--clr-white); transition:all 0.4s; 
+                               
+                                    // width:calc(33.3333% - 15px);
                                     @include media ('tablet') {
                                         width:100%; min-height:auto;
                                     }   
@@ -5690,6 +5692,27 @@
                                             width:184px; height:50px;
                     
                                             &::after {width:184px; height:50px; background:url(../../images/main/mainCont03_img03.svg)50% 50% no-repeat;}
+                                        }
+                                    }
+                                    /* 24.12.17 kb */
+                                    &.itemBox{
+                                        width: 100%; display: flex; justify-content: center; align-items: center;
+                                        .boxArea{
+                                            > li{
+                                                text-align: center;
+                                                &:nth-child(1){
+                                                    font-size: 40px; font-weight: 700; margin-bottom: 20px;
+                                                    @include media ('mobile') {
+                                                        font-size: 30px;
+                                                    }
+                                                }
+                                                &:nth-child(2){
+                                                    font-size: 34px; font-weight: 500; word-break: keep-all;
+                                                    @include media ('mobile') {
+                                                        font-size: 20px;
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                     > div {

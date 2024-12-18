@@ -14,6 +14,7 @@
 
 	<title>sk우리동네광고</title>
 
+	<link rel="stylesheet" href="../../common/css/fullpage.min.css" /> <!-- 24.12.10 kb 수정 -->
 	<link rel="stylesheet" href="../../common/css/swiper.css" />
 	<link rel="stylesheet" href="../../common/css/tui-date-picker.css">
 	<link rel="stylesheet" href="../../common/css/style.css" />
@@ -21,6 +22,7 @@
 	
 	<script src="../../common/js/jquery-3.4.1.min.js"></script>
 	<script src="../../common/js/jquery-ui.min.js"></script>
+	<script src="../../common/js/fullpage.js"></script> <!-- 24.12.10 kb 수정 -->
 	<script src="../../common/js/tui-date-picker.js"></script>
 	<script src="../../common/js/swiper.js"></script>
 	<script src="../../common/js/common.js"></script>
@@ -48,14 +50,15 @@
         <div class="layoutTop">
             <!-- Top -->
             
+<!-- header.ejs 는 main.html과 연결 (12월 버전) / header2.ejs는 main2.ejs와 연결 (11월 버전) -->
 <div class="cptHeader">
 	<div class="headerInner">
 		<div class="gnbArea">
 			<div class="leftArea">
 				<div class="logo">
 					<a href="#none">
-						<img src="../../images/common/btv_logo.svg" alt="" class="pcLogo">
-						<img src="../../images/common/btv_mo_logo.svg" alt="" class="moLogo">
+						<img src="../../images/common/btv_logo_w.png" alt="" class="pcLogo">
+						<img src="../../images/common/btv_mo_logo_w.svg" alt="" class="moLogo">
 					</a>
 				</div>
 				<!--2024.09.04 pc menu-->
@@ -63,16 +66,9 @@
 					<div class="headerMenu">
 						<!--2024.09.04 로그인 전 후-->
 						<dl>
-							<dt><a href="#none" class="item">광고만들기</a></dt>
+							<dt><a href="#none" class="item">서비스소개</a></dt>
 							<dd class="head2depth">
 								<a href="../createAd/createTemplate.html">2depth</a>
-								<a href="#none">2depth</a>
-							</dd>
-						</dl>
-						<dl>
-							<dt><a href="#none" class="item">서비스 소개</a></dt>
-							<dd class="head2depth">
-								<a href="#none">2depth</a>
 								<a href="#none">2depth</a>
 							</dd>
 						</dl>
@@ -102,7 +98,19 @@
 						<dl>
 							<dt>
 								<a href="#none" class="item">
-									<span class="ico"><span class="hidden">티비아이콘</span></span>
+									<span class="ico"><span class="hidden">광고진행</span></span>
+									<span class="txt">광고시작하기</span>
+								</a>
+							</dt>
+							<dd class="head2depth">
+								<a href="#none">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<a href="#none" class="item">
+									<span class="ico"><span class="hidden">광고진행</span></span>
 									<span class="txt">나의광고</span>
 								</a>
 							</dt>
@@ -117,11 +125,11 @@
 			<div class="rightArea pcMenu">
 				<div class="cptBtnForm"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
 					<!--2024.09.04 로그인 전-->
-					<button type="button" class="btn scnd login">로그인</button>
-					<button type="button" class="btn scnd register">회원가입</button>
+					<button type="button" class="btn login">로그인</button>
+					<button type="button" class="btn register">회원가입</button>
 					<!--2024.09.04 로그인 후-->
 					<div class="mypageCover">
-						<button type="button" class="btn scnd mypage">
+						<button type="button" class="btn mypage">
 							<span class="userNm">홍길동</span>님 
 						</button>
 
@@ -181,6 +189,14 @@
 						</ul>
 					</div>
 					<ul class="headerMenu">
+						<!-- 2024.09.04 로그인 후 only !!!! -->
+						<li class="afterLoginMenu">
+							<a href="#none">나의광고</a>
+							<ul class="head2depth">
+								<li><a href="#none">2depth</a></li>
+								<li><a href="#none">2depth</a></li>
+							</ul>
+						</li>
 						<!--2024.09.04 로그인 전 후-->
 						<li>
 							<a href="#none">광고만들기</a>
@@ -190,7 +206,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="#none">서비스 소개</a>
+							<a href="#none">서비스소개</a>
 							<ul class="head2depth">
 								<li><a href="#none">2depth</a></li>
 								<li><a href="#none">2depth</a></li>
@@ -209,17 +225,6 @@
 								<li><a href="#none">2depth</a></li>
 								<li><a href="#none">2depth</a></li>
 							</ul>
-						</li>
-						<li>
-							<a href="#none">이벤트</a>
-							<ul class="head2depth">
-								<li><a href="#none">2depth</a></li>
-								<li><a href="#none">2depth</a></li>
-							</ul>
-						</li>
-						<!-- 2024.09.04 로그인 후 only !!!! -->
-						<li class="afterLoginMenu">
-							<a href="#none">나의광고</a>
 						</li>
 					</ul>
 					<div class="cptBtnForm loginArea">
@@ -302,6 +307,7 @@
         <div class="layoutFooter">
             <!-- Footer -->
             
+<!-- 24.12.16 kb 수정 -->
 <div class="cptFooter">
     <div class="footerArea">
         <div class="footTop">
@@ -312,6 +318,13 @@
                     <li><a href="#none" class="hglt">개인정보 처리방침</a></li>
                 </ul>
             </div>
+            <div class="topSns">
+                <ul>
+                    <li><a href="#"><img src="../../images/common/ico_sns_yt.png" alt="btv 유투브 링크주소" /></a></li>
+                    <li><a href="#"><img src="../../images/common/ico_sns_bl.png" alt="btv 네이버 블로그 링크주소" /></a></li>
+                    <li><a href="#"><img src="../../images/common/ico_sns_ins.png" alt="btv 인스타그램 링크주소" /></a></li>
+                </ul>
+            </div>
         </div>
         <div class="footBtm">
             <div class="btmArea">
@@ -319,8 +332,8 @@
                     <li>SK브로드밴드(주) 대표이사 사장 박진효</li>
                     <li>서울시 중구 퇴계로 24 SK남산그린빌딩</li>
                     <li>사업자등록번호 214-86-18758</li>
-                    <li>통신판매신고번호 서울 중구 제 2008-1608호</li>
                 </ul>
+                <p>통신판매신고번호 서울 중구 제 2008-1608호</p>
                 <p>COPYRIGHT ⓒ 2020 BY SK broadband CO.LTD.ALL RIGHTS RESERVED.</p>
             </div>
         </div>

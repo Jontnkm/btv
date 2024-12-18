@@ -1,0 +1,632 @@
+ <!-- Header -->
+ 
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>sk우리동네광고</title>
+
+	<link rel="stylesheet" href="../../common/css/fullpage.min.css" /> <!-- 24.12.10 kb 수정 -->
+	<link rel="stylesheet" href="../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="../../common/css/style.css" />
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="../../common/js/jquery-3.4.1.min.js"></script>
+	<script src="../../common/js/jquery-ui.min.js"></script>
+	<script src="../../common/js/fullpage.js"></script> <!-- 24.12.10 kb 수정 -->
+	<script src="../../common/js/tui-date-picker.js"></script>
+	<script src="../../common/js/swiper.js"></script>
+	<script src="../../common/js/common.js"></script>
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>
+		new WOW().init(); // wow 활성화
+	</script>
+	
+
+	<!--
+    <script src="../common/js/basic.js"></script>
+    -->
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            
+<!-- header.ejs 는 main.html과 연결 (12월 버전) / header2.ejs는 main2.ejs와 연결 (11월 버전) -->
+<div class="cptHeader">
+	<div class="headerInner">
+		<div class="gnbArea">
+			<div class="leftArea">
+				<div class="logo">
+					<a href="#none">
+						<img src="../../images/common/btv_logo_w.png" alt="" class="pcLogo">
+						<img src="../../images/common/btv_mo_logo_w.svg" alt="" class="moLogo">
+					</a>
+				</div>
+				<!--2024.09.04 pc menu-->
+				<div class="menu pcHeader">
+					<div class="headerMenu">
+						<!--2024.09.04 로그인 전 후-->
+						<dl>
+							<dt><a href="#none" class="item">서비스소개</a></dt>
+							<dd class="head2depth">
+								<a href="../createAd/createTemplate.html">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#none" class="item">갤러리</a></dt>
+							<dd class="head2depth">
+								<a href="#none">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#none" class="item">고객센터</a></dt>
+							<dd class="head2depth">
+								<a href="#none">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl>
+						<!-- 이슈로 인해 당분간 사용 안함 2024.10.29 kb -->
+						<!-- <dl>
+							<dt><a href="#none" class="item">소상공인 소식</a></dt>
+							<dd class="head2depth">
+								<a href="#none">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl> -->
+						<!-- 2024.09.04 로그인 후 only !!!! -->
+						<dl>
+							<dt>
+								<a href="#none" class="item">
+									<span class="ico"><span class="hidden">광고진행</span></span>
+									<span class="txt">광고시작하기</span>
+								</a>
+							</dt>
+							<dd class="head2depth">
+								<a href="#none">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<a href="#none" class="item">
+									<span class="ico"><span class="hidden">광고진행</span></span>
+									<span class="txt">나의광고</span>
+								</a>
+							</dt>
+							<dd class="head2depth">
+								<a href="#none">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="rightArea pcMenu">
+				<div class="cptBtnForm"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
+					<!--2024.09.04 로그인 전-->
+					<button type="button" class="btn login">로그인</button>
+					<button type="button" class="btn register">회원가입</button>
+					<!--2024.09.04 로그인 후-->
+					<div class="mypageCover">
+						<button type="button" class="btn mypage">
+							<span class="userNm">홍길동</span>님 
+						</button>
+
+						<div class="dropDown">
+							<div class="status">
+								<ul class="statList">
+									<li><span>제작</span><span>000</span></li>
+									<li><span>심사</span><span>000</span></li>
+									<li><span>집행</span><span>000</span></li>
+								</ul>
+							</div>
+							<div class="loginOption">
+								<ul>
+									<li><a href="#none">나의정보</a></li>
+									<li><a href="#none">나의혜택/광고관리</a></li>
+									<li><a href="#none">결제정보</a></li>
+									<li><a href="#none">광고 효과 보기</a></li>
+									<li><a href="#none">로그아웃</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="moMenuBtn">
+					<div class="menuWrap">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
+				</div>
+			</div>
+
+			<!--2024.09.05 mobile area-->
+			<!--2024.09.04 mobile menu-->
+			<div class="menu moHeader">
+				<div class="mobileMenuBox">
+					<div class="moQuick">
+						<ul>
+							<li class="item01">
+								<a href="#none">
+									<span class="icon"></span>
+									<span class="txt">영상제작<br>체험관</span>
+								</a>
+							</li>
+							<li class="item02">
+								<a href="#none">
+									<span class="icon"></span>
+									<span class="txt">광고비<br>알아보기</span>
+								</a>
+							</li>
+							<li class="item03">
+								<a href="#none">
+									<span class="icon"></span>
+									<span class="txt">광고 상담<br>신청</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<ul class="headerMenu">
+						<!-- 2024.09.04 로그인 후 only !!!! -->
+						<li class="afterLoginMenu">
+							<a href="#none">나의광고</a>
+							<ul class="head2depth">
+								<li><a href="#none">2depth</a></li>
+								<li><a href="#none">2depth</a></li>
+							</ul>
+						</li>
+						<!--2024.09.04 로그인 전 후-->
+						<li>
+							<a href="#none">광고만들기</a>
+							<ul class="head2depth">
+								<li><a href="#none">2depth</a></li>
+								<li><a href="#none">2depth</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none">서비스소개</a>
+							<ul class="head2depth">
+								<li><a href="#none">2depth</a></li>
+								<li><a href="#none">2depth</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none">갤러리</a>
+							<ul class="head2depth">
+								<li><a href="#none">2depth</a></li>
+								<li><a href="#none">2depth</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none">고객센터</a>
+							<ul class="head2depth">
+								<li><a href="#none">2depth</a></li>
+								<li><a href="#none">2depth</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="cptBtnForm loginArea">
+						<!--2024.09.04 로그인 전-->
+						<button type="button" class="btn prmy">로그인</button>
+						<button type="button" class="btn scnd">회원가입</button>
+						<!--2024.09.04 로그인 후-->
+						<button type="button" class="btn scnd" style="display:none;">로그아웃</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer lytService" id="container">
+            <!-- 메인 콘텐츠 영역 -->
+
+            <div class="cptService cptService1">
+                <div class="serviceArea">
+                    <div class="comTopTitle">
+                        <h3>우리가게,<br>우리동네와 더 가까이</h3>
+                        <h4>
+                            B tv 우리동네광고는 지역밀착형 TV광고로 우리가게를 쉽게 홍보할수 있어요,<br>간단한 지역설정부터 영상제작까지 한번에 해결하는 B tv 우리동네광고
+                        </h4>
+                        <h5>
+                            왜 TV 광고가 효과적일까요?
+                        </h5>
+                        <h6>
+                            확실한 TV광고 효과 매출 상승의 비결!
+                        </h6>
+                    </div>
+                    <ul class="pcCard">
+                        <li class="item01">
+                            <p>3시간</p>
+                            <p>성인하루 평균 TV 시청시간</p>
+                            <p><span></span> 시청률 UP</p>
+                            <p>정보통신 정책연구원</p><p>
+                        </p></li>
+                        <li class="item02">
+                           <p>60%</p>
+                           <p>소비자 TV광고 신뢰도</p>
+                           <p><span></span> 신뢰도 UP</p>
+                           <p>TV 60% &gt; 신문잡지 58% &gt; 소셜 25%</p>
+                        </li>
+                        <li class="item03">
+                            <p>4배</p>
+                            <p>다른 광고 대비 판매 증대 효과</p>
+                            <p><span></span> 수익률 UP</p>
+                            <p>닐슨</p>
+                        </li>
+                        <li class="item04">
+                            <p>20%</p>
+                            <p>디지털 광고대비</p>
+                            <p><span></span> 인지도 UP</p>
+                            <p>애드네트워크 2021</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cptService cptService2">
+                <div class="comBigTitle">
+                    <h3>왜 Btv 우리동네 광고 일까요?</h3>
+                </div>
+                <ul class="serviceList">
+                    <li>
+                        <ul>    
+                            <li class="listTop">인기채널에 광고 노출</li>
+                            <li class="listMid">우리동네에서 인지도가 쑥 올랐어요!</li>
+                            <li class="listBot">문의전화도 많이 오고 방문하는 고객이 많아졌어요.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>    
+                            <li class="listTop">지역 타기팅</li>
+                            <li class="listMid">내가 원하는 동네만 콕 찍어서 TV 광고를 할 수 있어요!</li>
+                            <li class="listBot">AI가 상권분석을 통해 우리가게에 맞는 동네를 추천해줘요</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>    
+                            <li class="listTop">AI 영상제작</li>
+                            <li class="listMid">AI가 나에게 맞는 우리매장 광고영상을 만들어줘요</li>
+                            <li class="listBot">저작권 걱정없이,영상편집 몰라도 AI가 광고영상을 만들어 줘요</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>    
+                            <li class="listTop">실시간 리포트</li>
+                            <li class="listMid">내 광고가 어떻게 나가고 있는지 한눈에 확인해 볼 수 있어 믿음이 가요</li>
+                            <li class="listBot">채널별, 지역별, 일자별, 성별, 관심사별 광고현황을 실시간으로 확인해 볼 수 있어요</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>    
+                            <li class="listTop">경제적인 광고비용</li>
+                            <li class="listMid">다른 광고보다 비용이 낮아요</li>
+                            <li class="listBot">Y*******, N*****검색광고, 인** 광고보다 비용 저렴</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="cptService cptService3">
+                <div class="serviceArea">
+                    <div class="comBigTitle">
+                        <h3>B tv 우리동네광고 상품</h3>
+                    </div>
+                    <ul>
+                        <li class="item01">
+                            <p class="title">B tv 우리동네광고(IPTV)</p>
+                            <span class="ico"><span class="hidden">아이콘</span></span>
+                            <div class="q01">
+                                <p class="q">이런분이 사용하면 좋아요!</p>
+                                <p class="a">동 단위~시/군/구/전국까지 자유롭게 선택하여 TV광고 원하는 분</p>
+                                <p class="a">소상공인, 브랜드 광고주에게 적합(브랜드/프랜차이즈(본사) 광고주는 별도 문의)</p>
+                            </div>
+                            <div class="q02">
+                                <p class="q">요금(부가세 별도)</p>
+                                <p class="a">15초 영상 : 1회 노출당 5월 과금</p>
+                                <p class="a">30초 영상 : 1회 노출당 10원 과금</p>
+                            </div>
+                            <div class="btnBox">
+                                <div class="cptBtnForm d-flex gap10">
+                                    <button type="button" class="btn prmy">상담신청</button>
+                                    <button type="button" class="btn prmy">광고하기</button>
+                                </div>
+                                <div class="cptBtnForm">
+                                    <button type="button" class="btn scnd">상품 자세히 보기</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item02">
+                            <p class="title">케이블 TV광고</p>
+                            <span class="ico"><span class="hidden">아이콘</span></span>
+                            <div class="q01">
+                                <p class="q">이런분이 사용하면 좋아요!</p>
+                                <p class="a">시/군/구 단위 이상으로 광고를 원하는 중소규모 사업체</p>
+                                <p class="a">전국 23개 케이블 tv 가입자 대상<br>시청률 상위 30개 채널에 집중 편성하여 광고노출</p>
+                            </div>
+                            <div class="btnBox">
+                                <div class="cptBtnForm">
+                                    <button type="button" class="btn prmy">상담신청</button>
+                                </div>
+                                <div class="cptBtnForm">
+                                    <button type="button" class="btn scnd">상품 자세히 보기</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item03">
+                            <p class="title">Mobile 메세징 광고</p>
+                            <span class="ico"><span class="hidden">아이콘</span></span>
+                            <div class="q01">
+                                <p class="q">이런분이 사용하면 좋아요!</p>
+                                <p class="a">TV광고와 문자광고를 효율적으로 실행하고자 하는 분</p>
+                            </div>
+                            <div class="q02">
+                                <p class="q">요금(부가세 별도)</p>
+                                <p class="a">일반 메세지 : LMS 100원, MMS 150원</p>
+                                <p class="a">RCS 메세지 : LMS 100원, MMS <span>150원</span> 120원</p>
+                            </div>
+                            <div class="btnBox">
+                                <div class="cptBtnForm">
+                                    <button type="button" class="btn prmy">상담신청</button>
+                                </div>
+                                <div class="cptBtnForm">
+                                    <button type="button" class="btn scnd">상품 자세히 보기</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="banner">
+                        <p>내가 원하는 <em>상품,혜택,요금</em>을 <em>직접 확인</em>하고 비교해보세요!</p>
+                        <button type="button" class="calculator">요금 계산기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cptService cptService4">
+                <div class="comBigTitle">
+                    <h3>B tv 자주 묻는 질문</h3>
+                </div>
+                <div class="modAccordion">
+                    <ul class="accoList">
+                        <li class="accoItem">
+                            <dl class="accoArea">
+                                <dt class="accoTop" onclick="toggleAccordion(this)">
+                                    <p class="accoTitle">Btv 내 광고가 시청자에게 몇번씩 노출되나요?
+                                        <span class="arrowImg">
+                                            <img src="../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                        </span>
+                                    </p>
+                                </dt>
+                                <dd class="accoCont">
+                                    <div class="accoTxt">
+                                        광고주님의 광고 노출 횟수는 청약한 광고 금액에 따라 달라집니다. 광고 금액이 20만원인 경우 약 3만회 노출됩니다.
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="accoItem">
+                            <dl class="accoArea">
+                                <dt class="accoTop" onclick="toggleAccordion(this)">
+                                    <p class="accoTitle">SK브로드밴드의 IPTV와 케이블TV 모두에서 광고가 노출되나요?
+                                        <span class="arrowImg">
+                                            <img src="../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                        </span>
+                                    </p>
+                                </dt>
+                                <dd class="accoCont">
+                                    <div class="accoTxt">SK브로드밴드의 IPTV와 케이블TV 모두에서 광고가 노출되나요? 에 대한 답변</div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="accoItem">
+                            <dl class="accoArea">
+                                <dt class="accoTop" onclick="toggleAccordion(this)">
+                                    <p class="accoTitle">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 
+                                        <span class="arrowImg">
+                                            <img src="../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                        </span>
+                                    </p>
+                                </dt>
+                                <dd class="accoCont">
+                                    <div class="accoTxt">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 에 대한 답변</div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="accoItem">
+                            <dl class="accoArea">
+                                <dt class="accoTop" onclick="toggleAccordion(this)">
+                                    <p class="accoTitle">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요?                            
+                                        <span class="arrowImg">
+                                            <img src="../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                        </span>
+                                    </p>
+                                </dt>
+                                <dd class="accoCont">
+                                    <div class="accoTxt">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요? 에 대한 답변</div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="accoItem">
+                            <dl class="accoArea">
+                                <dt class="accoTop" onclick="toggleAccordion(this)">
+                                    <p class="accoTitle">광고가 불가능하거나 제한 업종이 있나요?
+                                        <span class="arrowImg">
+                                            <img src="../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                        </span>
+                                    </p>
+                                </dt>
+                                <dd class="accoCont">
+                                    <div class="accoTxt">광고가 불가능하거나 제한 업종이 있나요? 에 대한 답변</div>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //메인 콘텐츠 영역 -->
+        </div>
+        <!--// 중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            
+<!-- 24.12.16 kb 수정 -->
+<div class="cptFooter">
+    <div class="footerArea">
+        <div class="footTop">
+            <div class="topArea">
+                <ul>
+                    <li><a href="#none">회원 이용약관</a></li>
+                    <li><a href="#none">서비스 이용약관</a></li>
+                    <li><a href="#none" class="hglt">개인정보 처리방침</a></li>
+                </ul>
+            </div>
+            <div class="topSns">
+                <ul>
+                    <li><a href="#"><img src="../../images/common/ico_sns_yt.png" alt="btv 유투브 링크주소" /></a></li>
+                    <li><a href="#"><img src="../../images/common/ico_sns_bl.png" alt="btv 네이버 블로그 링크주소" /></a></li>
+                    <li><a href="#"><img src="../../images/common/ico_sns_ins.png" alt="btv 인스타그램 링크주소" /></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footBtm">
+            <div class="btmArea">
+                <ul>
+                    <li>SK브로드밴드(주) 대표이사 사장 박진효</li>
+                    <li>서울시 중구 퇴계로 24 SK남산그린빌딩</li>
+                    <li>사업자등록번호 214-86-18758</li>
+                </ul>
+                <p>통신판매신고번호 서울 중구 제 2008-1608호</p>
+                <p>COPYRIGHT ⓒ 2020 BY SK broadband CO.LTD.ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            
+<!--quick menus structure-->
+<div class="quickMenu">
+	<div class="qmInner">
+		<ul>
+			<li>
+				<span class="qmIcon tutorial">quickIcon</span>
+				<span class="qmTxt">영상제작<br>체험관</span>
+			</li>
+			<li>
+				<span class="qmIcon amount">quickIcon</span>
+				<span class="qmTxt">광고비<br>알아보기</span>
+			</li>
+			<li>
+				<span class="qmIcon consult">quickIcon</span>
+				<span class="qmTxt">광고 상담<br>신청</span>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--floating menu structure-->
+<div class="quickFloat">
+	<ul>
+		<li class="chatbot">
+			<a href="#none">
+				<span class="hidden">챗봇연결</span>
+			</a>
+		</li>
+		<li class="topBtn">
+			<a href="#none">
+				<span>TOP</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+
+</div>
+</body>
+
+
+</html>
+
+
+
+<!--모바일전용 메뉴바 2024년 10월 30일-->
+<div class="moBarCov">
+    <div class="inner">
+        <!-- kb 2024-11-08 수정 -->
+        <img src="../../images/common/moBar.svg" alt="" />
+        <a href="#none" class="barMenu">
+            <span class="midBtn">나의<br>광고</span>
+        </a>
+        <ul>
+            <li class="active"> <!--해당페이지 활성화시 메뉴 클래스추가-->
+                <a href="#none" class="barMenu">
+                    <span class="ico home"></span>
+                    <span class="txt">홈</span>
+                </a>
+            </li>
+            <li>
+                <a href="#none" class="barMenu">
+                    <span class="ico adcreate"></span>
+                    <span class="txt">광고만들기</span>
+                </a>
+            </li>
+            <li class="fakeBox"><span class="hidden">spaceArea</span></li>
+            <li>
+                <a href="#none" class="barMenu">
+                    <span class="ico exp"></span>
+                    <span class="txt">체험관</span>
+                </a>
+            </li>
+            <li>
+                <!--2024.10.30 로그인 후-->
+                <a href="#none" class="barMenu">
+                    <span class="ico mypage"></span>
+                    <span class="txt">마이페이지</span>
+                    <!--2024.10.30 로그인 전-->
+                    <!-- <span class="txt">로그인</span> -->
+                    <!-- //2024.10.30 로그인 전-->
+                </a>
+                <!-- //2024.10.30 로그인 후-->
+            </li>
+        </ul>
+    </div>
+</div>
+

@@ -14,6 +14,7 @@
 
 	<title>sk우리동네광고</title>
 
+	<link rel="stylesheet" href="../common/css/fullpage.min.css" /> <!-- 24.12.10 kb 수정 -->
 	<link rel="stylesheet" href="../common/css/swiper.css" />
 	<link rel="stylesheet" href="../common/css/tui-date-picker.css">
 	<link rel="stylesheet" href="../common/css/style.css" />
@@ -21,6 +22,7 @@
 	
 	<script src="../common/js/jquery-3.4.1.min.js"></script>
 	<script src="../common/js/jquery-ui.min.js"></script>
+	<script src="../common/js/fullpage.js"></script> <!-- 24.12.10 kb 수정 -->
 	<script src="../common/js/tui-date-picker.js"></script>
 	<script src="../common/js/swiper.js"></script>
 	<script src="../common/js/common.js"></script>
@@ -48,14 +50,15 @@
         <div class="layoutTop">
             <!-- Top -->
             
+<!-- header.ejs 는 main.html과 연결 (12월 버전) / header2.ejs는 main2.ejs와 연결 (11월 버전) -->
 <div class="cptHeader">
 	<div class="headerInner">
 		<div class="gnbArea">
 			<div class="leftArea">
 				<div class="logo">
 					<a href="#none">
-						<img src="../images/common/btv_logo.svg" alt="" class="pcLogo">
-						<img src="../images/common/btv_mo_logo.svg" alt="" class="moLogo">
+						<img src="../images/common/btv_logo_w.png" alt="" class="pcLogo">
+						<img src="../images/common/btv_mo_logo_w.svg" alt="" class="moLogo">
 					</a>
 				</div>
 				<!--2024.09.04 pc menu-->
@@ -63,16 +66,9 @@
 					<div class="headerMenu">
 						<!--2024.09.04 로그인 전 후-->
 						<dl>
-							<dt><a href="#none" class="item">광고만들기</a></dt>
+							<dt><a href="#none" class="item">서비스소개</a></dt>
 							<dd class="head2depth">
 								<a href="../createAd/createTemplate.html">2depth</a>
-								<a href="#none">2depth</a>
-							</dd>
-						</dl>
-						<dl>
-							<dt><a href="#none" class="item">서비스 소개</a></dt>
-							<dd class="head2depth">
-								<a href="#none">2depth</a>
 								<a href="#none">2depth</a>
 							</dd>
 						</dl>
@@ -102,7 +98,19 @@
 						<dl>
 							<dt>
 								<a href="#none" class="item">
-									<span class="ico"><span class="hidden">티비아이콘</span></span>
+									<span class="ico"><span class="hidden">광고진행</span></span>
+									<span class="txt">광고시작하기</span>
+								</a>
+							</dt>
+							<dd class="head2depth">
+								<a href="#none">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<a href="#none" class="item">
+									<span class="ico"><span class="hidden">광고진행</span></span>
 									<span class="txt">나의광고</span>
 								</a>
 							</dt>
@@ -117,11 +125,11 @@
 			<div class="rightArea pcMenu">
 				<div class="cptBtnForm"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
 					<!--2024.09.04 로그인 전-->
-					<button type="button" class="btn scnd login">로그인</button>
-					<button type="button" class="btn scnd register">회원가입</button>
+					<button type="button" class="btn login">로그인</button>
+					<button type="button" class="btn register">회원가입</button>
 					<!--2024.09.04 로그인 후-->
 					<div class="mypageCover">
-						<button type="button" class="btn scnd mypage">
+						<button type="button" class="btn mypage">
 							<span class="userNm">홍길동</span>님 
 						</button>
 
@@ -181,6 +189,14 @@
 						</ul>
 					</div>
 					<ul class="headerMenu">
+						<!-- 2024.09.04 로그인 후 only !!!! -->
+						<li class="afterLoginMenu">
+							<a href="#none">나의광고</a>
+							<ul class="head2depth">
+								<li><a href="#none">2depth</a></li>
+								<li><a href="#none">2depth</a></li>
+							</ul>
+						</li>
 						<!--2024.09.04 로그인 전 후-->
 						<li>
 							<a href="#none">광고만들기</a>
@@ -190,7 +206,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="#none">서비스 소개</a>
+							<a href="#none">서비스소개</a>
 							<ul class="head2depth">
 								<li><a href="#none">2depth</a></li>
 								<li><a href="#none">2depth</a></li>
@@ -210,17 +226,6 @@
 								<li><a href="#none">2depth</a></li>
 							</ul>
 						</li>
-						<li>
-							<a href="#none">이벤트</a>
-							<ul class="head2depth">
-								<li><a href="#none">2depth</a></li>
-								<li><a href="#none">2depth</a></li>
-							</ul>
-						</li>
-						<!-- 2024.09.04 로그인 후 only !!!! -->
-						<li class="afterLoginMenu">
-							<a href="#none">나의광고</a>
-						</li>
 					</ul>
 					<div class="cptBtnForm loginArea">
 						<!--2024.09.04 로그인 전-->
@@ -238,441 +243,320 @@
 
         </div>
         <!-- //상단영역 -->
-        <div class="mainLayout">
+        <div class="lytMain" id="fullpage">
+
             <!-- 메인 콘텐츠 영역 -->
-            <div class="mainCont01">
-                <div class="mainVisual">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide animeslide-slide bg01">
-                            <div class="container">
-                                <p data-animate="bottom" class="animeslide-heading">
-                                        TV광고, 집에서 간편하게 <b>GO GO!</b>
-                                </p>
-                                <p data-animate="bottom" class="animeslide-desc">
-                                    국내 <span>최초,</span> 국내 <span>유일</span><br>
-                                    원스탑 TV광고 서비스
-                                </p>
-                                <a href="#none" data-animate="bottom" class="redirect animeslide-btn">광고만들기</a>
-                            </div>
-                        </div> 
-                        <div class="swiper-slide animeslide-slide bg02">
-                            <div class="container">
-                                <p data-animate="bottom" class="animeslide-heading">
-                                        TV광고, 내가 바로 CF감독님
-                                </p>
-                                <p data-animate="bottom" class="animeslide-desc">
-                                    <span>AI</span>가  <span>나대신<span></span></span> 만들어주는<br>
-                                    우리가게 광고영상
-                                </p>
-                                <a href="#none" data-animate="bottom" class="redirect animeslide-btn">광고만들기</a>
-                            </div>
-                        </div>
-                        <!-- <div class="swiper-slide animeslide-slide bg01">
-                            <a href="#none">
-                                <img src="../images/main/mainCont01_img01.png" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide animeslide-slide bg01">
-                            <a href="#none">
-                                <img src="../images/main/mainCont01_img02.png" alt="">
-                            </a>
-                        </div> -->
-                    </div>
-                    <!--2024.10.04 슬라이드 페이지네이션-->
-                    <div class="swiper-pagination"></div>
 
-                    <!--2024.10.04 슬라이드 좌우 버튼-->
-                    <div class="swiper-button prevBtn">
-                        <a href="#none" class="swiper-button-prev"></a>
+            <!-- 메인1 -->
+            <div class="section cptMain1">
+                <div class="mainArea">
+                    <div class="mainTitle">
+                        <h2>우리 가게의 이야기를 전하는 TV광고</h2>
+                        <h3>사장님도 광고 전문가가 될 수 있는, <strong>B tv 우리동네광고</strong></h3>
+                        <div class="btnWrap">
+                            <a href="#" class="button">
+                                <span class="btnOverlay"></span>
+                                <span class="btnTxt">더 알아보기</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="swiper-button nextBtn">
-                        <a href="#none" class="swiper-button-next"></a>
+                    <!-- 마우스 애니메이션 -->
+                    <div class="mouse">
+                        <div class="scroll"></div>
                     </div>
                 </div>
             </div>
+            <!--// 메인1 -->
 
-
-            <div class="mainCont02">
-                <div class="mcInner">
-                    <p class="mcTit wow bounceInLeft" >전국민이 신뢰하는 TV광고</p>
-                    <p class="mcSubTit wow bounceInLeft" >
-                        인정받은 믿음, 검증된 결과
-                    </p>
-                    <p class="mcSubDesc type01 wow bounceInLeft" >
-                        확실한 TV 광고 효과<br>매출 상승의 비결!
-                    </p>
-
-                    <ul class="pcCard">
-                        <li class="item01 wow bounceIn">
-                            <p class="wow bounceIn">3시간</p>
-                            <p class="wow bounceIn">성인하루 평균 TV 시청시간</p>
-                            <p class="wow bounceIn"><span></span> 시청률 UP</p>
-                            <p class="wow bounceIn">정보통신 정책연구원<p>
-                        </li>
-                        <li class="item02 wow bounceIn">
-                           <p class="wow bounceIn">60%</p>
-                           <p class="wow bounceIn">소비자 TV광고 신뢰도</p>
-                           <p class="wow bounceIn"><span></span> 신뢰도 UP</p>
-                           <P class="wow bounceIn">TV 60% > 신문잡지 58% > 소셜 25%</P>
-                        </li>
-                        <li class="item03 wow bounceIn">
-                            <p class="wow bounceIn">4배</p>
-                            <p class="wow bounceIn">다른 광고 대비 판매 증대 효과</p>
-                            <p class="wow bounceIn"><span></span> 수익률 UP</p>
-                            <p class="wow bounceIn">닐슨</p>
-                        </li>
-                        <li class="item04 wow bounceIn">
-                            <p class="wow bounceIn">20%</p>
-                            <p class="wow bounceIn">디지털 광고대비</p>
-                            <p class="wow bounceIn"><span></span> 인지도 UP</p>
-                            <p class="wow bounceIn">애드네트워크 2021</p>
-                        </li>
-                    </ul>
-                    <div class="moCard">
-                        <ul class="swiper-wrapper">
-                            <li class="swiper-slide item01 wow bounceIn">
-                                <p class="wow bounceIn">3시간</p>
-                                <p class="wow bounceIn">성인 하루 평균</p>
-                                <p class="wow bounceIn"><span></span> 시청률 UP</p>
-                                <P class="wow bounceIn">시청률</P>
-                            </li>
-                            <li class="swiper-slide item02 wow bounceIn">
-                            <p class="wow bounceIn">60%</p>
-                            <p class="wow bounceIn">소비자 TV광고 신뢰도</p>
-                            <p class="wow bounceIn"><span></span> 신뢰도 UP</p>
-                            <P class="wow bounceIn">TV 60% > 신문잡지 58% > 소셜 25%</P>
-                            </li>
-                            <li class="swiper-slide item03 wow bounceIn">
-                                <p class="wow bounceIn">4배</p>
-                                <p class="wow bounceIn">다른 광고 대비 판매 증대 효과</p>
-                                <p class="wow bounceIn"><span></span> 수익률 UP</p>
-                                <p class="wow bounceIn">Nielson</p>
-                            </li>
-                            <li class="swiper-slide item04 wow bounceIn">
-                                <p class="wow bounceIn">20%</p>
-                                <p class="wow bounceIn">다른 광고 대비 판매 증대 효과</p>
-                                <p class="wow bounceIn"><span></span> 인지도 UP</p>
-                                <p class="wow bounceIn">AD week 2021</p>
-                            </li>
+            <!-- 메인2 -->
+            <div class="section cptMain2">
+                <div class="mainArea">
+                    <div class="mainSubTitle">
+                        <span class="top">사장님의 홍보 고민은<br></span>
+                        <!-- 슬롯 효과 -->
+                        <ul class="slotJs">
+                            <li class="you-can-buy-js hidden"></li>
+                            <li class="slotSelected"><img src="../images/main/slot_img01.png" alt="사람이 뛰고 있는 일러스트" /></li>
+                            <li><img src="../images/main/slot_img02.png" alt="카트 일러스트" /></li>
+                            <li><img src="../images/main/slot_img03.png" alt="돈이 그려져 있는 서류 일러스트" /></li>
+                            <li><img src="../images/main/slot_img04.png" alt="마우스 일러스트" /></li>
                         </ul>
+                        <!--// 슬롯 효과 -->
                     </div>
-                    <span class="arrow wow bounceInLeft"><img src="../images/main/mainCont02_img01.png" alt=""></span>
-                    <span class="obj01 wow bounceIn"><img src="../images/main/mainCont02_img02.png" alt=""></span>
-                    <span class="obj02 wow bounceIn"><img src="../images/main/mainCont02_img03.png" alt=""></span>
-                    <span class="obj03 wow bounceIn"><img src="../images/main/mainCont02_img04.png" alt=""></span>
-                    <span class="obj04 wow bounceIn"><img src="../images/main/mainCont02_img05.png" alt=""></span>
+                    <!-- 슬라이드 무한 루프 -->
+                    <div class="swiper swiperLoop">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <p class="topTitle">매장 주변 동네 손님들에게<br>어떻게 홍보할지 모르겠어요.</p>
+                                <p class="midTitle">원하는 동네만 콕 찍어 tv 광고 할 수 있어요!</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="topTitle">손님이 늘지 않아서<br>고민이예요.</p>
+                                <p class="midTitle">모바일보다 큰 화면으로<br>기억에 쏙 남는 TV 광고는<br>생각해 보셨나요?</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="topTitle">지금 하고 있는 홍보들이<br>효과가 없는 것 같아요.</p>
+                                <p class="midTitle">전단지는 바닥에 쌓이고,<br>TV 광고는 매출이 쌓여요!?</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="topTitle">매월 광고비 지출이<br>너무 부담스러워요.</p>
+                                <p class="midTitle">TV 광고를 5원 (회당 송출료)에<br>할 수 있다는 사실을 알고 계신가요??</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="topTitle">TV 광고는 하고 싶은데<br>시작이 막막해요.</p>
+                                <p class="midTitle">영상 지식이 없어도 쉽게 제작하고 바로 송출 할 수 있는 TV광고 알고 계시나요?</p>
+                            </div>
+                        </div>
+                      </div>
+                      <!--// 슬라이드 무한 루프 -->
                 </div>
             </div>
+            <!--// 메인2 -->
 
+            <!--// 메인3 -->
+            <div class="section cptMain3">
+                <div class="mainArea">
+                    <div class="mainSubTitle">
+                        <p class="txtLeft">우리 가게를</p>
+                        <p class="txtImg"><img src="../images/main/main_banner03.png" alt="한 남자가 가게 식탁을 정리하는 이미지" /></p>
+                        <p class="txtRight">알리는 방법</p>
+                        <p class="txtBottom">B tv를 통해 더욱 돋보이고 매력적으로<br>우리 매장을 홍보해 보세요!</p>
+                    </div>
+                </div>
+            </div>
+            <!--// 메인3 -->
 
-            <div class="mainCont03">
-                <div class="mcInner">
-                    <span class="object obj01 wow bounceIn"></span>
-                    <span class="object obj02 wow bounceIn"></span>
-                    <span class="object obj03 wow bounceIn"></span>
-                    <span class="object obj04 wow bounceIn"></span>
-                    
-                    <div class="left">
-                        <div class="chatBox">
-                            <ul>
-                                <li class="item rtType" id="chat01">
-                                    <div class="inner">
-                                        <div class="chatTxt">
-                                            <p>
-                                                TV 광고가 좋은건 알겟는데... <br>많은 비용과 전문가들만 할 수 있는 거잖아요
-                                            </p>
-                                            <span class="thumb">
-                                                <img src="../images/main/mainCont03_thumb01.png" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item ltType" id="chat02">
-                                    <div class="inner">
-                                        <div class="chatTxt">
-                                            <span class="thumb">
-                                                <img src="../images/main/mainCont03_thumb02.svg" alt="">
-                                            </span>
-                                            <p>
-                                                NO!<br>B tv 우리동네광고가 해결해 드립니다.
-                                            </p>
-                                            
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item rtType" id="chat03">
-                                    <div class="inner">
-                                        <div class="chatTxt">
-                                            <p>
-                                                우리는 동네장사만 하는데?<br>TV 광고가 불필요하지 않을까요?
-                                            </p>
-                                            <span class="thumb">
-                                                <img src="../images/main/mainCont03_thumb01.png" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item ltType" id="chat04">
-                                    <div class="inner">
-                                        <div class="chatTxt">
-                                            <span class="thumb">
-                                                <img src="../images/main/mainCont03_thumb02.svg" alt="">
-                                            </span>
-                                            <!-- kb 2024-11-04 -->
-                                            <p>
-                                                NO!<br><span>내가 원하는 동네만 꼭 찍어</span> TV광고를 해서<br>동네사람들이 많이 방문 해요.
-                                            </p>
-                                            <!--// kb 2024-11-04 -->
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item rtType" id="chat05">
-                                    <div class="inner">
-                                        <div class="chatTxt">
-                                            <p>
-                                                TV 광고 하려면 비싸겠네..
-                                            </p>
-                                            <span class="thumb">
-                                                <img src="../images/main/mainCont03_thumb01.png" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item ltType" id="chat06">
-                                    <div class="inner">
-                                        <div class="chatTxt">
-                                            <span class="thumb">
-                                                <img src="../images/main/mainCont03_thumb02.svg" alt=""> 
-                                            </span>
-                                            <p>
-                                                NO!<br><span>5원에 1회 노출해서 전단지보다 저렴해요.</span><br>이 모든것을 당신이 직접 손쉽게 운영할 수 있어요!                                                
-                                            </p>
-                                        </div>
-                                    </div>
+            <!-- 메인4 -->
+            <div class="section cptMain4">
+                <div class="mainArea">
+                    <div class="mainSubTitle">
+                        <p><img src="../images/main/ico_chk.png" alt="체크 아이콘" /></p>
+                        <h3>처음 시작하셔도 걱정 없어요</h3>
+                    </div>
+                    <ul class="mainList">
+                        <li>
+                            <ul class="ani1">
+                                <li class="txtSmall">광고비</li>
+                                <li class="txtBig">광고에 진심!<br>적은 예산도 가능해요</li>
+                                <li class="txtImg">
+                                    <!-- 계산기 애니메이션 -->
+                                    <ul class="rectWrap">
+                                        <li class="rect1"><img src="../images/main/ico_base_rect01.png" alt="계산기 아이콘" /></li>
+                                        <li class="rect2"><img src="../images/main/ico_base_rect02.png" alt="계산기 아이콘" /></li>
+                                        <li class="rect3"><img src="../images/main/ico_base_rect03.png" alt="계산기 아이콘" /></li>
+                                        <li class="rect4"><img src="../images/main/ico_base_rect04.png" alt="계산기 아이콘" /></li>
+                                    </ul>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <p class="mcTit wow bounceInRight">우리동네 광고 특장점</p>
-                        <p class="mcSubDesc type01 wow bounceInRight">
-                            소상공인의<br>홍보 고민을 책임지는
-                        </p>
-                        <p class="mcSubDesc type02 wow bounceInRight">
-                            B tv 우리동네광고
-                        </p>
-                        <p class="desc wow bounceInRight">
-                            당신이 직접 TV광고를 운영할 수 있으니<br>더욱 믿음이 가요.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="mainCont04">
-                <div class="mcInner">
-                    <p class="mcTit wow bounceInLeft">추천상품</p>
-                    <p class="mcSubDesc type02 wow bounceInLeft">
-                        B tv 추천상품
-                    </p>
-                    
-                    <ul>
-                        <li class="item01 wow fadeInUp" >
-                            <p class="title wow fadeInUp">B tv 우리동네광고(IPTV)</p>
-                            <span class="ico wow fadeInUp"><span class="hidden">아이콘</span></span>
-                            <div class="q01 wow fadeInUp">
-                                <p class="q wow fadeInUp">이런분이 사용하면 좋아요!</p>
-                                <p class="a wow fadeInUp">동 단위~시/군/구/전국까지 자유롭게 선택하여 TV광고 원하는 분</p>
-                                <p class="a wow fadeInUp">소상공인, 브랜드 광고주에게 적합(브랜드/프랜차이즈(본사) 광고주는 별도 문의)</p>
-                            </div>
-                            <div class="q02 wow fadeInUp">
-                                <p class="q wow fadeInUp">요금(부가세 별도)</p>
-                                <p class="a wow fadeInUp">15초 영상 : 1회 노출당 5월 과금</p>
-                                <p class="a wow fadeInUp">30초 영상 : 1회 노출당 10원 과금</p>
-                            </div>
-                            <div class="btnBox">
-                                <div class="cptBtnForm d-flex gap10">
-                                    <button type="button" class="btn prmy wow fadeInUp">상담신청</button>
-                                    <button type="button" class="btn prmy wow fadeInUp">광고하기</button>
-                                </div>
-                                <div class="cptBtnForm">
-                                    <button type="button" class="btn scnd wow fadeInUp">상품 자세히 보기</button>
-                                </div>
-                            </div>
                         </li>
-
-                        <li class="item02 wow fadeInUp">
-                            <p class="title wow fadeInUp">케이블 TV광고</p>
-                            <span class="ico wow fadeInUp"><span class="hidden">아이콘</span></span>
-                            <div class="q01 wow fadeInUp">
-                                <p class="q wow fadeInUp">이런분이 사용하면 좋아요!</p>
-                                <p class="a wow fadeInUp">시/군/구 단위 이상으로 광고를 원하는 중소규모 사업체</p>
-                                <p class="a wow fadeInUp">전국 23개 케이블 tv 가입자 대상<br>시청률 상위 30개 채널에 집중 편성하여 광고노출</p>
-                            </div>
-                            <div class="btnBox">
-                                <div class="cptBtnForm">
-                                    <button type="button" class="btn prmy wow fadeInUp">상담신청</button>
-                                </div>
-                                <div class="cptBtnForm">
-                                    <button type="button" class="btn scnd wow fadeInUp">상품 자세히 보기</button>
-                                </div>
-                            </div>
+                        <li>
+                            <ul class="ani2">
+                                <li class="txtSmall">동네 알리기</li>
+                                <li class="txtBig">우리 동네만 나가니까<br>동네 손님이 많아요</li>
+                                <li class="txtImg">
+                                    <img src="../images/main/ico_base.png" alt="지도 아이콘" class="imgBase" />
+                                    <!-- 지도 애니메이션 -->
+                                    <ul class="cirWrap">
+                                        <li class="cir1"><img src="../images/main/ico_base_cir01.png" alt="지도 표시 아이콘" /></li>
+                                        <li class="cir2"><img src="../images/main/ico_base_cir02.png" alt="지도 표시 아이콘" /></li>
+                                        <li class="cir3"><img src="../images/main/ico_base_cir03.png" alt="지도 표시 아이콘" /></li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
-
-                        <li class="item03 wow fadeInUp">
-                            <p class="title wow fadeInUp">Mobile 메세징 광고</p>
-                            <span class="ico wow fadeInUp"><span class="hidden">아이콘</span></span>
-                            <div class="q01 wow fadeInUp">
-                                <p class="q wow fadeInUp">이런분이 사용하면 좋아요!</p>
-                                <p class="a wow fadeInUp">TV광고와 문자광고를 효율적으로 실행하고자 하는 분</p>
-                            </div>
-                            <div class="q02 wow fadeInUp">
-                                <p class="q wow fadeInUp">요금(부가세 별도)</p>
-                                <p class="a wow fadeInUp">일반 메세지 : LMS 100원, MMS 150원</p>
-                                <p class="a wow fadeInUp">RCS 메세지 : LMS 100원, MMS <span>150원</span> 120원</p>
-                            </div>
-                            <div class="btnBox">
-                                <div class="cptBtnForm">
-                                    <button type="button" class="btn prmy wow fadeInUp">상담신청</button>
-                                </div>
-                                <div class="cptBtnForm">
-                                    <button type="button" class="btn scnd wow fadeInUp">상품 자세히 보기</button>
-                                </div>
-                            </div>
+                        <li>
+                            <ul class="ani3">
+                                <li class="txtSmall">영상 제작</li>
+                                <li class="txtBig">손쉽게 제작하고<br>TV, SNS, 유튜브 다 OK</li>
+                                <li class="txtExtra">SNS, 유튜브에서도 올려서 홍보해보세요</li>
+                                <li class="txtImg">
+                                    <!-- 음악 애니메이션 -->
+                                    <ul class="musicWrap">
+                                        <li class="music"><img src="../images/main/ico_music.png" alt="음악 플레이와 중지 아이콘" /></li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
-
-                    <div class="banner wow bounceIn">
-                        <p class="wow fadeInUp">내가 원하는 상품,혜택,요금을 직접 확인하고 비교해보세요!</p>
-                        <button type="button" class="calculator wow fadeInUp">요금 계산기</button>
-                    </div>
                 </div>
             </div>
+            <!--// 메인4 -->
 
-
-            <div class="mainCont05">
-                <div class="mcInner">
-                    <p class="mcTit wow bounceInLeft" >인터뷰</p>
-                    <div class="lineCov">
-                        <p class="mcSubDesc type02 wow bounceInLeft">
-                            B tv 우리동네광고를 사용하고 이렇게 바뀌었어요
-                        </p>
-                        <div class="slideBtn wow fadeIn" >
-                            <div class="swiper-button prevBtn">
-                                <a href="#none" class="swiper-button-prev02"></a>
+            <!-- 메인5 -->
+            <div class="section cptMain5">
+                <div class="mainArea">
+                    <div class="mainSubTitle">
+                        <p>사장님 인터뷰</p>
+                        <h3>사장님들의 생생한 경험담을 직접 들어보세요</h3>
+                    </div>
+                    <!-- 탭메뉴 -->
+                    <div class="modTab mainTab">
+                        <div class="tabInner">
+                            <ul class="tabMenu">
+                                <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab(0)">광고비</button></li>
+                                <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(1)">공지/동네 알리기</button></li>
+                                <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(2)">영상 제작</button></li>
+                            </ul>
+                        </div>
+                        <div class="tabContainer">
+                            <!-- 광고비 -->
+                            <div class="tabCont active">
+                                <div class="cptImgList">
+                                    <!-- 탭메뉴 슬라이드 -->
+                                    <div class="swiper swiper-container tabSwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="swiperImg">
+                                                    <img src="../images/main/tabImg01.png" alt="사람" />
+                                                    <div class="txtBox">
+                                                        <p>외식업</p>
+                                                        <p>매출 80% 이상<br>올랐어요!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="swiperImg">
+                                                    <img src="../images/main/tabImg02.png" alt="사람" />
+                                                    <div class="txtBox">
+                                                        <p>학원</p>
+                                                        <p>영알못이여도<br>다 할 수 있어요!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="swiperImg">
+                                                    <img src="../images/main/tabImg03.png" alt="사람" />
+                                                    <div class="txtBox">
+                                                        <p>미용/뷰티</p>
+                                                        <p>10만원으로<br>광고 만들었어요!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="swiperImg">
+                                                    <img src="../images/main/tabImg04.png" alt="사람" />
+                                                    <div class="txtBox">
+                                                        <p>외식업</p>
+                                                        <p>매출 80% 이상<br>올랐어요!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-next btnNext" aria-label="다음슬라이드"></div>
+                                        <div class="swiper-button-prev btnPrev" aria-label="이전슬라이드"></div>
+                                        <div class="btnPause" aria-label="자동재생정지"></div>
+                                        <div class="btnStart" aria-label="자동재생재시작"></div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <!--// 탭메뉴 슬라이드 -->
+                                </div>
+                            </div> 
+                            <!--// 광고비 -->
+                            <!-- 동네 알리기 -->
+                            <div class="tabCont">
+                                <div class="cptImgList">
+                                    동네 알리기
+                                </div>
                             </div>
-                            <div class="swiper-button nextBtn">
-                                <a href="#none" class="swiper-button-next02"></a>
+                            <!--// 동네 알리기 -->
+                            <!-- 영상 제작 -->
+                            <div class="tabCont">
+                                <div class="cptImgList">
+                                    영상 제작
+                                </div>
                             </div>
+                            <!--// 영상 제작 -->
                         </div>
                     </div>
+                    <!--// 탭메뉴 -->
+                </div>
+            </div>
+            <!--// 메인5 -->
 
-                    <div class="mainSlide02 wow fadeIn" >
-                        <div class="curtain01"></div>
-                        <div class="curtain02"></div>
+            <!-- 메인6 -->
+            <div class="section cptMain6">
+                <div class="mainArea">
+                    <div class="mainSubTitle">
+                        <h3>이달의 이벤트</h3>
+                    </div>
+                    <!-- 이벤트 슬라이드 -->
+                    <div class="swiper swiper-container eventSwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide" onclick="popOpen('adSlidePop')"><img src="../images/main/mainCont05_img01.png" alt=""></div>
-                            <div class="swiper-slide" onclick="popOpen('adSlidePop')"><img src="../images/main/mainCont05_img01.png" alt=""></div>
-                            <div class="swiper-slide" onclick="popOpen('adSlidePop')"><img src="../images/main/mainCont05_img01.png" alt=""></div>
-                            <div class="swiper-slide" onclick="popOpen('adSlidePop')"><img src="../images/main/mainCont05_img01.png" alt=""></div>
-                            <div class="swiper-slide" onclick="popOpen('adSlidePop')"><img src="../images/main/mainCont05_img01.png" alt=""></div>
-                            <div class="swiper-slide" onclick="popOpen('adSlidePop')"><img src="../images/main/mainCont05_img01.png" alt=""></div>
+                            <div class="swiper-slide">
+                                <div class="swiperCont">
+                                    <img src="../images/main/mainCont01_img01.png" alt="이벤트 배너 텍스트" class="swiperImg" />
+                                    <div class="swiperTxt">
+                                        <p>이벤트</p>
+                                        <h4>b Tv 우리동네광고<br>이벤트 내용입니다.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiperCont">
+                                    <img src="../images/main/mainCont01_img02.png" alt="이벤트 배너 텍스트" class="swiperImg"  />
+                                    <div class="swiperTxt">
+                                        <p>이벤트</p>
+                                        <h4>b Tv 우리동네광고<br>이벤트 내용입니다.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiperCont">
+                                    <img src="../images/main/mainCont01_img01.png" alt="이벤트 배너 텍스트" class="swiperImg"  />
+                                    <div class="swiperTxt">
+                                        <p>이벤트</p>
+                                        <h4>b Tv 우리동네광고<br>이벤트 내용입니다.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiperCont">
+                                    <img src="../images/main/mainCont01_img02.png" alt="이벤트 배너 텍스트" class="swiperImg"  />
+                                    <div class="swiperTxt">
+                                        <p>이벤트</p>
+                                        <h4>b Tv 우리동네광고<br>이벤트 내용입니다.</h4>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
-
-                    <div class="mainSlide02_mo wow fadeIn" >
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" onclick="popOpen('adSlidePop')"><img src="../images/main/mainCont05_img01.png" alt=""></div>
-                            <div class="swiper-slide" onclick="popOpen('adSlidePop')"><img src="../images/main/mainCont05_img01.png" alt=""></div>
-                            <div class="swiper-slide" onclick="popOpen('adSlidePop')"><img src="../images/main/mainCont05_img01.png" alt=""></div>
-                            <div class="swiper-slide" onclick="popOpen('adSlidePop')"><img src="../images/main/mainCont05_img01.png" alt=""></div>
-                            <div class="swiper-slide" onclick="popOpen('adSlidePop')"><img src="../images/main/mainCont05_img01.png" alt=""></div>
-                            <div class="swiper-slide" onclick="popOpen('adSlidePop')"><img src="../images/main/mainCont05_img01.png" alt=""></div>
-                        </div>
-                    </div>
+                    <!--// 탭메뉴 슬라이드 -->
                 </div>
-            </div>
-
-            <div class="mainCont06">
-                <div class="mcInner">
-                    <div class="left">
-                        <p class="mcTit wow bounceInRight moTit" >제휴 사이트</p>
-                        <div class="affSlide wow fadeIn" >
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../images/main/mainCont06_img01.png" alt=""></div>
-                                <div class="swiper-slide"><img src="../images/main/mainCont06_img01.png" alt=""></div>
-                                <div class="swiper-slide"><img src="../images/main/mainCont06_img01.png" alt=""></div>
-                                <div class="swiper-slide"><img src="../images/main/mainCont06_img01.png" alt=""></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <p class="mcTit wow bounceInRight pcTit" >제휴 사이트</p>
-                        <p class="mcSubTit wow bounceInRight" >
-                            소상공인 지원 이벤트
-                        </p>
-                        <p class="desc wow bounceInRight"
-                            더이상 간판 발품 팔며 찾지 마세요!<br>
-                            더이상 간판 발품 팔며 찾지 마세요!
-                        </p> 
-                        <div class="slideBtn wow fadeIn">
-                            <div class="swiper-button prevBtn">
-                                <a href="#none" class="swiper-button-prev03"></a>
-                            </div>
-                            <div class="swiper-button nextBtn">
-                                <a href="#none" class="swiper-button-next03"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- kb 2024-11-04 수정 -->
-            <div class="mainCont07 wow fadeIn">
-                <div class="mcInner">
-                    <div class="bannerBottom">
+                <div class="mainBg">
+                    <div class="mainBgArea">
                         <div class="left">
-                            <p class="title">배너 타이틀 들어가는 곳 배너 타이틀 들어가는 곳 2줄까지만 들어갑니다</p>
-                            <div class="cptBtnForm d-flex gap10 excpBtn"> 
-                                <button type="button" class="btn prmy">더보기</button>
+                            <p class="leftTop">이제 사장님 차례입니다.</p>
+                            <p class="leftMid">지금 바로 경험 해보세요!</p>
+                        </div>
+                        <div class="right">
+                            <div class="btnWrap">
+                                <a href="#" class="button">
+                                    <span class="btnOverlay"></span>
+                                    <span class="btnTxt">광고 견적내기</span>
+                                </a>
+                            </div>
+                            <div class="btnWrap">
+                                <a href="#" class="button">
+                                    <span class="btnOverlay"></span>
+                                    <span class="btnTxt">광고 만들기</span>
+                                </a>
                             </div>
                         </div>
-                        <dib class="right">
-                            <img src="../images/temp/preview_temp.png" alt="이미지">
-                        </dib>
                     </div>
                 </div>
             </div>
-            <!--// kb 2024-11-04 수정 -->
+            <!--// 메인6 -->
 
-            <div class="mainCont08">
-                <div class="mcInner">
-                    <span class="obj01 wow bounceInLeft"></span>
-                    <span class="obj02 wow bounceInRight"></span>
-                    <span class="obj03 wow bounceInDown"></span>
-                    <span class="obj04 wow bounceInLeft"></span>
-                    <span class="obj05 wow bounceInUp"></span>
-                    <span class="obj06 wow bounceInUp"></span>
-
-                    <p class="bannerTit wow fadeIn" >
-                        B tv 우리 동네 광고와 함께 만드는 성공스토리!
-                    </p>
-                    <p class="bannerTit wow fadeIn" >
-                        이제 당신이 주인공입니다
-                    </p>
-                    
-                    <div class="cptBtnForm">
-                        <button type="button" class="btn prmy wow fadeIn">광고 시작하기</button>
-                    </div>
-                </div>
-            </div>
             <!-- //메인 콘텐츠 영역 -->
-        </div>
 
-        <!-- 하단영역 -->
-        <div class="layoutFooter main">
-            <!-- Footer -->
-            
+            <!-- 하단영역 -->
+            <div class="layoutFooter section fp-auto-height mainFooter">
+                <!-- Footer -->
+                
+<!-- 24.12.16 kb 수정 -->
 <div class="cptFooter">
     <div class="footerArea">
         <div class="footTop">
@@ -683,6 +567,13 @@
                     <li><a href="#none" class="hglt">개인정보 처리방침</a></li>
                 </ul>
             </div>
+            <div class="topSns">
+                <ul>
+                    <li><a href="#"><img src="../../images/common/ico_sns_yt.png" alt="btv 유투브 링크주소" /></a></li>
+                    <li><a href="#"><img src="../../images/common/ico_sns_bl.png" alt="btv 네이버 블로그 링크주소" /></a></li>
+                    <li><a href="#"><img src="../../images/common/ico_sns_ins.png" alt="btv 인스타그램 링크주소" /></a></li>
+                </ul>
+            </div>
         </div>
         <div class="footBtm">
             <div class="btmArea">
@@ -690,16 +581,18 @@
                     <li>SK브로드밴드(주) 대표이사 사장 박진효</li>
                     <li>서울시 중구 퇴계로 24 SK남산그린빌딩</li>
                     <li>사업자등록번호 214-86-18758</li>
-                    <li>통신판매신고번호 서울 중구 제 2008-1608호</li>
                 </ul>
+                <p>통신판매신고번호 서울 중구 제 2008-1608호</p>
                 <p>COPYRIGHT ⓒ 2020 BY SK broadband CO.LTD.ALL RIGHTS RESERVED.</p>
             </div>
         </div>
     </div>
 </div>
 
+            </div>
+            <!-- //하단영역 -->
+
         </div>
-        <!-- //하단영역 -->
 
         <!-- 상단영역 -->
         <div class="layoutQuick">
@@ -746,32 +639,7 @@
 </div>
 
 <!-- 팝업이 들어오는 영역 -->
-<div class="modPopup type01" id="adSlidePop">
-    <div class="popupDim">딤 영역</div>
-    <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
-        <!-- 팝업 타이틀 -->
-        <div class="popTitArea">
-            <div class="tit">
-                <span>[외식업]</span>
-                <span>매출이 80%이상 올랐어요!</span>
-            </div>
-            <button class="closeBtn" onclick="popClose('adSlidePop')">팝업 닫기</button>
-        </div>
 
-        <!-- 팝업 컨텐츠 -->
-        <div class="popContArea">
-            <div class="tempArea" style="width:100%; height:400px; background:red; opacity:0.2">
-
-            </div>
-        </div>
-
-        <!-- 팝업 버튼 -->
-        <div class="popBtnArea">
-            <button type="button" class="popBtn white" onclick="popClose('adSlidePop')">취소</button>
-            <button type="button" class="popBtn blue" onclick="popClose('adSlidePop')">확인</button>
-        </div>
-    </div>
-</div>
 <!-- Bottom -->
 
 </div>
