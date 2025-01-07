@@ -1403,7 +1403,7 @@ window.addEventListener('DOMContentLoaded', () => {
 $(function(){
     var page = $('.lytMain').fullpage({
         sectionSelector: '.section',
-        anchors : ['cptMain1', 'cptMain2', 'cptMain3', 'cptMain4', 'cptMain5', 'cptMain6'],
+        anchors : ['TV광고', '홍보고민', '가게홍보', '광고소개', '인터뷰', '이벤트','하단'],
         navigation : false,
         navigationPosition : 'left',
         responsiveWidth: 1320,
@@ -1470,7 +1470,7 @@ window.addEventListener('load', function(){
 function tabSwiperWrap(target2){
     tabSwiper = new Swiper('.tabSwiper', {
         spaceBetween: 50,
-        speed: 1000,
+        speed: 500,
         loop: false,
         centeredSlides: false,
         autoplay: false,
@@ -1486,12 +1486,13 @@ function tabSwiperWrap(target2){
             640: {
               slidesPerView: 1,
               spaceBetween: 20,
+              centeredSlides: true,
             },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-              centeredSlides: false,
-            },
+            // 768: {
+            //   slidesPerView: 3,
+            //   spaceBetween: 20,
+            //   centeredSlides: false,
+            // },
             1024: {
               slidesPerView: 4,
               spaceBetween: 20,
@@ -1501,14 +1502,8 @@ function tabSwiperWrap(target2){
     });
 
     //정지 및 재생 기능
-    const btnPause = document.querySelector('.btnPause');
     const btnStart = document.querySelector('.btnStart');
-
-    btnPause.addEventListener('click', function() {
-        tabSwiper.autoplay.stop();
-        btnPause.style.display = 'none';
-        btnStart.style.display = 'block';
-    });
+    const btnPause = document.querySelector('.btnPause');
 
     btnStart.addEventListener('click', function() {
         tabSwiper.autoplay.start();
@@ -1516,9 +1511,18 @@ function tabSwiperWrap(target2){
         btnPause.style.display = 'block';
     });
 
-    btnPause.style.display = 'block';
-    btnStart.style.display = 'none';
+    btnPause.addEventListener('click', function() {
+        tabSwiper.autoplay.pause();
+        btnPause.style.display = 'none';
+        btnStart.style.display = 'block';
+    });
+
+    btnStart.style.display = 'block';
+    btnPause.style.display = 'none';
+
+
 }
+
 // tabSwiper 페이지 로드
 window.addEventListener('load', function(){
     tabSwiperWrap();

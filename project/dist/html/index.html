@@ -6,6 +6,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" href="..//images/common/favicon.ico" /> <!-- 25.01.06 kb 수정 -->
+
 	<!-- 캐싱방지 -->
 	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
@@ -18,7 +20,6 @@
 	<link rel="stylesheet" href="../common/css/swiper.css" />
 	<link rel="stylesheet" href="../common/css/tui-date-picker.css">
 	<link rel="stylesheet" href="../common/css/style.css" />
-	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
 	
 	<script src="../common/js/jquery-3.4.1.min.js"></script>
 	<script src="../common/js/jquery-ui.min.js"></script>
@@ -43,7 +44,7 @@
 <div class="wrap">
 
 <!-- 레이아웃 -->
-<div class="lytLayout">
+<div class="lytLayout" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
     <div class="layoutArea">
 
         <!-- 상단영역 -->
@@ -250,7 +251,7 @@
             <!-- 메인1 -->
             <div class="section cptMain1">
                 <div class="mainArea">
-                    <div class="mainTitle">
+                    <div class="mainTitle wow fadeIn">
                         <h2>우리 가게의 이야기를 전하는 TV광고</h2>
                         <h3>사장님도 광고 전문가가 될 수 있는, <strong>B tv 우리동네광고</strong></h3>
                         <div class="btnWrap">
@@ -318,7 +319,7 @@
                 <div class="mainArea">
                     <div class="mainSubTitle">
                         <p class="txtLeft">우리 가게를</p>
-                        <p class="txtImg"><img src="../images/main/main_banner03.png" alt="한 남자가 가게 식탁을 정리하는 이미지" /></p>
+                        <p class="txtImg"></p>
                         <p class="txtRight">알리는 방법</p>
                         <p class="txtBottom">B tv를 통해 더욱 돋보이고 매력적으로<br>우리 매장을 홍보해 보세요!</p>
                     </div>
@@ -410,7 +411,43 @@
                                                     <img src="../images/main/tabImg01.png" alt="사람" />
                                                     <div class="txtBox">
                                                         <p>외식업</p>
+                                                        <p>매출 80% 이상<br>올랐어요!</p> <!-- 2줄까지 텍스트 입력 권고 -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="swiperImg">
+                                                    <img src="../images/main/tabImg02.png" alt="사람" />
+                                                    <div class="txtBox">
+                                                        <p>학원</p>
+                                                        <p>영알못이여도<br>다 할 수 있어요!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="swiperImg">
+                                                    <img src="../images/main/tabImg03.png" alt="사람" />
+                                                    <div class="txtBox">
+                                                        <p>미용/뷰티</p>
+                                                        <p>10만원으로<br>광고 만들었어요!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="swiperImg">
+                                                    <img src="../images/main/tabImg04.png" alt="사람" />
+                                                    <div class="txtBox">
+                                                        <p>외식업</p>
                                                         <p>매출 80% 이상<br>올랐어요!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="swiperImg">
+                                                    <img src="../images/main/tabImg01.png" alt="사람" />
+                                                    <div class="txtBox">
+                                                        <p>외식업</p>
+                                                        <p>매출 80% 이상<br>올랐어요!</p> <!-- 2줄까지 텍스트 입력 권고 -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -444,8 +481,8 @@
                                         </div>
                                         <div class="swiper-button-next btnNext" aria-label="다음슬라이드"></div>
                                         <div class="swiper-button-prev btnPrev" aria-label="이전슬라이드"></div>
-                                        <div class="btnPause" aria-label="자동재생정지"></div>
                                         <div class="btnStart" aria-label="자동재생재시작"></div>
+                                        <div class="btnPause" aria-label="자동재생정지"></div>
                                         <div class="swiper-pagination"></div>
                                     </div>
                                     <!--// 탭메뉴 슬라이드 -->
@@ -455,14 +492,14 @@
                             <!-- 동네 알리기 -->
                             <div class="tabCont">
                                 <div class="cptImgList">
-                                    동네 알리기
+                                
                                 </div>
                             </div>
                             <!--// 동네 알리기 -->
                             <!-- 영상 제작 -->
                             <div class="tabCont">
                                 <div class="cptImgList">
-                                    영상 제작
+                         
                                 </div>
                             </div>
                             <!--// 영상 제작 -->
@@ -487,7 +524,7 @@
                                     <img src="../images/main/mainCont01_img01.png" alt="이벤트 배너 텍스트" class="swiperImg" />
                                     <div class="swiperTxt">
                                         <p>이벤트</p>
-                                        <h4>b Tv 우리동네광고<br>이벤트 내용입니다.</h4>
+                                        <h4>b Tv 우리동네광고<br>이벤트 내용입니다.</h4> <!-- 2줄까지 텍스트 입력 권고 -->
                                     </div>
                                 </div>
                             </div>
@@ -556,7 +593,7 @@
             <div class="layoutFooter section fp-auto-height mainFooter">
                 <!-- Footer -->
                 
-<!-- 24.12.16 kb 수정 -->
+<!-- 25.01.06 kb 수정 -->
 <div class="cptFooter">
     <div class="footerArea">
         <div class="footTop">
@@ -569,9 +606,9 @@
             </div>
             <div class="topSns">
                 <ul>
-                    <li><a href="#"><img src="../../images/common/ico_sns_yt.png" alt="btv 유투브 링크주소" /></a></li>
-                    <li><a href="#"><img src="../../images/common/ico_sns_bl.png" alt="btv 네이버 블로그 링크주소" /></a></li>
-                    <li><a href="#"><img src="../../images/common/ico_sns_ins.png" alt="btv 인스타그램 링크주소" /></a></li>
+                    <li><a href="#"><img src="../images/common/ico_sns_yt.png" alt="btv 유투브 링크" /></a></li>
+                    <li><a href="#"><img src="../images/common/ico_sns_bl.png" alt="btv 네이버 블로그 링크" /></a></li>
+                    <li><a href="#"><img src="../images/common/ico_sns_ins.png" alt="btv 인스타그램 링크" /></a></li>
                 </ul>
             </div>
         </div>
@@ -588,6 +625,7 @@
         </div>
     </div>
 </div>
+<!--// 25.01.06 kb 수정 -->
 
             </div>
             <!-- //하단영역 -->

@@ -5462,7 +5462,9 @@
                                     margin-bottom: 50px;
                                 }
                                 h3{
-                                    text-align: center; font-size: 72px; font-weight: 200; letter-spacing: -3.6px; background: linear-gradient(84deg, #6F44DC 3.65%, #3850E8 49.15%, #108FDE 93.75%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: transparent; line-height: 82px;@include media ('tablet'){
+                                    text-align: center; font-size: 72px; font-weight: 200; letter-spacing: -3.6px; line-height: 82px;
+                                    background: #ECE5FF; background: linear-gradient(to right, #ECE5FF 10%, #3850E8 60%, #108FDE 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+                                    @include media ('tablet'){
                                         font-size: 50px; line-height: 60px; font-weight: 500;
                                     }
                                     @include media ('mobile'){
@@ -5476,7 +5478,8 @@
                                     }
                                 }
                                 h5{
-                                    background-image: linear-gradient(to right, #108FDE, #491BC7); color: transparent; -webkit-background-clip: text; font-size: 32px; text-align: center; font-weight: 700; margin-bottom: 20px;
+                                    background: #ECE5FF; background: linear-gradient(to right, #ECE5FF 30%, #3850E8 60%, #108FDE 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+                                    font-size: 32px; text-align: center; font-weight: 700; margin-bottom: 20px;
                                     @include media ('mobile'){
                                         font-size: 28px;
                                     }
@@ -5488,7 +5491,7 @@
                             .pcCard {
                                 margin: 0 auto; display:flex; justify-content: center; flex-flow: row nowrap; align-items: center; gap: 30px; background: transparent; position:relative; 
                                 @include media ('tablet'){
-                                    flex-wrap: wrap; flex-direction: row; justify-content: space-between; gap: 15px;
+                                    flex-wrap: wrap; flex-direction: row; gap: 15px;
                                 }
                                 > li {
                                     padding: 45px 30px; border-radius:24px; width:307px; height: 360px; background: #060A40; box-shadow: 0px 4px 20px 10px rgba(35, 12, 98, 0.05);  
@@ -5585,31 +5588,31 @@
                                 }
                                 &:nth-child(1){
                                     background: #EFEFFF url(../../images/sub/sv_list01.png) right 80px top 50% no-repeat;
-                                    @include media ('mobile'){
+                                    @include media ('tablet'){
                                         background-size: 70px; background-position: right 20px top 20px;
                                     }
                                 }
                                 &:nth-child(2){
                                     background: #EFEFFF url(../../images/sub/sv_list02.png) right 80px top 50%  no-repeat;
-                                    @include media ('mobile'){
+                                    @include media ('tablet'){
                                         background-size: 70px; background-position: right 20px top 20px;
                                     }
                                 }
                                 &:nth-child(3){
                                     background: #EFEFFF url(../../images/sub/sv_list03.png) right 80px top 50% no-repeat;
-                                    @include media ('mobile'){
+                                    @include media ('tablet'){
                                         background-size: 70px; background-position: right 20px top 20px;
                                     }
                                 }
                                 &:nth-child(4){
                                     background: #EFEFFF url(../../images/sub/sv_list04.png) right 80px top 50%  no-repeat;
-                                    @include media ('mobile'){
+                                    @include media ('tablet'){
                                         background-size: 70px; background-position: right 20px top 20px;
                                     }
                                 }
                                 &:nth-child(5){
                                     background: #EFEFFF url(../../images/sub/sv_list05.png) right 80px top 50% no-repeat;
-                                    @include media ('mobile'){
+                                    @include media ('tablet'){
                                         background-size: 70px; background-position: right 20px top 20px;
                                     }
                                 }
