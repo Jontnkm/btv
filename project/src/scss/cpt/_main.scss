@@ -344,7 +344,7 @@
                         padding: 0 15px; flex-direction: column; gap: 15px;
                     }
                     > li{ 
-                        background: #1b1c1d; width: 33.333%; height: 430px; border-radius: 30px; transition: all 0.3s 0s ease; cursor: pointer;
+                        background:  #1b1c1d; width: 33.333%; height: 430px; border-radius: 30px; transition: all 0.3s 0s ease; cursor: pointer;
                         &:hover{
                             background: var(--prm-color);
                         }
@@ -480,9 +480,6 @@
                                     }
                                 }
                             }
-                        }
-                        &:nth-child(2){
-                            background: var(--prm-color);
                         }
                     }
                 }
