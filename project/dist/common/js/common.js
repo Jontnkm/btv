@@ -1283,11 +1283,11 @@ document.addEventListener('DOMContentLoaded', () => {
 //=============================== 튜토리얼 - 윈도우 새창(영상 제작 튜토리얼)  ===================================//
 //============================================================================================================//
 function openTutorial(){
-    window.open("tutorialStep.html", "_blank", "width=700, height=1000, scrollbars=yes, resizable=no, left=0, top=0");
+    window.open("tutorialStep.html", "_blank", "width=700, scrollbars=yes, resizable=no, left=0, top=0");
 }
 // 경로 다른 버전
 function openTutorial2(){
-    window.open("../createAd/tutorialStep.html", "_blank", "width=700, height=1000, scrollbars=yes, resizable=no, left=0, top=0");
+    window.open("../createAd/tutorialStep.html", "_blank", "width=700, scrollbars=yes, resizable=no, left=0, top=0");
 }
 
 
