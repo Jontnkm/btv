@@ -1157,69 +1157,66 @@ function showTab5(index) {
 
 
 
-// KB 2024-10-24 수정 //
+// KB 2025-01-10 수정 //
 //============================================================================================================//
 //============================================= 튜토리얼 스크롤  ==============================================//
 //============================================================================================================//
-document.addEventListener('DOMContentLoaded', function () {
-    let currentTabIndex = 0; 
-    const tabItems = document.querySelectorAll('.ttTabMenu1 .tabItem'); 
-    const totalTabs = tabItems.length; 
-    const itemsPerPage = 4; 
+// document.addEventListener('DOMContentLoaded', function () {
+//     let currentTabIndex = 0; 
+//     const tabItems = document.querySelectorAll('.ttTabMenu1 .tabItem'); 
+//     const totalTabs = tabItems.length; 
+//     const itemsPerPage = 4; 
 
-    const nextClick = document.querySelector('.nextClick');
-    const prevClick = document.querySelector('.prevClick');
+//     const nextClick = document.querySelector('.nextClick');
+//     const prevClick = document.querySelector('.prevClick');
 
-    // nextClick과 prevClick이 존재하는지 확인
-    if (!nextClick || !prevClick) {
-        console.warn('nextClick or prevClick element not found.');
-        return; 
-    }
+//     if (!nextClick || !prevClick) {
+//         console.warn('nextClick or prevClick element not found.');
+//         return; 
+//     }
 
-    function updateTabDisplay() {
-        tabItems.forEach((item, index) => {
-            item.style.display = (index >= currentTabIndex && index < currentTabIndex + itemsPerPage) ? 'block' : 'none';
-        });
+//     function updateTabDisplay() {
+//         tabItems.forEach((item, index) => {
+//             item.style.display = (index >= currentTabIndex && index < currentTabIndex + itemsPerPage) ? 'block' : 'none';
+//         });
 
-        prevClick.style.display = currentTabIndex === 0 ? 'none' : 'block';
-        nextClick.style.display = currentTabIndex + itemsPerPage >= totalTabs ? 'none' : 'block';
-    }
+//         prevClick.style.display = currentTabIndex === 0 ? 'none' : 'block';
+//         nextClick.style.display = currentTabIndex + itemsPerPage >= totalTabs ? 'none' : 'block';
+//     }
 
-    function nextTab() {
-        if (currentTabIndex + itemsPerPage < totalTabs) {
-            currentTabIndex += itemsPerPage; 
-            updateTabDisplay(); 
-        }
-    }
+//     function nextTab() {
+//         if (currentTabIndex + itemsPerPage < totalTabs) {
+//             currentTabIndex += itemsPerPage; 
+//             updateTabDisplay(); 
+//         }
+//     }
     
-    function prevTab() {
-        if (currentTabIndex - itemsPerPage >= 0) {
-            currentTabIndex -= itemsPerPage; 
-            updateTabDisplay(); 
-        }
-    }
+//     function prevTab() {
+//         if (currentTabIndex - itemsPerPage >= 0) {
+//             currentTabIndex -= itemsPerPage; 
+//             updateTabDisplay(); 
+//         }
+//     }
 
-    nextClick.addEventListener('click', nextTab);
-    prevClick.addEventListener('click', prevTab);
+//     nextClick.addEventListener('click', nextTab);
+//     prevClick.addEventListener('click', prevTab);
 
-    updateTabDisplay();
+//     updateTabDisplay();
 
-    function checkScreenSize() {
-        if (window.innerWidth > 806) {
-            tabItems.forEach(item => item.style.display = 'block'); 
-            prevClick.style.display = 'none'; 
-            nextClick.style.display = 'none'; 
-        } else if (window.innerWidth <= 806) {
-            updateTabDisplay();
-        }
-    }
+//     function checkScreenSize() {
+//         if (window.innerWidth > 806) {
+//             tabItems.forEach(item => item.style.display = 'block'); 
+//             prevClick.style.display = 'none'; 
+//             nextClick.style.display = 'none'; 
+//         } else if (window.innerWidth <= 806) {
+//             updateTabDisplay();
+//         }
+//     }
 
-    // 초기 화면 크기 체크
-    checkScreenSize();
+//     checkScreenSize();
 
-    // 화면 크기 변경 시 체크
-    window.addEventListener('resize', checkScreenSize);
-});
+//     window.addEventListener('resize', checkScreenSize);
+// });
 
 
 
@@ -1281,16 +1278,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// KB 2024-11.04 수정 //
+// KB 2025-01-13 수정 //
 //============================================================================================================//
 //=============================== 튜토리얼 - 윈도우 새창(영상 제작 튜토리얼)  ===================================//
 //============================================================================================================//
 function openTutorial(){
-    window.open("tutorialStep.html", "_blank", "width=700, height=3000, scrollbars=yes, resizable=no, left=0, top=0");
+    window.open("tutorialStep.html", "_blank", "width=700, height=1000, scrollbars=yes, resizable=no, left=0, top=0");
 }
 // 경로 다른 버전
 function openTutorial2(){
-    window.open("../createAd/tutorialStep.html", "_blank", "width=700, height=3000, scrollbars=yes, resizable=no, left=0, top=0");
+    window.open("../createAd/tutorialStep.html", "_blank", "width=700, height=1000, scrollbars=yes, resizable=no, left=0, top=0");
 }
 
 

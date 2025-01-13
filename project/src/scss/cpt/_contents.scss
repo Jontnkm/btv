@@ -5180,7 +5180,7 @@
                     }
                 }
                 @include media('mobile'){
-                    left: 30px; width: calc(100% - 60px);
+                    left: 15px; width: calc(100% - 30px);
                 }
             }
         }
@@ -5212,7 +5212,7 @@
                 }
                 .ttTabDepth2{
                     .tabInner{
-                        position: fixed; left: 30px; top: 160px; z-index: 10;
+                        position: fixed; left: 30px; top: 160px; z-index: 10; padding-right: 30px;
                         .ttTabMenu2{
                             margin: 0; background: transparent; 
                             .tabItem{
@@ -5226,7 +5226,7 @@
                             }
                         }
                         @include media('mobile'){
-                            left: 30px; 
+                            left: 15px; 
                         }
                     }
                     @include media('mobile'){
@@ -5246,7 +5246,11 @@
 }
 
 .tutorialList{
-    width:100%; position:relative;
+    width:100%; position:relative; padding-bottom: 200px;
+
+    @include media ('tablet') {
+        padding-bottom: 100px;
+    }
 
     > ul {
         display:flex; flex-flow:row wrap; align-items: center; justify-content: flex-start; gap: 55px;
