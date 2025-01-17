@@ -5204,9 +5204,9 @@
         }
 
         .ttContainer{
-            margin-top: 200px;
             .tabCont{
                 display: none;
+                padding-top: 100px;
                 &.active{
                     display: block;
                 }
@@ -5233,9 +5233,6 @@
                         padding: 0 15px; 
                     }
                 }
-            }
-            @include media('mobile'){
-                margin-top: 180px;
             }
         }
 
